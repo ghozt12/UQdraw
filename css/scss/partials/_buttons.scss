@@ -1,0 +1,42 @@
+// Submit button (used on canvas)
+
+.submit {    
+    height: 60px;
+    width: 150px;
+    border: 2px solid #AFA5FF;
+    border-radius: 50px;
+    color: #AFA5FF;
+    font-size: 16px;
+    transition: 0.4s;
+    outline-style: none;
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+
+    background-color: $uq-purple!important;
+    background-color: #FFF;
+
+    &:hover {
+    	border: 2px solid #FFF;
+    	color: #FFF;
+    	transition: 0.4s;
+    }
+}
+
+.drawing-app-submit {
+	@extend .submit;
+
+	// Placement
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.drawing-app-question {
+	@extend .submit;
+
+	// Placement
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}

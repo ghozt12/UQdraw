@@ -2,15 +2,32 @@
 <html>
   <head>
     <title> UQDraw </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
   </head>
 
-  <body>
-    <div id="top-bar"></div>
-    <h1> Team One </h1>
-    <canvas id="canvas"></canvas>
+  <body id="drawing-app">
+    <div id="top-bar">
+      <img src="../assets/images/uqdraw-logo.png"></img>
+    </div>
+
+    <!-- Question button -->
+    <button class="drawing-app-question">Question</button>
+
+    <!-- Submit button -->
+    <button class="drawing-app-submit">Submit</button>
+
+    <!-- Drawing Canvas -->
+    <div id="canvasDiv"></div>
+    <div id="app-bar">
+      <div class="icon-select selected"><img src="../assets/images/icon-canvas-pen.svg"/> </div>
+      <div class="icon-select"><img src="../assets/images/icon-canvas-eraser.svg"/> </div>
+    </div>
     
   </body>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/drawing_page.js"></script>
   <script type="text/javascript" src="../js/uqdraw.js"></script>
   <script type="text/javascript">
      UQdraw.init();

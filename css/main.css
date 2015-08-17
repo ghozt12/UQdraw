@@ -40,8 +40,60 @@ table {
   height: 50px; }
   #top-bar img {
     width: 100px;
-    margin: 7px 0 0px 0;
-    margin-left: -50px;
+    margin-top: 7px;
+    margin-right: auto;
+    margin-left: auto;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 0); }
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+
+.submit, .drawing-app-submit, .drawing-app-question {
+  height: 60px;
+  width: 150px;
+  border: 2px solid #AFA5FF;
+  border-radius: 50px;
+  color: #AFA5FF;
+  font-size: 16px;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
+  outline-style: none;
+  cursor: pointer;
+  height: 30px;
+  width: 100px;
+  background-color: #3D3092 !important;
+  background-color: #FFF; }
+  .submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover {
+    border: 2px solid #FFF;
+    color: #FFF;
+    -webkit-transition: 0.4s;
+            transition: 0.4s; }
+
+.drawing-app-submit {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+.drawing-app-question {
+  position: absolute;
+  top: 10px;
+  left: 10px; }
+
+#app-bar {
+  background: #3D3092;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  #app-bar img {
+    height: 30px;
+    margin-top: 22px;
+    margin-left: 30px; }
+  #app-bar .icon-select {
+    display: inline-block;
+    margin-left: calc(100vw / 8);
+    height: 70px;
+    width: 90px; }
+  #app-bar .selected {
+    background: #1d1745; }

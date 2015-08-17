@@ -5,6 +5,7 @@ var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
 var del = require('del');
 var concat_css = require("gulp-concat-css");
+var autoprefixer = require('gulp-autoprefixer');
 
 // Tasks
 
@@ -12,6 +13,7 @@ var concat_css = require("gulp-concat-css");
 gulp.task('sass-to-css', function() {
     gulp.src('css/scss/**/*.scss')
         .pipe(scss())
+        .pipe(autoprefixer())
         .pipe(gulp.dest('./css/'));    
 });
 

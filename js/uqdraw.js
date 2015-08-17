@@ -8,7 +8,11 @@ var UQdraw = (function() {
 
 	// Variables
 	var context,
-		currently_painting;
+		currently_painting,
+		canvasHeight = window.innerHeight-100, // to account for the bars
+		canvasWidth = window.innerWidth,
+		canvas;
+
 
 	// These store our drawings
 	var clickX = new Array();
@@ -17,9 +21,15 @@ var UQdraw = (function() {
 
 	// Initilise
 	init = function init() {
-		// Get the Html canvas element
-		context = document.getElementById('canvas').getContext("2d");
+		// Canvas
+		canvas = document.createElement('canvas');
+		canvas.setAttribute('width', canvasWidth);
+		canvas.setAttribute('height', canvasHeight);
+		canvas.setAttribute('id', 'canvas');
+		canvas = document.getElementById('canvasDiv').appendChild(canvas);
 
+		// Get the Html canvas element
+		context = canvas.getContext("2d"); 
 		// Setup
 		setupListenerEvents();
 	},
