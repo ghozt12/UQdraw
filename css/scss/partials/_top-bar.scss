@@ -1,0 +1,13 @@
+// Top Bar
+#top-bar {
+	background: $uq-purple;
+	height: 50px;
+
+	img {
+		width: 100px;
+		margin: 7px 0 0px 0;
+		margin-left: -50px;
+		@include centerer(true, false);
+	}
+}
+
