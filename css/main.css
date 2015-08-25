@@ -97,3 +97,97 @@ table {
     width: 90px; }
   #app-bar .selected {
     background: #1d1745; }
+
+input:focus {
+  outline: none; }
+
+.CodeInput {
+  width: 65px;
+  height: 65px;
+  background: #eee;
+  border-radius: 15%;
+  border: 1px solid #4a4a4a;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700; }
+
+#start-input {
+  width: 210px;
+  margin: auto;
+  margin-top: 30px; }
+
+.start-section-input h3 {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 800; }
+
+.start-or {
+  margin-top: 20px;
+  text-align: center; }
+  .start-or span {
+    position: relative;
+    display: inline-block; }
+
+.start-or:before {
+  content: '';
+  border-top: 3px solid #000;
+  width: 47%;
+  position: absolute;
+  height: 5px;
+  left: 0;
+  margin-top: 10px; }
+
+.start-or:after {
+  content: '';
+  border-top: 3px solid #000;
+  width: 47%;
+  position: absolute;
+  height: 5px;
+  right: 0;
+  margin-top: 10px; }
+
+.start-section-subjects {
+  margin-top: 20px;
+  width: 100%; }
+  .start-section-subjects h3 {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 800; }
+  .start-section-subjects ul {
+    max-width: 400px;
+    margin: auto; }
+  .start-section-subjects ul li {
+    color: white;
+    text-align: center;
+    height: 30px;
+    background: #16BF25;
+    border-radius: 15px;
+    margin: 3px;
+    padding-top: 12px;
+    -webkit-transition: .3s;
+            transition: .3s; }
+  .start-section-subjects ul li:hover {
+    background: #0b6413; }
+
+.startpage-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  padding-top: 30px; }
+
+.startpage-header {
+  height: 173px;
+  width: 100%;
+  background: #3D3092; }
+
+body {
+  font-family: "Roboto", serif; }
+
+.startpage-welcome {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 100;
+  font-size: 1em; }

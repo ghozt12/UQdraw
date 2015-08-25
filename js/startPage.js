@@ -1,0 +1,63 @@
+$('#someInput').bind('input', function() { 
+    $(this).val(); 
+    var value = $("#element").val();
+    alert(value);
+});
+
+// Auto Focus
+document.getElementById("CodeInputOne").focus();
+// Auto Move to next input on entry
+$(window).keyup(function(e) {
+
+	// Simple move to next input
+	if ($("#CodeInputOne").val())
+		document.getElementById("CodeInputTwo").focus();
+	if ($("#CodeInputTwo").val())
+		document.getElementById("CodeInputThree").focus();
+
+	// Find out which element we are focused on
+	var focused = document.activeElement;
+	var focusedNumber = 0;
+	
+	// 
+	switch (focused.id) {
+		case "CodeInputOne":
+			focusedNumber = 1;
+			break;
+		case "CodeInputTwo":
+			focusedNumber = 2;
+			break;
+		case "CodeInputThree":
+			focusedNumber = 3;
+			break;
+	}
+	
+	// if backspace is pressed and the focused input is empty,
+	// the remove the previous input
+	if (e.which == 8 || e.which == 46) {
+
+		// We are already at the edge
+		if (focusedNumber == 1)
+			return;
+
+		if ($("#"+focused.id).val() == '') {
+			if (focusedNumber == 2) {
+				$("#CodeInputOne").val() == '';
+				$("#CodeInputOne").focus();
+			}
+
+			if (focusedNumber == 3) {
+				$("#CodeInputTwo").val() == '';
+				$("#CodeInputTwo").focus();
+			}
+		}
+	}
+
+	// Check if we have all the numbers
+	if ( e.which != 13 && $("#CodeInputOne").val() != '' && $("#CodeInputTwo").val() != '' && $("#CodeInputThree").val() != '') {
+		var code;
+		code = $("#CodeInputOne").val() + $("#CodeInputTwo").val() + $("#CodeInputThree").val();
+		alert("YOU ENTERED CODE:" + code);
+	}
+
+});

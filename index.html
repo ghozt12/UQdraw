@@ -1,19 +1,43 @@
 <html>
 <head>
   <!-- CSS -->
-  <link rel="stylesheet" href="main.css">
-  <!-- JS -->
-  <script src="main.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  
 </head>
 
 <body>
-	<div id="top-bar">
-		<img src="images/uqdraw-logo.png"></img>
+	<section>
+		<div class="startpage-header">
+			<img class='startpage-logo' src="assets/images/uqdraw-logo-transparent.png" />
+			<h3 class="startpage-welcome"> Welcome <span id="start-username">Brenton</span> </h3>
+		</div>
+	</section>
 
-	</div>
-	<div id="app">
-		<h1> This Is Team One! </h1>
-	</div>
+	<section class="start-section-input">
+		<form id="start-input">
+			<input id="CodeInputOne" class='CodeInput' type='text' value='' maxlength="1" />
+			<input id="CodeInputTwo" class='CodeInput' type='text' value='' maxlength="1"/>
+			<input id="CodeInputThree" class='CodeInput' type='text' value='' maxlength="1"/>
+		</form>
+		<h3> Enter subject Code </h3>
+	</section>
+
+	<div class="start-or"> <span> or </span> </div>
+
+	<section class = "start-section-subjects">
+		<h3> Select subject below </h3>
+		
+		<ul>
+			<li> <span class="subject"> Subject 1 </span> </lI>
+			<li> <span class="subject"> Subject 2 </span> </lI>
+			<li> <span class="subject"> Subject 3 </span> </lI>
+
+		</ul>
+	</section>
 </body>
+	<!-- Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
+	<!-- JS -->
+  	<script src="js/startPage.js"></script>
 </html>
