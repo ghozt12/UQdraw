@@ -3,7 +3,5 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
-<path fill="#3D3092" stroke="#777777" stroke-width="1.5" stroke-miterlimit="10" d="M11.496,47.418L3.549,39.43
-	c-3.277-3.295-3.263-8.674,0.032-11.953L26.553,4.631c3.297-3.278,8.674-3.266,11.95,0.032l7.948,7.99
-	c3.279,3.296,3.261,8.674-0.031,11.952L23.448,47.451L48.9,47.447l-29.594-0.006L11.496,47.418z"/>
+<text transform="matrix(1 0 0 1 1 39.4551)" fill="#3D3092" stroke="#777777" stroke-width="2" stroke-miterlimit="10" font-family="'MyriadPro-Bold'" font-size="40.4653">Aa</text>
 </svg>
