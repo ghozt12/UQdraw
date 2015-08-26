@@ -1,6 +1,19 @@
+// Top Bar
+#top-bar {
+    background: $uq-purple;
+    height: 50px;
+
+    img {
+        width: 100px;
+        margin-top:7px;
+        margin-right: auto;
+        margin-left: auto;
+        @include centerer(true, false);
+    }
+}
 
 // Student
-.startpage-header {
+.header-startpage {
     height: 173px;
     width: 100%;
     background: $uq-purple;
