@@ -101,9 +101,12 @@ table {
     background-color: #2d236c; }
   .button-goto-lecture:hover {
     background-color: #0b6413; }
+<<<<<<< HEAD
 
 #drawing-app {
   overflow: hidden; }
+=======
+>>>>>>> 2b802eb38879e4f4eb6f9401c45682d1563b0d8f
 
 #app-bar {
   background: #3D3092;
