@@ -80,18 +80,27 @@ table {
   top: 10px;
   left: 10px; }
 
-.button-goto-prepare {
-  background-color: #3D3092;
+.button-goto-prepare, .button-goto-lecture {
   width: 150px;
   height: 100%;
   display: inline-block;
   float: right;
   color: white;
   text-align: center; }
-  .button-goto-prepare p {
+  
+.button-goto-prepare {
+   background-color: #3D3092;
+}
+.button-goto-lecture {
+   background-color: #16BF25;
+}
+  .button-goto-prepare p , .button-goto-lecture p {
     margin-top: 15px; }
+	
   .button-goto-prepare:hover {
     background-color: #2d236c; }
+  .button-goto-lecture:hover {
+    background-color: #0b6413; }
 
 #drawing-app {
   overflow: hidden; }
@@ -205,6 +214,11 @@ input:focus {
   width: 100%;
   background: #16BF25; }
 
+.header-l-prepare-header {
+  height: 50px;
+  width: 100%;
+  background: #3D3092; }
+  
 body {
   font-family: "Roboto", serif; }
 
