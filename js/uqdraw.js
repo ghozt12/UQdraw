@@ -49,6 +49,7 @@ var UQdraw = (function() {
 
 		// When the user press down
 		press = function(e) {
+			e.preventDefault();
 			// Mouse position
 			var mouseX = e.pageX - this.offsetLeft;
 			var mouseY = e.pageY - this.offsetTop;
@@ -60,6 +61,7 @@ var UQdraw = (function() {
 
 		// When the user drags
 		drag = function(e) {
+			e.preventDefault();
 			// Make sure that they have touched first
 			if (currently_painting) {
 				addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
@@ -79,10 +81,10 @@ var UQdraw = (function() {
 		};
 
 		// Touch resources
-	    document.addEventListener("touchstart", press, true);
-	    document.addEventListener("touchmove", drag, true);
-	    document.addEventListener("touchend", release, true);
-	    document.addEventListener("touchcancel", cancel, true); 
+	    canvas.addEventListener("touchstart", press, true);
+	    canvas.addEventListener("touchmove", drag, true);
+	    canvas.addEventListener("touchend", release, true);
+	    canvas.addEventListener("touchcancel", cancel, true); 
 
 	    // Mouse resources 
 		canvas.addEventListener("mousedown", press, false);

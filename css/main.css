@@ -93,6 +93,9 @@ table {
   .button-goto-prepare:hover {
     background-color: #2d236c; }
 
+#drawing-app {
+  overflow: hidden; }
+
 #app-bar {
   background: #3D3092;
   height: 70px;

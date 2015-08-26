@@ -2,6 +2,10 @@
 
 // Canvas size is set in JS
 
+#drawing-app {
+	overflow: hidden;
+}
+
 // Top Bar
 #app-bar {
 	background: $uq-purple;
