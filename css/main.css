@@ -30,6 +30,10 @@ blockquote:before, blockquote:after {
 q:before, q:after {
   content: '';
   content: none; }
+  
+a {
+text-decoration:none;
+}
 
 table {
   border-collapse: collapse;
@@ -49,7 +53,7 @@ table {
         -ms-transform: translate(-50%, 0);
             transform: translate(-50%, 0); }
 
-.submit, .drawing-app-submit, .drawing-app-question {
+.submit, .drawing-app-submit, .drawing-app-back, .drawing-app-question {
   height: 60px;
   width: 150px;
   border: 2px solid #AFA5FF;
@@ -64,7 +68,7 @@ table {
   width: 100px;
   background-color: #3D3092 !important;
   background-color: #FFF; }
-  .submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover {
+  .submit:hover, .drawing-app-submit:hover, .drawing-app-back:hover, .drawing-app-question:hover{
     border: 2px solid #FFF;
     color: #FFF;
     -webkit-transition: 0.4s;
@@ -75,10 +79,15 @@ table {
   top: 10px;
   right: 10px; }
 
-.drawing-app-question {
+.drawing-app-back {
   position: absolute;
   top: 10px;
   left: 10px; }
+  
+.drawing-app-question {
+  position: absolute;
+  top: 60px;
+  right: 10px; }
 
 .button-goto-prepare, .button-goto-lecture {
   width: 150px;
@@ -105,8 +114,8 @@ table {
 
 #drawing-app {
   overflow: hidden; }
-=======
->>>>>>> 2b802eb38879e4f4eb6f9401c45682d1563b0d8f
+/* =======
+>>>>>>> 2b802eb38879e4f4eb6f9401c45682d1563b0d8f */ /* what is this???? */
 
 #app-bar {
   background: #3D3092;
@@ -115,16 +124,16 @@ table {
   bottom: 0;
   width: 100%; }
   #app-bar img {
-    height: 30px;
-    margin-top: 22px;
-    margin-left: 30px; }
+    height: 45px;
+    margin-top: 15px;
+    margin-left: 23px; }
   #app-bar .icon-select {
     display: inline-block;
-    margin-left: calc(100vw / 8);
+    margin-left: calc(100vw / 12);
     height: 70px;
     width: 90px; }
   #app-bar .selected {
-    background: #1d1745; }
+    background: white; }
 
 input:focus {
   outline: none; }
@@ -210,7 +219,8 @@ input:focus {
   height: 173px;
   width: 100%;
   background: white;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-top:-20px}
 
 .header-l-subjects-header {
   height: 50px;
@@ -269,22 +279,26 @@ body {
   margin-top: 18px; }
 
 .lecture-mode {
-  background: #0b6413;
+  background-image: url("../assets/images/lecture-mode-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: calc(100vh - 173px);
   cursor: pointer;
   -webkit-transition: .3s;
           transition: .3s; }
   .lecture-mode:hover {
-    background: #16BF25; }
+    opacity: .8; }
 
 .prepare-mode {
-  background: #1d1745;
+  background-image: url("../assets/images/prepare-mode-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: calc(100vh - 173px);
   cursor: pointer;
   -webkit-transition: .3s;
           transition: .3s; }
   .prepare-mode:hover {
-    background: #3D3092; }
+    opacity: .8; }
 
 .theme-question-purple h2 {
   text-align: center;
