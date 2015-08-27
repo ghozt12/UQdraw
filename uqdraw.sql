@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 27, 2015 at 03:34 AM
+-- Generation Time: Aug 27, 2015 at 08:18 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -23,52 +23,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `course`
---
-
-CREATE TABLE IF NOT EXISTS `course` (
-  `lecturerID` varchar(11) NOT NULL,
-  `courseID` varchar(11) NOT NULL,
-  `enteringCode` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `lecturer`
---
-
-CREATE TABLE IF NOT EXISTS `lecturer` (
-  `lecturerID` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `question`
 --
 
 CREATE TABLE IF NOT EXISTS `question` (
   `courseID` varchar(11) NOT NULL,
-  `questionID` int(11) NOT NULL,
+  `questionID` int(11) NOT NULL AUTO_INCREMENT,
   `questionTitle` text NOT NULL,
   `questionImage` text,
   UNIQUE KEY `questionID` (`questionID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `submission`
---
-
-CREATE TABLE IF NOT EXISTS `submission` (
-  `questionID` varchar(11) NOT NULL,
-  `studentID` varchar(11) NOT NULL,
-  `date` date NOT NULL,
-  `subImage` text NOT NULL,
-  `result` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
