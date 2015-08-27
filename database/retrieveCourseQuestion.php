@@ -9,6 +9,7 @@
 	require['dbconnect.php'];
 
 	$enteringCode = $_POST['enteringCode'];
+    $studentID = $_POST['studentID'];
 
 	$sql = 'SELECT * from course WHERE enteringCode = "'.$enteringCode.'"';
 	
@@ -32,7 +33,7 @@
     */
     session_start();
     $_SESSION['courseID'] = $courseID;
-
+    $_SESSION['studentID'] = $studentID;
 
     /*
         after procceed the retrieving Course action from db, 

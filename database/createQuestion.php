@@ -39,7 +39,6 @@
     /*
         add needed information into session()
     */
-    session_start();
     $_SESSION['questionTitle'] = $questionTitle;
 
 
