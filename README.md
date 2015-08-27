@@ -2,5 +2,7 @@
 UQDraw web application for DECO3801.
 
 # To run sass converter
-open terminal
-type "gulp"
+## Install compass
+gem install compass
+## Run compass
+compass watch
