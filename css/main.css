@@ -2,142 +2,195 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/* line 6, scss/partials/_reset.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after {
-  content: '';
-  content: none; }
-
-q:before, q:after {
-  content: '';
-  content: none; }
-  
-a {
-text-decoration:none;
+  vertical-align: baseline;
 }
 
+/* HTML5 display-role reset for older browsers */
+/* line 16, scss/partials/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 19, scss/partials/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, scss/partials/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 25, scss/partials/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 29, scss/partials/_reset.scss */
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+/* line 34, scss/partials/_reset.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 38, scss/partials/_reset.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
-#top-bar {
+/* line 2, scss/partials/_headers.scss */
+#headers-top-bar {
   background: #3D3092;
-  height: 50px; }
-  #top-bar img {
-    width: 100px;
-    margin-top: 7px;
-    margin-right: auto;
-    margin-left: auto;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-            transform: translate(-50%, 0); }
+  height: 50px;
+}
+/* line 6, scss/partials/_headers.scss */
+#headers-top-bar img {
+  width: 100px;
+  margin-top: 7px;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 
-.submit, .drawing-app-submit, .drawing-app-back, .drawing-app-question {
+/* line 18, scss/partials/_headers.scss */
+.header-startpage {
+  height: 173px;
+  width: 100%;
+  background: #3D3092;
+}
+/* line 23, scss/partials/_headers.scss */
+.header-startpage h3 {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 100;
+  font-size: 1em;
+}
+
+/* line 34, scss/partials/_headers.scss */
+.lecturer-startpage-header {
+  height: 173px;
+  width: 100%;
+  background: white;
+  margin-bottom: 20px;
+}
+
+/* line 41, scss/partials/_headers.scss */
+.header-l-subjects-header {
+  height: 50px;
+  width: 100%;
+  background: #16BF25;
+}
+
+/* line 3, scss/partials/_buttons.scss */
+.submit, .drawing-app-submit, .drawing-app-question {
   height: 60px;
   width: 150px;
   border: 2px solid #AFA5FF;
   border-radius: 50px;
   color: #AFA5FF;
   font-size: 16px;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   outline-style: none;
   cursor: pointer;
   height: 30px;
   width: 100px;
   background-color: #3D3092 !important;
-  background-color: #FFF; }
-  .submit:hover, .drawing-app-submit:hover, .drawing-app-back:hover, .drawing-app-question:hover{
-    border: 2px solid #FFF;
-    color: #FFF;
-    -webkit-transition: 0.4s;
-            transition: 0.4s; }
+  background-color: #FFF;
+}
+/* line 19, scss/partials/_buttons.scss */
+.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover {
+  border: 2px solid #FFF;
+  color: #FFF;
+  transition: 0.4s;
+}
 
+/* line 26, scss/partials/_buttons.scss */
 .drawing-app-submit {
   position: absolute;
   top: 10px;
-  right: 10px; }
+  right: 10px;
+}
 
-.drawing-app-back {
-  position: absolute;
-  top: 10px;
-  left: 10px; }
-  
+/* line 35, scss/partials/_buttons.scss */
 .drawing-app-question {
   position: absolute;
-  top: 60px;
-  right: 10px; }
+  top: 10px;
+  left: 10px;
+}
 
-.button-goto-prepare, .button-goto-lecture {
+/* line 45, scss/partials/_buttons.scss */
+.button-goto-prepare {
+  background-color: #3D3092;
   width: 150px;
   height: 100%;
   display: inline-block;
   float: right;
   color: white;
-  text-align: center; }
-  
-.button-goto-prepare {
-   background-color: #3D3092;
+  text-align: center;
 }
-.button-goto-lecture {
-   background-color: #16BF25;
+/* line 55, scss/partials/_buttons.scss */
+.button-goto-prepare p {
+  margin-top: 15px;
 }
-  .button-goto-prepare p , .button-goto-lecture p {
-    margin-top: 15px; }
-	
-  .button-goto-prepare:hover {
-    background-color: #2d236c; }
-  .button-goto-lecture:hover {
-    background-color: #0b6413; }
-<<<<<<< HEAD
+/* line 59, scss/partials/_buttons.scss */
+.button-goto-prepare:hover {
+  background-color: #2d236c;
+}
 
+/* line 5, scss/partials/_canvas.scss */
 #drawing-app {
-  overflow: hidden; }
-/* =======
->>>>>>> 2b802eb38879e4f4eb6f9401c45682d1563b0d8f */ /* what is this???? */
+  overflow: hidden;
+}
 
+/* line 10, scss/partials/_canvas.scss */
 #app-bar {
   background: #3D3092;
   height: 70px;
   position: absolute;
   bottom: 0;
-  width: 100%; }
-  #app-bar img {
-    height: 45px;
-    margin-top: 15px;
-    margin-left: 23px; }
-  #app-bar .icon-select {
-    display: inline-block;
-    margin-left: calc(100vw / 12);
-    height: 70px;
-    width: 90px; }
-  #app-bar .selected {
-    background: white; }
+  width: 100%;
+}
+/* line 17, scss/partials/_canvas.scss */
+#app-bar img {
+  height: 30px;
+  margin-top: 22px;
+  margin-left: 30px;
+}
+/* line 24, scss/partials/_canvas.scss */
+#app-bar .icon-select {
+  display: inline-block;
+  margin-left: calc(100vw / 8);
+  height: 70px;
+  width: 90px;
+}
+/* line 31, scss/partials/_canvas.scss */
+#app-bar .selected {
+  background: #1d1745;
+}
 
+/* line 1, scss/partials/_input_startpage.scss */
 input:focus {
-  outline: none; }
+  outline: none;
+}
 
+/* line 5, scss/partials/_input_startpage.scss */
 .CodeInput {
   width: 65px;
   height: 65px;
@@ -146,20 +199,28 @@ input:focus {
   border: 1px solid #4a4a4a;
   font-size: 40px;
   text-align: center;
-  font-weight: 700; }
+  font-weight: 700;
+}
 
+/* line 16, scss/partials/_input_startpage.scss */
 #start-input {
   width: 210px;
   margin: auto;
-  margin-top: 30px; }
+  margin-top: 30px;
+}
 
+/* line 24, scss/partials/_input_startpage.scss */
 .start-or {
   margin-top: 20px;
-  text-align: center; }
-  .start-or span {
-    position: relative;
-    display: inline-block; }
+  text-align: center;
+}
+/* line 28, scss/partials/_input_startpage.scss */
+.start-or span {
+  position: relative;
+  display: inline-block;
+}
 
+/* line 34, scss/partials/_input_startpage.scss */
 .start-or:before {
   content: '';
   border-top: 3px solid #000;
@@ -167,8 +228,10 @@ input:focus {
   position: absolute;
   height: 5px;
   left: 0;
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
+/* line 44, scss/partials/_input_startpage.scss */
 .start-or:after {
   content: '';
   border-top: 3px solid #000;
@@ -176,205 +239,292 @@ input:focus {
   position: absolute;
   height: 5px;
   right: 0;
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
+/* line 54, scss/partials/_input_startpage.scss */
 .start-section-subjects {
   margin-top: 20px;
-  width: 100%; }
-  .start-section-subjects ul {
-    max-width: 400px;
-    margin: auto; }
-  .start-section-subjects ul li {
-    color: white;
-    text-align: center;
-    height: 30px;
-    background: #16BF25;
-    border-radius: 15px;
-    margin: 3px;
-    padding-top: 12px;
-    -webkit-transition: .3s;
-            transition: .3s; }
-  .start-section-subjects ul li:hover {
-    background: #0b6413; }
+  width: 100%;
+}
+/* line 59, scss/partials/_input_startpage.scss */
+.start-section-subjects ul {
+  max-width: 400px;
+  margin: auto;
+}
+/* line 65, scss/partials/_input_startpage.scss */
+.start-section-subjects ul li {
+  color: white;
+  text-align: center;
+  height: 30px;
+  background: #16BF25;
+  border-radius: 15px;
+  margin: 3px;
+  padding-top: 12px;
+  transition: .3s;
+}
+/* line 76, scss/partials/_input_startpage.scss */
+.start-section-subjects ul li:hover {
+  background: #0b6413;
+}
 
-.startpage-logo {
+/* line 1, scss/partials/_images.scss */
+.images-startpage-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 400px;
-  padding-top: 30px; }
+  padding-top: 30px;
+}
 
+/* line 9, scss/partials/_images.scss */
 .images-l-subjects {
   display: inline-block;
   height: 30px;
   padding-top: 10px;
-  float: left; }
+  float: left;
+}
 
-.startpage-header {
+/* line 2, scss/partials/_headers.scss */
+#headers-top-bar {
+  background: #3D3092;
+  height: 50px;
+}
+/* line 6, scss/partials/_headers.scss */
+#headers-top-bar img {
+  width: 100px;
+  margin-top: 7px;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* line 18, scss/partials/_headers.scss */
+.header-startpage {
   height: 173px;
   width: 100%;
-  background: #3D3092; }
+  background: #3D3092;
+}
+/* line 23, scss/partials/_headers.scss */
+.header-startpage h3 {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 100;
+  font-size: 1em;
+}
 
+/* line 34, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 173px;
   width: 100%;
   background: white;
   margin-bottom: 20px;
-  margin-top:-20px}
+}
 
+/* line 41, scss/partials/_headers.scss */
 .header-l-subjects-header {
   height: 50px;
   width: 100%;
-  background: #16BF25; }
+  background: #16BF25;
+}
 
-.header-l-prepare-header {
-  height: 50px;
-  width: 100%;
-  background: #3D3092; }
-  
+/* line 1, scss/partials/_typography.scss */
 body {
-  font-family: "Roboto", serif; }
+  font-family: "Roboto", serif;
+}
 
+/* line 7, scss/partials/_typography.scss */
 .startpage-welcome {
   color: white;
   text-align: center;
   width: 100%;
   margin-top: 10px;
   font-weight: 100;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
+/* line 18, scss/partials/_typography.scss */
 .start-section-input h3 {
   text-align: center;
   padding-top: 10px;
-  font-weight: 800; }
+  font-weight: 800;
+}
 
+/* line 32, scss/partials/_typography.scss */
 .lecturer-startpage-welcome {
   color: #000;
   text-align: center;
   width: 100%;
   margin-top: 10px;
   font-weight: 100;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
+/* line 41, scss/partials/_typography.scss */
 #lecturer-start-username {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
+/* line 46, scss/partials/_typography.scss */
 .lecture-mode h2, .prepare-mode h2 {
   color: white;
   font-size: 50px;
   text-align: center;
   font-weight: 500;
   padding-top: calc(55vh - 173px);
-  margin-bottom: 30px; }
-
+  margin-bottom: 30px;
+}
+/* line 55, scss/partials/_typography.scss */
 .lecture-mode h3, .prepare-mode h3 {
   color: white;
   font-weight: 300;
-  text-align: center; }
+  text-align: center;
+}
 
+/* line 62, scss/partials/_typography.scss */
 .typography-l-h3 {
   color: white;
   display: inline-block;
   margin-left: 20px;
-  margin-top: 18px; }
+  margin-top: 18px;
+}
 
+/* line 5, scss/partials/_theme.scss */
 .lecture-mode {
-  background-image: url("../assets/images/lecture-mode-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #0b6413;
   height: calc(100vh - 173px);
   cursor: pointer;
-  -webkit-transition: .3s;
-          transition: .3s; }
-  .lecture-mode:hover {
-    opacity: .8; }
+  transition: .3s;
+}
+/* line 11, scss/partials/_theme.scss */
+.lecture-mode:hover {
+  background: #16BF25;
+}
 
+/* line 16, scss/partials/_theme.scss */
 .prepare-mode {
-  background-image: url("../assets/images/prepare-mode-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #1d1745;
   height: calc(100vh - 173px);
   cursor: pointer;
-  -webkit-transition: .3s;
-          transition: .3s; }
-  .prepare-mode:hover {
-    opacity: .8; }
+  transition: .3s;
+}
+/* line 22, scss/partials/_theme.scss */
+.prepare-mode:hover {
+  background: #3D3092;
+}
 
+/* line 29, scss/partials/_theme.scss */
 .theme-question-purple h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
-  font-size: 40px; }
+  font-size: 40px;
+}
 
+/* line 1, scss/partials/_list.scss */
 .list-subjects, .list-subjects-purple, .list-subjects-green {
   margin-top: 20px;
-  width: 100%; }
-  .list-subjects ul, .list-subjects-purple ul, .list-subjects-green ul {
-    max-width: 400px;
-    margin: auto; }
-  .list-subjects ul li, .list-subjects-purple ul li, .list-subjects-green ul li {
-    color: white;
-    text-align: center;
-    height: 30px;
-    border-radius: 15px;
-    margin: 3px;
-    padding-top: 12px;
-    -webkit-transition: .3s;
-            transition: .3s; }
-  .list-subjects h2, .list-subjects-purple h2, .list-subjects-green h2 {
-    text-align: center;
-    padding-top: 10px;
-    font-weight: 800;
-    font-size: 40px; }
-  .list-subjects h3, .list-subjects-purple h3, .list-subjects-green h3 {
-    text-align: center;
-    padding-top: 10px;
-    font-weight: 500;
-    padding-bottom: 10px; }
+  width: 100%;
+}
+/* line 5, scss/partials/_list.scss */
+.list-subjects ul, .list-subjects-purple ul, .list-subjects-green ul {
+  max-width: 400px;
+  margin: auto;
+}
+/* line 11, scss/partials/_list.scss */
+.list-subjects ul li, .list-subjects-purple ul li, .list-subjects-green ul li {
+  color: white;
+  text-align: center;
+  height: 30px;
+  border-radius: 15px;
+  margin: 3px;
+  padding-top: 12px;
+  transition: .3s;
+}
+/* line 22, scss/partials/_list.scss */
+.list-subjects h2, .list-subjects-purple h2, .list-subjects-green h2 {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 800;
+  font-size: 40px;
+}
+/* line 29, scss/partials/_list.scss */
+.list-subjects h3, .list-subjects-purple h3, .list-subjects-green h3 {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
 
+/* line 40, scss/partials/_list.scss */
 .list-subjects-purple ul li {
-  background: #3D3092; }
-
+  background: #3D3092;
+}
+/* line 44, scss/partials/_list.scss */
 .list-subjects-purple ul li:hover {
-  background: #1d1745; }
+  background: #1d1745;
+}
 
+/* line 53, scss/partials/_list.scss */
 .list-subjects-green ul li {
-  background: #16BF25; }
-
+  background: #16BF25;
+}
+/* line 57, scss/partials/_list.scss */
 .list-subjects-green ul li:hover {
-  background: #0b6413; }
+  background: #0b6413;
+}
 
+/* line 62, scss/partials/_list.scss */
 .list-questions, .list-questions-purple {
   margin-top: 20px;
-  width: 100%; }
-  .list-questions ul, .list-questions-purple ul {
-    max-width: 400px;
-    margin: auto; }
-  .list-questions ul li, .list-questions-purple ul li {
-    margin-bottom: 10px; }
-  .list-questions ul li div, .list-questions-purple ul li div {
-    color: white;
-    height: 30px;
-    margin: 3px;
-    padding-top: 12px;
-    -webkit-transition: .3s;
-            transition: .3s;
-    padding-left: 10px; }
-  .list-questions h2, .list-questions-purple h2 {
-    text-align: center;
-    padding-top: 10px;
-    font-weight: 800;
-    font-size: 40px; }
-  .list-questions h3, .list-questions-purple h3 {
-    text-align: center;
-    padding-top: 10px;
-    font-weight: 500;
-    padding-bottom: 10px; }
-  .list-questions label, .list-questions-purple label {
-    font-size: 20px; }
+  width: 100%;
+}
+/* line 67, scss/partials/_list.scss */
+.list-questions ul, .list-questions-purple ul {
+  max-width: 400px;
+  margin: auto;
+}
+/* line 73, scss/partials/_list.scss */
+.list-questions ul li, .list-questions-purple ul li {
+  margin-bottom: 10px;
+}
+/* line 77, scss/partials/_list.scss */
+.list-questions ul li div, .list-questions-purple ul li div {
+  color: white;
+  height: 30px;
+  margin: 3px;
+  padding-top: 12px;
+  transition: .3s;
+  padding-left: 10px;
+}
+/* line 86, scss/partials/_list.scss */
+.list-questions h2, .list-questions-purple h2 {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 800;
+  font-size: 40px;
+}
+/* line 93, scss/partials/_list.scss */
+.list-questions h3, .list-questions-purple h3 {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+/* line 100, scss/partials/_list.scss */
+.list-questions label, .list-questions-purple label {
+  font-size: 20px;
+}
 
+/* line 109, scss/partials/_list.scss */
 .list-questions-purple ul li div {
-  background: #3D3092; }
-
+  background: #3D3092;
+}
+/* line 113, scss/partials/_list.scss */
 .list-questions-purple ul li div:hover {
-  background: #1d1745; }
+  background: #1d1745;
+}
