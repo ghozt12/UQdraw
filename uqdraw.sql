@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.10
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Aug 27, 2015 at 12:56 AM
--- Server version: 5.6.19
--- PHP Version: 5.5.16
+-- Host: 127.0.0.1
+-- Generation Time: Aug 27, 2015 at 03:34 AM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Course`
+-- Table structure for table `course`
 --
 
-CREATE TABLE IF NOT EXISTS `Course` (
+CREATE TABLE IF NOT EXISTS `course` (
   `lecturerID` varchar(11) NOT NULL,
   `courseID` varchar(11) NOT NULL,
   `enteringCode` varchar(11) NOT NULL
@@ -35,49 +35,40 @@ CREATE TABLE IF NOT EXISTS `Course` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Lecturer`
+-- Table structure for table `lecturer`
 --
 
-CREATE TABLE IF NOT EXISTS `Lecturer` (
+CREATE TABLE IF NOT EXISTS `lecturer` (
   `lecturerID` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Question`
+-- Table structure for table `question`
 --
 
-CREATE TABLE IF NOT EXISTS `Question` (
+CREATE TABLE IF NOT EXISTS `question` (
   `courseID` varchar(11) NOT NULL,
   `questionID` int(11) NOT NULL,
   `questionTitle` text NOT NULL,
-  `questionImage` text NOT NULL
+  `questionImage` text,
+  UNIQUE KEY `questionID` (`questionID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Submission`
+-- Table structure for table `submission`
 --
 
-CREATE TABLE IF NOT EXISTS `Submission` (
+CREATE TABLE IF NOT EXISTS `submission` (
   `questionID` varchar(11) NOT NULL,
   `studentID` varchar(11) NOT NULL,
   `date` date NOT NULL,
   `subImage` text NOT NULL,
-  `result` int(11) NOT NULL
+  `result` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `Question`
---
-ALTER TABLE `Question`
-  ADD UNIQUE KEY `questionID` (`questionID`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
