@@ -185,12 +185,12 @@ table {
   background: #1d1745;
 }
 
-/* line 1, scss/partials/_input_startpage.scss */
+/* line 1, scss/partials/_start_three_input.scss */
 input:focus {
   outline: none;
 }
 
-/* line 5, scss/partials/_input_startpage.scss */
+/* line 5, scss/partials/_start_three_input.scss */
 .CodeInput {
   width: 65px;
   height: 65px;
@@ -202,25 +202,25 @@ input:focus {
   font-weight: 700;
 }
 
-/* line 16, scss/partials/_input_startpage.scss */
+/* line 16, scss/partials/_start_three_input.scss */
 #start-input {
   width: 210px;
   margin: auto;
   margin-top: 30px;
 }
 
-/* line 24, scss/partials/_input_startpage.scss */
+/* line 22, scss/partials/_start_three_input.scss */
 .start-or {
   margin-top: 20px;
   text-align: center;
 }
-/* line 28, scss/partials/_input_startpage.scss */
+/* line 26, scss/partials/_start_three_input.scss */
 .start-or span {
   position: relative;
   display: inline-block;
 }
 
-/* line 34, scss/partials/_input_startpage.scss */
+/* line 32, scss/partials/_start_three_input.scss */
 .start-or:before {
   content: '';
   border-top: 3px solid #000;
@@ -231,7 +231,7 @@ input:focus {
   margin-top: 10px;
 }
 
-/* line 44, scss/partials/_input_startpage.scss */
+/* line 42, scss/partials/_start_three_input.scss */
 .start-or:after {
   content: '';
   border-top: 3px solid #000;
@@ -242,17 +242,17 @@ input:focus {
   margin-top: 10px;
 }
 
-/* line 54, scss/partials/_input_startpage.scss */
+/* line 52, scss/partials/_start_three_input.scss */
 .start-section-subjects {
   margin-top: 20px;
   width: 100%;
 }
-/* line 59, scss/partials/_input_startpage.scss */
+/* line 57, scss/partials/_start_three_input.scss */
 .start-section-subjects ul {
   max-width: 400px;
   margin: auto;
 }
-/* line 65, scss/partials/_input_startpage.scss */
+/* line 62, scss/partials/_start_three_input.scss */
 .start-section-subjects ul li {
   color: white;
   text-align: center;
@@ -263,7 +263,7 @@ input:focus {
   padding-top: 12px;
   transition: .3s;
 }
-/* line 76, scss/partials/_input_startpage.scss */
+/* line 73, scss/partials/_start_three_input.scss */
 .start-section-subjects ul li:hover {
   background: #0b6413;
 }
@@ -395,29 +395,38 @@ body {
 
 /* line 5, scss/partials/_theme.scss */
 .lecture-mode {
-  background: #0b6413;
+  background-image: url(../assets/images/lecture-mode-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: calc(100vh - 173px);
   cursor: pointer;
-  transition: .3s;
+  transition: .5s;
 }
-/* line 11, scss/partials/_theme.scss */
+/* line 13, scss/partials/_theme.scss */
 .lecture-mode:hover {
-  background: #16BF25;
+  opacity: .9;
 }
 
-/* line 16, scss/partials/_theme.scss */
+/* line 19, scss/partials/_theme.scss */
+.lecture-start a {
+  text-decoration: none;
+}
+
+/* line 24, scss/partials/_theme.scss */
 .prepare-mode {
-  background: #1d1745;
+  background-image: url(../assets/images/prepare-mode-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: calc(100vh - 173px);
   cursor: pointer;
   transition: .3s;
 }
-/* line 22, scss/partials/_theme.scss */
+/* line 32, scss/partials/_theme.scss */
 .prepare-mode:hover {
-  background: #3D3092;
+  opacity: .9;
 }
 
-/* line 29, scss/partials/_theme.scss */
+/* line 39, scss/partials/_theme.scss */
 .theme-question-purple h2 {
   text-align: center;
   padding-top: 10px;
