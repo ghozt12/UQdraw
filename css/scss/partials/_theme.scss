@@ -4,24 +4,34 @@
 
 // Start page
 .lecture-mode {
-	background: darken($uq-green, 20%);
+	background-image: url(../assets/images/lecture-mode-bg.png);
+	background-repeat: no-repeat;
+    background-size: cover;
 	height: calc(100vh - 173px);
 	cursor: pointer;
-	transition: .3s;
-
+	transition: .5s;
+	
 	&:hover {
-		background: $uq-green;
+		opacity: .9;
+	}
+}
+
+.lecture-start{
+a {
+		 text-decoration: none;
 	}
 }
 
 .prepare-mode {
-	background: darken($uq-purple, 20%);
+	background-image: url(../assets/images/prepare-mode-bg.png);
+	background-repeat: no-repeat;
+    background-size: cover;
 	height: calc(100vh - 173px);
 	cursor: pointer;
 	transition: .3s;
 
 	&:hover {
-		background: $uq-purple;
+		opacity: .9;
 	}
 }
 

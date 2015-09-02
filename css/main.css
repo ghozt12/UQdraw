@@ -416,29 +416,38 @@ body {
 
 /* line 6, scss/partials/_theme.scss */
 .lecture-mode {
-  background: #0b6413;
+  background-image: url(../assets/images/lecture-mode-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: calc(100vh - 173px);
   cursor: pointer;
-  transition: .3s;
+  transition: .5s;
 }
-/* line 12, scss/partials/_theme.scss */
+/* line 14, scss/partials/_theme.scss */
 .lecture-mode:hover {
-  background: #16BF25;
+  opacity: .9;
 }
 
-/* line 17, scss/partials/_theme.scss */
+/* line 20, scss/partials/_theme.scss */
+.lecture-start a {
+  text-decoration: none;
+}
+
+/* line 25, scss/partials/_theme.scss */
 .prepare-mode {
-  background: #1d1745;
+  background-image: url(../assets/images/prepare-mode-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: calc(100vh - 173px);
   cursor: pointer;
   transition: .3s;
 }
-/* line 23, scss/partials/_theme.scss */
+/* line 33, scss/partials/_theme.scss */
 .prepare-mode:hover {
-  background: #3D3092;
+  opacity: .9;
 }
 
-/* line 30, scss/partials/_theme.scss */
+/* line 40, scss/partials/_theme.scss */
 .theme-question-purple h2 {
   text-align: center;
   padding-top: 10px;
