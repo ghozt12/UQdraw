@@ -9,7 +9,7 @@
 	<section>
 		<div class="header-startpage">
 			<img class='images-startpage-logo' src="assets/images/uqdraw-logo-transparent.png" />
-			<h3> Welcome <span id="start-username">Brenton</span> </h3>
+			<h3> Welcome <span id="start-username"></span> </h3>
 		</div>
 	</section>
 
@@ -41,4 +41,10 @@
 
 	<!-- JS -->
   	<script src="js/startPage.js"></script>
+
+  	<script>
+  		 $(document).ready(function() {
+  		 	$("#start-username").load("pages/signon.php");
+  		 });
+  	</script>
 </html>
