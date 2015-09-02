@@ -20,6 +20,38 @@ body {
 	font-weight: 600;
 }
 
+// This is for the title bar (page title)
+.type-title {
+	color: white;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 18px;
+}
+
+// Body heading
+.type-body-heading {
+	text-align: center;
+	padding-top: 10px;
+	font-weight: 800;
+	font-size: 40px;
+}
+// Body subheading
+.type-body-subheading {
+	text-align: center;
+	padding-top: 10px;
+	font-weight: 500;
+	padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
 // Student Start Page
 
 .startpage-welcome {

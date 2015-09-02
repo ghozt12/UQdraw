@@ -5,29 +5,34 @@
   <link rel="stylesheet" href="../css/gridism.css">
 </head>
 
-<body class="lecturer-startpage">
-
+<body>
+	<!-- Header -->
 	<section>
-		<div class="header-l-prepare-header">
-			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
-			<h3 class="typography-l-h3"> Prepare Mode </h3>
-			<a href="lecture-subjects.html"><div class="button-goto-lecture"> <p> goto Lecture Mode </p></div></a>
+		<div class='header-l-prepare'>
+			<!-- Logo (small) -->
+			<a href="#"><img class='images-l-subjects' src='../assets/images/topbar-logo.png' /></a>
+			<!-- Title of the page -->
+			<h3 class='type-title'> Prepare Mode </h3>
+			<!-- Switch button -->
+			<a href='lecture-subjects.html'><div class='button-switch'> <p> Lecture Mode </p></div></a>
 		</div>
 	</section>
 
-	<section class = "list-subjects-green">
-
-		<h2> Subjects </h2>
-		<h3> Select subject below or click 'Add Subject' to create a new one. </h3>
-
-		<ul>
-			<li> <span class="subject"> Subject 1 </span> </lI>
-			<li> <span class="subject"> Subject 2 </span> </lI>
-			<li> <span class="subject"> Subject 3 </span> </lI>
-			<li> <span class="subject"> + </span> </lI>
-
+	<!-- Body -->
+	<section>
+		<!-- Body Heading -->
+		<h2 class="type-body-heading"> Subjects </h2>
+		<!-- Body Subheading -->
+		<h3 class="type-body-subheading"> Select subject below or click 'Add Subject' to create a new one. </h3>
+		<!-- List the subjects -->
+		<ul class="list-subjects-green">
+			<!-- Place PHP here, for each subject in db, create a <li> element -->
+			<li> <span> Subject 1 </span> </li>
+			<li> <span> Subject 2 </span> </li>
+			<li> <span> Subject 3 </span> </li>
+			<!-- Create new Subject button -->
+			<button class="button-add-subject">+</button>
 		</ul>
-
 	</section>
 
 </body>

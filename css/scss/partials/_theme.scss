@@ -1,9 +1,8 @@
-.theme-lecturer-startpage-body {
+/* *******
+** THEME SPECIFIC STYLING
+** ******/
 
-}
-
-// Start page
-.lecture-mode {
+.theme-lecture-mode {
 	background-image: url(../assets/images/lecture-mode-bg.png);
 	background-repeat: no-repeat;
     background-size: cover;
@@ -22,7 +21,7 @@ a {
 	}
 }
 
-.prepare-mode {
+.theme-prepare-mode {
 	background-image: url(../assets/images/prepare-mode-bg.png);
 	background-repeat: no-repeat;
     background-size: cover;
@@ -44,10 +43,3 @@ a {
 		font-size: 40px;
 	}
 }
-
-.theme-lecture-start {
-
-}
-
-
-// Student side

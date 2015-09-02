@@ -1,3 +1,10 @@
+/* *******
+** Headers
+** ******/
+
+// Variables:
+$header-height: 50px;
+
 // Top Bar
 #headers-top-bar {
     background: $uq-purple;
@@ -11,6 +18,22 @@
         @include centerer(true, false);
     }
 }
+
+// Header for Prepare (ie Purple)
+.header-l-prepare {
+    height: $header-height;
+    width: 100%;
+    background: $uq-green;
+}
+
+// Header for Lecture (ie Green)
+.header-l-leacture {
+    
+}
+
+
+
+
 
 // Student
 .header-startpage {
@@ -29,6 +52,7 @@
 }
 
 // Lecturer
+
 .lecturer-startpage-header {
 	height: 173px;
     width: 100%;
@@ -36,7 +60,7 @@
     margin-bottom: 20px;
 }
 
-.header-l-subjects-header {
+.header-l-prepare {
 	height: 50px;
     width: 100%;
     background: $uq-green;

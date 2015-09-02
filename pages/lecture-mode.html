@@ -5,42 +5,52 @@
   <link rel="stylesheet" href="../css/gridism.css">
 </head>
 <body class="body-l-startpage">
+	
 	<section>
 		<div>
 			<img class='images-startpage-logo' src="../assets/images/qudraw-logo-white.png" />
-			<h3 class="type-welcome"> Welcome <span>Brenton</span> </h3>
+			<h3 class="type-welcome"> Welcome <!-- type-welcome span --> <span>Brenton</span> </h3>
 		</div>
 	</section>
 
 	<section class="theme-lecture-start">
-		<!-- Part 1: Lecture Mode -->	
-		<a href="../pages/lecture-subjects.html">
 		<!-- Uses gridism -->
 		<div class="grid no-gutters">
-			<div class="unit half">
-				<a href="lecture-subjects.html">
-					<div class="type-lecture-mode">
-						<h2> Lecture Mode </h2>
-						<h3> Ask prepared questions </h3>
-						<h3> Review responses with class </h3>
-					</div>
-				</a>
-			</div>
-		</a>
-		<!-- Part 2: Prepare Mode  -->	
-		<a href="../pages/lecture-prepare.html">
-			<div class="unit half">
-				<div class="type-prepare-mode">
-					<h2> Prepare Mode </h2>
-					<h3> Prepare questions </h3>
-					<h3> Review responses from previous lectures </h3>
-					<h3> Grade responses </h3>
+			
+			<!-- Part 1: Lecture Mode -->	
+			<a href="../pages/lecture-subjects.html">
+				<!-- Set the theme here -->
+				<div class="unit half theme-lecture-mode">
+					<a href="lecture-subjects.html">
+						<div class="type-lecture-mode">
+							<!-- Title -->
+							<h2> Lecture Mode </h2>
+							<!-- Information -->
+							<h3> Ask prepared questions </h3>
+							<h3> Review responses with class </h3>
+						</div>
+					</a>
 				</div>
-			</div>
-		</div>
-		</a>	
+			</a>
+
+			<!-- Part 2: Prepare Mode  -->	
+			<a href="../pages/lecture-prepare.html">
+				<!-- Set the theme here -->
+				<div class="unit half theme-prepare-mode">
+					<div class="type-prepare-mode">
+						<!-- Title -->
+						<h2> Prepare Mode </h2>
+						<!-- Information -->
+						<h3> Prepare questions </h3>
+						<h3> Review responses from previous lectures </h3>
+						<h3> Grade responses </h3>
+					</div>
+				</div>
+			</a>
+		</div>	
 	</section>
 </body>
 	<!-- Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- JS -->
 </html>
