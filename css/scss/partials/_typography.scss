@@ -1,5 +1,23 @@
+/* *****
+** Font Family
+* *****/
+
 body {
-	font-family: "Roboto", serif;
+	font-family: "Ariel", serif;
+}
+
+/* *****
+** Typograhpy
+* *****/
+
+// This is for the text "Welcome User"
+.type-welcome {
+	text-align: center;
+}
+
+// This is for the text "Welcome *User*" where it covers the user
+.type-welcome span {
+	font-weight: 600;
 }
 
 // Student Start Page
@@ -42,7 +60,7 @@ body {
 	font-weight: 600;
 }
 
-.lecture-mode, .prepare-mode {
+.type-lecture-mode, .type-prepare-mode {
 	h2 {
 		color: white;
 		font-size: 50px;

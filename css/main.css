@@ -1,3 +1,8 @@
+/* line 1, scss/modules/_width100.scss */
+.width100 {
+  width: 100%;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -67,13 +72,13 @@ table {
   transform: translate(-50%, 0);
 }
 
-/* line 18, scss/partials/_headers.scss */
+/* line 16, scss/partials/_headers.scss */
 .header-startpage {
   height: 173px;
   width: 100%;
   background: #3D3092;
 }
-/* line 23, scss/partials/_headers.scss */
+/* line 21, scss/partials/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -83,7 +88,7 @@ table {
   font-size: 1em;
 }
 
-/* line 34, scss/partials/_headers.scss */
+/* line 32, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 173px;
   width: 100%;
@@ -91,7 +96,7 @@ table {
   margin-bottom: 20px;
 }
 
-/* line 41, scss/partials/_headers.scss */
+/* line 39, scss/partials/_headers.scss */
 .header-l-subjects-header {
   height: 50px;
   width: 100%;
@@ -185,12 +190,12 @@ table {
   background: #1d1745;
 }
 
-/* line 1, scss/partials/_input_startpage.scss */
+/* line 1, scss/partials/_start_three_input.scss */
 input:focus {
   outline: none;
 }
 
-/* line 5, scss/partials/_input_startpage.scss */
+/* line 5, scss/partials/_start_three_input.scss */
 .CodeInput {
   width: 65px;
   height: 65px;
@@ -202,25 +207,25 @@ input:focus {
   font-weight: 700;
 }
 
-/* line 16, scss/partials/_input_startpage.scss */
+/* line 16, scss/partials/_start_three_input.scss */
 #start-input {
   width: 210px;
   margin: auto;
   margin-top: 30px;
 }
 
-/* line 24, scss/partials/_input_startpage.scss */
+/* line 22, scss/partials/_start_three_input.scss */
 .start-or {
   margin-top: 20px;
   text-align: center;
 }
-/* line 28, scss/partials/_input_startpage.scss */
+/* line 26, scss/partials/_start_three_input.scss */
 .start-or span {
   position: relative;
   display: inline-block;
 }
 
-/* line 34, scss/partials/_input_startpage.scss */
+/* line 32, scss/partials/_start_three_input.scss */
 .start-or:before {
   content: '';
   border-top: 3px solid #000;
@@ -231,7 +236,7 @@ input:focus {
   margin-top: 10px;
 }
 
-/* line 44, scss/partials/_input_startpage.scss */
+/* line 42, scss/partials/_start_three_input.scss */
 .start-or:after {
   content: '';
   border-top: 3px solid #000;
@@ -242,17 +247,17 @@ input:focus {
   margin-top: 10px;
 }
 
-/* line 54, scss/partials/_input_startpage.scss */
+/* line 52, scss/partials/_start_three_input.scss */
 .start-section-subjects {
   margin-top: 20px;
   width: 100%;
 }
-/* line 59, scss/partials/_input_startpage.scss */
+/* line 57, scss/partials/_start_three_input.scss */
 .start-section-subjects ul {
   max-width: 400px;
   margin: auto;
 }
-/* line 65, scss/partials/_input_startpage.scss */
+/* line 62, scss/partials/_start_three_input.scss */
 .start-section-subjects ul li {
   color: white;
   text-align: center;
@@ -263,7 +268,7 @@ input:focus {
   padding-top: 12px;
   transition: .3s;
 }
-/* line 76, scss/partials/_input_startpage.scss */
+/* line 73, scss/partials/_start_three_input.scss */
 .start-section-subjects ul li:hover {
   background: #0b6413;
 }
@@ -301,13 +306,13 @@ input:focus {
   transform: translate(-50%, 0);
 }
 
-/* line 18, scss/partials/_headers.scss */
+/* line 16, scss/partials/_headers.scss */
 .header-startpage {
   height: 173px;
   width: 100%;
   background: #3D3092;
 }
-/* line 23, scss/partials/_headers.scss */
+/* line 21, scss/partials/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -317,7 +322,7 @@ input:focus {
   font-size: 1em;
 }
 
-/* line 34, scss/partials/_headers.scss */
+/* line 32, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 173px;
   width: 100%;
@@ -325,19 +330,35 @@ input:focus {
   margin-bottom: 20px;
 }
 
-/* line 41, scss/partials/_headers.scss */
+/* line 39, scss/partials/_headers.scss */
 .header-l-subjects-header {
   height: 50px;
   width: 100%;
   background: #16BF25;
 }
 
-/* line 1, scss/partials/_typography.scss */
+/* *****
+** Font Family
+* *****/
+/* line 5, scss/partials/_typography.scss */
 body {
-  font-family: "Roboto", serif;
+  font-family: "Ariel", serif;
 }
 
-/* line 7, scss/partials/_typography.scss */
+/* *****
+** Typograhpy
+* *****/
+/* line 14, scss/partials/_typography.scss */
+.type-welcome {
+  text-align: center;
+}
+
+/* line 19, scss/partials/_typography.scss */
+.type-welcome span {
+  font-weight: 600;
+}
+
+/* line 25, scss/partials/_typography.scss */
 .startpage-welcome {
   color: white;
   text-align: center;
@@ -347,14 +368,14 @@ body {
   font-size: 1em;
 }
 
-/* line 18, scss/partials/_typography.scss */
+/* line 36, scss/partials/_typography.scss */
 .start-section-input h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
 }
 
-/* line 32, scss/partials/_typography.scss */
+/* line 50, scss/partials/_typography.scss */
 .lecturer-startpage-welcome {
   color: #000;
   text-align: center;
@@ -364,13 +385,13 @@ body {
   font-size: 1em;
 }
 
-/* line 41, scss/partials/_typography.scss */
+/* line 59, scss/partials/_typography.scss */
 #lecturer-start-username {
   font-weight: 600;
 }
 
-/* line 46, scss/partials/_typography.scss */
-.lecture-mode h2, .prepare-mode h2 {
+/* line 64, scss/partials/_typography.scss */
+.type-lecture-mode h2, .type-prepare-mode h2 {
   color: white;
   font-size: 50px;
   text-align: center;
@@ -378,14 +399,14 @@ body {
   padding-top: calc(55vh - 173px);
   margin-bottom: 30px;
 }
-/* line 55, scss/partials/_typography.scss */
-.lecture-mode h3, .prepare-mode h3 {
+/* line 73, scss/partials/_typography.scss */
+.type-lecture-mode h3, .type-prepare-mode h3 {
   color: white;
   font-weight: 300;
   text-align: center;
 }
 
-/* line 62, scss/partials/_typography.scss */
+/* line 80, scss/partials/_typography.scss */
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -393,31 +414,31 @@ body {
   margin-top: 18px;
 }
 
-/* line 5, scss/partials/_theme.scss */
+/* line 6, scss/partials/_theme.scss */
 .lecture-mode {
   background: #0b6413;
   height: calc(100vh - 173px);
   cursor: pointer;
   transition: .3s;
 }
-/* line 11, scss/partials/_theme.scss */
+/* line 12, scss/partials/_theme.scss */
 .lecture-mode:hover {
   background: #16BF25;
 }
 
-/* line 16, scss/partials/_theme.scss */
+/* line 17, scss/partials/_theme.scss */
 .prepare-mode {
   background: #1d1745;
   height: calc(100vh - 173px);
   cursor: pointer;
   transition: .3s;
 }
-/* line 22, scss/partials/_theme.scss */
+/* line 23, scss/partials/_theme.scss */
 .prepare-mode:hover {
   background: #3D3092;
 }
 
-/* line 29, scss/partials/_theme.scss */
+/* line 30, scss/partials/_theme.scss */
 .theme-question-purple h2 {
   text-align: center;
   padding-top: 10px;
@@ -435,7 +456,7 @@ body {
   max-width: 400px;
   margin: auto;
 }
-/* line 11, scss/partials/_list.scss */
+/* line 10, scss/partials/_list.scss */
 .list-subjects ul li, .list-subjects-purple ul li, .list-subjects-green ul li {
   color: white;
   text-align: center;
@@ -445,14 +466,14 @@ body {
   padding-top: 12px;
   transition: .3s;
 }
-/* line 22, scss/partials/_list.scss */
+/* line 21, scss/partials/_list.scss */
 .list-subjects h2, .list-subjects-purple h2, .list-subjects-green h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
 }
-/* line 29, scss/partials/_list.scss */
+/* line 28, scss/partials/_list.scss */
 .list-subjects h3, .list-subjects-purple h3, .list-subjects-green h3 {
   text-align: center;
   padding-top: 10px;
@@ -460,39 +481,39 @@ body {
   padding-bottom: 10px;
 }
 
-/* line 40, scss/partials/_list.scss */
+/* line 39, scss/partials/_list.scss */
 .list-subjects-purple ul li {
   background: #3D3092;
 }
-/* line 44, scss/partials/_list.scss */
+/* line 43, scss/partials/_list.scss */
 .list-subjects-purple ul li:hover {
   background: #1d1745;
 }
 
-/* line 53, scss/partials/_list.scss */
+/* line 52, scss/partials/_list.scss */
 .list-subjects-green ul li {
   background: #16BF25;
 }
-/* line 57, scss/partials/_list.scss */
+/* line 56, scss/partials/_list.scss */
 .list-subjects-green ul li:hover {
   background: #0b6413;
 }
 
-/* line 62, scss/partials/_list.scss */
+/* line 61, scss/partials/_list.scss */
 .list-questions, .list-questions-purple {
   margin-top: 20px;
   width: 100%;
 }
-/* line 67, scss/partials/_list.scss */
+/* line 66, scss/partials/_list.scss */
 .list-questions ul, .list-questions-purple ul {
   max-width: 400px;
   margin: auto;
 }
-/* line 73, scss/partials/_list.scss */
+/* line 72, scss/partials/_list.scss */
 .list-questions ul li, .list-questions-purple ul li {
   margin-bottom: 10px;
 }
-/* line 77, scss/partials/_list.scss */
+/* line 76, scss/partials/_list.scss */
 .list-questions ul li div, .list-questions-purple ul li div {
   color: white;
   height: 30px;
@@ -501,30 +522,30 @@ body {
   transition: .3s;
   padding-left: 10px;
 }
-/* line 86, scss/partials/_list.scss */
+/* line 85, scss/partials/_list.scss */
 .list-questions h2, .list-questions-purple h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
 }
-/* line 93, scss/partials/_list.scss */
+/* line 92, scss/partials/_list.scss */
 .list-questions h3, .list-questions-purple h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 500;
   padding-bottom: 10px;
 }
-/* line 100, scss/partials/_list.scss */
+/* line 99, scss/partials/_list.scss */
 .list-questions label, .list-questions-purple label {
   font-size: 20px;
 }
 
-/* line 109, scss/partials/_list.scss */
+/* line 108, scss/partials/_list.scss */
 .list-questions-purple ul li div {
   background: #3D3092;
 }
-/* line 113, scss/partials/_list.scss */
+/* line 112, scss/partials/_list.scss */
 .list-questions-purple ul li div:hover {
   background: #1d1745;
 }
