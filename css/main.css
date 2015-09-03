@@ -109,6 +109,13 @@ table {
 }
 
 /* line 56, scss/partials/_headers.scss */
+.header-l-subjects-header {
+  height: 50px;
+  width: 100%;
+  background: #16BF25;
+}
+
+/* line 62, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 173px;
   width: 100%;
@@ -116,7 +123,7 @@ table {
   margin-bottom: 20px;
 }
 
-/* line 63, scss/partials/_headers.scss */
+/* line 69, scss/partials/_headers.scss */
 .header-l-prepare {
   height: 50px;
   width: 100%;
@@ -379,6 +386,13 @@ input:focus {
 }
 
 /* line 56, scss/partials/_headers.scss */
+.header-l-subjects-header {
+  height: 50px;
+  width: 100%;
+  background: #16BF25;
+}
+
+/* line 62, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 173px;
   width: 100%;
@@ -386,7 +400,7 @@ input:focus {
   margin-bottom: 20px;
 }
 
-/* line 63, scss/partials/_headers.scss */
+/* line 69, scss/partials/_headers.scss */
 .header-l-prepare {
   height: 50px;
   width: 100%;
@@ -398,7 +412,7 @@ input:focus {
 * *****/
 /* line 5, scss/partials/_typography.scss */
 body {
-  font-family: "Ariel", serif;
+  font-family: "Arial", serif;
 }
 
 /* *****
@@ -407,14 +421,15 @@ body {
 /* line 14, scss/partials/_typography.scss */
 .type-welcome {
   text-align: center;
+  padding-bottom: 10px;
 }
 
-/* line 19, scss/partials/_typography.scss */
+/* line 20, scss/partials/_typography.scss */
 .type-welcome span {
   font-weight: 600;
 }
 
-/* line 24, scss/partials/_typography.scss */
+/* line 25, scss/partials/_typography.scss */
 .type-title {
   color: white;
   display: inline-block;
@@ -422,7 +437,7 @@ body {
   margin-top: 18px;
 }
 
-/* line 32, scss/partials/_typography.scss */
+/* line 33, scss/partials/_typography.scss */
 .type-body-heading {
   text-align: center;
   padding-top: 10px;
@@ -430,7 +445,7 @@ body {
   font-size: 40px;
 }
 
-/* line 39, scss/partials/_typography.scss */
+/* line 40, scss/partials/_typography.scss */
 .type-body-subheading {
   text-align: center;
   padding-top: 10px;
@@ -438,7 +453,7 @@ body {
   padding-bottom: 10px;
 }
 
-/* line 57, scss/partials/_typography.scss */
+/* line 58, scss/partials/_typography.scss */
 .startpage-welcome {
   color: white;
   text-align: center;
@@ -448,14 +463,14 @@ body {
   font-size: 1em;
 }
 
-/* line 68, scss/partials/_typography.scss */
+/* line 69, scss/partials/_typography.scss */
 .start-section-input h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
 }
 
-/* line 82, scss/partials/_typography.scss */
+/* line 83, scss/partials/_typography.scss */
 .lecturer-startpage-welcome {
   color: #000;
   text-align: center;
@@ -465,12 +480,12 @@ body {
   font-size: 1em;
 }
 
-/* line 91, scss/partials/_typography.scss */
+/* line 92, scss/partials/_typography.scss */
 #lecturer-start-username {
   font-weight: 600;
 }
 
-/* line 96, scss/partials/_typography.scss */
+/* line 97, scss/partials/_typography.scss */
 .type-lecture-mode h2, .type-prepare-mode h2 {
   color: white;
   font-size: 50px;
@@ -479,14 +494,14 @@ body {
   padding-top: calc(55vh - 173px);
   margin-bottom: 30px;
 }
-/* line 105, scss/partials/_typography.scss */
+/* line 106, scss/partials/_typography.scss */
 .type-lecture-mode h3, .type-prepare-mode h3 {
   color: white;
   font-weight: 300;
   text-align: center;
 }
 
-/* line 112, scss/partials/_typography.scss */
+/* line 113, scss/partials/_typography.scss */
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -508,11 +523,11 @@ body {
 }
 /* line 13, scss/partials/_theme.scss */
 .theme-lecture-mode:hover {
-  opacity: .9;
+  opacity: .8;
 }
 
 /* line 19, scss/partials/_theme.scss */
-.lecture-start a {
+.theme-lecture-start a {
   text-decoration: none;
 }
 
@@ -527,7 +542,7 @@ body {
 }
 /* line 32, scss/partials/_theme.scss */
 .theme-prepare-mode:hover {
-  opacity: .9;
+  opacity: .8;
 }
 
 /* line 39, scss/partials/_theme.scss */
