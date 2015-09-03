@@ -3,7 +3,7 @@
 * *****/
 
 body {
-	font-family: "Ariel", serif;
+	font-family: "Arial", serif;
 }
 
 /* *****
@@ -13,6 +13,7 @@ body {
 // This is for the text "Welcome User"
 .type-welcome {
 	text-align: center;
+	padding-bottom: 10px;
 }
 
 // This is for the text "Welcome *User*" where it covers the user
