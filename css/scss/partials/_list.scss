@@ -44,6 +44,26 @@
 	}
 }
 
+.list-questions-green {
+	width: 80%;
+	margin: auto;
+	
+	
+	li {
+		margin-bottom: 10px;
+		height: 50px;
+		background: $uq-green;
+		color: white;
+		margin: 3px;
+		padding-top: 12px;
+		transition: .3s;
+		cursor: pointer;
+		@extend .noselect;
+		font-size: 30px;
+		padding-left:20px;
+	}
+}
+
 .list-questions {
 
 	margin-top: 20px;

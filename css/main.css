@@ -4,7 +4,7 @@
 }
 
 /* line 1, scss/modules/_noselect.scss */
-.noselect, .list-subjects li, .list-subjects-purple li, .list-subjects-green li {
+.noselect, .list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -326,10 +326,9 @@ input:focus {
   margin-left: auto;
   margin-right: auto;
   width: 400px;
-  padding-top: 30px;
 }
 
-/* line 9, scss/partials/_images.scss */
+/* line 8, scss/partials/_images.scss */
 .images-l-subjects {
   display: inline-block;
   height: 30px;
@@ -577,20 +576,39 @@ body {
 }
 
 /* line 47, scss/partials/_list.scss */
+.list-questions-green {
+  width: 80%;
+  margin: auto;
+}
+/* line 52, scss/partials/_list.scss */
+.list-questions-green li {
+  margin-bottom: 10px;
+  height: 50px;
+  background: #16BF25;
+  color: white;
+  margin: 3px;
+  padding-top: 12px;
+  transition: .3s;
+  cursor: pointer;
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+/* line 67, scss/partials/_list.scss */
 .list-questions, .list-questions-purple {
   margin-top: 20px;
   width: 100%;
 }
-/* line 52, scss/partials/_list.scss */
+/* line 72, scss/partials/_list.scss */
 .list-questions ul, .list-questions-purple ul {
   max-width: 400px;
   margin: auto;
 }
-/* line 58, scss/partials/_list.scss */
+/* line 78, scss/partials/_list.scss */
 .list-questions ul li, .list-questions-purple ul li {
   margin-bottom: 10px;
 }
-/* line 62, scss/partials/_list.scss */
+/* line 82, scss/partials/_list.scss */
 .list-questions ul li div, .list-questions-purple ul li div {
   color: white;
   height: 30px;
@@ -599,30 +617,30 @@ body {
   transition: .3s;
   padding-left: 10px;
 }
-/* line 71, scss/partials/_list.scss */
+/* line 91, scss/partials/_list.scss */
 .list-questions h2, .list-questions-purple h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
 }
-/* line 78, scss/partials/_list.scss */
+/* line 98, scss/partials/_list.scss */
 .list-questions h3, .list-questions-purple h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 500;
   padding-bottom: 10px;
 }
-/* line 85, scss/partials/_list.scss */
+/* line 105, scss/partials/_list.scss */
 .list-questions label, .list-questions-purple label {
   font-size: 20px;
 }
 
-/* line 94, scss/partials/_list.scss */
+/* line 114, scss/partials/_list.scss */
 .list-questions-purple ul li div {
   background: #3D3092;
 }
-/* line 98, scss/partials/_list.scss */
+/* line 118, scss/partials/_list.scss */
 .list-questions-purple ul li div:hover {
   background: #1d1745;
 }
