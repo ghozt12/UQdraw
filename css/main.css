@@ -89,10 +89,17 @@ table {
 .header-l-prepare {
   height: 50px;
   width: 100%;
+  background: #3D3092;
+}
+
+/* line 30, scss/partials/_headers.scss */
+.header-l-lecture {
+  height: 50px;
+  width: 100%;
   background: #16BF25;
 }
 
-/* line 39, scss/partials/_headers.scss */
+/* line 41, scss/partials/_headers.scss */
 .header-startpage {
   height: 100px;
   width: 100%;
@@ -111,6 +118,8 @@ table {
 }
 
 /* line 59, scss/partials/_headers.scss */
+<<<<<<< HEAD
+=======
 .header-l-subjects-header {
   height: 50px;
   width: 100%;
@@ -118,6 +127,7 @@ table {
 }
 
 /* line 65, scss/partials/_headers.scss */
+>>>>>>> origin/master
 .lecturer-startpage-header {
   height: 173px;
   width: 100%;
@@ -125,6 +135,8 @@ table {
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
+=======
 /* line 72, scss/partials/_headers.scss */
 .header-l-prepare {
   height: 50px;
@@ -132,6 +144,7 @@ table {
   background: #16BF25;
 }
 
+>>>>>>> origin/master
 /* *******
 ** BUTTONS 
 ** ******/
@@ -166,9 +179,9 @@ table {
 /* line 33, scss/partials/_buttons.scss */
 .button-add-subject {
   width: 100%;
-  border: 2px solid #16BF25;
+  border: 2px solid #3D3092;
   background-color: white;
-  color: #16BF25;
+  color: #3D3092;
   font-weight: 600;
   font-size: 20px;
   height: 42px;
@@ -178,12 +191,12 @@ table {
 /* line 44, scss/partials/_buttons.scss */
 .button-add-subject:hover {
   transition: 0.7s;
-  background-color: #16BF25;
+  background-color: #3D3092;
   color: white;
 }
 
 /* line 54, scss/partials/_buttons.scss */
-.button-switch {
+.button-goto-prepare {
   background-color: #3D3092;
   width: 150px;
   height: 100%;
@@ -193,22 +206,41 @@ table {
   text-align: center;
 }
 /* line 64, scss/partials/_buttons.scss */
-.button-switch p {
+.button-goto-prepare p {
   margin-top: 15px;
 }
 /* line 68, scss/partials/_buttons.scss */
-.button-switch:hover {
+.button-goto-prepare:hover {
   background-color: #2d236c;
 }
 
-/* line 75, scss/partials/_buttons.scss */
+/* line 73, scss/partials/_buttons.scss */
+.button-goto-lecture {
+  background-color: #16BF25;
+  width: 150px;
+  height: 100%;
+  display: inline-block;
+  float: right;
+  color: white;
+  text-align: center;
+}
+/* line 83, scss/partials/_buttons.scss */
+.button-goto-lecture p {
+  margin-top: 15px;
+}
+/* line 87, scss/partials/_buttons.scss */
+.button-goto-lecture:hover {
+  background-color: #11911c;
+}
+
+/* line 92, scss/partials/_buttons.scss */
 .drawing-app-submit {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-/* line 85, scss/partials/_buttons.scss */
+/* line 102, scss/partials/_buttons.scss */
 .drawing-app-question {
   position: absolute;
   top: 10px;
@@ -330,14 +362,23 @@ input:focus {
 }
 
 /* line 1, scss/partials/_images.scss */
-.images-startpage-logo {
+.student-startpage-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  padding-top: 30px;
+}
+
+/* line 9, scss/partials/_images.scss */
+.lecturer-startpage-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 300px;
 }
 
-/* line 8, scss/partials/_images.scss */
+/* line 16, scss/partials/_images.scss */
 .images-l-subjects {
   display: inline-block;
   height: 30px;
@@ -368,10 +409,17 @@ input:focus {
 .header-l-prepare {
   height: 50px;
   width: 100%;
+  background: #3D3092;
+}
+
+/* line 30, scss/partials/_headers.scss */
+.header-l-lecture {
+  height: 50px;
+  width: 100%;
   background: #16BF25;
 }
 
-/* line 39, scss/partials/_headers.scss */
+/* line 41, scss/partials/_headers.scss */
 .header-startpage {
   height: 100px;
   width: 100%;
@@ -390,6 +438,8 @@ input:focus {
 }
 
 /* line 59, scss/partials/_headers.scss */
+<<<<<<< HEAD
+=======
 .header-l-subjects-header {
   height: 50px;
   width: 100%;
@@ -397,6 +447,7 @@ input:focus {
 }
 
 /* line 65, scss/partials/_headers.scss */
+>>>>>>> origin/master
 .lecturer-startpage-header {
   height: 173px;
   width: 100%;
@@ -404,6 +455,8 @@ input:focus {
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
+=======
 /* line 72, scss/partials/_headers.scss */
 .header-l-prepare {
   height: 50px;
@@ -411,6 +464,7 @@ input:focus {
   background: #16BF25;
 }
 
+>>>>>>> origin/master
 /* *****
 ** Font Family
 * *****/
@@ -557,7 +611,14 @@ body {
   opacity: .8;
 }
 
-/* line 39, scss/partials/_theme.scss */
+/* line 37, scss/partials/_theme.scss */
+.bg {
+  background-image: url(../assets/images/bg.png);
+  background-repeat: none;
+  background-size: cover;
+}
+
+/* line 44, scss/partials/_theme.scss */
 .theme-question-purple h2 {
   text-align: center;
   padding-top: 10px;
@@ -594,11 +655,11 @@ body {
 /* line 1, scss/partials/_list.scss */
 .list-subjects, .list-subjects-purple, .list-subjects-green {
   margin-top: 20px;
-  width: 100%;
-  max-width: 400px;
+  width: 50%;
   margin: auto;
+  padding-top: 30px;
 }
-/* line 8, scss/partials/_list.scss */
+/* line 10, scss/partials/_list.scss */
 .list-subjects li, .list-subjects-purple li, .list-subjects-green li {
   color: white;
   text-align: center;
@@ -610,30 +671,44 @@ body {
   cursor: pointer;
 }
 
-/* line 25, scss/partials/_list.scss */
-.list-subjects-purple ul li {
+/* line 27, scss/partials/_list.scss */
+.list-subjects-purple li {
   background: #3D3092;
 }
-/* line 29, scss/partials/_list.scss */
-.list-subjects-purple ul li:hover {
+/* line 32, scss/partials/_list.scss */
+.list-subjects-purple li:hover {
   background: #1d1745;
 }
+/* line 35, scss/partials/_list.scss */
+.list-subjects-purple h3 {
+  text-align: center;
+  padding-bottom: 10px;
+}
 
-/* line 38, scss/partials/_list.scss */
+/* line 42, scss/partials/_list.scss */
+.list-subjects-green {
+  opacity: .7;
+}
+/* line 45, scss/partials/_list.scss */
 .list-subjects-green li {
   background: #16BF25;
 }
-/* line 42, scss/partials/_list.scss */
+/* line 49, scss/partials/_list.scss */
 .list-subjects-green li:hover {
   background: #0b6413;
 }
+/* line 52, scss/partials/_list.scss */
+.list-subjects-green h3 {
+  text-align: center;
+  padding-bottom: 10px;
+}
 
-/* line 47, scss/partials/_list.scss */
+/* line 58, scss/partials/_list.scss */
 .list-questions-green {
   width: 80%;
   margin: auto;
 }
-/* line 52, scss/partials/_list.scss */
+/* line 63, scss/partials/_list.scss */
 .list-questions-green li {
   margin-bottom: 10px;
   height: 50px;
@@ -651,21 +726,37 @@ body {
   float: right;
 }
 
+<<<<<<< HEAD
+/* line 78, scss/partials/_list.scss */
+=======
 /* line 71, scss/partials/_list.scss */
+>>>>>>> origin/master
 .list-questions, .list-questions-purple {
   margin-top: 20px;
   width: 100%;
 }
+<<<<<<< HEAD
+/* line 83, scss/partials/_list.scss */
+=======
 /* line 76, scss/partials/_list.scss */
+>>>>>>> origin/master
 .list-questions ul, .list-questions-purple ul {
   max-width: 400px;
   margin: auto;
 }
+<<<<<<< HEAD
+/* line 89, scss/partials/_list.scss */
+.list-questions ul li, .list-questions-purple ul li {
+  margin-bottom: 10px;
+}
+/* line 93, scss/partials/_list.scss */
+=======
 /* line 82, scss/partials/_list.scss */
 .list-questions ul li, .list-questions-purple ul li {
   margin-bottom: 10px;
 }
 /* line 86, scss/partials/_list.scss */
+>>>>>>> origin/master
 .list-questions ul li div, .list-questions-purple ul li div {
   color: white;
   height: 30px;
@@ -674,30 +765,50 @@ body {
   transition: .3s;
   padding-left: 10px;
 }
+<<<<<<< HEAD
+/* line 102, scss/partials/_list.scss */
+=======
 /* line 95, scss/partials/_list.scss */
+>>>>>>> origin/master
 .list-questions h2, .list-questions-purple h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
 }
+<<<<<<< HEAD
+/* line 109, scss/partials/_list.scss */
+=======
 /* line 102, scss/partials/_list.scss */
+>>>>>>> origin/master
 .list-questions h3, .list-questions-purple h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 500;
   padding-bottom: 10px;
 }
+<<<<<<< HEAD
+/* line 116, scss/partials/_list.scss */
+=======
 /* line 109, scss/partials/_list.scss */
+>>>>>>> origin/master
 .list-questions label, .list-questions-purple label {
   font-size: 20px;
 }
 
+<<<<<<< HEAD
+/* line 125, scss/partials/_list.scss */
+.list-questions-purple ul li div {
+  background: #3D3092;
+}
+/* line 129, scss/partials/_list.scss */
+=======
 /* line 118, scss/partials/_list.scss */
 .list-questions-purple ul li div {
   background: #3D3092;
 }
 /* line 122, scss/partials/_list.scss */
+>>>>>>> origin/master
 .list-questions-purple ul li div:hover {
   background: #1d1745;
 }
