@@ -29,6 +29,15 @@ Once that is done you can run compass by typing
 ## Mac
 http://code.tutsplus.com/tutorials/how-to-install-ruby-on-a-mac--net-21664
 
+Once that is done cd to your working directory
+- cd Documents/UQDraw/    (example)
+
+Type 
+- gem install compass
+
+Run
+- compass watch
+
 # UQDRAW CSS STYLE GUIDE
 
 ## Naming 

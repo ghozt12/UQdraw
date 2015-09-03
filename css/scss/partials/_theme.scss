@@ -11,11 +11,11 @@
 	transition: .5s;
 	
 	&:hover {
-		opacity: .9;
+		opacity: .8;
 	}
 }
 
-.lecture-start{
+.theme-lecture-start{
 a {
 		 text-decoration: none;
 	}
@@ -30,7 +30,7 @@ a {
 	transition: .3s;
 
 	&:hover {
-		opacity: .9;
+		opacity: .8;
 	}
 }
 
@@ -41,5 +41,31 @@ a {
 		padding-top: 10px;
 		font-weight: 800;
 		font-size: 40px;
+	}
+}
+
+.theme-response-holder {
+	width: 80%;
+	margin: auto;
+	border: 1px solid #000;
+	height: 50px;
+	margin-top: 30px;
+}
+
+.theme-response-inner {
+	width: 30%;
+	height: 50px;
+	background: $uq-green;
+
+}
+
+// This is for the buttons and time left lecture side 
+.theme-response-actions {
+	margin-top: 30px;
+	text-align: center;
+
+	h2 {
+		font-size: 30px;
+
 	}
 }
