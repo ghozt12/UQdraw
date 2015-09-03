@@ -23,13 +23,13 @@
 
 	.icon-select {
 		display: inline-block;
-		margin-left: calc(100vw / 8);
+		margin-left: calc(100vw / 12);
 		height: 70px;
 		width: 90px;
 	}
 
 	.selected {
-		background: darken($uq-purple, 20%);
+		background: white;
 	}
 
 	
