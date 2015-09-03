@@ -23,10 +23,8 @@
 		<h3 class="type-body-subheading"> Select subject below</h3>
 		<!-- List the subjects -->
 		<ul class = "list-subjects-purple">
-			<li> <span class="subject"> Subject 1 </span> </lI>
-			<li> <span class="subject"> Subject 2 </span> </lI>
-			<li> <span class="subject"> Subject 3 </span> </lI>
-
+			<!--<li> <span class="subject"> Subject 1 </span> </lI>-->
+			<div id = "subjects"></div>	
 		</ul>
 
 	</section>
@@ -36,4 +34,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 	<!-- JS -->
+	<script>
+  		 // DISRESPECT
+ 
+  		 $(document).ready(function() {
+  		 	$("#subjects").load("subListForALecturer.php");
+  		 });
+  	</script>
 </html>
