@@ -9,7 +9,7 @@
 	<section>
 		<div>
 			<img class='images-startpage-logo' src="../assets/images/qudraw-logo-white.png" />
-			<h3 class="type-welcome"> Welcome <!-- type-welcome span --> <span>Brenton</span> </h3>
+			<h3 class="type-welcome"> Welcome <!-- type-welcome span --> <span id="start-username"></span></h3>
 		</div>
 	</section>
 
@@ -53,4 +53,9 @@
 	<!-- Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!-- JS -->
+	<script>
+  		$(document).ready(function() {
+  		$("#start-username").load("registerLecturer.php");
+  		 });
+  	</script>
 </html>
