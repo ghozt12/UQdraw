@@ -94,7 +94,7 @@ table {
 
 /* line 39, scss/partials/_headers.scss */
 .header-startpage {
-  height: 173px;
+  height: 100px;
   width: 100%;
   background: #3D3092;
 }
@@ -108,14 +108,14 @@ table {
   font-size: 1em;
 }
 
-/* line 56, scss/partials/_headers.scss */
+/* line 57, scss/partials/_headers.scss */
 .header-l-subjects-header {
   height: 50px;
   width: 100%;
   background: #16BF25;
 }
 
-/* line 62, scss/partials/_headers.scss */
+/* line 63, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 173px;
   width: 100%;
@@ -123,7 +123,7 @@ table {
   margin-bottom: 20px;
 }
 
-/* line 69, scss/partials/_headers.scss */
+/* line 70, scss/partials/_headers.scss */
 .header-l-prepare {
   height: 50px;
   width: 100%;
@@ -256,7 +256,7 @@ input:focus {
   background: #eee;
   border-radius: 15%;
   border: 1px solid #4a4a4a;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   font-weight: 700;
 }
@@ -332,7 +332,7 @@ input:focus {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 400px;
+  width: 300px;
 }
 
 /* line 8, scss/partials/_images.scss */
@@ -371,7 +371,7 @@ input:focus {
 
 /* line 39, scss/partials/_headers.scss */
 .header-startpage {
-  height: 173px;
+  height: 100px;
   width: 100%;
   background: #3D3092;
 }
@@ -385,14 +385,14 @@ input:focus {
   font-size: 1em;
 }
 
-/* line 56, scss/partials/_headers.scss */
+/* line 57, scss/partials/_headers.scss */
 .header-l-subjects-header {
   height: 50px;
   width: 100%;
   background: #16BF25;
 }
 
-/* line 62, scss/partials/_headers.scss */
+/* line 63, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 173px;
   width: 100%;
@@ -400,7 +400,7 @@ input:focus {
   margin-bottom: 20px;
 }
 
-/* line 69, scss/partials/_headers.scss */
+/* line 70, scss/partials/_headers.scss */
 .header-l-prepare {
   height: 50px;
   width: 100%;
