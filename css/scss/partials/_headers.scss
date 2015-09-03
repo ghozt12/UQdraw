@@ -39,9 +39,11 @@ $header-height: 50px;
 
 // Student
 .header-startpage {
-    height: 173px;
+    height: 100px;
     width: 100%;
     background: $uq-purple;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     h3 {
         color: white;
@@ -51,6 +53,7 @@ $header-height: 50px;
         font-weight: 100;
         font-size: 1em;
     }
+
 }
 
 // Lecturer
