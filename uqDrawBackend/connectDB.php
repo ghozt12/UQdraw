@@ -15,7 +15,7 @@ $dbname = "uqdraw";
 $mysqli -> connect($host, $user, $password, $dbname);
 
 $query = "SELECT * FROM `Question`; ";
-$result = mysqli_query($mysqli, query);
+$result = mysqli_query($mysqli, $query);
 
 if ($result) {
     echo "Yes";
