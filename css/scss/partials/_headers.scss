@@ -23,12 +23,14 @@ $header-height: 50px;
 .header-l-prepare {
     height: $header-height;
     width: 100%;
-    background: $uq-green;
+    background: $uq-purple;
 }
 
 // Header for Lecture (ie Green)
-.header-l-leacture {
-    
+.header-l-lecture {
+    height: $header-height;
+    width: 100%;
+    background: $uq-green;
 }
 
 
@@ -53,11 +55,6 @@ $header-height: 50px;
 
 // Lecturer
 
-.header-l-subjects-header{
-	height: 50px;
-    width: 100%;
-    background: $uq-green;
-}
 
 .lecturer-startpage-header {
 	height: 173px;
@@ -66,8 +63,3 @@ $header-height: 50px;
     margin-bottom: 20px;
 }
 
-.header-l-prepare {
-	height: 50px;
-    width: 100%;
-    background: $uq-green;
-}

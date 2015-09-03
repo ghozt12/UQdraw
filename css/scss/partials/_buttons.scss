@@ -33,9 +33,9 @@
 .button-add-subject {
     @extend .remove-button-style;
     width: 100%;
-    border: 2px solid $uq-green;
+    border: 2px solid $uq-purple;
     background-color: white;
-    color: $uq-green;
+    color: $uq-purple;
     font-weight: 600;
     font-size: 20px;
     height: 42px;
@@ -43,15 +43,15 @@
 
     &:hover {
         transition: 0.7s;
-        background-color: $uq-green;
+        background-color: $uq-purple;
         color: white;
     }
 
     cursor: pointer;
 }
-
+			
 // Lecturer go to prepare mode (header button on right)
-.button-switch {
+.button-goto-prepare {
     background-color: $uq-purple;
     width: 150px;
     height: 100%;
@@ -70,7 +70,24 @@
     }
 }
 
+.button-goto-lecture {
+    background-color: $uq-green;
+    width: 150px;
+    height: 100%;
+    display: inline-block;
+    float: right;
 
+    color: white;
+    text-align: center;
+    
+    p {
+        margin-top: 15px;
+    }
+
+    &:hover {
+        background-color: darken($uq-green, 10%);
+    }
+}
 
 .drawing-app-submit {
 	@extend .submit;

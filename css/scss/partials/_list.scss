@@ -1,9 +1,11 @@
 .list-subjects {
 	margin-top: 20px;
-	width: 100%;
+	width: 50%;
 
-	max-width: 400px;
+	
 	margin: auto;
+	
+	padding-top: 30px;
 	
 	li {
 		color: white;
@@ -22,25 +24,34 @@
 .list-subjects-purple {
 	@extend .list-subjects;
 
-	ul li {
+	li {
 		background: $uq-purple;
+
 	}
 
-	ul li:hover {
+	li:hover {
 		background: darken($uq-purple, 20%);
+	}
+	h3 {
+		text-align:center;
+		padding-bottom:10px;
 	}
 	
 }
 
 .list-subjects-green {
 	@extend .list-subjects;
-
+		opacity: .7;
 	li {
 		background: $uq-green;
 	}
 
 	li:hover {
 		background: darken($uq-green, 20%);
+	}
+	h3 {
+		text-align:center;
+		padding-bottom:10px;
 	}
 }
 
