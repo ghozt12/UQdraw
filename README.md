@@ -49,9 +49,15 @@ For example if your css code is in _header.scss then use header as the first par
 
 ## Folder Structure
 
+[Will update]
+
 ## Grid
 
+We are using Gridism http://cobyism.com/gridism/
+
 ## Other
+
+[Will update]
 
 ## Compass
 
