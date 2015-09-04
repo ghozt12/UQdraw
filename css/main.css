@@ -106,8 +106,9 @@ table {
   background: #3D3092;
   padding-top: 20px;
   padding-bottom: 20px;
+  box-shadow: 0px 1px 5px #000;
 }
-/* line 48, scss/partials/_headers.scss */
+/* line 49, scss/partials/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -117,24 +118,24 @@ table {
   font-size: 1em;
 }
 
-/* line 62, scss/partials/_headers.scss */
+/* line 63, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
-  background: white;
+  background: #e9e9e9;
 }
 
 /* *******
 ** BUTTONS 
 ** ******/
 /* line 6, scss/partials/_buttons.scss */
-.remove-button-style, .button-add-subject, .drawing-app-submit {
+.remove-button-style, .button-add-subject, .drawing-app-submit, .drawing-app-question {
   outline-style: none;
   border: 0px;
 }
 
 /* line 10, scss/partials/_buttons.scss */
-.submit, .drawing-app-submit, .drawing-app-question {
+.submit, .drawing-app-submit, .drawing-app-question, .drawing-app-back, .q-button, .q-button-long {
   height: 60px;
   width: 150px;
   border: 2px solid #AFA5FF;
@@ -149,9 +150,9 @@ table {
   background-color: #FFF;
 }
 /* line 25, scss/partials/_buttons.scss */
-.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover {
+.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover, .drawing-app-back:hover, .q-button:hover, .q-button-long:hover {
   border: 2px solid #FFF;
-  color: #FFF;
+  color: #3D3092;
   transition: 0.4s;
 }
 
@@ -222,8 +223,52 @@ table {
 /* line 102, scss/partials/_buttons.scss */
 .drawing-app-question {
   position: absolute;
+  top: 60px;
+  right: 10px;
+}
+/* line 111, scss/partials/_buttons.scss */
+.drawing-app-question:hover {
+  border: 2px solid #3D3092;
+  color: #FFF;
+  background-color: #3D3092;
+  transition: 0.4s;
+}
+
+/* line 119, scss/partials/_buttons.scss */
+.drawing-app-back {
+  position: absolute;
   top: 10px;
   left: 10px;
+}
+
+/* line 128, scss/partials/_buttons.scss */
+.q-button {
+  font-size: 12px;
+  border: 2px solid #16BF25;
+  color: #16BF25;
+  width: 70px;
+}
+/* line 134, scss/partials/_buttons.scss */
+.q-button:hover {
+  border: 2px solid white;
+  background: #16BF25;
+  color: white;
+  transition: 0.4s;
+}
+
+/* line 142, scss/partials/_buttons.scss */
+.q-button-long {
+  font-size: 12px;
+  border: 2px solid #16BF25;
+  color: #16BF25;
+  width: 155px;
+}
+/* line 148, scss/partials/_buttons.scss */
+.q-button-long:hover {
+  border: 2px solid white;
+  background: #16BF25;
+  color: white;
+  transition: 0.4s;
 }
 
 /* line 5, scss/partials/_canvas.scss */
@@ -404,8 +449,9 @@ input:focus {
   background: #3D3092;
   padding-top: 20px;
   padding-bottom: 20px;
+  box-shadow: 0px 1px 5px #000;
 }
-/* line 48, scss/partials/_headers.scss */
+/* line 49, scss/partials/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -415,11 +461,11 @@ input:focus {
   font-size: 1em;
 }
 
-/* line 62, scss/partials/_headers.scss */
+/* line 63, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
-  background: white;
+  background: #e9e9e9;
 }
 
 /* *****
@@ -644,7 +690,7 @@ body {
 
 /* line 42, scss/partials/_list.scss */
 .list-subjects-green {
-  opacity: .7;
+  opacity: .9;
 }
 /* line 45, scss/partials/_list.scss */
 .list-subjects-green li {

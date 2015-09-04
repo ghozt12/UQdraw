@@ -24,7 +24,7 @@
 
     &:hover {
         border: 2px solid #FFF;
-        color: #FFF;
+        color: $uq-purple;
         transition: 0.4s;
     }
 }
@@ -101,10 +101,55 @@
 
 .drawing-app-question {
 	@extend .submit;
+    @extend .remove-button-style;
+
+	// Placement
+	position: absolute;
+	top: 60px;
+	right: 10px;
+	
+	 &:hover {
+        border: 2px solid $uq-purple;
+        color: #FFF;
+		background-color: $uq-purple;
+        transition: 0.4s;
+	}
+}
+
+.drawing-app-back {
+	@extend .submit;
 
 	// Placement
 	position: absolute;
 	top: 10px;
 	left: 10px;
+}
+
+.q-button {
+	@extend .submit;
+	font-size: 12px;
+	border: 2px solid $uq-green;
+	color: $uq-green;
+	width: 70px;
+	&:hover {
+        border: 2px solid white;
+		background: $uq-green;
+        color: white;
+        transition: 0.4s;
+	}
+}
+
+.q-button-long {
+	@extend .submit;
+	font-size: 12px;
+	border: 2px solid $uq-green;
+	color: $uq-green;
+	width: 155px;
+	&:hover {
+        border: 2px solid white;
+		background: $uq-green;
+        color: white;
+        transition: 0.4s;
+	}
 }
 
