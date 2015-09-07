@@ -1,15 +1,25 @@
 <?php
+	include 'connectDB.php';
+	session_name("PHPSESSID");
+	session_start();
+	$userID = $_SERVER['HTTP_X_UQ_USER'];
 	$userType = $_SERVER['HTTP_X_UQ_USER_TYPE'];
-	$namejson = $_SERVER['HTTP_X_KVD_PAYLOAD'];
-	$namearray = json_decode($namejson);
-
+	$existquery = "INSERT INTO Lecturer VALUES ('$userID')";
+    $deCodedJson = json_decode($userType);
+    echo $deCodedJson["firstname"];
 	if($userType == "Student")
 	{
-		echo $namearray->{'firstname'};
+		echo "<script> window.location.href = 'http://teamone.uqcloud.net'</script>";
 	}
 	if($userType == "Staff")
 	{
-		echo "<script> window.location.href = 'http://teamone.uqcloud.net/pages/lecture-mode.html'</script>";
-	}	
-	mysqli_close($conn);	
+		if(!mysqli_query($conn, $existquery))
+		{
+			echo mysqli_error($conn);
+		}
+		else
+		{
+			echo "<script> window.location.href = 'http://teamone.uqcloud.net/Lectuer'</script>";	
+		}
+	}		
 ?>

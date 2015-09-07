@@ -5,7 +5,7 @@
  * Date: 29/8/15
  * Time: 11:15 PM
  */
-include "conn.php";
+include "connectDB.php";
 
 $JSONData = $_GET[""];
 $JSONobj = json_decode($JSONData);

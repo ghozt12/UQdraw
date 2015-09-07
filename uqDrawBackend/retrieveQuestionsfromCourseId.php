@@ -5,10 +5,13 @@
  * Date: 29/8/15
  * Time: 11:33 PM
  */
+include "connectDB.php";
+
 $JSONData = $_GET[""];
 $JSONobj = json_decode($JSONData);
 $courseId = $JSONobj->{'couseId'};
 $domainURL="http://teamone.uqcloud.net/";
+$fileDirectory = "image/15_1/".$courseId;
 $questionsData = array();
 
 $query = "SELECT `questionTitle`,`questionImage` FROM `Question` WHERE `courseID` ='$courseId';";

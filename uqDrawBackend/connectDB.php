@@ -18,7 +18,7 @@ $query = "SELECT * FROM `Question`; ";
 $result = mysqli_query($mysqli, $query);
 
 if ($result) {
-    echo "Yes";
+    echo "Yes, Here is data from table Question";
     for($x=0;$row=$result->fetch_object();$x++){
         echo $row->questionID;
     }
@@ -31,13 +31,8 @@ if (mysqli_connect_errno()) {
 
     exit();
 }
+
 else
  echo "Connect to mySQL successfully <br/>";
 
-    if (!mysqli_set_charset($mysqli, "utf8")) {
-        // printf("Error loading character set utf8: %s\n", mysqli_error($mysqli));
-    }
-    else {
-        // printf("Current character set: %s\n", mysqli_character_set_name($mysqli));
-    }
 ?>
