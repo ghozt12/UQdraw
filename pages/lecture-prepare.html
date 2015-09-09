@@ -25,7 +25,7 @@
 		<!-- Body Subheading -->
 		<h3 class="type-body-subheading"> Select subject below or click '+' to create a new one. </h3>
 		<!-- List the subjects -->
-		<ul class="list-subjects-green">
+		<ul class="list-subjects-green" id="subjects">
 			<!-- Place PHP here, for each subject in db, create a <li> element -->
 			<li> <span> Subject 1 </span> </li>
 			<li> <span> Subject 2 </span> </li>
@@ -38,6 +38,11 @@
 </body>
 	<!-- Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
 	<!-- JS -->
+		<script>
+  		 // DISRESPECT
+  		 $(document).ready(function() {
+  		 	$("#subjects").load("lecturerSubjects.php");
+  		 });
+  	</script>
 </html>

@@ -16,9 +16,11 @@
 	$result = mysqli_query($mysqli, $query);
 	if ($result) {
 	    for($x=0;$row=$result->fetch_object();$x++){
-	    	echo "<li> <span class='subject'>";
-	    	echo $row->courseID;
-	    	echo "</span> </li>";
+	    $tmpCourseId = $row->courseID;
+	    	//echo "<li id='"+$tmpCourseId+"><span class='subject'>";
+	    	echo "<a href='http://www.google.com'><li><span class='subject' id='".$tmpCourseId."'>";
+	    	echo $tmpCourseId;
+	    	echo "</span> </li></a>";
 		}
 	} else {
 	    echo "No result in the Question Table";

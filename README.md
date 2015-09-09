@@ -1,5 +1,7 @@
 # UQdraw
 UQDraw web application for DECO3801.
+How to Install web application
+upload all files from the UQDraw folder onto webserver 
 
 # SCSS
 Make sure you are editing the .scss files and not the main.css file. See style guide for more info.
