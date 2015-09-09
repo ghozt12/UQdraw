@@ -142,8 +142,9 @@
 .grid-container {
 	margin: 0 auto;
 	width: 1200px;
-	padding-top: 20px;
+	padding-top: 20px; 
 }
+
 //style for single grid block
 .grid-response {
 	float: left;
@@ -154,6 +155,5 @@
 	margin: 5px;
 	border-radius: 25px;
     border: 4px solid;
-    border-color: $uq-purple;
-    
+    border-color: $uq-purple; 
 }

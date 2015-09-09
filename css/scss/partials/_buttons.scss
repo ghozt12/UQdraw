@@ -153,3 +153,21 @@
 	}
 }
 
+//style for buttons in a single response
+.button-hidden {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    width: 70px;
+    margin-top: 18px;
+    margin-left: 17px;
+    background: $uq-purple;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 100;
+}
+
+.grid-response:hover .button-hidden{
+        opacity: 1;
+}

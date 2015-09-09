@@ -271,6 +271,26 @@ table {
   transition: 0.4s;
 }
 
+/* line 157, scss/partials/_buttons.scss */
+.button-hidden {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  width: 70px;
+  margin-top: 18px;
+  margin-left: 17px;
+  background: #3D3092;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 100;
+}
+
+/* line 171, scss/partials/_buttons.scss */
+.grid-response:hover .button-hidden {
+  opacity: 1;
+}
+
 /* line 5, scss/partials/_canvas.scss */
 #drawing-app {
   overflow: hidden;
@@ -407,6 +427,13 @@ input:focus {
   height: 30px;
   padding-top: 10px;
   float: left;
+}
+
+/* line 23, scss/partials/_images.scss */
+.single-response {
+  z-index: -1;
+  position: absolute;
+  border-radius: 20px;
 }
 
 /* *******
@@ -803,7 +830,7 @@ body {
   padding-top: 20px;
 }
 
-/* line 148, scss/partials/_list.scss */
+/* line 149, scss/partials/_list.scss */
 .grid-response {
   float: left;
   width: 110px;
