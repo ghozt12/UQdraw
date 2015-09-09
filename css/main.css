@@ -624,13 +624,20 @@ body {
 }
 
 /* line 37, scss/partials/_theme.scss */
-.bg {
-  background-image: url(../assets/images/bg.png);
+.bg-prepare {
+  background-image: url(../assets/images/bg-prepare.jpg);
   background-repeat: none;
   background-size: cover;
 }
 
-/* line 44, scss/partials/_theme.scss */
+/* line 43, scss/partials/_theme.scss */
+.bg-lecture {
+  background-image: url(../assets/images/bg-lecture.jpg);
+  background-repeat: none;
+  background-size: cover;
+}
+
+/* line 50, scss/partials/_theme.scss */
 .theme-question-purple h2 {
   text-align: center;
   padding-top: 10px;
@@ -638,7 +645,7 @@ body {
   font-size: 40px;
 }
 
-/* line 52, scss/partials/_theme.scss */
+/* line 58, scss/partials/_theme.scss */
 .theme-response-holder {
   width: 80%;
   margin: auto;
@@ -647,19 +654,19 @@ body {
   margin-top: 30px;
 }
 
-/* line 60, scss/partials/_theme.scss */
+/* line 66, scss/partials/_theme.scss */
 .theme-response-inner {
   width: 30%;
   height: 50px;
   background: #16BF25;
 }
 
-/* line 68, scss/partials/_theme.scss */
+/* line 74, scss/partials/_theme.scss */
 .theme-response-actions {
   margin-top: 30px;
   text-align: center;
 }
-/* line 72, scss/partials/_theme.scss */
+/* line 78, scss/partials/_theme.scss */
 .theme-response-actions h2 {
   font-size: 30px;
 }

@@ -34,8 +34,14 @@ a {
 	}
 }
 
-.bg{
-	background-image: url(../assets/images/bg.png);
+.bg-prepare{
+	background-image: url(../assets/images/bg-prepare.jpg);
+	background-repeat:none;
+	background-size:cover;
+}
+
+.bg-lecture{
+	background-image: url(../assets/images/bg-lecture.jpg);
 	background-repeat:none;
 	background-size:cover;
 }
