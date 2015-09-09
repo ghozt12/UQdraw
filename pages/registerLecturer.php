@@ -5,14 +5,14 @@
 	$nameJson = $_SERVER['HTTP_X_KVD_PAYLOAD'];
 	$nameArray = json_decode($nameJson);
 
-	if($userType !== "Staff")
+	/*if($userType !== "Staff")
 	{
 		echo "<script> window.location.href = 'http://teamone.uqcloud.net'</script>";
-	}
-	if($userType == "Staff")
-	{
+	}*/
+	/*if($userType == "Staff")
+	{*/
 
-		$userQuery = "SELECT LecturerID FROM Lecturer WHERE LecturerID = '$userID'";
+		$userQuery = "SELECT lecturerID FROM Lecturer WHERE lecturerID = '$userID'";
 		$userResult = mysqli_query($conn, $userQuery);
 		$foundUser = "";
 	
@@ -23,7 +23,7 @@
 			}
 		}
 
-		if (!$userID == $foundUser[0]){
+		if ($userID !== $foundUser[0]){
 			$addLecturer = "INSERT INTO Lecturer VALUES ('$userID')";
 			mysqli_query($conn, $addLecturer);
 			echo $nameArray->{'firstname'};
@@ -32,7 +32,6 @@
 		{
 			echo $nameArray->{'firstname'};
 		}
-	}
-
+	/*}*/
 	mysqli_close($conn);
 ?>
