@@ -277,7 +277,7 @@ table {
   transition: opacity 0.3s linear;
   width: 70px;
   margin-top: 18px;
-  margin-left: 17px;
+  margin-left: 20px;
   background: #3D3092;
   color: #fff;
   border: none;
@@ -434,6 +434,243 @@ input:focus {
   z-index: -1;
   position: absolute;
   border-radius: 20px;
+}
+
+/* Preload images */
+/* line 31, scss/partials/_images.scss */
+body:after {
+  content: url(../assets/images/lightbox-close.png) url(../assets/images/lightbox-loading.gif) url(../assets/images/lightbox-prev.png) url(../assets/images/lightbox-next.png);
+  display: none;
+}
+
+/* line 36, scss/partials/_images.scss */
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
+}
+
+/* line 47, scss/partials/_images.scss */
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+}
+
+/* line 57, scss/partials/_images.scss */
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 68, scss/partials/_images.scss */
+.lightbox a img {
+  border: none;
+}
+
+/* line 72, scss/partials/_images.scss */
+.lb-outerContainer {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 86, scss/partials/_images.scss */
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 92, scss/partials/_images.scss */
+.lb-container {
+  padding: 4px;
+}
+
+/* line 96, scss/partials/_images.scss */
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+/* line 106, scss/partials/_images.scss */
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(../assets/images/lightbox-loading.gif) no-repeat;
+}
+
+/* line 114, scss/partials/_images.scss */
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 123, scss/partials/_images.scss */
+.lb-container > .nav {
+  left: 0;
+}
+
+/* line 127, scss/partials/_images.scss */
+.lb-nav a {
+  outline: none;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+}
+
+/* line 132, scss/partials/_images.scss */
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+/* line 138, scss/partials/_images.scss */
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(../assets/images/lightbox-prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+/* line 151, scss/partials/_images.scss */
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 156, scss/partials/_images.scss */
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(../assets/images/lightbox-next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+/* line 169, scss/partials/_images.scss */
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 174, scss/partials/_images.scss */
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 187, scss/partials/_images.scss */
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 193, scss/partials/_images.scss */
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
+
+/* line 198, scss/partials/_images.scss */
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+/* line 205, scss/partials/_images.scss */
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+/* line 211, scss/partials/_images.scss */
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999;
+}
+
+/* line 219, scss/partials/_images.scss */
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(../assets/images/lightbox-close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+/* line 235, scss/partials/_images.scss */
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
 /* *******
