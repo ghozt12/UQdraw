@@ -295,7 +295,7 @@ table {
   margin-top: 18px;
   margin-left: 20px;
   background: #3D3092;
-  color: #fff;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   padding: 5px;
@@ -305,6 +305,120 @@ table {
 /* line 180, scss/partials/_buttons.scss */
 .grid-response:hover .button-hidden {
   opacity: 1;
+}
+
+/*.button-correct {
+    width: 200px;
+    padding: 5px;
+    border: none;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.button-incorrect {
+    width: 200px;
+    padding: 5px;
+    border: none;
+    margin-right: 20px;
+    font-size: 20px;
+    background: #111111;
+    color: #ffffff;
+}
+*/
+/* line 194, scss/partials/_buttons.scss */
+.button-correct {
+  -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
+  box-shadow: inset 0px 1px 0px 0px #a4e271;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #77a809));
+  background: -moz-linear-gradient(top, #89c403 5%, #77a809 100%);
+  background: -webkit-linear-gradient(top, #89c403 5%, #77a809 100%);
+  background: -o-linear-gradient(top, #89c403 5%, #77a809 100%);
+  background: -ms-linear-gradient(top, #89c403 5%, #77a809 100%);
+  background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809',GradientType=0);
+  background-color: #89c403;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #74b807;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528009;
+  width: 220px;
+  margin-right: 20px;
+}
+
+/* line 222, scss/partials/_buttons.scss */
+.button-correct:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
+  background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
+  background: -webkit-linear-gradient(top, #77a809 5%, #89c403 100%);
+  background: -o-linear-gradient(top, #77a809 5%, #89c403 100%);
+  background: -ms-linear-gradient(top, #77a809 5%, #89c403 100%);
+  background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#89c403',GradientType=0);
+  background-color: #77a809;
+}
+
+/* line 232, scss/partials/_buttons.scss */
+.button-correct:active {
+  position: relative;
+  top: 1px;
+}
+
+/* line 238, scss/partials/_buttons.scss */
+.button-incorrect {
+  -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
+  box-shadow: inset 0px 1px 0px 0px #f5978e;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
+  background: -moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+  background: -webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+  background: -o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+  background: -ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+  background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
+  background-color: #f24537;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
+  width: 220px;
+  margin-left: 20px;
+}
+
+/* line 266, scss/partials/_buttons.scss */
+.button-incorrect:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
+  background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+  background: -webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+  background: -o-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+  background: -ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+  background-color: #c62d1f;
+}
+
+/* line 276, scss/partials/_buttons.scss */
+.button-incorrect:active {
+  position: relative;
+  top: 1px;
 }
 
 /* line 5, scss/partials/_canvas.scss */
@@ -458,7 +572,7 @@ body:after {
   display: none;
 }
 
-/* line 36, scss/partials/_images.scss */
+/* line 39, scss/partials/_images.scss */
 .lightboxOverlay {
   position: absolute;
   top: 0;
@@ -470,7 +584,7 @@ body:after {
   display: none;
 }
 
-/* line 47, scss/partials/_images.scss */
+/* line 50, scss/partials/_images.scss */
 .lightbox {
   position: absolute;
   left: 0;
@@ -481,7 +595,7 @@ body:after {
   font-weight: normal;
 }
 
-/* line 57, scss/partials/_images.scss */
+/* line 60, scss/partials/_images.scss */
 .lightbox .lb-image {
   display: block;
   height: auto;
@@ -493,12 +607,12 @@ body:after {
   border-radius: 3px;
 }
 
-/* line 68, scss/partials/_images.scss */
+/* line 71, scss/partials/_images.scss */
 .lightbox a img {
   border: none;
 }
 
-/* line 72, scss/partials/_images.scss */
+/* line 75, scss/partials/_images.scss */
 .lb-outerContainer {
   position: relative;
   background-color: white;
@@ -513,19 +627,19 @@ body:after {
   border-radius: 4px;
 }
 
-/* line 86, scss/partials/_images.scss */
+/* line 89, scss/partials/_images.scss */
 .lb-outerContainer:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 92, scss/partials/_images.scss */
+/* line 95, scss/partials/_images.scss */
 .lb-container {
   padding: 4px;
 }
 
-/* line 96, scss/partials/_images.scss */
+/* line 99, scss/partials/_images.scss */
 .lb-loader {
   position: absolute;
   top: 43%;
@@ -536,7 +650,7 @@ body:after {
   line-height: 0;
 }
 
-/* line 106, scss/partials/_images.scss */
+/* line 109, scss/partials/_images.scss */
 .lb-cancel {
   display: block;
   width: 32px;
@@ -545,7 +659,7 @@ body:after {
   background: url(../assets/images/lightbox-loading.gif) no-repeat;
 }
 
-/* line 114, scss/partials/_images.scss */
+/* line 117, scss/partials/_images.scss */
 .lb-nav {
   position: absolute;
   top: 0;
@@ -555,25 +669,25 @@ body:after {
   z-index: 10;
 }
 
-/* line 123, scss/partials/_images.scss */
+/* line 126, scss/partials/_images.scss */
 .lb-container > .nav {
   left: 0;
 }
 
-/* line 127, scss/partials/_images.scss */
+/* line 130, scss/partials/_images.scss */
 .lb-nav a {
   outline: none;
   background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
 }
 
-/* line 132, scss/partials/_images.scss */
+/* line 135, scss/partials/_images.scss */
 .lb-prev, .lb-next {
   height: 100%;
   cursor: pointer;
   display: block;
 }
 
-/* line 138, scss/partials/_images.scss */
+/* line 141, scss/partials/_images.scss */
 .lb-nav a.lb-prev {
   width: 34%;
   left: 0;
@@ -587,13 +701,13 @@ body:after {
   transition: opacity 0.6s;
 }
 
-/* line 151, scss/partials/_images.scss */
+/* line 154, scss/partials/_images.scss */
 .lb-nav a.lb-prev:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 156, scss/partials/_images.scss */
+/* line 159, scss/partials/_images.scss */
 .lb-nav a.lb-next {
   width: 64%;
   right: 0;
@@ -607,13 +721,13 @@ body:after {
   transition: opacity 0.6s;
 }
 
-/* line 169, scss/partials/_images.scss */
+/* line 172, scss/partials/_images.scss */
 .lb-nav a.lb-next:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 174, scss/partials/_images.scss */
+/* line 177, scss/partials/_images.scss */
 .lb-dataContainer {
   margin: 0 auto;
   padding-top: 5px;
@@ -627,20 +741,20 @@ body:after {
   border-bottom-right-radius: 4px;
 }
 
-/* line 187, scss/partials/_images.scss */
+/* line 190, scss/partials/_images.scss */
 .lb-dataContainer:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 193, scss/partials/_images.scss */
+/* line 196, scss/partials/_images.scss */
 .lb-data {
   padding: 0 4px;
   color: #ccc;
 }
 
-/* line 198, scss/partials/_images.scss */
+/* line 201, scss/partials/_images.scss */
 .lb-data .lb-details {
   width: 85%;
   float: left;
@@ -648,14 +762,14 @@ body:after {
   line-height: 1.1em;
 }
 
-/* line 205, scss/partials/_images.scss */
+/* line 208, scss/partials/_images.scss */
 .lb-data .lb-caption {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
 }
 
-/* line 211, scss/partials/_images.scss */
+/* line 214, scss/partials/_images.scss */
 .lb-data .lb-number {
   display: block;
   clear: left;
@@ -664,7 +778,7 @@ body:after {
   color: #999999;
 }
 
-/* line 219, scss/partials/_images.scss */
+/* line 222, scss/partials/_images.scss */
 .lb-data .lb-close {
   display: block;
   float: right;
@@ -681,7 +795,7 @@ body:after {
   transition: opacity 0.2s;
 }
 
-/* line 235, scss/partials/_images.scss */
+/* line 238, scss/partials/_images.scss */
 .lb-data .lb-close:hover {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
