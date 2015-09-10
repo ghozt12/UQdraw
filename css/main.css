@@ -92,15 +92,23 @@ table {
   width: 100%;
   background: #3D3092;
 }
+/* line 27, scss/partials/_headers.scss */
+.header-l-prepare img {
+  margin-left: 10px;
+}
 
-/* line 30, scss/partials/_headers.scss */
+/* line 33, scss/partials/_headers.scss */
 .header-l-lecture {
   height: 50px;
   width: 100%;
   background: #16BF25;
 }
+/* line 37, scss/partials/_headers.scss */
+.header-l-lecture img {
+  margin-left: 10px;
+}
 
-/* line 41, scss/partials/_headers.scss */
+/* line 47, scss/partials/_headers.scss */
 .header-startpage {
   height: 120px;
   width: 100%;
@@ -109,7 +117,7 @@ table {
   padding-bottom: 20px;
   box-shadow: 0px 1px 5px #000;
 }
-/* line 49, scss/partials/_headers.scss */
+/* line 55, scss/partials/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -119,7 +127,7 @@ table {
   font-size: 1em;
 }
 
-/* line 63, scss/partials/_headers.scss */
+/* line 69, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
@@ -136,7 +144,7 @@ table {
 }
 
 /* line 10, scss/partials/_buttons.scss */
-.submit, .drawing-app-submit, .drawing-app-question, .drawing-app-back, .q-button, .q-button-long {
+.submit, .drawing-app-submit, .drawing-app-question, .drawing-app-back, .back-button, .q-button, .q-button-long {
   height: 60px;
   width: 150px;
   border: 2px solid #AFA5FF;
@@ -151,7 +159,7 @@ table {
   background-color: #FFF;
 }
 /* line 25, scss/partials/_buttons.scss */
-.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover, .drawing-app-back:hover, .q-button:hover, .q-button-long:hover {
+.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover, .drawing-app-back:hover, .back-button:hover, .q-button:hover, .q-button-long:hover {
   border: 2px solid #FFF;
   color: #3D3092;
   transition: 0.4s;
@@ -243,13 +251,20 @@ table {
 }
 
 /* line 128, scss/partials/_buttons.scss */
+.back-button {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+}
+
+/* line 137, scss/partials/_buttons.scss */
 .q-button {
   font-size: 12px;
   border: 2px solid #16BF25;
   color: #16BF25;
   width: 70px;
 }
-/* line 134, scss/partials/_buttons.scss */
+/* line 143, scss/partials/_buttons.scss */
 .q-button:hover {
   border: 2px solid white;
   background: #16BF25;
@@ -257,14 +272,14 @@ table {
   transition: 0.4s;
 }
 
-/* line 142, scss/partials/_buttons.scss */
+/* line 151, scss/partials/_buttons.scss */
 .q-button-long {
   font-size: 12px;
   border: 2px solid #16BF25;
   color: #16BF25;
   width: 155px;
 }
-/* line 148, scss/partials/_buttons.scss */
+/* line 157, scss/partials/_buttons.scss */
 .q-button-long:hover {
   border: 2px solid white;
   background: #16BF25;
@@ -272,7 +287,7 @@ table {
   transition: 0.4s;
 }
 
-/* line 157, scss/partials/_buttons.scss */
+/* line 166, scss/partials/_buttons.scss */
 .button-hidden {
   opacity: 0;
   transition: opacity 0.3s linear;
@@ -287,7 +302,7 @@ table {
   z-index: 100;
 }
 
-/* line 171, scss/partials/_buttons.scss */
+/* line 180, scss/partials/_buttons.scss */
 .grid-response:hover .button-hidden {
   opacity: 1;
 }
@@ -309,16 +324,15 @@ table {
 #app-bar img {
   height: 30px;
   margin-top: 22px;
-  margin-left: 30px;
+  margin-left: 45%;
 }
 /* line 24, scss/partials/_canvas.scss */
 #app-bar .icon-select {
   display: inline-block;
-  margin-left: calc(100vw / 12);
   height: 70px;
-  width: 90px;
+  width: 16%;
 }
-/* line 31, scss/partials/_canvas.scss */
+/* line 30, scss/partials/_canvas.scss */
 #app-bar .selected {
   background: white;
 }
@@ -699,15 +713,23 @@ body:after {
   width: 100%;
   background: #3D3092;
 }
+/* line 27, scss/partials/_headers.scss */
+.header-l-prepare img {
+  margin-left: 10px;
+}
 
-/* line 30, scss/partials/_headers.scss */
+/* line 33, scss/partials/_headers.scss */
 .header-l-lecture {
   height: 50px;
   width: 100%;
   background: #16BF25;
 }
+/* line 37, scss/partials/_headers.scss */
+.header-l-lecture img {
+  margin-left: 10px;
+}
 
-/* line 41, scss/partials/_headers.scss */
+/* line 47, scss/partials/_headers.scss */
 .header-startpage {
   height: 120px;
   width: 100%;
@@ -716,7 +738,7 @@ body:after {
   padding-bottom: 20px;
   box-shadow: 0px 1px 5px #000;
 }
-/* line 49, scss/partials/_headers.scss */
+/* line 55, scss/partials/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -726,7 +748,7 @@ body:after {
   font-size: 1em;
 }
 
-/* line 63, scss/partials/_headers.scss */
+/* line 69, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
@@ -946,6 +968,19 @@ body {
   font-size: 30px;
 }
 
+/* line 92, scss/partials/_theme.scss */
+.subject-form {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  background-color: #3D3092;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
 /* line 1, scss/partials/_list.scss */
 .list-subjects, .list-subjects-purple, .list-subjects-green {
   margin-top: 20px;
@@ -998,11 +1033,18 @@ body {
 }
 
 /* line 58, scss/partials/_list.scss */
+#addbutton {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 64, scss/partials/_list.scss */
 .list-questions-green {
   width: 80%;
   margin: auto;
 }
-/* line 63, scss/partials/_list.scss */
+/* line 69, scss/partials/_list.scss */
 .list-questions-green li {
   margin-bottom: 10px;
   height: 50px;
@@ -1015,17 +1057,17 @@ body {
   font-size: 30px;
   padding-left: 20px;
 }
-/* line 77, scss/partials/_list.scss */
+/* line 83, scss/partials/_list.scss */
 .list-questions-green li button {
   float: right;
 }
 
-/* line 82, scss/partials/_list.scss */
+/* line 88, scss/partials/_list.scss */
 .student-list {
   width: 80%;
   margin: auto;
 }
-/* line 87, scss/partials/_list.scss */
+/* line 93, scss/partials/_list.scss */
 .student-list li {
   margin-bottom: 10px;
   height: 50px;
@@ -1040,32 +1082,32 @@ body {
   font-size: 30px;
   text-align: center;
 }
-/* line 101, scss/partials/_list.scss */
+/* line 107, scss/partials/_list.scss */
 .student-list li:hover {
   background: white;
   color: #16BF25;
   transition: 0.4s;
 }
-/* line 108, scss/partials/_list.scss */
+/* line 114, scss/partials/_list.scss */
 .student-list li button {
   float: right;
 }
 
-/* line 113, scss/partials/_list.scss */
+/* line 119, scss/partials/_list.scss */
 .list-questions, .list-questions-purple {
   margin-top: 20px;
   width: 100%;
 }
-/* line 118, scss/partials/_list.scss */
+/* line 124, scss/partials/_list.scss */
 .list-questions ul, .list-questions-purple ul {
   max-width: 400px;
   margin: auto;
 }
-/* line 124, scss/partials/_list.scss */
+/* line 130, scss/partials/_list.scss */
 .list-questions ul li, .list-questions-purple ul li {
   margin-bottom: 10px;
 }
-/* line 128, scss/partials/_list.scss */
+/* line 134, scss/partials/_list.scss */
 .list-questions ul li div, .list-questions-purple ul li div {
   color: white;
   height: 30px;
@@ -1074,42 +1116,42 @@ body {
   transition: .3s;
   padding-left: 10px;
 }
-/* line 137, scss/partials/_list.scss */
+/* line 143, scss/partials/_list.scss */
 .list-questions h2, .list-questions-purple h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
 }
-/* line 144, scss/partials/_list.scss */
+/* line 150, scss/partials/_list.scss */
 .list-questions h3, .list-questions-purple h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 500;
   padding-bottom: 10px;
 }
-/* line 151, scss/partials/_list.scss */
+/* line 157, scss/partials/_list.scss */
 .list-questions label, .list-questions-purple label {
   font-size: 20px;
 }
 
-/* line 160, scss/partials/_list.scss */
+/* line 166, scss/partials/_list.scss */
 .list-questions-purple ul li div {
   background: #3D3092;
 }
-/* line 164, scss/partials/_list.scss */
+/* line 170, scss/partials/_list.scss */
 .list-questions-purple ul li div:hover {
   background: #1d1745;
 }
 
-/* line 173, scss/partials/_list.scss */
+/* line 179, scss/partials/_list.scss */
 .grid-container {
   margin: 0 auto;
   width: 1200px;
   padding-top: 20px;
 }
 
-/* line 180, scss/partials/_list.scss */
+/* line 186, scss/partials/_list.scss */
 .grid-response {
   float: left;
   width: 110px;

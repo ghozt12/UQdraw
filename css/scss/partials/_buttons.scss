@@ -125,6 +125,15 @@
 	left: 10px;
 }
 
+.back-button {
+	@extend .submit;
+
+	// Placement
+	position: absolute;
+	top: 60px;
+	left: 10px;
+}
+
 .q-button {
 	@extend .submit;
 	font-size: 12px;

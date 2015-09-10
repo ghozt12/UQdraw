@@ -24,6 +24,9 @@ $header-height: 50px;
     height: $header-height;
     width: 100%;
     background: $uq-purple;
+	img{
+	margin-left:10px;
+	}
 }
 
 // Header for Lecture (ie Green)
@@ -31,6 +34,9 @@ $header-height: 50px;
     height: $header-height;
     width: 100%;
     background: $uq-green;
+	img{
+	margin-left:10px;
+	}
 }
 
 
