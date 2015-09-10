@@ -14,10 +14,17 @@ if($courseId!=NULL&&strlen($courseId)<20) {// don't run if cocourseID is invaild
     $domainURL = "http://teamone.uqcloud.net/";
     $response = array();//JSON
     $response["questionsList"] = array();//JSON array
+    $codeQuery = "SELECT  `enteringCode` FROM `Course` WHERE `courseID`= '$courseId'";
+    $codeResult = mysqli_query($mysqli, $codeQuery);
+    if($codeResult){
+        $response["enteringCode"]=$codeResult->fetch_object()->enteringCode;
+    }
+
     $query = "select a.*, b.enteringCode from Question a join Course b on a.courseID=b.courseID where b.courseID='$courseId'";
     $result = mysqli_query($mysqli, $query);
     if ($result) {//success =1 means data retrieve successfully
             $response["subject"] = explode("-", $courseId)[0];//XXXX1234
+            $response["subjectFull"] = $courseId; //XXXX1234-11_1
         for ($x = 0; $row = $result->fetch_object(); $x++) {
             $questionData = array();
             $questionData["index"] = $x;
@@ -31,7 +38,7 @@ if($courseId!=NULL&&strlen($courseId)<20) {// don't run if cocourseID is invaild
                 $questionData["image"] = NULL;
             }
             array_push($response["questionsList"], $questionData);//push object in array
-            if($x==0){$response["enteringCode"]=$row->enteringCode;}//Since all entering code in the result are the same, we only need one
+          //  if($x==0){$response["enteringCode"]=$row->enteringCode;}//Since all entering code in the result are the same, we only need one
         }
         $response["success"] = 1;
     } else {

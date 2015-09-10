@@ -54,14 +54,45 @@
 						"Year: <input style='width:10%;'  type='number' name='year' maxlength='2' value ='"+getCurrentYear()
 						+"'>Semester: <input style='width:10%;' type='number' name='year'maxlength='1' value ='"+getCurrentSem()+"'><button onclick='submitCourse()'>Add</button></span></form></li>";
 			}
-            function submitCourse(){//get data from the form
-         }
-			function getCurrentYear(){
-				
-			}
-		    function getCurrentSem(){}
+		 function submitCourse(){//get data from the form
 
+			 var courseCode = document.getElementsByName("courseID")[0].value;
+			 var year = document.getElementsByName("year")[0].value;
+			 var sem = document.getElementsByName("semester")[0].value;
+			 var postCourseCode = "";
+			 if(courseCode==null||year==null||sem==null){
+				 alert("Type something dude");}
 
+			 else{
+				 postCourseCode=postCourseCode.concat(courseCode,"-",year,"_",sem);
+				 alert(postCourseCode);
+				 var url = "http://teamone.uqcloud.net/Brian/uqDrawBackend/addCourse.php?courseID="+postCourseCode;
+				 var data ="";
+				 $.post(url,data,function(data, status){
+					 alert("Data: " + data + "\nStatus: " + status);
+				 });
+			 }
 
+		 }
+		 function getCurrentYear(){
+			 var d = new Date();
+			 var year=d.getFullYear();
+			 return year.toString().substring(2, 4);
+		 }
+		 function getCurrentSem(){
+			 var d = new Date();
+			 var month=d.getMonth();
+			 if(month>=2&&month<=6){
+				 return 1;
+			 }
+			 if(month>=7&&month<=11){
+				 return 2;
+			 }
+			 if(month>=12&&month<=1){
+				 return 3;
+			 }
+
+		 }
   	</script>
 </html>
+

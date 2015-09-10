@@ -7,15 +7,21 @@
  */
 include "connectDB.php";
 //include "testSaveImage.php"; //get a hard coded image blob for testing
-$JSONData=$_GET [""]; // JSON get from ajax
-$JSONobj = json_decode($JSONData);
-$courseId = $JSONobj->{'courseId'};
-$title = $JSONobj->{'title'}; //questionTitle
-$haveImage=$JSONobj->{'haveImage'};// true = question attached with img, vice versa
-$fileFormat = $JSONobj->{'fileFormat'};
-$imageBlob = $JSONobj->{'image'}; //questionImage
-$fileFormat = $JSONobj->{'fileFormat'};
+//$JSONData=$_POST[""]; // JSON get from ajax
+//$JSONData = '{"courseID":"BBBB2234-15_1","title":"One more question","haveImage":0,"fileFormat":"","image":"","questionWeek":1}';
+//$obj = json_decode($JSONData);
+echo"Add Question Page: \n";
+echo "<pre>";
+print_r($_POST);
+echo "</pre>";
 
+$title = $_POST["title"];
+$courseId = $_POST["courseID"];
+$haveImage=$_POST["haveImage"];
+$questionWeek = $_POST["questionWeek"];
+$imageBlob = $_POST["image"];
+
+echo $title." ".$courseId." ".$haveImage;
 /*$title = "test1";
 $imageBlob = $blob;
 $haveImage=true;

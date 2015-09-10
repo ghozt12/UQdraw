@@ -4,7 +4,92 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/gridism.css">
 </head>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">	</script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
+<script type='text/javascript'>
+	var courseID ="";
+	var haveImage =0;// set to 1 if a image is imported
+	var fileFormat ="";
+	var title ="";
+	var imageBlob ="";
+	$(document).ready(function() {
+		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
+			type: 'GET',
+			url: 'http://teamone.uqcloud.net/Brian/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
+			success: function(data){
+				//alert(data);
+				//alert("success");
+				var questionsListObject = JSON.parse(data);
+				courseID = questionsListObject.subjectFull;
+				document.getElementById("code").textContent=questionsListObject.enteringCode;// 3 digit code
+				document.getElementById("subject").textContent=questionsListObject.subject;// course code
+				var questionListHTML="";
+				for (var i = 0; i < questionsListObject.questionsList.length; i++) {//generate all question from JSON
+					var question = questionsListObject.questionsList[i];
+					questionListHTML += getQuestionItem(question);
+				}
+				document.getElementById("questionsList").innerHTML = questionListHTML;
+			},
+			error: function(){
+				alert('There was an error adding your comment');
+			}
+		});
+	});
+	function getParameterByName(name) { // get url parameter
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
+ //"<p>Lecture</p>"+questionItem.quwstionWeek+
+		return	"<li> <span>" +questionItem.title+ "</span>" +
+		"<button class='q-button'>DELETE</button> " +
+		"<button class='q-button-long'>VIEW RESPONSES</button> " +
+		"<button class='q-button'>EDIT</button> ";
+	}
+	function addCourse(){
+		document.getElementById("addButton").innerHTML ="";
+		document.getElementById("addButton").innerHTML =/*"<li><form id ='addSubjectForm' class='subject-form'><span>Title:<input style='width:70%;'type='text' name='title' >" +
+				"<button  type='submit' id ='addButton';class= 'q-button' '>Add</button>" +
+				"<button  class= 'q-button' onclick='parseImage()'>Image</button></span></form></li>";*/
+				"<li><span>Title:<input style='width:70%;'type='text' name='title' >" +
+				"<button   class='q-button' onclick='submitCourse()' >Add</button>" +
+				"<button  class= 'q-button' onclick='parseImage()'>Image</button></span></li>"
+	}
 
+	function parseImage(){
+	//Change image to blob}
+		imageBlob = "";
+	}
+	function getCurrentWeek(){
+		var d =new Date();//to be discuss
+		return 1;
+	}
+
+	function submitCourse(){ //ajax Post
+	//$("#addButton").click(function(){
+		title = document.getElementsByName("title")[0].value;
+		var DataObj = {
+			  courseID: courseID,
+			  title: title,
+			  haveImage: haveImage,
+			  fileFormat: fileFormat,
+			  image: imageBlob,
+			  questionWeek:getCurrentWeek()
+ 		};
+		$.post('addQuestion.php',DataObj, function(data){//url must be in file path, Can't POST data through HTTP
+			alert(data);
+			location.reload();// reload page when data is inserted
+
+		}).fail(function() {
+			// just in case posting your form failed
+			alert( "Posting failed." );
+
+		});
+
+	}
+</script>
 <body class="bg-prepare">
 	<!-- Header -->
 	<section>
@@ -21,23 +106,25 @@
 	<!-- Body -->
 	<section>
 		<!-- Body Heading -->
-		<h2 class="type-body-heading"> <span id="subject"> MATH 1061 </span>  CODE: <span>3FC</span> </h2>
+		<h2 class="type-body-heading"> <span id="subject"> MATH 1061 </span>  CODE: <span id="code">3FC</span> </h2>
 		<!-- Body Subheading -->
 		<h3 class="type-body-subheading"> Click the plus button to create a new question </h3>
 		<!-- List the Questions -->
 		<ul class="list-questions-green">
+			<span id="questionsList">
 			<!-- Place PHP here, for each question in db, create a <li> element -->
 			<li> <span> Question 1: Draw a house </span> <button class="q-button">DELETE</button> <button class="q-button-long">VIEW RESPONSES</button> <button class="q-button">EDIT</button> </li>
 			<li> <span> Question 2: Draw a circle </span> <button class="q-button">DELETE</button> <button class="q-button-long">VIEW RESPONSES</button> <button class="q-button">EDIT</button></li>
 			<li> <span> Question 3: What is 1 + 0? </span> <button class="q-button">DELETE</button> <button class="q-button-long">VIEW RESPONSES</button> <button class="q-button">EDIT</button> </li>
 			<!-- Create new question button -->
-			<button class="button-add-subject">+</button>
+				</span>
+			<ul id="addButton"><li onclick="addCourse()"><button class="button-add-subject">+</button></li></ul>
 		</ul>
 	</section>
 
 </body>
 	<!-- Library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 
 	<!-- JS -->
 </html>
