@@ -4,7 +4,7 @@
 }
 
 /* line 1, scss/modules/_noselect.scss */
-.noselect, .list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li {
+.noselect, .list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li, .student-list li {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -25,42 +25,43 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 16, scss/partials/_reset.scss */
+/* line 17, scss/partials/_reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 19, scss/partials/_reset.scss */
+/* line 20, scss/partials/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, scss/partials/_reset.scss */
+/* line 23, scss/partials/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 25, scss/partials/_reset.scss */
+/* line 26, scss/partials/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 29, scss/partials/_reset.scss */
+/* line 30, scss/partials/_reset.scss */
 blockquote:before, blockquote:after {
   content: '';
   content: none;
 }
 
-/* line 34, scss/partials/_reset.scss */
+/* line 35, scss/partials/_reset.scss */
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 38, scss/partials/_reset.scss */
+/* line 39, scss/partials/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -688,12 +689,22 @@ body {
   background: #16BF25;
 }
 
-/* line 74, scss/partials/_theme.scss */
+/* line 73, scss/partials/_theme.scss */
+.student-question {
+  margin-top: 30px;
+}
+
+/* line 77, scss/partials/_theme.scss */
+.student-responses {
+  margin-top: 30px;
+}
+
+/* line 82, scss/partials/_theme.scss */
 .theme-response-actions {
   margin-top: 30px;
   text-align: center;
 }
-/* line 78, scss/partials/_theme.scss */
+/* line 86, scss/partials/_theme.scss */
 .theme-response-actions h2 {
   font-size: 30px;
 }
@@ -773,20 +784,51 @@ body {
 }
 
 /* line 82, scss/partials/_list.scss */
+.student-list {
+  width: 80%;
+  margin: auto;
+}
+/* line 87, scss/partials/_list.scss */
+.student-list li {
+  margin-bottom: 10px;
+  height: 50px;
+  background: #16BF25;
+  color: white;
+  margin: 3px;
+  padding-top: 12px;
+  transition: .3s;
+  cursor: pointer;
+  font-size: 30px;
+  padding-left: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+/* line 101, scss/partials/_list.scss */
+.student-list li:hover {
+  background: white;
+  color: #16BF25;
+  transition: 0.4s;
+}
+/* line 108, scss/partials/_list.scss */
+.student-list li button {
+  float: right;
+}
+
+/* line 113, scss/partials/_list.scss */
 .list-questions, .list-questions-purple {
   margin-top: 20px;
   width: 100%;
 }
-/* line 87, scss/partials/_list.scss */
+/* line 118, scss/partials/_list.scss */
 .list-questions ul, .list-questions-purple ul {
   max-width: 400px;
   margin: auto;
 }
-/* line 93, scss/partials/_list.scss */
+/* line 124, scss/partials/_list.scss */
 .list-questions ul li, .list-questions-purple ul li {
   margin-bottom: 10px;
 }
-/* line 97, scss/partials/_list.scss */
+/* line 128, scss/partials/_list.scss */
 .list-questions ul li div, .list-questions-purple ul li div {
   color: white;
   height: 30px;
@@ -795,42 +837,42 @@ body {
   transition: .3s;
   padding-left: 10px;
 }
-/* line 106, scss/partials/_list.scss */
+/* line 137, scss/partials/_list.scss */
 .list-questions h2, .list-questions-purple h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
 }
-/* line 113, scss/partials/_list.scss */
+/* line 144, scss/partials/_list.scss */
 .list-questions h3, .list-questions-purple h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 500;
   padding-bottom: 10px;
 }
-/* line 120, scss/partials/_list.scss */
+/* line 151, scss/partials/_list.scss */
 .list-questions label, .list-questions-purple label {
   font-size: 20px;
 }
 
-/* line 129, scss/partials/_list.scss */
+/* line 160, scss/partials/_list.scss */
 .list-questions-purple ul li div {
   background: #3D3092;
 }
-/* line 133, scss/partials/_list.scss */
+/* line 164, scss/partials/_list.scss */
 .list-questions-purple ul li div:hover {
   background: #1d1745;
 }
 
-/* line 142, scss/partials/_list.scss */
+/* line 173, scss/partials/_list.scss */
 .grid-container {
   margin: 0 auto;
   width: 1200px;
   padding-top: 20px;
 }
 
-/* line 149, scss/partials/_list.scss */
+/* line 180, scss/partials/_list.scss */
 .grid-response {
   float: left;
   width: 110px;
