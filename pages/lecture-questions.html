@@ -4,7 +4,44 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/gridism.css">
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">	</script>
+<script type='text/javascript'>
+	$(document).ready(function() {
+		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
+			type: 'GET',
+			url: 'http://teamone.uqcloud.net/Brian/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
+			success: function(data){
+				alert(data);
+				alert("success");
+				var questionsListObject = JSON.parse(data);
+				document.getElementById("code").textContent=questionsListObject.enteringCode;// 3 digit code
+				document.getElementById("subject").textContent=questionsListObject.subject;// course code
+				var questionListHTML="";
+				for (var i = 0; i < questionsListObject.questionsList.length; i++) {//generate all question from JSON
+					var question = questionsListObject.questionsList[i];
+					questionListHTML += getQuestionItem(question);
+				}
+				document.getElementById("questionsList").innerHTML = questionListHTML;
+			},
+			error: function(){
+				console.log(data);
+				alert('There was an error adding your comment');
+			}
+		});
+	});
+	function getParameterByName(name) { // get url parameter
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
+		return "<li id='"+questionItem.questionID+"'> <label> Lecture "+questionItem.questionWeek
+		+" </label> <div>"+questionItem.title
+		+" <button class='button'> Ask </button> <button class='button'> View </button> </div> </li>"
 
+	}
+</script>
 <body class="bg-lecture">
 
 	<section>
@@ -16,10 +53,10 @@
 	</section>
 
 	<section class = "list-questions-purple">
-		<h2> Subject 1 - Code: <span id="code"> 3FC </span> </h2>
+		<h2> <span id="subject">Subject 1</span> - Code: <span id="code"> 3FC </span> </h2>
 		<h3> Questions </h3>
 
-		<ul>
+		<ul><span id="questionsList">
 			<li>
 				<label> Lecture 1 </label>
 				<div> 
@@ -48,11 +85,11 @@
 				</div>
 			</li>
 
-		</ul>
+		</span></ul>
 	</section>
 
 </body>
 	<!-- Library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 	<!-- JS -->
 </html>

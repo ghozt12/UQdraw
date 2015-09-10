@@ -14,25 +14,14 @@ $password = "mYzL@vbOwepH";
 $dbname = "uqdraw";
 $mysqli -> connect($host, $user, $password, $dbname);
 
-$query = "SELECT * FROM `Question`; ";
-$result = mysqli_query($mysqli, $query);
-
-if ($result) {
-    echo "Yes, Here is data from table Question";
-    for($x=0;$row=$result->fetch_object();$x++){
-        echo $row->questionID;
-    }
-} else {
-    echo "No";
-}
 if (mysqli_connect_errno()) {
-    echo("Failed to connect, the error message is : ".
-        mysqli_connect_error());
+    //echo("Failed to connect, the error message is : ".
+        mysqli_connect_error();
 
-    exit();
+    //exit();
 }
 
-else
- echo "Connect to mySQL successfully <br/>";
+//else
+ //echo "Connect to mySQL successfully <br/>";
 
 ?>

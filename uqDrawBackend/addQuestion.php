@@ -39,7 +39,7 @@ if ($insertDataResult) {
 
 if($haveImage==true && $insertDataResult) {//if there is a image, update file path to db and upload the image to serve
 
-    $questionId = $mysqli->insert_id;// retrieve questionID after row is inserted
+    $questionId = $mysqli->insert_id;//retrieve questionID after row is inserted
     $imagePath_withQid = $imagePath.$questionId; // attach question in the dir
 
     if (!is_dir($imagePath_withQid)) { //create directory if it haven't exist
