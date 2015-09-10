@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> UQDraw </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/test.css">
+
+  </head>
+
+  <body id="drawing-app">
+    <div id="headers-top-bar">
+      <img src="../assets/images/topbar-logo.png"></img>
+    </div>
+
+    <!-- Back button -->
+    <button class="drawing-app-back">Back</button>
+
+	<section class="student-question">
+		<!-- Body Heading -->
+		<h2 class="type-body-heading"> <span id="subject"> MATH 1061 </span>  CODE: <span>3FC</span> </h2>
+		<!-- List the Questions -->
+		<ul class="student-list">
+			<!-- Place PHP here, for each question in db, create a <li> element -->
+			<li> <span> Question Available! </span> 
+		</ul>
+		</section>
+		<section class="student-responses">
+		<h2 class="type-body-heading"> <span> PREVIOUS RESPONSES </span> </h2>
+		<!-- Place PHP here, for each question in db, create a <li> element -->
+		<ul class="student-list">
+			<li> <span> Draw my house </span> </li>
+		</ul>
+	</section>
+    
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/drawing_page.js"></script>
+  <script type="text/javascript" src="../js/uqdraw.js"></script>
+  <script type="text/javascript">
+     UQdraw.init();
+  </script>
+
+</html>
