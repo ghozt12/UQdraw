@@ -11,8 +11,8 @@
 			type: 'GET',
 			url: 'http://teamone.uqcloud.net/Brian/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
 			success: function(data){
-				alert(data);
-				alert("success");
+				//alert(data);
+				//alert("success");
 				var questionsListObject = JSON.parse(data);
 				document.getElementById("code").textContent=questionsListObject.enteringCode;// 3 digit code
 				document.getElementById("subject").textContent=questionsListObject.subject;// course code
