@@ -20,15 +20,17 @@
 				//alert(data);
 				//alert("success");
 				var questionsListObject = JSON.parse(data);
-				courseID = questionsListObject.subjectFull;
-				document.getElementById("code").textContent=questionsListObject.enteringCode;// 3 digit code
-				document.getElementById("subject").textContent=questionsListObject.subject;// course code
-				var questionListHTML="";
-				for (var i = 0; i < questionsListObject.questionsList.length; i++) {//generate all question from JSON
-					var question = questionsListObject.questionsList[i];
-					questionListHTML += getQuestionItem(question);
-				}
-				document.getElementById("questionsList").innerHTML = questionListHTML;
+				if(questionsListObject.success==1) {
+					courseID = questionsListObject.subjectFull;
+					document.getElementById("code").textContent = questionsListObject.enteringCode;// 3 digit code
+					document.getElementById("subject").textContent = questionsListObject.subject;// course code
+					var questionListHTML = "";
+					for (var i = 0; i < questionsListObject.questionsList.length; i++) {//generate all question from JSON
+						var question = questionsListObject.questionsList[i];
+						questionListHTML += getQuestionItem(question);
+					}
+					document.getElementById("questionsList").innerHTML = questionListHTML;
+				}else{alert("Fail to retrieve data please signon");}
 			},
 			error: function(){
 				alert('There was an error adding your comment');
@@ -70,24 +72,25 @@
 	function submitCourse(){ //ajax Post
 	//$("#addButton").click(function(){
 		title = document.getElementsByName("title")[0].value;
-		var DataObj = {
-			  courseID: courseID,
-			  title: title,
-			  haveImage: haveImage,
-			  fileFormat: fileFormat,
-			  image: imageBlob,
-			  questionWeek:getCurrentWeek()
- 		};
-		$.post('addQuestion.php',DataObj, function(data){//url must be in file path, Can't POST data through HTTP
-			alert(data);
-			location.reload();// reload page when data is inserted
+		if(title!="") {
+			var DataObj = {
+				courseID: courseID,
+				title: title,
+				haveImage: haveImage,
+				fileFormat: fileFormat,
+				image: imageBlob,
+				questionWeek: getCurrentWeek()
+			};
+			$.post('../Brian/uqDrawBackend/addQuestion.php', DataObj, function (data) {//url must be in file path, Can't POST data through HTTP
+				alert(data);
+				location.reload();// reload page when data is inserted
 
-		}).fail(function() {
-			// just in case posting your form failed
-			alert( "Posting failed." );
+			}).fail(function () {
+				// just in case posting your form failed
+				alert("Posting failed.");
 
-		});
-
+			});
+		}else{alert("Type something, dude");}
 	}
 </script>
 <body class="bg-prepare">

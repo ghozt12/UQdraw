@@ -45,6 +45,9 @@ if($courseId!=NULL&&strlen($courseId)<20) {// don't run if cocourseID is invaild
         $response["success"] = 0;
         echo $mysqli->error;
     }
-    echo json_encode($response, JSON_UNESCAPED_SLASHES);// display JSON
-}else{echo"Missing/invaild parameter courseId ";};
+
+}else{//echo"Missing/invaild parameter courseId ";
+    $response["success"] = 0;
+}
+echo json_encode($response, JSON_UNESCAPED_SLASHES);// display JSON
 ?>

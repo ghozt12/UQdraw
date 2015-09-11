@@ -36,6 +36,9 @@ if($code!=NULL&& strlen($code)==3) {//stop running if code is invaild
         $response["success"] = 0;
         echo $mysqli->error;
     }
-    echo json_encode($response, JSON_UNESCAPED_SLASHES);// display JSON
-}else{echo"Missing/invaild parameter code ";};
+
+}else{//echo"Missing/invaild parameter code ";
+    $response["success"] = 0;
+}
+echo json_encode($response, JSON_UNESCAPED_SLASHES);// display JSON
 ?>

@@ -9,6 +9,49 @@
 
 </head>
 
+<!-- Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- JS -->
+<script src="js/startPage.js"></script>
+
+<script>
+	var studentID ="";
+	var name ="";
+	// DISRESPECT
+	$(document).ready(function() {
+		// disable the line under to test the pagg avoid redirect
+		//$("#start-username").load("pages/signon.php");//redirect to lecturer mode, if staff login
+
+		$.ajax({//get student course list from table Submissons, stdID will get from JSON, no need to POST anything
+			type: 'GET',
+			url: 'Brian/uqDrawBackend/retrieveStudentCourseList.php',//
+			success: function(data){
+				var coursesListObject = JSON.parse(data);
+				if(coursesListObject.success==1) {
+				studentID = coursesListObject.studentID;
+				name = coursesListObject.name;
+					document.getElementById("start-username").textContent = name;// FirstName
+					var courseListHTML = "";
+					for (var i = 0; i < coursesListObject.courseID.length; i++) {//generate all question from JSON
+						var course = coursesListObject.courseID[i];
+						courseListHTML += getCourseItem(course);
+					}
+					document.getElementById("courseList").innerHTML = courseListHTML;
+				}else{alert("Fail to retrieve data, please Signon");}
+			},
+			error: function(){
+				alert("can't reach server" );
+			}
+		});
+	});
+
+	function getCourseItem(courseItem){ // add a <li> on the page// will be add a link after that page is finish
+		return	"<li> <span class='subject'>"+courseItem+"</span> </lI>";
+	}
+
+
+</script>
 <body>
 	<!-- Header -->
 	<section>
@@ -34,24 +77,13 @@
 
 	<section class = "list-subjects-green">
 		<h3> Select subject below </h3>
-		<ul>
+		<ul><span id="courseList">
 			<li> <span class="subject"> Subject 1 </span> </lI>
 			<li> <span class="subject"> Subject 2 </span> </lI>
 			<li> <span class="subject"> Subject 3 </span> </lI>
-		</ul>
+		</span></ul>
 	</section>
 </body>
 
-	<!-- Library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-	<!-- JS -->
-  	<script src="js/startPage.js"></script>
-
-  	<script>
-  		 // DISRESPECT
-  		 $(document).ready(function() {
-  		 	$("#start-username").load("pages/signon.php");
-  		 });
-  	</script>
 </html>
