@@ -18,7 +18,7 @@
 	    for($x=0;$row=$result->fetch_object();$x++){
 	    $tmpCourseId = $row->courseID;
 	    	//echo "<li id='"+$tmpCourseId+"><span class='subject'>";
-	    	echo "<a href='http://www.google.com'><li><span class='subject' id='".$tmpCourseId."'>";
+	    	echo "<a href='http://teamone.uqcloud.net/Brian/testFrontEnd/pages/lecture-questions.html?courseID=".$tmpCourseId."''><li><span id='".$tmpCourseId."'>";
 	    	echo $tmpCourseId;
 	    	echo "</span> </li></a>";
 		}
