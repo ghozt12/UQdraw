@@ -9,6 +9,8 @@
 
   </head>
 
+
+
   <body id="drawing-app">
     <div id="headers-top-bar">
       <img src="../assets/images/topbar-logo.png"></img>
@@ -19,18 +21,21 @@
 
 	<section class="student-question">
 		<!-- Body Heading -->
-		<h2 class="type-body-heading"> <span id="subject"> MATH 1061 </span>  CODE: <span>3FC</span> </h2>
+		<h2 class="type-body-heading"> <span id="subject">  </span>  CODE: <span id="code">3FC</span> </h2>
 		<!-- List the Questions -->
-		<ul class="student-list" href="drawing-app.html">
+		<ul class="student-list" >
 			<!-- Place PHP here, for each question in db, create a <li> element -->
+          <h2 class="type-body-heading"> <span> Question Available </span> </h2>
+          <span id="openedQuestions"></span>
 			<a href="drawing-app.html"><li> <span> Question Available! </span></li></a>
 		</ul>
 		</section>
 		<section class="student-responses">
 		<h2 class="type-body-heading"> <span> PREVIOUS RESPONSES </span> </h2>
 		<!-- Place PHP here, for each question in db, create a <li> element -->
-		<ul class="student-list" href="drawing-app.html">
-          <a href="drawing-app.html"><li> <span> Draw my house </span> </li></a>
+		<ul class="student-list" >
+          <span id="closedQuestions"></span><!-- don't link to drawing app, since it already submitted-->
+         <!-- <a ><li> <span> Draw my house </span> </li></a>-->
 		</ul>
 	</section>
     
@@ -40,6 +45,55 @@
   <script type="text/javascript" src="../js/uqdraw.js"></script>
   <script type="text/javascript">
      UQdraw.init();
+  </script>
+  <script type='text/javascript'>
+    var courseID ="";
+    $(document).ready(function() {
+      $.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
+        type: 'GET',
+        url: 'http://teamone.uqcloud.net/Brian/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
+        success: function(data){
+          //alert(data);
+          //alert("success");
+          var questionsListObject = JSON.parse(data);
+          if(questionsListObject.success==1) {
+            courseID = questionsListObject.subjectFull;
+            document.getElementById("code").textContent = questionsListObject.enteringCode;// 3 digit code
+            document.getElementById("subject").textContent = questionsListObject.subject;// course code
+            var questionListHTML_open = ""; // status = 0
+            var questionListHTML_close = "";//status = 1
+            for (var i = 0; i < questionsListObject.questionsList.length; i++) {//generate all question from JSON
+              var question = questionsListObject.questionsList[i];
+              if(question.status== 0){
+                questionListHTML_open += getQuestionItem(question);
+              }
+              if(question.status == 1){
+                questionListHTML_close += getQuestionItem(question);
+              }
+
+            }
+            document.getElementById("openedQuestions").innerHTML = questionListHTML_open;
+            document.getElementById("closedQuestions").innerHTML = questionListHTML_close;
+          }else{alert("Fail to retrieve data please signon");}
+        },
+        error: function(){
+          alert('There was an error adding your comment');
+        }
+      });
+    });
+    function getParameterByName(name) { // get url parameter
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
+      //"<p>Lecture</p>"+questionItem.quwstionWeek+
+      return	"<a href='drawing-app2.html?questionID="+questionItem.questionID+"'><li> <span> "+questionItem.title+" </span></li></a>";
+    }
+
+
+
   </script>
 
 </html>

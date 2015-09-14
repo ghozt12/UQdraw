@@ -220,21 +220,27 @@ $(document).ready(function () {
 	$("#save").click(function() {
 		var canvas = document.getElementById("canvas");
 		var data = canvas.toDataURL("image/png");
-		alert("saved");
-		
-		// Send to the server 
-		// Uncomment code and add a php user
-		/* $.ajax({
-		  type: "POST",
-		  url: "ADD_SOME_PHP_PAGE_HERE",
-		  data: { 
-		     imgBase64: data
-		  }
-		}).done(function(o) {
-		  console.log('saved successfully saved'); 
-		});
-		*/
+		var questionID = getParameterByName("questionID");
+		if(questionID==""){// if no question ID, won't upload
+			alert("no question is selected, can't send data");
+		}else {
+			document.getElementById("testImg").src = data;
+			// Send to the server
+			// Uncomment code and add a php user
+			$.ajax({
+				type: "POST",
+				url: "../uqDrawBackend/addSubmission.php",
+				data: {
+					imgBase64: data,
+					questionID: questionID,// hard code at the momvent
+				}
+			}).done(function (data) {
+				alert(data);//get result from php
+				console.log(data);
+				console.log('saved successfully saved');
+			});
 
+		}
 	});
 
 	
@@ -393,11 +399,17 @@ function redraw(context) {
 		}
 	};
 
+	function getParameterByName(name) { // get url parameter added by Brian
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
 </script>
 
 
 </head>
-<body>
+<img>
 <div id="page">
 
 	<div id="headers-top-bar">
@@ -431,6 +443,7 @@ function redraw(context) {
     </div>
 
     <div id="showimg"></div>
-</div> 
+</div>
+<img id="testImg">
 </body>
 </html>
