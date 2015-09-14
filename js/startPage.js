@@ -69,7 +69,8 @@ $(window).keyup(function(e) {
 	if ( e.which != 13 && $("#CodeInputOne").val() != '' && $("#CodeInputTwo").val() != '' && $("#CodeInputThree").val() != '') {
 		var code;
 		code = $("#CodeInputOne").val() + $("#CodeInputTwo").val() + $("#CodeInputThree").val();
-		alert("YOU ENTERED CODE:" + code);
+		//alert("YOU ENTERED CODE:" + code);
+		window.location.href = "http://teamone.uqcloud.net/pages/student-questions.html?courseID=AAAA1234";
 	}
 
 });
