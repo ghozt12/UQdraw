@@ -325,7 +325,7 @@ table {
     color: #ffffff;
 }
 */
-/* line 194, scss/partials/_buttons.scss */
+/* line 203, scss/partials/_buttons.scss */
 .button-correct {
   -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
   -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
@@ -355,7 +355,7 @@ table {
   margin-right: 20px;
 }
 
-/* line 222, scss/partials/_buttons.scss */
+/* line 231, scss/partials/_buttons.scss */
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -367,13 +367,13 @@ table {
   background-color: #77a809;
 }
 
-/* line 232, scss/partials/_buttons.scss */
+/* line 241, scss/partials/_buttons.scss */
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
-/* line 238, scss/partials/_buttons.scss */
+/* line 247, scss/partials/_buttons.scss */
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -403,7 +403,7 @@ table {
   margin-left: 20px;
 }
 
-/* line 266, scss/partials/_buttons.scss */
+/* line 275, scss/partials/_buttons.scss */
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -415,7 +415,7 @@ table {
   background-color: #c62d1f;
 }
 
-/* line 276, scss/partials/_buttons.scss */
+/* line 285, scss/partials/_buttons.scss */
 .button-incorrect:active {
   position: relative;
   top: 1px;
@@ -435,20 +435,31 @@ table {
   width: 100%;
 }
 /* line 17, scss/partials/_canvas.scss */
+#app-bar .center {
+  position: relative;
+  margin: auto;
+  z-index: 10;
+  width: 400px;
+}
+/* line 25, scss/partials/_canvas.scss */
 #app-bar img {
   height: 30px;
   margin-top: 22px;
-  margin-left: 45%;
+  margin-left: 10px;
 }
-/* line 24, scss/partials/_canvas.scss */
+/* line 31, scss/partials/_canvas.scss */
+#app-bar .size {
+  padding-left: 15px;
+}
+/* line 35, scss/partials/_canvas.scss */
 #app-bar .icon-select {
   display: inline-block;
   height: 70px;
-  width: 16%;
+  width: 13%;
 }
-/* line 30, scss/partials/_canvas.scss */
+/* line 41, scss/partials/_canvas.scss */
 #app-bar .selected {
-  background: white;
+  background: #1d1745;
 }
 
 /* line 1, scss/partials/_start_three_input.scss */

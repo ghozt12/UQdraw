@@ -15,7 +15,7 @@
     </div>
 
     <!-- Back button -->
-    <button class="drawing-app-back">Back</button>
+    <button id="zoom" class="drawing-app-back">Back</button>
 
     <!-- Submit button -->
     <button class="drawing-app-submit">Submit</button>
@@ -40,6 +40,10 @@
   <script type="text/javascript" src="../js/uqdraw.js"></script>
   <script type="text/javascript">
      UQdraw.init();
+     $("#zoom").click(function() {
+      
+        UQdraw.zoom();
+     });
   </script>
 
 </html>
