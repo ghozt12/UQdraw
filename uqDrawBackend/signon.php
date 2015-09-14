@@ -14,5 +14,4 @@
 		//redirects staff to Lecturer-mode
 		echo "<script> window.location.href = 'http://teamone.uqcloud.net/pages/lecture-mode.html'</script>";
 	}	
-	mysqli_close($conn);	
 ?>

@@ -30,7 +30,7 @@
 		//If userID does not exist on the DB insert their UserID into the Lecturer table
 		if ($userID !== $foundUser[0]){
 			$addLecturer = "INSERT INTO Lecturer VALUES ('$userID')";
-			mysqli_query($conn, $addLecturer);
+			mysqli_query($mysqli, $addLecturer);
 			//Display their name
 			echo $nameArray->{'firstname'};
 		}
@@ -39,5 +39,5 @@
 			echo $nameArray->{'firstname'};
 		}
 	/*}*/
-	mysqli_close($conn);
+	mysqli_close($mysqli);
 ?>
