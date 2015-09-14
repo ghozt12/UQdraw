@@ -7,11 +7,12 @@
  */
 
 $mysqli = new mysqli();
-
+//DB Credentials
 $host ="localhost";
 $user ="root";
 $password = "mYzL@vbOwepH";
 $dbname = "uqdraw";
+//Connect DB
 $mysqli -> connect($host, $user, $password, $dbname);
 
 if (mysqli_connect_errno()) {
