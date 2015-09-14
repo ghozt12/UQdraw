@@ -24,7 +24,7 @@
 	<section>
 		<!-- The question goes here, get id question -->
 		<h2 class="type-body-heading"> <span id="question">Draw My House</span> </h2>
-		<h3 class="type-body-url"> uq.edu.au/uqdraw/ ENTER CODE: <span id = "code"> 3fg </span> <span id="question">Draw My House</span> </h2>
+		<h3 class="type-body-url"> teamone.uqcloud.net ENTER CODE: <span id = "code"> 3fg </span></h2>
 
 		<!-- RESPONSE FILLER -->
 		<!-- This works by increasing the inner divs width, so grab
@@ -39,7 +39,7 @@
 			<h2> Time: <span id="time-left"> 30 seconds </span></h2>
 
 			<!-- Buttons -->
-			<button>View Responses</button>
+			<button onclick="window.location.href='http://teamone.uqcloud.net/pages/lecture-responses.html'">View Responses</button>
 			<button>End</button>
 			<button>Next</button>
 		</div>
@@ -48,6 +48,31 @@
 </body>
 	<!-- Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
 	<!-- JS -->
+	<script type='text/javascript'>
+	$(document).ready(function() {
+		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
+			type: 'GET',
+			url: 'http://teamone.uqcloud.net/uqDrawBackend/getQuestion.php?courseID='+getParameterByName("courseID")+'&questionID='+getParameterByName("questionID"),
+			success: function(data){
+				//alert(data);
+				//alert("success");
+				var questionsListObject = JSON.parse(data);
+				document.getElementById("code").textContent=questionsListObject.enteringCode;// 3 digit code
+				//document.getElementById("subject").textContent=questionsListObject.subject;// course code
+				document.getElementById("question").textContent=questionsListObject.questionList[0].title;
+			},
+			error: function(){
+				console.log(data);
+				alert('There was an error adding your comment');
+			}
+		});
+	});
+	function getParameterByName(name) { // get url parameter
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+</script>
 </html>
