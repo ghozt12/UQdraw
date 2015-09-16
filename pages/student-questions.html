@@ -48,10 +48,22 @@
   </script>
   <script type='text/javascript'>
     var courseID ="";
+    var enteringCode="";
+    var url="";
     $(document).ready(function() {
+      if(getParameterByName("courseID")!=""){
+        courseID = getParameterByName("courseID");
+        url = "http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID="+courseID;
+      }
+      else {
+        if (getParameterByName("enteringCode") != "") {
+          enteringCode = getParameterByName("enteringCode");
+         url= "http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromThreeDigitCode.php?enteringCode="+enteringCode;
+        }
+      }
       $.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
         type: 'GET',
-        url: 'http://teamone.uqcloud.net/Brian/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
+        url: url,
         success: function(data){
           //alert(data);
           //alert("success");

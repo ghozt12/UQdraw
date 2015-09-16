@@ -70,7 +70,28 @@ $(window).keyup(function(e) {
 		var code;
 		code = $("#CodeInputOne").val() + $("#CodeInputTwo").val() + $("#CodeInputThree").val();
 		//alert("YOU ENTERED CODE:" + code);
-		window.location.href = "http://teamone.uqcloud.net/pages/student-questions.html?courseID=AAAA1234";
+
+		$.ajax({//check if the course exists
+			type: 'GET',
+			url: 'uqDrawBackend/checkEnteringCode.php?enteringCode='+code,//
+			success: function(data){
+				var checkObject = JSON.parse(data);
+				if(checkObject.success==0) {
+					alert("Wrong course");//if wrong, clear inputs and reset focus
+					$("#CodeInputOne").val('');
+					$("#CodeInputTwo").val('');
+					$("#CodeInputThree").val('');
+					document.getElementById("CodeInputOne").focus();
+				}
+				if(checkObject.success==1) {
+					window.location.href = "http://teamone.uqcloud.net/pages/student-questions.html?enteringCode="+code;
+				}
+			},
+			error: function(){
+				alert("can't reach server" );
+			}
+		});
+
 	}
 
 });

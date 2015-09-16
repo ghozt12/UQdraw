@@ -7,13 +7,14 @@
  */
 include "connectDB.php";
 
-$code = $_GET["code"];//the request should be http://<this url>/?code=XXX
+$code = $_GET["enteringCode"];//the request should be http://<this url>/?code=XXX
 //$code ="4rt";//ID for testing
 if($code!=NULL&& strlen($code)==3) {//stop running if code is invaild
     $IMG_DIR = "Brian/uqDrawBackend/";
     $domainURL = "http://teamone.uqcloud.net/";
     $response = array();//JSON
     $response["questionsList"] = array();//JSON array
+    $response["enteringCode"]=$code;
     $query = "SELECT * FROM `Question` WHERE `courseID` = (SELECT `courseID` FROM `Course` WHERE `enteringCode`='$code')";
     $result = mysqli_query($mysqli, $query);
     if ($result) {//success =1 means data retrieve successfully
@@ -24,11 +25,13 @@ if($code!=NULL&& strlen($code)==3) {//stop running if code is invaild
             $questionData["title"] = $row->questionTitle;
             $questionData["questionWeek"] = $row->questionWeek;
             $questionData["status"] = $row->status;
+            $response["subject"]=$row->courseID;
             if ($row->questionImage != NULL) {
                 $questionData["image"] = $domainURL . $IMG_DIR . $row->questionImage;
             } else {
                 $questionData["image"] = NULL;
             }
+
             array_push($response["questionsList"], $questionData);//push object in array
         }
         $response["success"] = 1;
