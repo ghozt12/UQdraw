@@ -1061,20 +1061,16 @@ body {
 .timer-div {
   margin-left: auto;
   margin-right: auto;
-  z-index: -1;
 }
 
-/* line 64, scss/partials/_theme.scss */
+/* line 63, scss/partials/_theme.scss */
 .theme-timer {
-  margin-left: auto;
-  margin-right: auto;
   border: 5px solid #3D3092;
   background: #3D3092;
   border-radius: 50%;
   margin-top: 30px;
   -webkit-animation: size 180s infinite linear;
   animation: size 180s infinite linear;
-  z-index: -1;
 }
 
 @keyframes size {
@@ -1083,15 +1079,17 @@ body {
     width: 300px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 38.7%;
   }
   to {
     height: 0px;
     width: 0px;
     Margin-top: 160px;
     margin-bottom: 160px;
+    margin-left: 50%;
   }
 }
-/* line 81, scss/partials/_theme.scss */
+/* line 77, scss/partials/_theme.scss */
 .theme-time3 {
   width: 300px;
   height: 300px;
@@ -1104,12 +1102,12 @@ body {
   top: 140px;
   text-align: center;
 }
-/* line 92, scss/partials/_theme.scss */
+/* line 88, scss/partials/_theme.scss */
 .theme-time3 p {
   margin-top: 10px;
 }
 
-/* line 97, scss/partials/_theme.scss */
+/* line 93, scss/partials/_theme.scss */
 .theme-time2 {
   width: 200px;
   height: 200px;
@@ -1122,12 +1120,12 @@ body {
   top: 190px;
   text-align: center;
 }
-/* line 108, scss/partials/_theme.scss */
+/* line 104, scss/partials/_theme.scss */
 .theme-time2 p {
   margin-top: 10px;
 }
 
-/* line 113, scss/partials/_theme.scss */
+/* line 109, scss/partials/_theme.scss */
 .theme-time1 {
   width: 100px;
   height: 100px;
@@ -1140,39 +1138,39 @@ body {
   top: 240px;
   text-align: center;
 }
-/* line 124, scss/partials/_theme.scss */
+/* line 120, scss/partials/_theme.scss */
 .theme-time1 p {
   margin-top: 25px;
 }
 
-/* line 129, scss/partials/_theme.scss */
+/* line 125, scss/partials/_theme.scss */
 .theme-response-inner {
   width: 30%;
   height: 50px;
   background: #16BF25;
 }
 
-/* line 136, scss/partials/_theme.scss */
+/* line 132, scss/partials/_theme.scss */
 .student-question {
   margin-top: 30px;
 }
 
-/* line 140, scss/partials/_theme.scss */
+/* line 136, scss/partials/_theme.scss */
 .student-responses {
   margin-top: 30px;
 }
 
-/* line 145, scss/partials/_theme.scss */
+/* line 141, scss/partials/_theme.scss */
 .theme-response-actions {
   margin-top: 30px;
   text-align: center;
 }
-/* line 149, scss/partials/_theme.scss */
+/* line 145, scss/partials/_theme.scss */
 .theme-response-actions h2 {
   font-size: 30px;
 }
 
-/* line 155, scss/partials/_theme.scss */
+/* line 151, scss/partials/_theme.scss */
 .subject-form {
   padding-top: 12px;
   padding-bottom: 12px;
