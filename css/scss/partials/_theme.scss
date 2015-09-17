@@ -73,9 +73,10 @@ a {
 }
 @keyframes size{
 	0% {height: 400px; width:400px; margin-bottom:10px; margin-top:0px; margin-left: -200px; background:$uq-green; border-color:$uq-green;}
-	50% { background:#FFC842; border-color:#FFC842;}
-	75% { background:#D6492A; border-color:#D6492A;}
-	100% {height: 0px; width: 0px; margin-bottom:160px; margin-top:200px; margin-left:0px; background:#AA0041; border-color:#AA0041;}
+	25% { background:#FFC842; border-color:#FFC842;}
+	50% { background:#D6492A; border-color:#D6492A;}
+	75% {background:red; border-color:red;}
+	100% {height: 0px; width: 0px; margin-bottom:160px; margin-top:200px; margin-left:0px; background:black; border-color:black;}
 }
 
 .theme-time2 {

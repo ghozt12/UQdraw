@@ -1087,13 +1087,17 @@ body {
     background: #16BF25;
     border-color: #16BF25;
   }
-  50% {
+  25% {
     background: #FFC842;
     border-color: #FFC842;
   }
-  75% {
+  50% {
     background: #D6492A;
     border-color: #D6492A;
+  }
+  75% {
+    background: red;
+    border-color: red;
   }
   100% {
     height: 0px;
@@ -1101,11 +1105,11 @@ body {
     margin-bottom: 160px;
     margin-top: 200px;
     margin-left: 0px;
-    background: #AA0041;
-    border-color: #AA0041;
+    background: black;
+    border-color: black;
   }
 }
-/* line 81, scss/partials/_theme.scss */
+/* line 82, scss/partials/_theme.scss */
 .theme-time2 {
   width: 400px;
   height: 400px;
@@ -1120,12 +1124,12 @@ body {
   top: 140px;
   text-align: center;
 }
-/* line 94, scss/partials/_theme.scss */
+/* line 95, scss/partials/_theme.scss */
 .theme-time2 p {
   margin-top: 20px;
 }
 
-/* line 99, scss/partials/_theme.scss */
+/* line 100, scss/partials/_theme.scss */
 .theme-time1 {
   width: 200px;
   height: 200px;
@@ -1140,12 +1144,12 @@ body {
   top: 240px;
   text-align: center;
 }
-/* line 112, scss/partials/_theme.scss */
+/* line 113, scss/partials/_theme.scss */
 .theme-time1 p {
   margin-top: 20px;
 }
 
-/* line 117, scss/partials/_theme.scss */
+/* line 118, scss/partials/_theme.scss */
 .theme-time15 {
   width: 300px;
   height: 300px;
@@ -1159,12 +1163,12 @@ body {
   top: 190px;
   text-align: center;
 }
-/* line 129, scss/partials/_theme.scss */
+/* line 130, scss/partials/_theme.scss */
 .theme-time15 p {
   margin-top: 20px;
 }
 
-/* line 134, scss/partials/_theme.scss */
+/* line 135, scss/partials/_theme.scss */
 .theme-time05 {
   width: 100px;
   height: 100px;
@@ -1178,39 +1182,39 @@ body {
   top: 290px;
   text-align: center;
 }
-/* line 146, scss/partials/_theme.scss */
+/* line 147, scss/partials/_theme.scss */
 .theme-time05 p {
   margin-top: 40px;
 }
 
-/* line 151, scss/partials/_theme.scss */
+/* line 152, scss/partials/_theme.scss */
 .theme-response-inner {
   width: 30%;
   height: 50px;
   background: #16BF25;
 }
 
-/* line 158, scss/partials/_theme.scss */
+/* line 159, scss/partials/_theme.scss */
 .student-question {
   margin-top: 30px;
 }
 
-/* line 162, scss/partials/_theme.scss */
+/* line 163, scss/partials/_theme.scss */
 .student-responses {
   margin-top: 30px;
 }
 
-/* line 167, scss/partials/_theme.scss */
+/* line 168, scss/partials/_theme.scss */
 .theme-response-actions {
   margin-top: 30px;
   text-align: center;
 }
-/* line 171, scss/partials/_theme.scss */
+/* line 172, scss/partials/_theme.scss */
 .theme-response-actions h2 {
   font-size: 30px;
 }
 
-/* line 177, scss/partials/_theme.scss */
+/* line 178, scss/partials/_theme.scss */
 .subject-form {
   padding-top: 12px;
   padding-bottom: 12px;
