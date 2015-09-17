@@ -114,6 +114,16 @@
         self.end();
         return false;
       });
+
+      // button automation
+      this.$lightbox.find('.button-correct, .button-incorrect').on('click', function() {
+        if (self.currentImageIndex === self.album.length - 1) {
+          self.end();
+        } else {
+          self.changeImage(self.currentImageIndex + 1);
+        }
+        return false;
+      });
     };
 
     // Show overlay and lightbox. If the image is part of a set, add siblings to album array.
