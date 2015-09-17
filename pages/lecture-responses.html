@@ -25,28 +25,37 @@
 		<div class="grid-container">
 
 			<!--example buttons-->
-			<div class="grid-response">
+			<div class="grid-response" id="response1">
 				<img class="single-response" src="..\assets\images\response-1.jpg" height="110px" width="110px" >
 				<a href="..\assets\images\response-1.jpg" data-lightbox="responses" data-title="First Response" >
 					<button type="button" class="button-hidden">Expand</button>
 				</a>
 				<button type="button" class="button-hidden" onclick="confirmDelete()">Delete</button>
+				<div id="mark0">
+					
+				</div>
 			</div>
 
-			<div class="grid-response">
+			<div class="grid-response" id="response2">
 				<img class="single-response" src="..\assets\images\response-2.jpg" height="110px" width="110px" >
 				<a href="..\assets\images\response-2.jpg" data-lightbox="responses" data-title="Second Response" >
 					<button type="button" class="button-hidden">Expand</button>
 				</a>
 				<button type="button" class="button-hidden">Delete</button>
+				<div id="mark1">
+				</div>
+
 			</div>
 
-			<div class="grid-response">
+			<div class="grid-response" id="response3">
 				<img class="single-response" src="..\assets\images\response-3.jpg" height="110px" width="110px" >
 				<a href="..\assets\images\response-3.jpg" data-lightbox="responses" data-title="Third Response" >
 					<button type="button" class="button-hidden">Expand</button>
 				</a>
 				<button type="button" class="button-hidden">Delete</button>
+				<div id="mark2">
+					
+				</div>
 			</div>
 
 			<div class="grid-response">
@@ -85,7 +94,7 @@
 </body>
 	<!-- Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="../js/lightbox.min.js"></script>
+	<script src="../js/lightbox.js"></script>
 	<script src="../js/responses_page.js"></script>
 	<!-- JS -->
 	<script>

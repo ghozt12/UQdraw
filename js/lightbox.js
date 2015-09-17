@@ -66,6 +66,32 @@
       this.$outerContainer = this.$lightbox.find('.lb-outerContainer');
       this.$container      = this.$lightbox.find('.lb-container');
 
+      //clear the marking icon in div
+      function clearDiv(elementID){
+        document.getElementById(elementID).innerHTML = "";
+      }
+
+      //append correct icon in the marking div
+      function appendCorrect(elementID){
+        var img = document.createElement("img");
+        img.src="../assets/images/correct.png";
+        img.height=20;
+        img.width=20;
+        img.className="marked";
+        document.getElementById(elementID).appendChild(img);
+      }
+
+      //append incorrect icon in the marking div
+      function appendIncorrect(elementID){
+        var img = document.createElement("img");
+        img.src="../assets/images/incorrect.png";
+        img.height=20;
+        img.width=20;
+        img.className="marked";
+        document.getElementById(elementID).appendChild(img);
+      }
+
+
       // Store css values for future lookup
       this.containerTopPadding = parseInt(this.$container.css('padding-top'), 10);
       this.containerRightPadding = parseInt(this.$container.css('padding-right'), 10);
@@ -116,7 +142,23 @@
       });
 
       // button automation
-      this.$lightbox.find('.button-correct, .button-incorrect').on('click', function() {
+      this.$lightbox.find('.button-correct').on('click', function() {
+      
+        clearDiv('mark'+self.currentImageIndex);
+        appendCorrect('mark'+self.currentImageIndex);
+
+        if (self.currentImageIndex === self.album.length - 1) {
+          self.end();
+        } else {
+          self.changeImage(self.currentImageIndex + 1);
+        }
+        return false;
+      });
+
+      this.$lightbox.find('.button-incorrect').on('click', function() {
+        clearDiv('mark'+self.currentImageIndex);
+        appendIncorrect('mark'+self.currentImageIndex);
+
         if (self.currentImageIndex === self.album.length - 1) {
           self.end();
         } else {
