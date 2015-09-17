@@ -55,7 +55,8 @@ a {
 	}
 }
 .timer-div{
-
+	height:400px;
+	width:100%;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -64,21 +65,26 @@ a {
 	border: 5px solid $uq-purple;
 	background:$uq-purple;
 	border-radius: 50%;
-	margin-top: 30px;
-	-webkit-animation: size 180s infinite linear;
-	animation: size 180s infinite linear;
-	
+	-webkit-animation: size 120s linear;
+	animation: size 120s linear;
+	position:absolute;
+	top:140px;
+	left:50%;
 }
 @keyframes size{
-	from {height: 300px; width:300px; margin-top:10px; margin-bottom:10px;	margin-left: 38.7%;}
-	to {height: 0px; width: 0px; Margin-top:160px; margin-bottom:160px;	margin-left: 50%;}
+	0% {height: 400px; width:400px; margin-bottom:10px; margin-top:0px; margin-left: -200px; background:$uq-green; border-color:$uq-green;}
+	50% { background:#FFC842; border-color:#FFC842;}
+	75% { background:#D6492A; border-color:#D6492A;}
+	100% {height: 0px; width: 0px; margin-bottom:160px; margin-top:200px; margin-left:0px; background:#AA0041; border-color:#AA0041;}
 }
 
-.theme-time3 {
-	width:300px;
-	height:300px;
+.theme-time2 {
+	width:400px;
+	height:400px;
 	color:white;
-	margin-left: 38.7%;
+	font-weight:bold;
+	left: 50%;
+	margin-left:-200px;
 	margin-right:auto;
 	border: 5px solid white;
 	border-radius: 50%;
@@ -86,31 +92,17 @@ a {
 	top:140px;
 	text-align: center;
 	p{
-		margin-top:10px;
-	}
-}
-
-.theme-time2 {
-	width:200px;
-	height:200px;
-	color:white;
-	margin-left: 42.3%;
-	margin-right:auto;
-	border: 5px solid  white;
-	border-radius: 50%;
-	position:absolute;
-	top:190px;
-	text-align: center;
-	p{
-		margin-top:10px;
+		margin-top:20px;
 	}
 }
 
 .theme-time1 {
-	width:100px;
-	height:100px;
+	width:200px;
+	height:200px;
 	color:white;
-	margin-left: 46%;
+	font-weight:bold;
+	left:50%;
+	margin-left: -100px;
 	margin-right:auto;
 	border: 5px solid  white;
 	border-radius: 50%;
@@ -118,8 +110,42 @@ a {
 	top:240px;
 	text-align: center;
 	p{
-		margin-top:25px;
-	}	
+		margin-top:20px;
+	}
+}
+
+.theme-time15 {
+	width:300px;
+	height:300px;
+	color:white;
+	left: 50%;
+	margin-left:-150px;
+	margin-right:auto;
+	border: 5px solid white;
+	border-radius: 50%;
+	position:absolute;
+	top:190px;
+	text-align: center;
+	p{
+		margin-top:20px;
+	}
+}
+
+.theme-time05 {
+	width:100px;
+	height:100px;
+	color:white;
+	left:50%;
+	margin-left: -50px;
+	margin-right:auto;
+	border: 5px solid  white;
+	border-radius: 50%;
+	position:absolute;
+	top:290px;
+	text-align: center;
+	p{
+		margin-top:40px;
+	}
 }
 
 .theme-response-inner {
