@@ -20,7 +20,7 @@ $courseId = $_POST["courseID"];
 $haveImage=$_POST["haveImage"];
 $questionWeek = $_POST["questionWeek"];
 $imageBlob = $_POST["image"];
-
+$fileFormat = $_POST["fileFormat"];
 echo $title." ".$courseId." ".$haveImage;
 /*$title = "test1";
 $imageBlob = $blob;
@@ -48,12 +48,28 @@ if($haveImage==true && $insertDataResult) {//if there is a image, update file pa
     $questionId = $mysqli->insert_id;//retrieve questionID after row is inserted
     $imagePath_withQid = $imagePath.$questionId; // attach question in the dir
 
-    if (!is_dir($imagePath_withQid)) { //create directory if it haven't exist
-        // dir doesn't exist, make it
-           mkdir($imagePath_withQid,0777);
-       }
+    //try put image in server first, if fail, whole procress abandant
+    $dirSplit = explode("/",$imagePath_withQid);
+    $dirCheck="";
+    for($x=0;$x<sizeof($dirSplit);$x++){// some problems on create mutiple dir at the same time
+        if($x!=0)
+            $dirCheck=$dirCheck."/".$dirSplit[$x];
+        else
+            $dirCheck=$dirCheck.$dirSplit[$x];
+        if (!is_dir($dirCheck)) { //create directory if it haven't exist
+            // dir doesn't exist, make it
+            mkdir($dirCheck,0777);
+        }
+
+    }
+
     $imagePath_full = $imagePath_withQid."/question".$fileFormat;// concat the file name and extension
-    if (file_put_contents($imagePath_full, base64_decode($imageBlob))== true) {//if the image is uploaded, update row
+    $img = str_replace('data:image/png;base64,', '', $imageBlob);
+    $img = str_replace(' ', '+', $img);
+    $data = base64_decode($img);
+    $success = file_put_contents($imagePath_full, $data);
+
+    if ($success) {//if the image is uploaded, update row
         echo"putting in ". $imagePath_withQid;
         $imageQuery = "UPDATE `Question` SET `questionImage`= '$imagePath_full' WHERE `questionID` =$questionId ";
         $insertImageResult = mysqli_query($mysqli, $imageQuery);

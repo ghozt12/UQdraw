@@ -25,9 +25,9 @@
 	<!-- All styles in this section are in scss/partials/_start_three_input.scss -->
 	<section class="start-section-input">
 		<form id="start-input">
-			<input id="CodeInputOne" class='CodeInput' type='text' value='' maxlength="1" />
-			<input id="CodeInputTwo" class='CodeInput' type='text' value='' maxlength="1"/>
-			<input id="CodeInputThree" class='CodeInput' type='text' value='' maxlength="1"/>
+			<input id="CodeInputOne" onkeyup="return forceLower(this);" class='CodeInput' type='text' value='' maxlength="1" />
+			<input id="CodeInputTwo" onkeyup="return forceLower(this);" class='CodeInput' type='text' value='' maxlength="1"/>
+			<input id="CodeInputThree" onkeyup="return forceLower(this);" class='CodeInput' type='text' value='' maxlength="1"/>
 		</form>
 		<h3> Enter subject Code </h3>
 	</section>
@@ -57,7 +57,7 @@
 
 		$.ajax({//get student course list from table Submissons, stdID will get from JSON, no need to POST anything
 			type: 'GET',
-			url: 'Brian/uqDrawBackend/retrieveStudentCourseList.php',//
+			url: 'uqDrawBackend/retrieveStudentCourseList.php',//
 			success: function(data){
 				var coursesListObject = JSON.parse(data);
 				if(coursesListObject.success==1) {
@@ -79,7 +79,11 @@
 	});
 
 	function getCourseItem(courseItem){ // add a <li> on the page// will be add a link after that page is finish
-		return	"<a href='pages/student-questions.html?courseID='"+courseItem+"><li> <span class='subject'>"+courseItem+"</span> </lI></a>";
+		return	'<a href="pages/student-questions.html?courseID='+courseItem+'"><li> <span class="subject">'+courseItem+'</span> </lI></a>';
+	}
+	function forceLower(strInput)
+	{
+		strInput.value=strInput.value.toLowerCase();
 	}
 
 
