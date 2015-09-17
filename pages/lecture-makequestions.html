@@ -46,7 +46,7 @@
 	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
  //"<p>Lecture</p>"+questionItem.quwstionWeek+
 		return	"<li> <span>" +questionItem.title+ "</span>" +
-		"<button class='q-button' onclick='deleteQuestion()'>DELETE</button> " +
+		"<button class='q-button' onclick='deleteQuestion("+questionItem.questionID+")'>DELETE</button> " +
 		"<button class='q-button-long'>VIEW RESPONSES</button> " +
 		"<button class='q-button'>EDIT</button> ";
 	}
@@ -128,8 +128,25 @@
 		}else{alert("Type something, dude");}
 	}
 
-	function deleteQuestion(){
-		alert("hi");
+	function deleteQuestion(questionID){
+		
+		$(document).ready(function(){
+			$.ajax({//delete question through ajax so it updates instantly
+				type: "POST",
+				url: '../uqDrawBackend/deleteQuestion.php',
+				data: {
+					questionID: questionID,
+				},
+				success:function(result){
+					alert(result);
+					location.reload();
+
+				},
+				error:function(){
+					alert("Can't Reach server")
+				}
+			});
+		});
 	}
 </script>
 <body class="bg-prepare">
