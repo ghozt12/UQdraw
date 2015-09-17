@@ -68,9 +68,10 @@ if($haveImage==true && $insertDataResult) {//if there is a image, update file pa
     $img = str_replace(' ', '+', $img);
     $data = base64_decode($img);
     $success = file_put_contents($imagePath_full, $data);
-
     if ($success) {//if the image is uploaded, update row
+        png2jpg($imagePath_full,$imagePath_withQid."/question.jpg", 100); // convert to jpg, after upload
         echo"putting in ". $imagePath_withQid;
+        $imagePath_full = $imagePath_withQid."/question.jpg";// concat the file name and extension
         $imageQuery = "UPDATE `Question` SET `questionImage`= '$imagePath_full' WHERE `questionID` =$questionId ";
         $insertImageResult = mysqli_query($mysqli, $imageQuery);
 
@@ -87,7 +88,12 @@ if($haveImage==true && $insertDataResult) {//if there is a image, update file pa
 
 }
 
-
+// Quality is a number between 0 (best compression) and 100 (best quality)
+function png2jpg($originalFile, $outputFile, $quality) {
+    $image = imagecreatefrompng($originalFile);
+    imagejpeg($image, $outputFile, $quality);
+    imagedestroy($image);
+}
 
 
 ?>

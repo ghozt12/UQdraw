@@ -3,8 +3,8 @@
 	include 'connectDB.php';
 	//Uses UQ single sign on to retrieve user ID & Type
 	$userType = $_SERVER['HTTP_X_UQ_USER_TYPE'];
-	$userID = $_SERVER['HTTP_X_UQ_USER'];
-	//$userID = "s4371125";
+	//$userID = $_SERVER['HTTP_X_UQ_USER'];
+	$userID = "t2345678";
 
 	//Query to get all subjects linked to UserID
 	$query = "SELECT * FROM Course WHERE lecturerID='$userID'";
