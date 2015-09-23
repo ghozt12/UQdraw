@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<title>UQDraw</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+   	<!-- JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../js/hammer.js"></script>
+	<script src="../js/drawing-app3.js"></script>
+
+</head>
+
+<body class="special-body">
+	<div id="page">
+			
+
+		<!-- Header Bar -->
+		<div id="headers-top-bar">
+
+	    </div>
+
+	    <!-- Initial Loader -->
+	    <div id="content">
+	    	<!-- Spinner -->
+	    	<div class="loading"></div>
+	    </div>
+
+	    <!-- Question bar -->
+	    <div id="quesition-bar"></div>
+	    <!-- Tool bar -->
+		<div id="tool-bar" class="closed">
+	    	<div class="element">
+	    		<h1>Colour</h1>
+	    		<div id="color-blue" class="color-selected"></div>
+	    		<div id="color-red"></div>
+	    		<div id="color-green"></div>
+	    	</div>
+	    	<div class="element">
+	    		<h1>Size</h1>
+	    		<div id="size-small"><img class="circle-small" src="../assets/images/canvas/10by10.svg"></div>
+	    		<div id="size-medium" class="selected"><img class="circle-medium" src="../assets/images/canvas/20by20.svg"></div>
+	    		<div id="size-large"><img class="circle-large" src="../assets/images/canvas/30by30.svg"></div>
+	    		
+	    	</div>
+	    	<div class="element">
+	    		<h1>Tools</h1>
+	    		<div id="tool-1" class="selected"><i class="fa fa-pencil"></i></div>
+	    		<div id="tool-2"><i class="fa fa-eraser"></i></div>
+	    		<div id="tool-3"><p>Clear</p></div>
+	    	</div>
+	    </div>
+	   	<!-- App bar-->
+	    <div id="app-bar">
+	    	<button id="tools"> Tools </button>
+	    	<button id="camera"> <i class="fa fa-camera"></i> </button>
+	    	<button id="submit"> Submit </button>
+
+	    </div>
+	</div>
+</body>
+</html>

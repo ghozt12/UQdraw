@@ -1,156 +1,22 @@
-<!doctype html>
-<html>
-<head>
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/test.css">
-    <title>UQDraw</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <style type="text/css">
-body {
-    margin:0px;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    font-family:Arial;
-    /* prevent text selection on ui */
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    /* prevent scrolling in windows phone */
-    -ms-touch-action: none;
-    /* prevent selection highlight */
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-        
-.header, .footer{
-    position: absolute;
-    background-color: #222;
-    text-align: center;
-}
-.header {
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    height: 32px;
-    padding:6px;
-}
-.footer {
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 42px;
-    padding:2px;    
-}
-.title {
-    width: auto;
-    line-height: 32px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #eee;
-    text-shadow: 0px -1px #000;
-    padding:0 60px;
-    display: inline-block;
-}
-.navbtn {
-    cursor: pointer;
-    float:left;
-    padding: 6px 10px;
-    font-weight: bold;
-    line-height: 18px;
-    font-size: 14px;
-    color: #eee;
-    text-shadow: 0px -1px #000;
-    border: solid 1px #111;
-    border-radius: 4px;
-    background-color: #404040;
-    box-shadow: 0 0 1px 1px #555,inset 0 1px 0 0 #666;  
-        display: inline-block;     
-   
-}
-.navbtn-hover, .navbtn:active {
-    color: #222;
-    text-shadow: 0px 1px #aaa;
-    background-color: #aaa;
-    box-shadow: 0 0 1px 1px #444,inset 0 1px 0 0 #ccc;   
-}
+// Drawing-app 3
 
-.navbtn2 {
-    cursor: pointer;
-    float:right;
-    padding: 6px 10px;
-    font-weight: bold;
-    line-height: 18px;
-    font-size: 14px;
-    color: #eee;
-    text-shadow: 0px -1px #000;
-    border: solid 1px #111;
-    border-radius: 4px;
-    background-color: #404040;
-    box-shadow: 0 0 1px 1px #555,inset 0 1px 0 0 #666;
-    display: inline-block;     
-}
-.navbtn-hover, .navbtn2:active {
-    color: #222;
-    text-shadow: 0px 1px #aaa;
-    background-color: #aaa;
-    box-shadow: 0 0 1px 1px #444,inset 0 1px 0 0 #ccc;   
-}
+// CANVAS API
+// *********************************************
+	// Context 
+	var ctx; 
 
-#content{
-    position: absolute;
-    top: 44px;
-    left: 0px;
-    right: 0px;
-    bottom: 46px;
-    overflow:hidden;
-    background-color:#ddd;
-}
-#canvas{
-    cursor:crosshair ;
-    background-color:#fff;
-}
-.palette-case {
-    width:260px;
-    margin:auto;
-    text-align:center;
-}
-.palette-box {
-    float:left;
-    padding:2px 6px 2px 6px;
-}
-.palette {
-    border:2px solid #777;
-    height:36px;
-    width:36px;
-}
-.red{
-    background-color:#c22;
-}
-.blue{
-    background-color:#22c;
-}
-.green{
-    background-color:#2c2;
-}
-.white{
-    background-color:#fff;
-}
-.black{
-    background-color:#000;
-    border:2px dashed #fff;
-}
-    </style>
-	<script type="text/javascript">
-	
-	var ctx;
+	// Checkers
+	var firstTime = true;
+	var currentColor = 'green';
+
+	// Colours
 	var color = "#000";	
 	var red = "#C02323";
 	var green = "#329F24";
 	var blue = "#2360C0";
 	var white = "#FFFFFF";
+
+	// Arrays
 	var clickX = new Array();
 	var clickY = new Array();
 	var clickDrag = new Array();
@@ -159,11 +25,112 @@ body {
 
 $(document).ready(function () {
 	
+	// Buttons 
+	// *********************************************
+	
+	// Open up the tool bar
+	$( "#tools" ).click(function() {
+	  if ($("#tool-bar").hasClass('closed'))
+	  	$("#tool-bar").removeClass('closed');
+	  else 
+	  	$("#tool-bar").addClass('closed');
+	});
+
+	// Colour
+	$( "#color-blue" ).click(function() {
+	  removeColourClasses(this);
+	  ctx.beginPath();
+	  ctx.strokeStyle = blue;
+	  currentColor = 'blue';
+	});
+
+	$( "#color-red" ).click(function() {
+	  removeColourClasses(this);
+	  ctx.beginPath();
+	  ctx.strokeStyle = red;
+	  currentColor = 'red';
+	});
+
+	$( "#color-green" ).click(function() {
+	  	// Box colour
+	  	removeColourClasses(this);
+	  	// Action
+		ctx.beginPath();
+		ctx.strokeStyle = green;
+		currentColor = 'green';
+	});
+
+	// Size
+	$( "#size-small" ).click(function() {
+	  removeSizeClasses(this);
+	  ctx.lineWidth = 3;
+	});
+
+	$( "#size-medium" ).click(function() {
+	  removeSizeClasses(this);
+	  ctx.lineWidth = 5;
+	});
+
+	$( "#size-large" ).click(function() {
+	  removeSizeClasses(this);
+	  ctx.lineWidth = 10;
+	});
+
+	// Tools
+	$( "#tool-1" ).click(function() {
+	  removeToolClasses(this);
+	  ctx.strokeStyle = currentColor;
+	});
+
+	$( "#tool-2" ).click(function() {
+	  removeToolClasses(this);
+	  ctx.beginPath();
+	  ctx.strokeStyle = white;
+	});
+
+	$( "#tool-3" ).click(function() {
+	  newCanvas();
+	  firstTime = true;
+	  $("#tool-bar").addClass('closed');
+	});	
+
+	function removeColourClasses(selected) {
+		$("#color-blue").removeClass('color-selected');
+		$("#color-red").removeClass('color-selected');
+		$("#color-green").removeClass('color-selected');
+		$(selected).addClass('color-selected');
+	}
+
+	function removeSizeClasses(selected) {
+		$("#size-small").removeClass('selected');
+		$("#size-medium").removeClass('selected');
+		$("#size-large").removeClass('selected');
+		$(selected).addClass('selected');
+	}
+
+	function removeToolClasses(selected) {
+		$("#tool-1").removeClass('selected');
+		$("#tool-2").removeClass('selected');
+		$("#tool-3").removeClass('selected');
+		$(selected).addClass('selected');
+	}
+
+var myElement = document.getElementById('tool-bar');
+	// Touch gestures
+	var mc = new Hammer(myElement);
+	mc.on('panup pandown', function(ev) {
+	    $("#tool-bar").addClass('closed');
+	});
+
+	// *********************************************
+
+
+
+	
 	// setup a new canvas for drawing wait for device init
     setTimeout(function(){
 	   newCanvas();
-	   ctx.lineWidth = 5;
-	   ctx.strokeStyle = green;	
+	   
     }, 1000);
 	
 	/* ADD ANY ICONS on clicks IN BELOW */
@@ -217,7 +184,7 @@ $(document).ready(function () {
 		newCanvas();
 	});
 
-	$("#save").click(function() {
+	$("#submit").click(function() {
 		var canvas = document.getElementById("canvas");
 		var data = canvas.toDataURL("image/png");
 		var questionID = getParameterByName("questionID");
@@ -271,14 +238,23 @@ function removeSizeClasses(selected) {
 
 // function to setup a new canvas for drawing
 function newCanvas(){
-	//define and resize canvas
-    $("#content").height($(window).height()-90);
-    var canvas = '<canvas id="canvas" width="'+$(window).width()+'" height="'+($(window).height()-90)+'"></canvas>';
+
+	// Show text
+	
+
+	// Define and resize canvas
+    $("#content").height($(window).height()-60);
+    var canvas = '<canvas id="canvas" width="'+$(window).width()+'" height="'+($(window).height()-60)+'"></canvas>';
 	$("#content").html(canvas);
+
+	// Show starting text
+	$( "#content" ).append( "<p id='starting-text'>Touch here to start drawing</p>" );
     
     // setup canvas
 	ctx=document.getElementById("canvas").getContext("2d");
-	ctx.strokeStyle = color;
+	//ctx.strokeStyle = color;
+	ctx.lineWidth = 5;
+	ctx.strokeStyle = green;	
 	
 	// setup to trigger drawing on mouse or touch
 	$("#canvas").drawTouch();
@@ -291,7 +267,20 @@ function newCanvas(){
 	clickDrag.length = 0;
 	sizeA.length = 0;
 	colourA.length = 0;
-	
+	$("#starting-text").on("mousedown", removeStartingText);
+	$("#starting-text").on("press", removeStartingText);
+	$("#starting-text").on("MSPointerDown", removeStartingText);
+
+}
+
+function removeStartingText() {
+	if (firstTime) {
+		$("#starting-text").remove();
+		console.log(firstTime);
+	}
+
+	firstTime = false;
+
 }
 // adds to the array 
 function addClick(color, thickness, x, y, dragging) {
@@ -305,6 +294,7 @@ function addClick(color, thickness, x, y, dragging) {
 // prototype to	start drawing on touch using canvas moveTo and lineTo
 $.fn.drawTouch = function() {
 	var start = function(e) {
+		removeStartingText();
         e = e.originalEvent;
 		ctx.beginPath();
 		x = e.changedTouches[0].pageX;
@@ -329,6 +319,7 @@ $.fn.drawTouch = function() {
 // prototype to	start drawing on pointer(microsoft ie) using canvas moveTo and lineTo
 $.fn.drawPointer = function() {
 	var start = function(e) {
+		removeStartingText();
         e = e.originalEvent;
 		ctx.beginPath();
 		x = e.pageX;
@@ -355,6 +346,7 @@ $.fn.drawPointer = function() {
 $.fn.drawMouse = function() {
 	var clicked = 0;
 	var start = function(e) {
+		removeStartingText();
 		clicked = 1;
 		ctx.beginPath();
 		x = e.pageX;
@@ -399,53 +391,18 @@ function redraw(context) {
 		}
 	};
 
-	function getParameterByName(name) { // get url parameter added by Brian
-		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-				results = regex.exec(location.search);
-		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-	}
-</script>
+function getParameterByName(name) { // get url parameter added by Brian
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+// *********************************************
 
 
-</head>
-<div id="page">
-	<div id="headers-top-bar">
-    </div>
 
-    <!-- Back button -->
-    <button id="zoom" class="drawing-app-back">Back</button>
 
-    <!-- Submit button -->
-    <button id="save" class="drawing-app-submit">Submit</button>
-	
-	<!-- Question button -->
-    <button class="drawing-app-question">Question</button>
+// Interface 
+// *********************************************
 
-    <!-- Clear Page -->
-   	<button id="clear" class="drawing-app-clear">clear page</button>
-    
-    <!-- Camera Button -->
-    <input type="file" class="drawing-app-camera" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
- Camera</input>
-
-    <div id="content"><p style="text-align:center">Loading Canvas...</p></div>
-
-   	<!-- The -->
-    <div id="app-bar">
-    	<div class="center">
-			<div id="app-green" class="icon-select selected"><img src="../assets/images/icon-canvas-colour-green.svg"/> </div>
-			<div id="app-red" class="icon-select"><img src="../assets/images/icon-canvas-colour-red.svg"/> </div>
-			<div id="app-blue" class="icon-select"><img src="../assets/images/icon-canvas-colour-blue.svg"/> </div>
-			<div id="app-eraser" class="icon-select"><img src="../assets/images/icon-canvas-eraser.svg"/> </div>
-			<div id="app-thin" class="icon-select"><img class="size" src="../assets/images/icon-thin-line.svg"/> </div>
-			<div id="app-normal" class="icon-select selected"><img class="size" src="../assets/images/icon-normal-line.svg"/> </div>
-			<div id="app-thick" class="icon-select"><img class="size" src="../assets/images/icon-thick-line.svg"/></div>
-		</div>
-    </div>
-
-    <div id="showimg"></div>
-</div>
-<img id="testImg">
-</body>
-</html>
+// *********************************************

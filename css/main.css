@@ -138,13 +138,13 @@ table {
 ** BUTTONS 
 ** ******/
 /* line 6, scss/partials/_buttons.scss */
-.remove-button-style, .button-add, .drawing-app-submit, .drawing-app-question {
+.remove-button-style, .button-add, .drawing-app-submit, .drawing-app-question, .drawing-app-camera, .drawing-app-clear {
   outline-style: none;
   border: 0px;
 }
 
 /* line 10, scss/partials/_buttons.scss */
-.submit, .drawing-app-submit, .drawing-app-question, .drawing-app-back, .back-button, .q-button, .q-button-long {
+.submit, .drawing-app-submit, .drawing-app-question, .drawing-app-camera, .drawing-app-clear, .drawing-app-back, .back-button, .q-button, .q-button-long {
   height: 60px;
   width: 150px;
   border: 2px solid #AFA5FF;
@@ -159,7 +159,7 @@ table {
   background-color: #FFF;
 }
 /* line 25, scss/partials/_buttons.scss */
-.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover, .drawing-app-back:hover, .back-button:hover, .q-button:hover, .q-button-long:hover {
+.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover, .drawing-app-camera:hover, .drawing-app-clear:hover, .drawing-app-back:hover, .back-button:hover, .q-button:hover, .q-button-long:hover {
   border: 2px solid #FFF;
   color: #3D3092;
   transition: 0.4s;
@@ -233,9 +233,11 @@ table {
 .drawing-app-question {
   position: absolute;
   top: 60px;
-  right: 10px;
+  right: 50%;
+  margin-right: -75px;
+  z-index: 1000;
 }
-/* line 111, scss/partials/_buttons.scss */
+/* line 113, scss/partials/_buttons.scss */
 .drawing-app-question:hover {
   border: 2px solid #3D3092;
   color: #FFF;
@@ -243,28 +245,58 @@ table {
   transition: 0.4s;
 }
 
-/* line 119, scss/partials/_buttons.scss */
+/* line 121, scss/partials/_buttons.scss */
+.drawing-app-camera {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 1000;
+}
+/* line 131, scss/partials/_buttons.scss */
+.drawing-app-camera:hover {
+  border: 2px solid #3D3092;
+  color: #FFF;
+  background-color: #3D3092;
+  transition: 0.4s;
+}
+
+/* line 140, scss/partials/_buttons.scss */
+.drawing-app-clear {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  z-index: 1000;
+}
+/* line 150, scss/partials/_buttons.scss */
+.drawing-app-clear:hover {
+  border: 2px solid #3D3092;
+  color: #FFF;
+  background-color: #3D3092;
+  transition: 0.4s;
+}
+
+/* line 158, scss/partials/_buttons.scss */
 .drawing-app-back {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-/* line 128, scss/partials/_buttons.scss */
+/* line 167, scss/partials/_buttons.scss */
 .back-button {
   position: absolute;
   top: 60px;
   left: 10px;
 }
 
-/* line 137, scss/partials/_buttons.scss */
+/* line 176, scss/partials/_buttons.scss */
 .q-button {
   font-size: 12px;
   border: 2px solid #16BF25;
   color: #16BF25;
   width: 70px;
 }
-/* line 143, scss/partials/_buttons.scss */
+/* line 182, scss/partials/_buttons.scss */
 .q-button:hover {
   border: 2px solid white;
   background: #16BF25;
@@ -272,14 +304,14 @@ table {
   transition: 0.4s;
 }
 
-/* line 151, scss/partials/_buttons.scss */
+/* line 190, scss/partials/_buttons.scss */
 .q-button-long {
   font-size: 12px;
   border: 2px solid #16BF25;
   color: #16BF25;
   width: 155px;
 }
-/* line 157, scss/partials/_buttons.scss */
+/* line 196, scss/partials/_buttons.scss */
 .q-button-long:hover {
   border: 2px solid white;
   background: #16BF25;
@@ -287,7 +319,7 @@ table {
   transition: 0.4s;
 }
 
-/* line 166, scss/partials/_buttons.scss */
+/* line 205, scss/partials/_buttons.scss */
 .button-hidden {
   opacity: 0;
   transition: opacity 0.3s linear;
@@ -302,7 +334,7 @@ table {
   z-index: 100;
 }
 
-/* line 180, scss/partials/_buttons.scss */
+/* line 219, scss/partials/_buttons.scss */
 .grid-response:hover .button-hidden {
   opacity: 1;
 }
@@ -325,7 +357,7 @@ table {
     color: #ffffff;
 }
 */
-/* line 203, scss/partials/_buttons.scss */
+/* line 242, scss/partials/_buttons.scss */
 .button-correct {
   -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
   -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
@@ -355,7 +387,7 @@ table {
   margin-right: 20px;
 }
 
-/* line 231, scss/partials/_buttons.scss */
+/* line 270, scss/partials/_buttons.scss */
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -367,13 +399,13 @@ table {
   background-color: #77a809;
 }
 
-/* line 241, scss/partials/_buttons.scss */
+/* line 280, scss/partials/_buttons.scss */
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
-/* line 247, scss/partials/_buttons.scss */
+/* line 286, scss/partials/_buttons.scss */
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -403,7 +435,7 @@ table {
   margin-left: 20px;
 }
 
-/* line 275, scss/partials/_buttons.scss */
+/* line 314, scss/partials/_buttons.scss */
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -415,7 +447,7 @@ table {
   background-color: #c62d1f;
 }
 
-/* line 285, scss/partials/_buttons.scss */
+/* line 324, scss/partials/_buttons.scss */
 .button-incorrect:active {
   position: relative;
   top: 1px;
@@ -1369,3 +1401,350 @@ body {
 /*
 ** Bodies
 */
+/* line 4, scss/partials/_updatedCanvas.scss */
+.special-body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial;
+  /* prevent text selection on ui */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /* prevent scrolling in windows phone */
+  -ms-touch-action: none;
+  /* prevent selection highlight */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 21, scss/partials/_updatedCanvas.scss */
+.header, .footer {
+  position: absolute;
+  background-color: #222;
+  text-align: center;
+}
+
+/* line 26, scss/partials/_updatedCanvas.scss */
+.header {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 32px;
+  padding: 6px;
+}
+
+/* line 33, scss/partials/_updatedCanvas.scss */
+.footer {
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 42px;
+  padding: 2px;
+}
+
+/* line 40, scss/partials/_updatedCanvas.scss */
+.title {
+  width: auto;
+  line-height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #eee;
+  text-shadow: 0px -1px #000;
+  padding: 0 60px;
+  display: inline-block;
+}
+
+/* line 50, scss/partials/_updatedCanvas.scss */
+.navbtn {
+  cursor: pointer;
+  float: left;
+  padding: 6px 10px;
+  font-weight: bold;
+  line-height: 18px;
+  font-size: 14px;
+  color: #eee;
+  text-shadow: 0px -1px #000;
+  border: solid 1px #111;
+  border-radius: 4px;
+  background-color: #404040;
+  box-shadow: 0 0 1px 1px #555,inset 0 1px 0 0 #666;
+  display: inline-block;
+}
+
+/* line 66, scss/partials/_updatedCanvas.scss */
+.navbtn-hover, .navbtn:active {
+  color: #222;
+  text-shadow: 0px 1px #aaa;
+  background-color: #aaa;
+  box-shadow: 0 0 1px 1px #444,inset 0 1px 0 0 #ccc;
+}
+
+/* line 73, scss/partials/_updatedCanvas.scss */
+.navbtn2 {
+  cursor: pointer;
+  float: right;
+  padding: 6px 10px;
+  font-weight: bold;
+  line-height: 18px;
+  font-size: 14px;
+  color: #eee;
+  text-shadow: 0px -1px #000;
+  border: solid 1px #111;
+  border-radius: 4px;
+  background-color: #404040;
+  box-shadow: 0 0 1px 1px #555,inset 0 1px 0 0 #666;
+  display: inline-block;
+}
+
+/* line 88, scss/partials/_updatedCanvas.scss */
+.navbtn-hover, .navbtn2:active {
+  color: #222;
+  text-shadow: 0px 1px #aaa;
+  background-color: #aaa;
+  box-shadow: 0 0 1px 1px #444,inset 0 1px 0 0 #ccc;
+}
+
+/* line 95, scss/partials/_updatedCanvas.scss */
+#content {
+  position: absolute;
+  top: 44px;
+  left: 0px;
+  right: 0px;
+  bottom: 40px;
+  overflow: hidden;
+  background-color: #ddd;
+}
+/* line 104, scss/partials/_updatedCanvas.scss */
+#content p {
+  position: absolute;
+  top: 40%;
+  z-index: 2000;
+  color: #16BF25;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100vw;
+}
+
+/* line 115, scss/partials/_updatedCanvas.scss */
+#canvas {
+  cursor: crosshair;
+  background-color: #fff;
+}
+
+/* line 119, scss/partials/_updatedCanvas.scss */
+.palette-case {
+  width: 260px;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 124, scss/partials/_updatedCanvas.scss */
+.palette-box {
+  float: left;
+  padding: 2px 6px 2px 6px;
+}
+
+/* line 128, scss/partials/_updatedCanvas.scss */
+.palette {
+  border: 2px solid #777;
+  height: 36px;
+  width: 36px;
+}
+
+/* line 133, scss/partials/_updatedCanvas.scss */
+.red {
+  background-color: #c22;
+}
+
+/* line 136, scss/partials/_updatedCanvas.scss */
+.blue {
+  background-color: #22c;
+}
+
+/* line 139, scss/partials/_updatedCanvas.scss */
+.green {
+  background-color: #2c2;
+}
+
+/* line 142, scss/partials/_updatedCanvas.scss */
+.white {
+  background-color: #fff;
+}
+
+/* line 145, scss/partials/_updatedCanvas.scss */
+.black {
+  background-color: #000;
+  border: 2px dashed #fff;
+}
+
+/* line 155, scss/partials/_updatedCanvas.scss */
+#app-bar {
+  background: #3D3092;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2002;
+}
+
+/* line 164, scss/partials/_updatedCanvas.scss */
+.button-removal, #tools, #camera, #submit {
+  outline: 0;
+  border: 0;
+  background: 0;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+/* line 183, scss/partials/_updatedCanvas.scss */
+#submit {
+  background: #16BF25;
+  height: 100%;
+  padding: 0;
+  float: right;
+  width: 100px;
+  transition: .3s;
+}
+/* line 192, scss/partials/_updatedCanvas.scss */
+#submit:hover {
+  background: #11911c;
+}
+
+/* line 204, scss/partials/_updatedCanvas.scss */
+.closed {
+  transform: translate3d(0, 50vh, 0);
+}
+
+/* line 208, scss/partials/_updatedCanvas.scss */
+#tool-bar {
+  transition: .3s;
+  position: absolute;
+  bottom: 42px;
+  z-index: 2000;
+  background: #3D3092;
+  width: 100%;
+  height: 50vh;
+}
+/* line 217, scss/partials/_updatedCanvas.scss */
+#tool-bar .element {
+  float: left;
+  border-right: 1px solid #1d1745;
+  height: 100%;
+  width: 33%;
+}
+/* line 223, scss/partials/_updatedCanvas.scss */
+#tool-bar .element h1 {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 200;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+/* line 232, scss/partials/_updatedCanvas.scss */
+#tool-bar .element .selected {
+  background: #1d1745;
+}
+/* line 236, scss/partials/_updatedCanvas.scss */
+#tool-bar .element .color-selected {
+  border: 1px solid white;
+}
+/* line 240, scss/partials/_updatedCanvas.scss */
+#tool-bar .element div {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 5px;
+  position: relative;
+  left: 50%;
+  margin-left: -25px;
+  text-align: center;
+}
+/* line 249, scss/partials/_updatedCanvas.scss */
+#tool-bar .element div i {
+  color: white;
+  margin-top: 10px;
+  font-size: 25px;
+}
+/* line 255, scss/partials/_updatedCanvas.scss */
+#tool-bar .element div p {
+  color: white;
+  padding-top: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+/* line 265, scss/partials/_updatedCanvas.scss */
+#tool-bar .element:nth-child(3) {
+  border-right: none;
+}
+
+/* line 271, scss/partials/_updatedCanvas.scss */
+#color-blue {
+  background-color: blue;
+}
+
+/* line 275, scss/partials/_updatedCanvas.scss */
+#color-red {
+  background-color: red;
+}
+
+/* line 278, scss/partials/_updatedCanvas.scss */
+#color-green {
+  background-color: green;
+}
+
+/* line 284, scss/partials/_updatedCanvas.scss */
+.circle-small {
+  margin-top: 20px !important;
+}
+
+/* line 288, scss/partials/_updatedCanvas.scss */
+.circle-medium {
+  margin-top: 15px !important;
+}
+
+/* line 292, scss/partials/_updatedCanvas.scss */
+.circle-large {
+  margin-top: 10px !important;
+}
+
+/* line 300, scss/partials/_updatedCanvas.scss */
+.loading {
+  position: absolute;
+  z-index: 10000;
+  left: 50%;
+  top: 40%;
+  margin-left: -25px;
+  border-bottom: 6px solid rgba(0, 0, 0, 0.1);
+  border-left: 6px solid rgba(0, 0, 0, 0.1);
+  border-right: 6px solid rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #3D3092;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  -webkit-animation: rot .6s infinite linear;
+  -moz-animation: rot .6s infinite linear;
+  animation: rot .6s infinite linear;
+}
+
+@keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes rot {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
