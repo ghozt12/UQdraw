@@ -26,6 +26,10 @@
     border-radius: 20px;
 }
 
+.marked {
+  margin-left: 80px;
+}
+
 //styles for lightbox
 /* Preload images */
 body:after {
@@ -240,3 +244,5 @@ body:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+
+

@@ -385,9 +385,14 @@ table {
   text-shadow: 0px 1px 0px #528009;
   width: 220px;
   margin-right: 20px;
+  outline: none;
 }
 
+<<<<<<< HEAD
 /* line 270, scss/partials/_buttons.scss */
+=======
+/* line 232, scss/partials/_buttons.scss */
+>>>>>>> c7d9c96038dd1e35e8dff0c832b1f65aaf69dad4
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -399,13 +404,21 @@ table {
   background-color: #77a809;
 }
 
+<<<<<<< HEAD
 /* line 280, scss/partials/_buttons.scss */
+=======
+/* line 242, scss/partials/_buttons.scss */
+>>>>>>> c7d9c96038dd1e35e8dff0c832b1f65aaf69dad4
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
+<<<<<<< HEAD
 /* line 286, scss/partials/_buttons.scss */
+=======
+/* line 248, scss/partials/_buttons.scss */
+>>>>>>> c7d9c96038dd1e35e8dff0c832b1f65aaf69dad4
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -433,9 +446,14 @@ table {
   text-shadow: 0px 1px 0px #810e05;
   width: 220px;
   margin-left: 20px;
+  outline: none;
 }
 
+<<<<<<< HEAD
 /* line 314, scss/partials/_buttons.scss */
+=======
+/* line 277, scss/partials/_buttons.scss */
+>>>>>>> c7d9c96038dd1e35e8dff0c832b1f65aaf69dad4
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -447,7 +465,11 @@ table {
   background-color: #c62d1f;
 }
 
+<<<<<<< HEAD
 /* line 324, scss/partials/_buttons.scss */
+=======
+/* line 287, scss/partials/_buttons.scss */
+>>>>>>> c7d9c96038dd1e35e8dff0c832b1f65aaf69dad4
 .button-incorrect:active {
   position: relative;
   top: 1px;
@@ -608,14 +630,19 @@ input:focus {
   border-radius: 20px;
 }
 
+/* line 29, scss/partials/_images.scss */
+.marked {
+  margin-left: 80px;
+}
+
 /* Preload images */
-/* line 31, scss/partials/_images.scss */
+/* line 35, scss/partials/_images.scss */
 body:after {
   content: url(../assets/images/lightbox-close.png) url(../assets/images/lightbox-loading.gif) url(../assets/images/lightbox-prev.png) url(../assets/images/lightbox-next.png);
   display: none;
 }
 
-/* line 39, scss/partials/_images.scss */
+/* line 43, scss/partials/_images.scss */
 .lightboxOverlay {
   position: absolute;
   top: 0;
@@ -627,7 +654,7 @@ body:after {
   display: none;
 }
 
-/* line 50, scss/partials/_images.scss */
+/* line 54, scss/partials/_images.scss */
 .lightbox {
   position: absolute;
   left: 0;
@@ -638,7 +665,7 @@ body:after {
   font-weight: normal;
 }
 
-/* line 60, scss/partials/_images.scss */
+/* line 64, scss/partials/_images.scss */
 .lightbox .lb-image {
   display: block;
   height: auto;
@@ -650,12 +677,12 @@ body:after {
   border-radius: 3px;
 }
 
-/* line 71, scss/partials/_images.scss */
+/* line 75, scss/partials/_images.scss */
 .lightbox a img {
   border: none;
 }
 
-/* line 75, scss/partials/_images.scss */
+/* line 79, scss/partials/_images.scss */
 .lb-outerContainer {
   position: relative;
   background-color: white;
@@ -670,19 +697,19 @@ body:after {
   border-radius: 4px;
 }
 
-/* line 89, scss/partials/_images.scss */
+/* line 93, scss/partials/_images.scss */
 .lb-outerContainer:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 95, scss/partials/_images.scss */
+/* line 99, scss/partials/_images.scss */
 .lb-container {
   padding: 4px;
 }
 
-/* line 99, scss/partials/_images.scss */
+/* line 103, scss/partials/_images.scss */
 .lb-loader {
   position: absolute;
   top: 43%;
@@ -693,7 +720,7 @@ body:after {
   line-height: 0;
 }
 
-/* line 109, scss/partials/_images.scss */
+/* line 113, scss/partials/_images.scss */
 .lb-cancel {
   display: block;
   width: 32px;
@@ -702,7 +729,7 @@ body:after {
   background: url(../assets/images/lightbox-loading.gif) no-repeat;
 }
 
-/* line 117, scss/partials/_images.scss */
+/* line 121, scss/partials/_images.scss */
 .lb-nav {
   position: absolute;
   top: 0;
@@ -712,25 +739,25 @@ body:after {
   z-index: 10;
 }
 
-/* line 126, scss/partials/_images.scss */
+/* line 130, scss/partials/_images.scss */
 .lb-container > .nav {
   left: 0;
 }
 
-/* line 130, scss/partials/_images.scss */
+/* line 134, scss/partials/_images.scss */
 .lb-nav a {
   outline: none;
   background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
 }
 
-/* line 135, scss/partials/_images.scss */
+/* line 139, scss/partials/_images.scss */
 .lb-prev, .lb-next {
   height: 100%;
   cursor: pointer;
   display: block;
 }
 
-/* line 141, scss/partials/_images.scss */
+/* line 145, scss/partials/_images.scss */
 .lb-nav a.lb-prev {
   width: 34%;
   left: 0;
@@ -744,13 +771,13 @@ body:after {
   transition: opacity 0.6s;
 }
 
-/* line 154, scss/partials/_images.scss */
+/* line 158, scss/partials/_images.scss */
 .lb-nav a.lb-prev:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 159, scss/partials/_images.scss */
+/* line 163, scss/partials/_images.scss */
 .lb-nav a.lb-next {
   width: 64%;
   right: 0;
@@ -764,13 +791,13 @@ body:after {
   transition: opacity 0.6s;
 }
 
-/* line 172, scss/partials/_images.scss */
+/* line 176, scss/partials/_images.scss */
 .lb-nav a.lb-next:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 177, scss/partials/_images.scss */
+/* line 181, scss/partials/_images.scss */
 .lb-dataContainer {
   margin: 0 auto;
   padding-top: 5px;
@@ -784,20 +811,20 @@ body:after {
   border-bottom-right-radius: 4px;
 }
 
-/* line 190, scss/partials/_images.scss */
+/* line 194, scss/partials/_images.scss */
 .lb-dataContainer:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 196, scss/partials/_images.scss */
+/* line 200, scss/partials/_images.scss */
 .lb-data {
   padding: 0 4px;
   color: #ccc;
 }
 
-/* line 201, scss/partials/_images.scss */
+/* line 205, scss/partials/_images.scss */
 .lb-data .lb-details {
   width: 85%;
   float: left;
@@ -805,14 +832,14 @@ body:after {
   line-height: 1.1em;
 }
 
-/* line 208, scss/partials/_images.scss */
+/* line 212, scss/partials/_images.scss */
 .lb-data .lb-caption {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
 }
 
-/* line 214, scss/partials/_images.scss */
+/* line 218, scss/partials/_images.scss */
 .lb-data .lb-number {
   display: block;
   clear: left;
@@ -821,7 +848,7 @@ body:after {
   color: #999999;
 }
 
-/* line 222, scss/partials/_images.scss */
+/* line 226, scss/partials/_images.scss */
 .lb-data .lb-close {
   display: block;
   float: right;
@@ -838,7 +865,7 @@ body:after {
   transition: opacity 0.2s;
 }
 
-/* line 238, scss/partials/_images.scss */
+/* line 242, scss/partials/_images.scss */
 .lb-data .lb-close:hover {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -1091,42 +1118,64 @@ body {
 
 /* line 57, scss/partials/_theme.scss */
 .timer-div {
+  height: 400px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 63, scss/partials/_theme.scss */
+/* line 64, scss/partials/_theme.scss */
 .theme-timer {
   border: 5px solid #3D3092;
   background: #3D3092;
   border-radius: 50%;
-  margin-top: 30px;
-  -webkit-animation: size 180s infinite linear;
-  animation: size 180s infinite linear;
+  -webkit-animation: size 120s linear;
+  animation: size 120s linear;
+  position: absolute;
+  top: 140px;
+  left: 50%;
 }
 
 @keyframes size {
-  from {
-    height: 300px;
-    width: 300px;
-    margin-top: 10px;
+  0% {
+    height: 400px;
+    width: 400px;
     margin-bottom: 10px;
-    margin-left: 38.7%;
+    margin-top: 0px;
+    margin-left: -200px;
+    background: #16BF25;
+    border-color: #16BF25;
   }
-  to {
+  25% {
+    background: #FFC842;
+    border-color: #FFC842;
+  }
+  50% {
+    background: #D6492A;
+    border-color: #D6492A;
+  }
+  75% {
+    background: red;
+    border-color: red;
+  }
+  100% {
     height: 0px;
     width: 0px;
-    Margin-top: 160px;
     margin-bottom: 160px;
-    margin-left: 50%;
+    margin-top: 200px;
+    margin-left: 0px;
+    background: black;
+    border-color: black;
   }
 }
-/* line 77, scss/partials/_theme.scss */
-.theme-time3 {
-  width: 300px;
-  height: 300px;
+/* line 82, scss/partials/_theme.scss */
+.theme-time2 {
+  width: 400px;
+  height: 400px;
   color: white;
-  margin-left: 38.7%;
+  font-weight: bold;
+  left: 50%;
+  margin-left: -200px;
   margin-right: auto;
   border: 5px solid white;
   border-radius: 50%;
@@ -1134,35 +1183,19 @@ body {
   top: 140px;
   text-align: center;
 }
-/* line 88, scss/partials/_theme.scss */
-.theme-time3 p {
-  margin-top: 10px;
+/* line 95, scss/partials/_theme.scss */
+.theme-time2 p {
+  margin-top: 20px;
 }
 
-/* line 93, scss/partials/_theme.scss */
-.theme-time2 {
+/* line 100, scss/partials/_theme.scss */
+.theme-time1 {
   width: 200px;
   height: 200px;
   color: white;
-  margin-left: 42.3%;
-  margin-right: auto;
-  border: 5px solid  white;
-  border-radius: 50%;
-  position: absolute;
-  top: 190px;
-  text-align: center;
-}
-/* line 104, scss/partials/_theme.scss */
-.theme-time2 p {
-  margin-top: 10px;
-}
-
-/* line 109, scss/partials/_theme.scss */
-.theme-time1 {
-  width: 100px;
-  height: 100px;
-  color: white;
-  margin-left: 46%;
+  font-weight: bold;
+  left: 50%;
+  margin-left: -100px;
   margin-right: auto;
   border: 5px solid  white;
   border-radius: 50%;
@@ -1170,39 +1203,77 @@ body {
   top: 240px;
   text-align: center;
 }
-/* line 120, scss/partials/_theme.scss */
+/* line 113, scss/partials/_theme.scss */
 .theme-time1 p {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
-/* line 125, scss/partials/_theme.scss */
+/* line 118, scss/partials/_theme.scss */
+.theme-time15 {
+  width: 300px;
+  height: 300px;
+  color: white;
+  left: 50%;
+  margin-left: -150px;
+  margin-right: auto;
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 190px;
+  text-align: center;
+}
+/* line 130, scss/partials/_theme.scss */
+.theme-time15 p {
+  margin-top: 20px;
+}
+
+/* line 135, scss/partials/_theme.scss */
+.theme-time05 {
+  width: 100px;
+  height: 100px;
+  color: white;
+  left: 50%;
+  margin-left: -50px;
+  margin-right: auto;
+  border: 5px solid  white;
+  border-radius: 50%;
+  position: absolute;
+  top: 290px;
+  text-align: center;
+}
+/* line 147, scss/partials/_theme.scss */
+.theme-time05 p {
+  margin-top: 40px;
+}
+
+/* line 152, scss/partials/_theme.scss */
 .theme-response-inner {
   width: 30%;
   height: 50px;
   background: #16BF25;
 }
 
-/* line 132, scss/partials/_theme.scss */
+/* line 159, scss/partials/_theme.scss */
 .student-question {
   margin-top: 30px;
 }
 
-/* line 136, scss/partials/_theme.scss */
+/* line 163, scss/partials/_theme.scss */
 .student-responses {
   margin-top: 30px;
 }
 
-/* line 141, scss/partials/_theme.scss */
+/* line 168, scss/partials/_theme.scss */
 .theme-response-actions {
   margin-top: 30px;
   text-align: center;
 }
-/* line 145, scss/partials/_theme.scss */
+/* line 172, scss/partials/_theme.scss */
 .theme-response-actions h2 {
   font-size: 30px;
 }
 
-/* line 151, scss/partials/_theme.scss */
+/* line 178, scss/partials/_theme.scss */
 .subject-form {
   padding-top: 12px;
   padding-bottom: 12px;

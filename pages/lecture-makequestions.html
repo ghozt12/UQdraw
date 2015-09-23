@@ -15,7 +15,7 @@
 	$(document).ready(function() {
 		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
 			type: 'GET',
-			url: 'http://teamone.uqcloud.net/Brian/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
+			url: 'http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
 			success: function(data){
 				//alert(data);
 				//alert("success");
@@ -46,24 +46,59 @@
 	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
  //"<p>Lecture</p>"+questionItem.quwstionWeek+
 		return	"<li> <span>" +questionItem.title+ "</span>" +
-		"<button class='q-button'>DELETE</button> " +
+		"<button class='q-button' onclick='deleteQuestion("+questionItem.questionID+")'>DELETE</button> " +
 		"<button class='q-button-long'>VIEW RESPONSES</button> " +
 		"<button class='q-button'>EDIT</button> ";
 	}
-	function addCourse(){
+	function addQuestion(){
 		document.getElementById("addButton").innerHTML ="";
 		document.getElementById("addButton").innerHTML =/*"<li><form id ='addSubjectForm' class='subject-form'><span>Title:<input style='width:70%;'type='text' name='title' >" +
 				"<button  type='submit' id ='addButton';class= 'q-button' '>Add</button>" +
 				"<button  class= 'q-button' onclick='parseImage()'>Image</button></span></form></li>";*/
 				"<li><span>Title:<input style='width:70%;'type='text' name='title' >" +
-				"<button   class='q-button' onclick='submitCourse()' >Add</button>" +
-				"<button  class= 'q-button' onclick='parseImage()'>Image</button></span></li>"
+				"<button  class='q-button' onclick='submitCourse()' >Add</button>" +
+				"<input  type='file' onchange='parseImage()''></span></li>" +
+				"<li><img id='preview'src='' height='500px' width='500px' alt='Image preview...'></li>";
+				//"<textarea id='base64textarea' placeholder='Base64 will appear here' cols='50' rows='15'></textarea>";
 	}
 
 	function parseImage(){
 	//Change image to blob}
-		imageBlob = "";
+		var preview = document.getElementById('preview'); //preview box
+		var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+		var reader  = new FileReader();
+		var canvas = document.createElement("canvas"),
+		canvasContext = canvas.getContext("2d");
+		haveImage = true;//set true if validate as a image
+
+		reader.onloadend = function (readerEvt) {
+			preview.src = reader.result; // show the upload photo on .preview
+		}
+
+		if (file) {
+			reader.readAsDataURL(file)//reads the data as a URL
+
+		} else {
+			preview.src = "";
+		}
+		preview.onload = function () {
+			//Set canvas size is same as the picture
+			canvas.width = preview.width;
+			canvas.height = preview.height;
+
+			// draw image into canvas element
+			canvasContext.drawImage(preview, 0, 0, preview.width, preview.height);
+
+			// get canvas contents as a data URL (returns png format by default)
+			var dataURL = canvas.toDataURL();
+            imageBlob = dataURL; // image blob reference that are going to POST
+		};
+		console.log(imageBlob);
 	}
+
+
+
+
 	function getCurrentWeek(){
 		var d =new Date();//to be discuss
 		return 1;
@@ -77,11 +112,11 @@
 				courseID: courseID,
 				title: title,
 				haveImage: haveImage,
-				fileFormat: fileFormat,
+				fileFormat: ".jpg", // since it is blob, no matter it is .jpg / .png, it will still saved in .png format
 				image: imageBlob,
 				questionWeek: getCurrentWeek()
 			};
-			$.post('../Brian/uqDrawBackend/addQuestion.php', DataObj, function (data) {//url must be in file path, Can't POST data through HTTP
+			$.post('../uqDrawBackend/addQuestion.php', DataObj, function (data) {//url must be in file path, Can't POST data through HTTP
 				alert(data);
 				location.reload();// reload page when data is inserted
 
@@ -91,6 +126,27 @@
 
 			});
 		}else{alert("Type something, dude");}
+	}
+
+	function deleteQuestion(questionID){
+		
+		$(document).ready(function(){
+			$.ajax({//delete question through ajax so it updates instantly
+				type: "POST",
+				url: '../uqDrawBackend/deleteQuestion.php',
+				data: {
+					questionID: questionID,
+				},
+				success:function(result){
+					alert(result);
+					location.reload();
+
+				},
+				error:function(){
+					alert("Can't Reach server")
+				}
+			});
+		});
 	}
 </script>
 <body class="bg-prepare">
@@ -120,9 +176,9 @@
 			<li> <span> Question 2: Draw a circle </span> <button class="q-button">DELETE</button> <button class="q-button-long">VIEW RESPONSES</button> <button class="q-button">EDIT</button></li>
 			<li> <span> Question 3: What is 1 + 0? </span> <button class="q-button">DELETE</button> <button class="q-button-long">VIEW RESPONSES</button> <button class="q-button">EDIT</button> </li>
 			<!-- Create new question button -->
-			</ul>
-				</span>
-			<ul id="addButton"><li onclick="addCourse()"><button class="button-add">+</button></li></ul>
+			</span>
+		</ul>
+			<ul id="addButton"><li onclick="addQuestion()"><button class="button-add">+</button></li></ul>
 		</ul>
 	</section>
 
