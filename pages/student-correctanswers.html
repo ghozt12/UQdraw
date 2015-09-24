@@ -1,0 +1,62 @@
+<html>
+<head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/gridism.css">
+</head>
+
+<body>
+
+	<section>
+		<div class="header-l-lecture">
+			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
+			<h3 class="typography-l-h3"> Correct Answers</h3>
+			<a href="lecture-prepare-responses.html"><div class="button-goto-lecture"> <p> Back </p></div></a>
+		</div>
+	</section>
+
+	<section>
+
+		<!-- Body Heading -->
+		<h2 class="type-body-heading"> Draw a House </h2>
+		<!-- Body Subheading - display number of responses-->
+		<h3 class="type-body-response"> 2 Correct Responses Lecture 1 - Intro</h3>
+		
+		<div class="grid-container">
+
+			<!--example buttons-->
+			<div class="grid-response" id="response1">
+				<img class="single-response" src="..\assets\images\response-1.jpg" height="110px" width="110px" >
+				<a href="..\assets\images\response-1.jpg" data-lightbox="responses" data-title="First Response" >
+					<button type="button" class="button-hidden">Expand</button>
+				</a>
+				<div id="mark0">
+					
+				</div>
+			</div>
+
+			<div class="grid-response" id="response2">
+				<img class="single-response" src="..\assets\images\response-2.jpg" height="110px" width="110px" >
+				<a href="..\assets\images\response-2.jpg" data-lightbox="responses" data-title="Second Response" >
+					<button type="button" class="button-hidden">Expand</button>
+				</a>
+				<div id="mark1">
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+</body>
+	<!-- Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../js/lightbox-lecture.js"></script>
+	<script src="../js/responses_page.js"></script>
+	<!-- JS -->
+	<script>
+  		 $(document).ready(function() {
+  		 	$("#subjects").load("subListForALecturer.php");
+  		 });
+  	</script>
+</html>
