@@ -388,11 +388,7 @@ table {
   outline: none;
 }
 
-<<<<<<< HEAD
-/* line 270, scss/partials/_buttons.scss */
-=======
-/* line 232, scss/partials/_buttons.scss */
->>>>>>> c7d9c96038dd1e35e8dff0c832b1f65aaf69dad4
+/* line 271, scss/partials/_buttons.scss */
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -404,21 +400,13 @@ table {
   background-color: #77a809;
 }
 
-<<<<<<< HEAD
-/* line 280, scss/partials/_buttons.scss */
-=======
-/* line 242, scss/partials/_buttons.scss */
->>>>>>> c7d9c96038dd1e35e8dff0c832b1f65aaf69dad4
+/* line 281, scss/partials/_buttons.scss */
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
-<<<<<<< HEAD
-/* line 286, scss/partials/_buttons.scss */
-=======
-/* line 248, scss/partials/_buttons.scss */
->>>>>>> c7d9c96038dd1e35e8dff0c832b1f65aaf69dad4
+/* line 287, scss/partials/_buttons.scss */
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -449,11 +437,7 @@ table {
   outline: none;
 }
 
-<<<<<<< HEAD
-/* line 314, scss/partials/_buttons.scss */
-=======
-/* line 277, scss/partials/_buttons.scss */
->>>>>>> c7d9c96038dd1e35e8dff0c832b1f65aaf69dad4
+/* line 316, scss/partials/_buttons.scss */
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -465,11 +449,7 @@ table {
   background-color: #c62d1f;
 }
 
-<<<<<<< HEAD
-/* line 324, scss/partials/_buttons.scss */
-=======
-/* line 287, scss/partials/_buttons.scss */
->>>>>>> c7d9c96038dd1e35e8dff0c832b1f65aaf69dad4
+/* line 326, scss/partials/_buttons.scss */
 .button-incorrect:active {
   position: relative;
   top: 1px;
