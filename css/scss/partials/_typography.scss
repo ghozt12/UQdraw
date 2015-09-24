@@ -3,12 +3,30 @@
 * *****/
 
 body {
-	font-family: "Arial", serif;
+	font-family: 'open-sans-semibold', sans-serif;
 }
+
 
 /* *****
 ** Typograhpy
 * *****/
+
+//new font quicksand
+@font-face{
+	font-family:'open-sans';
+	src:url('../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family:'open-sans-semibold';
+	src:url('../fonts/opensans/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face{
+	font-family:'open-sans-bold';
+	src:url('../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
+}
+
 
 // This is for the text "Welcome User"
 .type-welcome {
