@@ -62,22 +62,21 @@
 }
 
 .list-questions-green {
-	width: 50%;
-	margin: auto;
-	
-	
+	@extend .list-subjects;
+		opacity: .9;
 	li {
-		height: 25px;
 		background: $uq-green;
-		color: white;
-		margin: 3px;
-		border-radius: 50px;
-		padding-top: 10px;
-		transition: .3s;
-		cursor: pointer;
-		@extend .noselect;
-		font-size: 20px;
-		padding-left:20px;
+		text-align:left;
+		padding-left:5px;
+		padding-right:5px;
+	}
+
+	li:hover {
+		background: darken($uq-green, 20%);
+	}
+	h3 {
+		text-align:center;
+		padding-bottom:10px;
 	}
 
 	li button {
@@ -136,7 +135,7 @@
 		color: white;
 		height: 30px;
 		margin: 3px;
-		border-radius:50px;
+		border-radius:15px;
 		padding-top: 12px;
 		transition: .3s;
 		padding-left: 10px;
@@ -160,27 +159,21 @@
 		font-size: 20px;
 	}
 	button {
-		border-radius: 50px;
-		font-size: 16px;
+		border-radius: 12px;
+		margin-right:5px;
+		padding:2px;
 		transition: 0.4s;
-		outline-style: none;
 		cursor: pointer;
 		background:white;
 		margin-top:-5px;
 		height: 30px;
-
-		&:hover {
-			border: 2px solid #FFF;
-			color: $uq-purple;
-			transition: 0.4s;
-		}
 		float:right;
 		font-size: 12px;
-		border: 2px solid $uq-purple;
+		border: 2px solid white;
 		color: $uq-purple;
 		width: 70px;
 		&:hover {
-			border: 2px solid white;
+			border: 2px solid $uq-purple;
 			background: $uq-purple;
 			color: white;
 			transition: 0.4s;
