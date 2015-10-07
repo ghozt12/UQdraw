@@ -1055,7 +1055,7 @@ body {
 ** ******/
 /* line 5, scss/partials/_theme.scss */
 .theme-lecture-mode {
-  background-image: url(../assets/images/lecture-mode-bg.png);
+  background-image: url(../assets/images/trialbgl.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 163px);
@@ -1074,7 +1074,7 @@ body {
 
 /* line 24, scss/partials/_theme.scss */
 .theme-prepare-mode {
-  background-image: url(../assets/images/prepare-mode-bg.png);
+  background-image: url(../assets/images/trialbgp.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 163px);
