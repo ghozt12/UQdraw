@@ -160,16 +160,30 @@ table {
   cursor: pointer;
   height: 30px;
   width: 100px;
+  outline: none;
   background-color: #FFF;
 }
-/* line 25, scss/partials/_buttons.scss */
+/* line 23, scss/partials/_buttons.scss */
+.submit:focus, .drawing-app-submit:focus, .drawing-app-question:focus, .drawing-app-camera:focus, .drawing-app-clear:focus, .drawing-app-back:focus, .back-button:focus, .q-button:focus, .q-button-long:focus {
+  outline: 0;
+}
+/* line 26, scss/partials/_buttons.scss */
+.submit *:focus, .drawing-app-submit *:focus, .drawing-app-question *:focus, .drawing-app-camera *:focus, .drawing-app-clear *:focus, .drawing-app-back *:focus, .back-button *:focus, .q-button *:focus, .q-button-long *:focus {
+  outline: 0;
+}
+/* line 32, scss/partials/_buttons.scss */
 .submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover, .drawing-app-camera:hover, .drawing-app-clear:hover, .drawing-app-back:hover, .back-button:hover, .q-button:hover, .q-button-long:hover {
   border: 2px solid #FFF;
   color: #410C54;
   transition: 0.4s;
 }
 
-/* line 33, scss/partials/_buttons.scss */
+/* line 39, scss/partials/_buttons.scss */
+input:focus {
+  outline: none;
+}
+
+/* line 44, scss/partials/_buttons.scss */
 .button-add {
   width: 100%;
   opacity: .8;
@@ -182,14 +196,14 @@ table {
   border-radius: 15px;
   cursor: pointer;
 }
-/* line 45, scss/partials/_buttons.scss */
+/* line 56, scss/partials/_buttons.scss */
 .button-add:hover {
   transition: 0.7s;
   background-color: #410C54;
   color: white;
 }
 
-/* line 55, scss/partials/_buttons.scss */
+/* line 66, scss/partials/_buttons.scss */
 .button-goto-prepare {
   background-color: #410C54;
   width: 150px;
@@ -199,16 +213,16 @@ table {
   color: white;
   text-align: center;
 }
-/* line 65, scss/partials/_buttons.scss */
+/* line 76, scss/partials/_buttons.scss */
 .button-goto-prepare p {
   margin-top: 15px;
 }
-/* line 69, scss/partials/_buttons.scss */
+/* line 80, scss/partials/_buttons.scss */
 .button-goto-prepare:hover {
   background-color: #1e0627;
 }
 
-/* line 74, scss/partials/_buttons.scss */
+/* line 85, scss/partials/_buttons.scss */
 .button-goto-lecture {
   background-color: #8ED676;
   width: 150px;
@@ -218,23 +232,23 @@ table {
   color: white;
   text-align: center;
 }
-/* line 84, scss/partials/_buttons.scss */
+/* line 95, scss/partials/_buttons.scss */
 .button-goto-lecture p {
   margin-top: 15px;
 }
-/* line 88, scss/partials/_buttons.scss */
+/* line 99, scss/partials/_buttons.scss */
 .button-goto-lecture:hover {
   background-color: #6eca4f;
 }
 
-/* line 93, scss/partials/_buttons.scss */
+/* line 104, scss/partials/_buttons.scss */
 .drawing-app-submit {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-/* line 103, scss/partials/_buttons.scss */
+/* line 114, scss/partials/_buttons.scss */
 .drawing-app-question {
   position: absolute;
   top: 60px;
@@ -242,7 +256,7 @@ table {
   margin-right: -75px;
   z-index: 1000;
 }
-/* line 114, scss/partials/_buttons.scss */
+/* line 125, scss/partials/_buttons.scss */
 .drawing-app-question:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -250,14 +264,14 @@ table {
   transition: 0.4s;
 }
 
-/* line 122, scss/partials/_buttons.scss */
+/* line 133, scss/partials/_buttons.scss */
 .drawing-app-camera {
   position: absolute;
   top: 60px;
   right: 10px;
   z-index: 1000;
 }
-/* line 132, scss/partials/_buttons.scss */
+/* line 143, scss/partials/_buttons.scss */
 .drawing-app-camera:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -265,14 +279,14 @@ table {
   transition: 0.4s;
 }
 
-/* line 141, scss/partials/_buttons.scss */
+/* line 152, scss/partials/_buttons.scss */
 .drawing-app-clear {
   position: absolute;
   top: 60px;
   left: 10px;
   z-index: 1000;
 }
-/* line 151, scss/partials/_buttons.scss */
+/* line 162, scss/partials/_buttons.scss */
 .drawing-app-clear:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -280,28 +294,28 @@ table {
   transition: 0.4s;
 }
 
-/* line 159, scss/partials/_buttons.scss */
+/* line 170, scss/partials/_buttons.scss */
 .drawing-app-back {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-/* line 168, scss/partials/_buttons.scss */
+/* line 179, scss/partials/_buttons.scss */
 .back-button {
   position: absolute;
   top: 60px;
   left: 10px;
 }
 
-/* line 177, scss/partials/_buttons.scss */
+/* line 188, scss/partials/_buttons.scss */
 .q-button {
   font-size: 12px;
   border: 2px solid #8ED676;
   color: #8ED676;
   width: 70px;
 }
-/* line 183, scss/partials/_buttons.scss */
+/* line 194, scss/partials/_buttons.scss */
 .q-button:hover {
   border: 2px solid white;
   background: #8ED676;
@@ -309,14 +323,14 @@ table {
   transition: 0.4s;
 }
 
-/* line 191, scss/partials/_buttons.scss */
+/* line 202, scss/partials/_buttons.scss */
 .q-button-long {
   font-size: 12px;
   border: 2px solid #8ED676;
   color: #8ED676;
   width: 155px;
 }
-/* line 197, scss/partials/_buttons.scss */
+/* line 208, scss/partials/_buttons.scss */
 .q-button-long:hover {
   border: 2px solid white;
   background: #8ED676;
@@ -324,7 +338,7 @@ table {
   transition: 0.4s;
 }
 
-/* line 206, scss/partials/_buttons.scss */
+/* line 217, scss/partials/_buttons.scss */
 .button-hidden {
   opacity: 0;
   transition: opacity 0.3s linear;
@@ -339,7 +353,7 @@ table {
   z-index: 100;
 }
 
-/* line 220, scss/partials/_buttons.scss */
+/* line 231, scss/partials/_buttons.scss */
 .grid-response:hover .button-hidden {
   opacity: 1;
 }
@@ -362,7 +376,7 @@ table {
     color: #ffffff;
 }
 */
-/* line 243, scss/partials/_buttons.scss */
+/* line 254, scss/partials/_buttons.scss */
 .button-correct {
   -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
   -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
@@ -393,7 +407,7 @@ table {
   outline: none;
 }
 
-/* line 272, scss/partials/_buttons.scss */
+/* line 283, scss/partials/_buttons.scss */
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -405,13 +419,13 @@ table {
   background-color: #77a809;
 }
 
-/* line 282, scss/partials/_buttons.scss */
+/* line 293, scss/partials/_buttons.scss */
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
-/* line 288, scss/partials/_buttons.scss */
+/* line 299, scss/partials/_buttons.scss */
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -442,7 +456,7 @@ table {
   outline: none;
 }
 
-/* line 317, scss/partials/_buttons.scss */
+/* line 328, scss/partials/_buttons.scss */
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -454,7 +468,7 @@ table {
   background-color: #c62d1f;
 }
 
-/* line 327, scss/partials/_buttons.scss */
+/* line 338, scss/partials/_buttons.scss */
 .button-incorrect:active {
   position: relative;
   top: 1px;
@@ -976,9 +990,10 @@ body {
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
+  color: black;
 }
 
-/* line 58, scss/partials/_typography.scss */
+/* line 59, scss/partials/_typography.scss */
 .type-body-subheading {
   text-align: center;
   padding-top: 10px;
@@ -986,7 +1001,7 @@ body {
   padding-bottom: 10px;
 }
 
-/* line 76, scss/partials/_typography.scss */
+/* line 77, scss/partials/_typography.scss */
 .startpage-welcome {
   color: white;
   text-align: center;
@@ -996,18 +1011,18 @@ body {
   font-size: 1em;
 }
 
-/* line 85, scss/partials/_typography.scss */
+/* line 86, scss/partials/_typography.scss */
 .start-section-input {
   opacity: .8;
 }
-/* line 87, scss/partials/_typography.scss */
+/* line 88, scss/partials/_typography.scss */
 .start-section-input h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
 }
 
-/* line 101, scss/partials/_typography.scss */
+/* line 102, scss/partials/_typography.scss */
 .lecturer-startpage-welcome {
   color: #000;
   text-align: center;
@@ -1017,12 +1032,12 @@ body {
   font-size: 1em;
 }
 
-/* line 110, scss/partials/_typography.scss */
+/* line 111, scss/partials/_typography.scss */
 #lecturer-start-username {
   font-weight: 600;
 }
 
-/* line 115, scss/partials/_typography.scss */
+/* line 116, scss/partials/_typography.scss */
 .type-lecture-mode h2, .type-prepare-mode h2 {
   color: white;
   font-size: 50px;
@@ -1031,14 +1046,14 @@ body {
   padding-top: calc(55vh - 173px);
   margin-bottom: 30px;
 }
-/* line 124, scss/partials/_typography.scss */
+/* line 125, scss/partials/_typography.scss */
 .type-lecture-mode h3, .type-prepare-mode h3 {
   color: white;
   font-weight: 300;
   text-align: center;
 }
 
-/* line 131, scss/partials/_typography.scss */
+/* line 132, scss/partials/_typography.scss */
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -1046,7 +1061,7 @@ body {
   margin-top: 18px;
 }
 
-/* line 138, scss/partials/_typography.scss */
+/* line 139, scss/partials/_typography.scss */
 .type-body-url {
   font-size: 20px;
   text-align: center;
@@ -1054,7 +1069,7 @@ body {
   margin-top: 10px;
 }
 
-/* line 145, scss/partials/_typography.scss */
+/* line 146, scss/partials/_typography.scss */
 .type-body-response {
   font-size: 20px;
   text-align: left;

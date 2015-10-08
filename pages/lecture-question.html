@@ -21,8 +21,8 @@
 	<!-- Questions -->
 	<section>
 		<!-- The question goes here, get id question -->
-		<h2 class="type-body-heading"> <span id="question">Draw My House</span> </h2>
-		<h3 class="type-body-url"> teamone.uqcloud.net ENTER CODE: <span id = "code"> 3fg </span></h2>
+		<h2 class="type-body-heading"> <span id="question-title">Draw My House</span> </h2>
+		<h3 class="type-body-url"> teamone.uqcloud.net ENTER CODE: <span id = "code"> 3fg </span></h3>
 
 		<!-- RESPONSE FILLER -->
 		<!-- This works by increasing the inner divs width, so grab
@@ -64,7 +64,7 @@
 				var questionsListObject = JSON.parse(data);
 				document.getElementById("code").textContent=questionsListObject.enteringCode;// 3 digit code
 				//document.getElementById("subject").textContent=questionsListObject.subject;// course code
-				document.getElementById("question").textContent=questionsListObject.questionList[0].title;
+				document.getElementById("question-title").textContent=questionsListObject.questionList[0].title;
 			},
 			error: function(){
 				console.log(data);
