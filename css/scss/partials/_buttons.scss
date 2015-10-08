@@ -10,9 +10,9 @@
 .submit {    
     height: 60px;
     width: 150px;
-    border: 2px solid #AFA5FF;
+    border: 2px solid $uq-purple;
     border-radius: 50px;
-    color: #AFA5FF;
+    color: $uq-purple;
     font-size: 16px;
     transition: 0.4s;
     outline-style: none;
@@ -33,6 +33,7 @@
 .button-add {
     @extend .remove-button-style;
     width: 100%;
+	opacity:.8;
     border: 2px solid $uq-purple;
     background-color: white;
     color: $uq-purple;

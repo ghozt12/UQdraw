@@ -147,9 +147,9 @@ table {
 .submit, .drawing-app-submit, .drawing-app-question, .drawing-app-camera, .drawing-app-clear, .drawing-app-back, .back-button, .q-button, .q-button-long {
   height: 60px;
   width: 150px;
-  border: 2px solid #AFA5FF;
+  border: 2px solid #410C54;
   border-radius: 50px;
-  color: #AFA5FF;
+  color: #410C54;
   font-size: 16px;
   transition: 0.4s;
   outline-style: none;
@@ -168,6 +168,7 @@ table {
 /* line 33, scss/partials/_buttons.scss */
 .button-add {
   width: 100%;
+  opacity: .8;
   border: 2px solid #410C54;
   background-color: white;
   color: #410C54;
@@ -177,14 +178,14 @@ table {
   border-radius: 15px;
   cursor: pointer;
 }
-/* line 44, scss/partials/_buttons.scss */
+/* line 45, scss/partials/_buttons.scss */
 .button-add:hover {
   transition: 0.7s;
   background-color: #410C54;
   color: white;
 }
 
-/* line 54, scss/partials/_buttons.scss */
+/* line 55, scss/partials/_buttons.scss */
 .button-goto-prepare {
   background-color: #410C54;
   width: 150px;
@@ -194,16 +195,16 @@ table {
   color: white;
   text-align: center;
 }
-/* line 64, scss/partials/_buttons.scss */
+/* line 65, scss/partials/_buttons.scss */
 .button-goto-prepare p {
   margin-top: 15px;
 }
-/* line 68, scss/partials/_buttons.scss */
+/* line 69, scss/partials/_buttons.scss */
 .button-goto-prepare:hover {
   background-color: #1e0627;
 }
 
-/* line 73, scss/partials/_buttons.scss */
+/* line 74, scss/partials/_buttons.scss */
 .button-goto-lecture {
   background-color: #8ED676;
   width: 150px;
@@ -213,23 +214,23 @@ table {
   color: white;
   text-align: center;
 }
-/* line 83, scss/partials/_buttons.scss */
+/* line 84, scss/partials/_buttons.scss */
 .button-goto-lecture p {
   margin-top: 15px;
 }
-/* line 87, scss/partials/_buttons.scss */
+/* line 88, scss/partials/_buttons.scss */
 .button-goto-lecture:hover {
   background-color: #6eca4f;
 }
 
-/* line 92, scss/partials/_buttons.scss */
+/* line 93, scss/partials/_buttons.scss */
 .drawing-app-submit {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-/* line 102, scss/partials/_buttons.scss */
+/* line 103, scss/partials/_buttons.scss */
 .drawing-app-question {
   position: absolute;
   top: 60px;
@@ -237,7 +238,7 @@ table {
   margin-right: -75px;
   z-index: 1000;
 }
-/* line 113, scss/partials/_buttons.scss */
+/* line 114, scss/partials/_buttons.scss */
 .drawing-app-question:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -245,14 +246,14 @@ table {
   transition: 0.4s;
 }
 
-/* line 121, scss/partials/_buttons.scss */
+/* line 122, scss/partials/_buttons.scss */
 .drawing-app-camera {
   position: absolute;
   top: 60px;
   right: 10px;
   z-index: 1000;
 }
-/* line 131, scss/partials/_buttons.scss */
+/* line 132, scss/partials/_buttons.scss */
 .drawing-app-camera:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -260,14 +261,14 @@ table {
   transition: 0.4s;
 }
 
-/* line 140, scss/partials/_buttons.scss */
+/* line 141, scss/partials/_buttons.scss */
 .drawing-app-clear {
   position: absolute;
   top: 60px;
   left: 10px;
   z-index: 1000;
 }
-/* line 150, scss/partials/_buttons.scss */
+/* line 151, scss/partials/_buttons.scss */
 .drawing-app-clear:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -275,28 +276,28 @@ table {
   transition: 0.4s;
 }
 
-/* line 158, scss/partials/_buttons.scss */
+/* line 159, scss/partials/_buttons.scss */
 .drawing-app-back {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-/* line 167, scss/partials/_buttons.scss */
+/* line 168, scss/partials/_buttons.scss */
 .back-button {
   position: absolute;
   top: 60px;
   left: 10px;
 }
 
-/* line 176, scss/partials/_buttons.scss */
+/* line 177, scss/partials/_buttons.scss */
 .q-button {
   font-size: 12px;
   border: 2px solid #8ED676;
   color: #8ED676;
   width: 70px;
 }
-/* line 182, scss/partials/_buttons.scss */
+/* line 183, scss/partials/_buttons.scss */
 .q-button:hover {
   border: 2px solid white;
   background: #8ED676;
@@ -304,14 +305,14 @@ table {
   transition: 0.4s;
 }
 
-/* line 190, scss/partials/_buttons.scss */
+/* line 191, scss/partials/_buttons.scss */
 .q-button-long {
   font-size: 12px;
   border: 2px solid #8ED676;
   color: #8ED676;
   width: 155px;
 }
-/* line 196, scss/partials/_buttons.scss */
+/* line 197, scss/partials/_buttons.scss */
 .q-button-long:hover {
   border: 2px solid white;
   background: #8ED676;
@@ -319,7 +320,7 @@ table {
   transition: 0.4s;
 }
 
-/* line 205, scss/partials/_buttons.scss */
+/* line 206, scss/partials/_buttons.scss */
 .button-hidden {
   opacity: 0;
   transition: opacity 0.3s linear;
@@ -334,7 +335,7 @@ table {
   z-index: 100;
 }
 
-/* line 219, scss/partials/_buttons.scss */
+/* line 220, scss/partials/_buttons.scss */
 .grid-response:hover .button-hidden {
   opacity: 1;
 }
@@ -357,7 +358,7 @@ table {
     color: #ffffff;
 }
 */
-/* line 242, scss/partials/_buttons.scss */
+/* line 243, scss/partials/_buttons.scss */
 .button-correct {
   -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
   -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
@@ -388,7 +389,7 @@ table {
   outline: none;
 }
 
-/* line 271, scss/partials/_buttons.scss */
+/* line 272, scss/partials/_buttons.scss */
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -400,13 +401,13 @@ table {
   background-color: #77a809;
 }
 
-/* line 281, scss/partials/_buttons.scss */
+/* line 282, scss/partials/_buttons.scss */
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
-/* line 287, scss/partials/_buttons.scss */
+/* line 288, scss/partials/_buttons.scss */
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -437,7 +438,7 @@ table {
   outline: none;
 }
 
-/* line 316, scss/partials/_buttons.scss */
+/* line 317, scss/partials/_buttons.scss */
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -449,7 +450,7 @@ table {
   background-color: #c62d1f;
 }
 
-/* line 326, scss/partials/_buttons.scss */
+/* line 327, scss/partials/_buttons.scss */
 .button-incorrect:active {
   position: relative;
   top: 1px;
@@ -525,13 +526,13 @@ input:focus {
   margin-top: 20px;
   text-align: center;
 }
-/* line 26, scss/partials/_start_three_input.scss */
+/* line 25, scss/partials/_start_three_input.scss */
 .start-or span {
   position: relative;
   display: inline-block;
 }
 
-/* line 32, scss/partials/_start_three_input.scss */
+/* line 31, scss/partials/_start_three_input.scss */
 .start-or:before {
   content: '';
   border-top: 3px solid #000;
@@ -542,7 +543,7 @@ input:focus {
   margin-top: 10px;
 }
 
-/* line 42, scss/partials/_start_three_input.scss */
+/* line 41, scss/partials/_start_three_input.scss */
 .start-or:after {
   content: '';
   border-top: 3px solid #000;
@@ -553,17 +554,17 @@ input:focus {
   margin-top: 10px;
 }
 
-/* line 52, scss/partials/_start_three_input.scss */
+/* line 51, scss/partials/_start_three_input.scss */
 .start-section-subjects {
   margin-top: 20px;
   width: 100%;
 }
-/* line 57, scss/partials/_start_three_input.scss */
+/* line 56, scss/partials/_start_three_input.scss */
 .start-section-subjects ul {
   max-width: 400px;
   margin: auto;
 }
-/* line 62, scss/partials/_start_three_input.scss */
+/* line 61, scss/partials/_start_three_input.scss */
 .start-section-subjects ul li {
   color: white;
   text-align: center;
@@ -574,7 +575,7 @@ input:focus {
   padding-top: 12px;
   transition: .3s;
 }
-/* line 73, scss/partials/_start_three_input.scss */
+/* line 72, scss/partials/_start_three_input.scss */
 .start-section-subjects ul li:hover {
   background: #54b135;
 }
@@ -987,6 +988,10 @@ body {
   font-size: 1em;
 }
 
+/* line 85, scss/partials/_typography.scss */
+.start-section-input {
+  opacity: .8;
+}
 /* line 87, scss/partials/_typography.scss */
 .start-section-input h3 {
   text-align: center;
@@ -1313,7 +1318,7 @@ body {
 
 /* line 42, scss/partials/_list.scss */
 .list-subjects-green {
-  opacity: .9;
+  opacity: .8;
 }
 /* line 45, scss/partials/_list.scss */
 .list-subjects-green li {
