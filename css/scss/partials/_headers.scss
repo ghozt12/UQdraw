@@ -8,7 +8,7 @@ $header-height: 50px;
 // Top Bar
 #headers-top-bar {
     background: $uq-purple;
-    height: 50px;
+    height: 40px;
 
     img {
         width: 100px;
@@ -16,6 +16,10 @@ $header-height: 50px;
         margin-right: auto;
         margin-left: auto;
         @include centerer(true, false);
+    }
+
+    #submit {
+        height: 40px!important;
     }
 }
 

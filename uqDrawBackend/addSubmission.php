@@ -39,8 +39,8 @@ for($x=0;$x<sizeof($dirSplit);$x++){// some problems on create mutiple dir at th
     }
 
 }
-
-$imagePath_full = $imagePath."/".$studentID.".png";
+$timeStamp = time() + (7 * 24 * 60 * 60);
+$imagePath_full = $imagePath."/".$studentID."-".$timeStamp.".png";
 $img = str_replace('data:image/png;base64,', '', $imageBlob);
 $img = str_replace(' ', '+', $img);
 $data = base64_decode($img);
@@ -48,13 +48,14 @@ $success = file_put_contents($imagePath_full, $data);
 if ($success) {//if the image is uploaded, update row
     echo"<br>";
     echo "upload success your file in: http://teamone.uqcloud.net/uqDrawBackend/" . $imagePath_full;
-$dataQuery="INSERT INTO `Submission`(`submissionID`, `questionID`, `studentID`, `date`, `submittedImage`, `result`) VALUES (NULL,$questionID,'$studentID',NULL,'$imagePath_full',0)";
+$dataQuery="INSERT INTO `Submission`(`submissionID`, `questionID`, `studentID`, `date`, `submittedImage`, `result`) VALUES (NULL,$questionID,'$studentID',NULL,'$imagePath_full',0)
+ON DUPLICATE KEY UPDATE `date` =  CURRENT_TIMESTAMP, `submittedImage` = '$imagePath_full'";// if student submit more than one answer, change the time, and overwrite the answer
 $insertDataResult = mysqli_query($mysqli, $dataQuery);
 
 if ($insertDataResult) {
     //success
 } else {
-    echo " can't submit, procress abandant";
+    echo " can't submit, procress abandant,";
     echo $mysqli->error;
 }
 

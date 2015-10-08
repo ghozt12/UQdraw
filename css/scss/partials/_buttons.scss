@@ -19,6 +19,13 @@
     cursor: pointer;
     height: 30px;
     width: 100px;
+    outline: none;
+    &:focus{
+        outline: 0;
+        }
+    *:focus {
+    outline: 0;
+    }
 
     background-color: #FFF;
 
@@ -27,6 +34,10 @@
         color: $uq-purple;
         transition: 0.4s;
     }
+}
+
+input:focus {
+    outline: none;
 }
 
 // Add a subject as a lectruer
@@ -328,3 +339,6 @@
     position:relative;
     top:1px;
 }
+
+
+
