@@ -8,10 +8,10 @@
 <body>
 
 	<section>
-		<div class="header-l-lecture">
+		<div class="header-l-prepare">
 			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
-			<h3 class="typography-l-h3"> Lecture Mode </h3>
-			<a href="lecture-questions.html"><div class="button-goto-prepare"> <p> Back </p></div></a>
+			<h3 class="typography-l-h3"> Prepare Mode </h3>
+			<a href="lecture-responses.html"><div class="button-goto-prepare"> <p> Back </p></div></a>
 		</div>
 	</section>
 
@@ -26,27 +26,36 @@
 
 			<!--example buttons-->
 			<div class="grid-response">
-				<img class="single-response" src="..\assets\images\response-1.jpg" height="110px" width="110px" >
-				<a href="..\assets\images\response-1.jpg" data-lightbox="responses" data-title="First Response" >
+				<img class="single-response" src="..\assets\images\response-1.png" height="110px" width="110px" >
+				<a href="..\assets\images\response-1.png" data-lightbox="responses" data-title="First Response" >
 					<button type="button" class="button-hidden">Expand</button>
 				</a>
 				<button type="button" class="button-hidden" onclick="confirmDelete()">Delete</button>
+				<div id="mark0">
+					
+				</div>
 			</div>
 
-			<div class="grid-response">
+			<div class="grid-response" id="response2">
 				<img class="single-response" src="..\assets\images\response-2.jpg" height="110px" width="110px" >
 				<a href="..\assets\images\response-2.jpg" data-lightbox="responses" data-title="Second Response" >
 					<button type="button" class="button-hidden">Expand</button>
 				</a>
 				<button type="button" class="button-hidden">Delete</button>
+				<div id="mark1">
+				</div>
+
 			</div>
 
-			<div class="grid-response">
+			<div class="grid-response" id="response3">
 				<img class="single-response" src="..\assets\images\response-3.jpg" height="110px" width="110px" >
 				<a href="..\assets\images\response-3.jpg" data-lightbox="responses" data-title="Third Response" >
 					<button type="button" class="button-hidden">Expand</button>
 				</a>
 				<button type="button" class="button-hidden">Delete</button>
+				<div id="mark2">
+					
+				</div>
 			</div>
 
 			<div class="grid-response">
@@ -85,7 +94,7 @@
 </body>
 	<!-- Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="../js/lightbox.min.js"></script>
+	<script src="../js/lightbox.js"></script>
 	<script src="../js/responses_page.js"></script>
 	<!-- JS -->
 	<script>

@@ -30,7 +30,7 @@
 	}
 
 	li:hover {
-		background: darken($uq-purple, 20%);
+		background: darken($uq-purple, 10%);
 	}
 	h3 {
 		text-align:center;
@@ -62,26 +62,26 @@
 }
 
 .list-questions-green {
-	width: 50%;
-	margin: auto;
-	
-	
+	@extend .list-subjects;
+		opacity: .9;
 	li {
-		margin-bottom: 10px;
-		height: 50px;
 		background: $uq-green;
-		color: white;
-		margin: 3px;
-		padding-top: 12px;
-		transition: .3s;
-		cursor: pointer;
-		@extend .noselect;
-		font-size: 30px;
-		padding-left:20px;
+		text-align:left;
+		padding-left:5px;
+		padding-right:5px;
+	}
+
+	li:hover {
+		background: darken($uq-green, 20%);
+	}
+	h3 {
+		text-align:center;
+		padding-bottom:10px;
 	}
 
 	li button {
 		float: right;
+		margin-top: -5px;
 	}
 }
 
@@ -122,7 +122,7 @@
 	width: 100%;
 
 	ul {
-		max-width: 400px;
+		max-width: 50%;
 		margin: auto;
 		
 	}
@@ -135,6 +135,7 @@
 		color: white;
 		height: 30px;
 		margin: 3px;
+		border-radius:15px;
 		padding-top: 12px;
 		transition: .3s;
 		padding-left: 10px;
@@ -157,6 +158,27 @@
 	label {
 		font-size: 20px;
 	}
+	button {
+		border-radius: 12px;
+		margin-right:5px;
+		padding:2px;
+		transition: 0.4s;
+		cursor: pointer;
+		background:white;
+		margin-top:-5px;
+		height: 30px;
+		float:right;
+		font-size: 12px;
+		border: 2px solid white;
+		color: $uq-purple;
+		width: 70px;
+		&:hover {
+			border: 2px solid $uq-purple;
+			background: $uq-purple;
+			color: white;
+			transition: 0.4s;
+		}
+	}
 
 }
 
@@ -169,7 +191,7 @@
 	
 	ul li div:hover {
 		// froth
-		background: darken($uq-purple, 20%);
+		background: darken($uq-purple, 10%);
 	}
 
 
