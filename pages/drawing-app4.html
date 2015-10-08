@@ -3,16 +3,22 @@
 <head>
 	<title>UQDraw</title>
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
-    
+	 <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/special.css">
 
    	<!-- JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="../js/libs/img-lib.js"></script>
-
+	<script src="../js/hammer.js"></script>
 	<script src="../js/drawing-app3.js"></script>
+
+	<!-- JQUQERY UI -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
 </head>
 
@@ -22,17 +28,7 @@
 
 		<!-- Header Bar -->
 		<div id="headers-top-bar">
-			<button id="menu"><span></span><span></span></button>
-
-			<div class="input-group">
-				<button id="camera"> <i class="fa fa-camera"></i></button>
-				<input type="file" id="imageLoader" accept="image/*" title="camera" capture="camera">
-
-				
-			</div>
-			<button id="question"> Question </button>
-	    	<button id="submit"> Submit </button>
-
+			<button id="submit"> Submit </button>
 	    </div>
 
 	    <!-- Initial Loader -->
@@ -65,6 +61,10 @@
 	    		<div id="tool-3"><p>Clear</p></div>
 	    	</div>
 	    </div>
+
+	    <!-- Draggable div -->
+	    <div id="settings"><button id="tools"> Tools </button></div>
+
 	</div>
 </body>
 </html>

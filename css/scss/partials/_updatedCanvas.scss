@@ -174,10 +174,37 @@
 
 #tools {
 	@extend .button-removal;
+	float: left;
 }
 
 #camera {
 	@extend .button-removal;
+	position: absolute;
+}
+
+#question {
+    @extend .button-removal;
+    position: absolute;
+}
+
+.input-group {
+	display: inline-block;
+    width: 50px;
+    height: 30px;
+    overflow:hidden;
+    position: relative;
+
+	input {
+		height: 40px;
+		opacity:0; /* this will make it transparent */
+	    filter: alpha(opacity=0); /* transparency for Internet Explorer */
+	    position: absolute;  /* making it absolute with z-index:1 will place it on top of the button */
+	    z-index: 1;
+	    top: 0;
+	    right: 0;
+	    padding: 0;
+	    margin: 0;
+	}
 }
 
 #submit {
@@ -188,10 +215,20 @@
 	float: right;
 	width: 100px;
 	transition: .3s;
+    outline: 0;
+    border: none;
+
+    &:focus {
+        outline: none;
+        border: none;
+    }
 
 	&:hover {
 		background: darken($uq-green, 10%);
 	}
+}
+*:focus {
+    outline: none;
 }
 // *********************************************
 
@@ -200,73 +237,169 @@
 
 // Tool Bar
 // *********************************************
+// Break points 
+$break-small: 960px;
+$break-h-small: 690px;
 
 .closed {
-	transform: translate3d(0, 50vh, 0);
+	@media screen and (max-width: $break-small) {
+		transform: translate3d(-100vw, 0, 0);
+		-webkit-transform: translate3d(-100vw, 0, 0);
+	}
+
+	@media screen and (min-width: $break-small) {
+		transform: translate3d(-300px, 0, 0);
+		-webkit-transform: translate3d(-300px, 0, 0);
+	}
+	
+}
+
+
+@mixin element {
+    .element {
+        float: left;
+        border-right: 1px solid darken($uq-purple, 20%);
+        height: 100%;
+        width: 33%;
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 200;
+            padding-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .selected {
+            background: darken($uq-purple, 20%);
+        }
+
+        .color-selected {
+                        box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+
+            border: 1px solid white;
+        }
+
+        div {
+            height: 50px;
+            width: 50px;
+            margin-bottom: 5px;
+            position: relative;
+            left: 50%;
+            margin-left: -25px;
+            text-align:center;
+
+                i {
+                    color: white;
+                    margin-top: 10px;
+                    font-size: 25px;
+                }
+
+                p {
+                    color: white;
+                    padding-top: 20px;
+                    font-size: 15px;
+                    text-align: center;
+                }
+
+        }
+    } 
+
+    .element:nth-child(3) {
+        border-right: none;
+    }
+}
+
+@mixin elementdesktop {
+    .element {
+        display: block;
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 200;
+            padding-top: 10px;
+            margin-bottom: 20px;
+            background: darken($uq-purple, 20%);
+            padding-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .selected {
+            background: darken($uq-purple, 20%);
+        }
+
+        .color-selected {
+                        box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+
+            border: 1px solid white;
+        }
+
+        div {
+            height: 50px;
+            width: 50px;
+            position: relative;
+            left: 50%;
+            margin-left: -25px;
+            text-align:center;
+
+            i {
+                color: white;
+                margin-top: 10px;
+                font-size: 25px;
+            }
+
+            p {
+                color: white;
+                padding-top: 20px;
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+    }
 }
 
 #tool-bar {
-	transition: .3s;
-	position: absolute;
-	bottom: 42px;
-	z-index: 2000;
-	background: $uq-purple;
-	width: 100%;
-	height: 50vh;
+    @mixin general {
+    	transition: .3s;
+    	position: absolute;
+    	left: 0;
+    	z-index: 2000;
+    	background: $uq-purple;
+    }
 
-	.element {
-		float: left;
-		border-right: 1px solid darken($uq-purple, 20%);
-		height: 100%;
-		width: 33%;
-
-		h1 {
-			color: white;
-			text-align: center;
-			font-size: 15px;
-			font-weight: 200;
-			padding-top: 10px;
-			margin-bottom: 20px;
-		}
-
-		.selected {
-			background: darken($uq-purple, 20%);
-		}
-
-		.color-selected {
-			border: 1px solid white;
-		}
-
-		div {
-			height: 50px;
-			width: 50px;
-			margin-bottom: 5px;
-			position: relative;
-			left: 50%;
-			margin-left: -25px;
-				text-align:center;
-
-				i {
-					color: white;
-					margin-top: 10px;
-					font-size: 25px;
-				}
-
-				p {
-					color: white;
-					padding-top: 20px;
-					font-size: 15px;
-					text-align: center;
-				}
-
-		}
-	} 
-
-	.element:nth-child(3) {
-		border-right: none;
+	@media screen and (max-width: $break-small) {
+        @include general;
+		width: 100%;
+		height: 250px;
+		float: none;
+        @include element;
 	}
 
+    @media screen and (min-width: $break-small) and (max-height: $break-h-small) {
+         @include general;
+        width: 100%;
+        height: 250px;
+        float: none;
+        @include element;
+    }
+
+    @media screen and (min-width: $break-small) and (min-height: $break-h-small) {
+        @include general;
+        width: 80px;
+        height: 100%;
+        @include elementdesktop;
+        
+    }
 }
+
+
 
 #color-blue {
 	background-color: blue;
@@ -326,5 +459,9 @@
 }
 // *********************************************
 
+
+/* Floating part
+
+*/
 
 

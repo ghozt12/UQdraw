@@ -1,0 +1,65 @@
+#menu {
+  display: inline-block;
+  height: 20px;
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+  top: 0px;
+  left: 6px;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .1s ease-in-out;
+  -o-transition: .1s ease-in-out;
+  transition: .3s ease-in-out;
+  z-index: 5001;
+  background: 0;
+  border: 0;
+
+}
+
+/* THIS IS A HACK FOR SAFARI */
+@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+  #menu {
+    top: -4px;
+  }  
+}
+
+#menu span {
+  position: absolute;
+  background-color: white;
+  display: block;
+  height: 1px;
+  width: 18px;
+  border-radius: 20px;
+  /* Transitions */
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+#menu span:nth-child(1) {
+  top:0px;
+}
+
+#menu span:nth-child(2) {
+  top:8px;
+}
+
+
+#menu.flipper span:nth-child(2) {
+  -webkit-transform: rotateZ(-45deg) translate3d(0, -5.5px, 0);
+  -moz-transform: rotateZ(-45deg) translate3d(0, -5.5px, 0);
+  -o-transform: rotateZ(-45deg) translate3d(0, -5.5px, 0);
+  transform: rotateZ(-45deg) translate3d(0, -5.5px, 0);
+}
+
+#menu.flipper span:nth-child(1) {
+  -webkit-transform: rotateZ(45deg) translate3d(0, 5.5px, 0);
+  -moz-transform: rotateZ(45deg) translate3d(0, 5.5px, 0);
+  -o-transform: rotateZ(45deg) translate3d(0, 5.5px, 0);
+  transform: rotateZ(45deg) translate3d(0, 5.5px, 0);
+}

@@ -9,6 +9,9 @@
 	var firstTime = true;
 	var currentColor = 'green';
 
+	// draggable
+	var isLeft = true;
+
 	// Colours
 	var color = "#000";	
 	var red = "#C02323";
@@ -24,16 +27,41 @@
 	var colourA = new Array();
 
 $(document).ready(function () {
-	
+
+	// Image loader
+	var imageLoader = document.getElementById('imageLoader');
+    imageLoader.addEventListener('change', handleImage, false);
+
+
+	$(window).bind(
+  'touchmove',
+   function(e) {
+    e.preventDefault();
+  }
+);
+
+	// Check whether we should OPEN the tool bar 
+	// usually if on desktop or big screen
+	// *********************************************
+
+	if ($(window).height() >= 690 && $(window).width() >= 960) {
+		$("#tool-bar").removeClass('closed');
+		$("#menu").addClass('flipper');
+	}
+
 	// Buttons 
 	// *********************************************
 	
 	// Open up the tool bar
-	$( "#tools" ).click(function() {
-	  if ($("#tool-bar").hasClass('closed'))
+	$( "#menu" ).click(function() {
+	  if ($("#tool-bar").hasClass('closed') || $("#tool-bar").hasClass('closed2')) {
 	  	$("#tool-bar").removeClass('closed');
-	  else 
-	  	$("#tool-bar").addClass('closed');
+	  	$("#tool-bar").removeClass('closed2');
+	  	$("#menu").addClass('flipper');
+	  } else {
+	  		$("#menu").removeClass('flipper');
+	  		$("#tool-bar").addClass('closed');
+	  }
 	});
 
 	// Colour
@@ -73,7 +101,7 @@ $(document).ready(function () {
 
 	$( "#size-large" ).click(function() {
 	  removeSizeClasses(this);
-	  ctx.lineWidth = 10;
+	  ctx.lineWidth = 80;
 	});
 
 	// Tools
@@ -115,12 +143,6 @@ $(document).ready(function () {
 		$(selected).addClass('selected');
 	}
 
-var myElement = document.getElementById('tool-bar');
-	// Touch gestures
-	var mc = new Hammer(myElement);
-	mc.on('panup pandown', function(ev) {
-	    $("#tool-bar").addClass('closed');
-	});
 
 	// *********************************************
 
@@ -128,10 +150,9 @@ var myElement = document.getElementById('tool-bar');
 
 	
 	// setup a new canvas for drawing wait for device init
-    setTimeout(function(){
-	   newCanvas();
-	   
-    }, 1000);
+	setTimeout(function(){
+		newCanvas();
+	}, 1000);
 	
 	/* ADD ANY ICONS on clicks IN BELOW */
 
@@ -248,7 +269,7 @@ function newCanvas(){
 	$("#content").html(canvas);
 
 	// Show starting text
-	$( "#content" ).append( "<p id='starting-text'>Touch here to start drawing</p>" );
+	$( "#content" ).append( "<p id='starting-text'>Start drawing!</p>" );
     
     // setup canvas
 	ctx=document.getElementById("canvas").getContext("2d");
@@ -389,6 +410,8 @@ function redraw(context) {
 			context.closePath();
 			context.stroke();
 		}
+
+		context.strokeStyle = currentColor;
 	};
 
 function getParameterByName(name) { // get url parameter added by Brian
@@ -399,10 +422,113 @@ function getParameterByName(name) { // get url parameter added by Brian
 }
 // *********************************************
 
+/*
+function touchHandler(event) {
+    var touch = event.changedTouches[0];
+
+    var simulatedEvent = document.createEvent("MouseEvent");
+        simulatedEvent.initMouseEvent({
+        touchstart: "mousedown",
+        touchmove: "mousemove",
+        touchend: "mouseup"
+    }[event.type], true, true, window, 1,
+        touch.screenX, touch.screenY,
+        touch.clientX, touch.clientY, false,
+        false, false, false, 0, null);
+
+    touch.target.dispatchEvent(simulatedEvent);
+    event.preventDefault();
+}
+
+function init() {
+    document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true);
+}
+*/
 
 
 
 // Interface 
 // *********************************************
 
+
+// Handle Image uploads
 // *********************************************
+
+function handleImage(e){
+	var width = $(window).width();
+	var height = $(window).height()
+	loadImage(
+    e.target.files[0],
+    function (img) {
+        ctx.drawImage(img, 0, 0, width, height);
+    },
+    {
+        maxWidth: $(window).width(),
+        canvas: true,
+        maxHeight: $(window).height(),
+        minWidth: 100,
+        minHeight: 50,
+        canvas: true,
+        orientation: true
+    }
+	);
+}
+	/*
+		alert("loading image");
+    var reader = new FileReader();
+
+    reader.onload = function(event){
+        var img = new Image();
+
+        img.onload = function() {
+            var MAX_WIDTH = $(window).width();
+						var MAX_HEIGHT = $(window).height();
+						var width = img.width;
+						var height = img.height;
+
+						if (width > height) {
+						  if (width > MAX_WIDTH) {
+						    height *= MAX_WIDTH / width;
+						    width = MAX_WIDTH;
+						  }
+						} else {
+						  if (height > MAX_HEIGHT) {
+						    width *= MAX_HEIGHT / height;
+						    height = MAX_HEIGHT;
+						  }
+						}
+
+						alert("WIDTH " + width + " HEIHGT: " + height);
+
+						canvas.width = width;
+						canvas.height = height;
+            ctx.drawImage(img, 0, 0, width, height);
+        }
+        img.src = event.target.result;
+
+        // We need to rotate the canvas if
+        // they took photo in
+        // portrait
+    }
+
+    reader.onloadend = function() {
+    	var exif = EXIF.readFromBinaryFile(new BinaryFile(this.result));
+			switch(exif.Orientation){
+			case 8:
+				ctx.rotate(90*Math.PI/180);
+				break;
+			case 3:
+				ctx.rotate(180*Math.PI/180);
+				break;
+			case 6:
+				ctx.rotate(-90*Math.PI/180);
+				break;
+			}
+    }   
+    reader.readAsBinaryString(e.target.files[0]);  
+
+    */
+
