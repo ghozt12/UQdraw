@@ -71,6 +71,18 @@
         document.getElementById(elementID).innerHTML = "";
       }
 
+      function updateResult(submissionID,result){
+         var url = "../uqDrawBackend/submissionCorrection.php?submissionID="+submissionID+"&status="+result;
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: "",
+          success: function(){
+            console.log("success update result");
+          },error: function(){console.log("fail update result");}
+          });
+
+      }
       //append correct icon in the marking div
       function appendCorrect(elementID){
         var img = document.createElement("img");
@@ -143,9 +155,13 @@
 
       // button automation
       this.$lightbox.find('.button-correct').on('click', function() {
-      
-        clearDiv('mark'+self.currentImageIndex);
-        appendCorrect('mark'+self.currentImageIndex);
+        var submissionID = document.getElementById('mark'+self.currentImageIndex).getAttribute("value");
+        //alert(divID.innerHTML);//Get the submission ID
+       // clearDiv('mark'+self.currentImageIndex);
+        //alert(divID.getAttribute("value"));
+        //appendCorrect('mark'+self.currentImageIndex);
+        updateResult(parseInt(submissionID),1);
+
 
         if (self.currentImageIndex === self.album.length - 1) {
           self.end();
@@ -156,8 +172,10 @@
       });
 
       this.$lightbox.find('.button-incorrect').on('click', function() {
-        clearDiv('mark'+self.currentImageIndex);
-        appendIncorrect('mark'+self.currentImageIndex);
+       // clearDiv('mark'+self.currentImageIndex);
+        var submissionID = document.getElementById('mark'+self.currentImageIndex).getAttribute("value");
+        updateResult(parseInt(submissionID),2);
+        //appendIncorrect('mark'+self.currentImageIndex);
 
         if (self.currentImageIndex === self.album.length - 1) {
           self.end();
