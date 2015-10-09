@@ -85,6 +85,27 @@
 	}
 }
 
+.list-make-green {
+	@extend .list-subjects;
+		opacity: .9;
+	li {
+		background: $uq-green;
+		text-align:left;
+		padding-left:5px;
+		padding-right:5px;
+		cursor: auto;
+	}
+	h3 {
+		text-align:center;
+		padding-bottom:10px;
+	}
+
+	li button {
+		float: right;
+		margin-top: -5px;
+	}
+}
+
 .student-list {
 	width: 80%;
 	margin: auto;
@@ -187,11 +208,6 @@
 
 	ul li div {
 		background:  $uq-purple;
-	}
-	
-	ul li div:hover {
-		// froth
-		background: darken($uq-purple, 10%);
 	}
 
 

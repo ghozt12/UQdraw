@@ -28,9 +28,12 @@ $header-height: 50px;
     height: $header-height;
     width: 100%;
     background: $uq-purple;
-	img{
-	margin-left:10px;
-	}
+	.headerpos {
+        margin-right: auto;
+        margin-left: auto;
+        @include centerer(true, false);
+    }
+	
 }
 
 // Header for Lecture (ie Green)
@@ -38,9 +41,11 @@ $header-height: 50px;
     height: $header-height;
     width: 100%;
     background: $uq-green;
-	img{
-	margin-left:10px;
-	}
+	.headerpos {
+        margin-right: auto;
+        margin-left: auto;
+        @include centerer(true, false);
+    }
 }
 
 
@@ -73,6 +78,6 @@ $header-height: 50px;
 .lecturer-startpage-header {
 	height: 163px;
     width: 100%;
-    background: #e9e9e9;
+    background: #ffffff;
 }
 
