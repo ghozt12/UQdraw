@@ -72,13 +72,8 @@ table {
 ** ******/
 /* line 9, scss/partials/_headers.scss */
 #headers-top-bar {
-<<<<<<< HEAD
-  background: #3D3092;
-  height: 40px;
-=======
   background: #410C54;
-  height: 50px;
->>>>>>> ae1b2924bd6eff2b2c758668734070da341cc91b
+  height: 40px;
 }
 /* line 13, scss/partials/_headers.scss */
 #headers-top-bar img {
@@ -406,16 +401,12 @@ input:focus {
   padding: 6px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #528009;
-  width: 40%;
+  width: 220px;
   margin-right: 20px;
   outline: none;
 }
 
-<<<<<<< HEAD
 /* line 282, scss/partials/_buttons.scss */
-=======
-/* line 271, scss/partials/_buttons.scss */
->>>>>>> ae1b2924bd6eff2b2c758668734070da341cc91b
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -427,21 +418,13 @@ input:focus {
   background-color: #77a809;
 }
 
-<<<<<<< HEAD
 /* line 292, scss/partials/_buttons.scss */
-=======
-/* line 281, scss/partials/_buttons.scss */
->>>>>>> ae1b2924bd6eff2b2c758668734070da341cc91b
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
-<<<<<<< HEAD
 /* line 298, scss/partials/_buttons.scss */
-=======
-/* line 287, scss/partials/_buttons.scss */
->>>>>>> ae1b2924bd6eff2b2c758668734070da341cc91b
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -467,16 +450,12 @@ input:focus {
   padding: 6px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #810e05;
-  width: 40%;
+  width: 220px;
   margin-left: 20px;
   outline: none;
 }
 
-<<<<<<< HEAD
 /* line 327, scss/partials/_buttons.scss */
-=======
-/* line 316, scss/partials/_buttons.scss */
->>>>>>> ae1b2924bd6eff2b2c758668734070da341cc91b
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -488,11 +467,7 @@ input:focus {
   background-color: #c62d1f;
 }
 
-<<<<<<< HEAD
 /* line 337, scss/partials/_buttons.scss */
-=======
-/* line 326, scss/partials/_buttons.scss */
->>>>>>> ae1b2924bd6eff2b2c758668734070da341cc91b
 .button-incorrect:active {
   position: relative;
   top: 1px;
@@ -503,7 +478,7 @@ input:focus {
   overflow: hidden;
 }
 
-/* line 10, scss/partials/_canvas.scss */
+/* line 12, scss/partials/_canvas.scss */
 #app-bar {
   background: #410C54;
   height: 70px;
@@ -511,30 +486,30 @@ input:focus {
   bottom: 0;
   width: 100%;
 }
-/* line 17, scss/partials/_canvas.scss */
+/* line 19, scss/partials/_canvas.scss */
 #app-bar .center {
   position: relative;
   margin: auto;
   z-index: 10;
   width: 400px;
 }
-/* line 25, scss/partials/_canvas.scss */
+/* line 27, scss/partials/_canvas.scss */
 #app-bar img {
   height: 30px;
   margin-top: 22px;
   margin-left: 10px;
 }
-/* line 31, scss/partials/_canvas.scss */
+/* line 33, scss/partials/_canvas.scss */
 #app-bar .size {
   padding-left: 15px;
 }
-/* line 35, scss/partials/_canvas.scss */
+/* line 37, scss/partials/_canvas.scss */
 #app-bar .icon-select {
   display: inline-block;
   height: 70px;
   width: 13%;
 }
-/* line 41, scss/partials/_canvas.scss */
+/* line 43, scss/partials/_canvas.scss */
 #app-bar .selected {
   background: black;
 }
@@ -900,13 +875,8 @@ body:after {
 ** ******/
 /* line 9, scss/partials/_headers.scss */
 #headers-top-bar {
-<<<<<<< HEAD
-  background: #3D3092;
-  height: 40px;
-=======
   background: #410C54;
-  height: 50px;
->>>>>>> ae1b2924bd6eff2b2c758668734070da341cc91b
+  height: 40px;
 }
 /* line 13, scss/partials/_headers.scss */
 #headers-top-bar img {
@@ -1029,7 +999,7 @@ body {
   padding-bottom: 10px;
 }
 
-/* line 76, scss/partials/_typography.scss */
+/* line 67, scss/partials/_typography.scss */
 .startpage-welcome {
   color: white;
   text-align: center;
@@ -1039,14 +1009,14 @@ body {
   font-size: 1em;
 }
 
-/* line 87, scss/partials/_typography.scss */
+/* line 78, scss/partials/_typography.scss */
 .start-section-input h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
 }
 
-/* line 101, scss/partials/_typography.scss */
+/* line 92, scss/partials/_typography.scss */
 .lecturer-startpage-welcome {
   color: #000;
   text-align: center;
@@ -1056,12 +1026,12 @@ body {
   font-size: 1em;
 }
 
-/* line 110, scss/partials/_typography.scss */
+/* line 101, scss/partials/_typography.scss */
 #lecturer-start-username {
   font-weight: 600;
 }
 
-/* line 115, scss/partials/_typography.scss */
+/* line 106, scss/partials/_typography.scss */
 .type-lecture-mode h2, .type-prepare-mode h2 {
   color: white;
   font-size: 50px;
@@ -1070,14 +1040,14 @@ body {
   padding-top: calc(55vh - 173px);
   margin-bottom: 30px;
 }
-/* line 124, scss/partials/_typography.scss */
+/* line 115, scss/partials/_typography.scss */
 .type-lecture-mode h3, .type-prepare-mode h3 {
   color: white;
   font-weight: 300;
   text-align: center;
 }
 
-/* line 131, scss/partials/_typography.scss */
+/* line 122, scss/partials/_typography.scss */
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -1085,7 +1055,7 @@ body {
   margin-top: 18px;
 }
 
-/* line 138, scss/partials/_typography.scss */
+/* line 129, scss/partials/_typography.scss */
 .type-body-url {
   font-size: 20px;
   text-align: center;
@@ -1093,7 +1063,7 @@ body {
   margin-top: 10px;
 }
 
-/* line 145, scss/partials/_typography.scss */
+/* line 136, scss/partials/_typography.scss */
 .type-body-response {
   font-size: 20px;
   text-align: left;
@@ -1561,14 +1531,14 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* line 21, scss/partials/_updatedCanvas.scss */
+/* line 22, scss/partials/_updatedCanvas.scss */
 .header, .footer {
   position: absolute;
   background-color: #222;
   text-align: center;
 }
 
-/* line 26, scss/partials/_updatedCanvas.scss */
+/* line 27, scss/partials/_updatedCanvas.scss */
 .header {
   top: 0px;
   left: 0px;
@@ -1577,7 +1547,7 @@ body {
   padding: 6px;
 }
 
-/* line 33, scss/partials/_updatedCanvas.scss */
+/* line 34, scss/partials/_updatedCanvas.scss */
 .footer {
   bottom: 0px;
   left: 0px;
@@ -1586,7 +1556,7 @@ body {
   padding: 2px;
 }
 
-/* line 40, scss/partials/_updatedCanvas.scss */
+/* line 41, scss/partials/_updatedCanvas.scss */
 .title {
   width: auto;
   line-height: 32px;
@@ -1598,7 +1568,7 @@ body {
   display: inline-block;
 }
 
-/* line 50, scss/partials/_updatedCanvas.scss */
+/* line 51, scss/partials/_updatedCanvas.scss */
 .navbtn {
   cursor: pointer;
   float: left;
@@ -1615,7 +1585,7 @@ body {
   display: inline-block;
 }
 
-/* line 66, scss/partials/_updatedCanvas.scss */
+/* line 67, scss/partials/_updatedCanvas.scss */
 .navbtn-hover, .navbtn:active {
   color: #222;
   text-shadow: 0px 1px #aaa;
@@ -1623,7 +1593,7 @@ body {
   box-shadow: 0 0 1px 1px #444,inset 0 1px 0 0 #ccc;
 }
 
-/* line 73, scss/partials/_updatedCanvas.scss */
+/* line 74, scss/partials/_updatedCanvas.scss */
 .navbtn2 {
   cursor: pointer;
   float: right;
@@ -1640,7 +1610,7 @@ body {
   display: inline-block;
 }
 
-/* line 88, scss/partials/_updatedCanvas.scss */
+/* line 89, scss/partials/_updatedCanvas.scss */
 .navbtn-hover, .navbtn2:active {
   color: #222;
   text-shadow: 0px 1px #aaa;
@@ -1648,7 +1618,7 @@ body {
   box-shadow: 0 0 1px 1px #444,inset 0 1px 0 0 #ccc;
 }
 
-/* line 95, scss/partials/_updatedCanvas.scss */
+/* line 96, scss/partials/_updatedCanvas.scss */
 #content {
   position: absolute;
   top: 44px;
@@ -1658,7 +1628,7 @@ body {
   overflow: hidden;
   background-color: #ddd;
 }
-/* line 104, scss/partials/_updatedCanvas.scss */
+/* line 105, scss/partials/_updatedCanvas.scss */
 #content p {
   position: absolute;
   top: 40%;
@@ -1670,59 +1640,74 @@ body {
   width: 100vw;
 }
 
-/* line 115, scss/partials/_updatedCanvas.scss */
+/* line 116, scss/partials/_updatedCanvas.scss */
 #canvas {
   cursor: crosshair;
   background-color: #fff;
 }
 
-/* line 119, scss/partials/_updatedCanvas.scss */
+/* line 120, scss/partials/_updatedCanvas.scss */
+#canvas.small {
+  cursor: url("../assets/images/erasor_small.png") 5 5, crosshair;
+}
+
+/* line 123, scss/partials/_updatedCanvas.scss */
+#canvas.medium {
+  cursor: url("../assets/images/erasor_medium.png") 10 10, crosshair;
+}
+
+/* line 126, scss/partials/_updatedCanvas.scss */
+#canvas.large {
+  cursor: url("../assets/images/erasor_large.png") 20 20, crosshair;
+}
+
+/* line 130, scss/partials/_updatedCanvas.scss */
 .palette-case {
   width: 260px;
   margin: auto;
   text-align: center;
 }
 
-/* line 124, scss/partials/_updatedCanvas.scss */
+/* line 135, scss/partials/_updatedCanvas.scss */
 .palette-box {
   float: left;
   padding: 2px 6px 2px 6px;
 }
 
-/* line 128, scss/partials/_updatedCanvas.scss */
+/* line 139, scss/partials/_updatedCanvas.scss */
 .palette {
   border: 2px solid #777;
   height: 36px;
   width: 36px;
 }
 
-/* line 133, scss/partials/_updatedCanvas.scss */
+/* line 144, scss/partials/_updatedCanvas.scss */
 .red {
   background-color: #c22;
 }
 
-/* line 136, scss/partials/_updatedCanvas.scss */
+/* line 147, scss/partials/_updatedCanvas.scss */
 .blue {
   background-color: #22c;
 }
 
-/* line 139, scss/partials/_updatedCanvas.scss */
+/* line 150, scss/partials/_updatedCanvas.scss */
 .green {
   background-color: #2c2;
 }
 
-/* line 142, scss/partials/_updatedCanvas.scss */
+/* line 153, scss/partials/_updatedCanvas.scss */
 .white {
   background-color: #fff;
 }
 
-/* line 145, scss/partials/_updatedCanvas.scss */
+/* line 156, scss/partials/_updatedCanvas.scss */
 .black {
   background-color: #000;
   border: 2px dashed #fff;
 }
 
-/* line 155, scss/partials/_updatedCanvas.scss */
+/* line 166, scss/partials/_updatedCanvas.scss */
 #app-bar {
   background: #410C54;
   height: 40px;
@@ -1732,7 +1717,7 @@ body {
   z-index: 2002;
 }
 
-/* line 164, scss/partials/_updatedCanvas.scss */
+/* line 175, scss/partials/_updatedCanvas.scss */
 .button-removal, #tools, #camera, #question, #submit {
   outline: 0;
   border: 0;
@@ -1744,22 +1729,22 @@ body {
   cursor: pointer;
 }
 
-/* line 175, scss/partials/_updatedCanvas.scss */
+/* line 186, scss/partials/_updatedCanvas.scss */
 #tools {
   float: left;
 }
 
-/* line 180, scss/partials/_updatedCanvas.scss */
+/* line 191, scss/partials/_updatedCanvas.scss */
 #camera {
   position: absolute;
 }
 
-/* line 185, scss/partials/_updatedCanvas.scss */
+/* line 196, scss/partials/_updatedCanvas.scss */
 #question {
   position: absolute;
 }
 
-/* line 190, scss/partials/_updatedCanvas.scss */
+/* line 201, scss/partials/_updatedCanvas.scss */
 .input-group {
   display: inline-block;
   width: 50px;
@@ -1767,7 +1752,7 @@ body {
   overflow: hidden;
   position: relative;
 }
-/* line 197, scss/partials/_updatedCanvas.scss */
+/* line 208, scss/partials/_updatedCanvas.scss */
 .input-group input {
   height: 40px;
   opacity: 0;
@@ -1783,7 +1768,7 @@ body {
   margin: 0;
 }
 
-/* line 210, scss/partials/_updatedCanvas.scss */
+/* line 221, scss/partials/_updatedCanvas.scss */
 #submit {
   background: #8ED676;
   height: 100%;
@@ -1794,66 +1779,30 @@ body {
   outline: 0;
   border: none;
 }
-/* line 221, scss/partials/_updatedCanvas.scss */
+/* line 232, scss/partials/_updatedCanvas.scss */
 #submit:focus {
   outline: none;
   border: none;
 }
-/* line 226, scss/partials/_updatedCanvas.scss */
+/* line 237, scss/partials/_updatedCanvas.scss */
 #submit:hover {
   background: #6eca4f;
 }
 
-/* line 230, scss/partials/_updatedCanvas.scss */
+/* line 241, scss/partials/_updatedCanvas.scss */
 *:focus {
   outline: none;
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 960px) {
-  /* line 244, scss/partials/_updatedCanvas.scss */
+  /* line 255, scss/partials/_updatedCanvas.scss */
   .closed {
     transform: translate3d(-100vw, 0, 0);
     -webkit-transform: translate3d(-100vw, 0, 0);
   }
-=======
-/* line 208, scss/partials/_updatedCanvas.scss */
-#tool-bar {
-  transition: .3s;
-  position: absolute;
-  bottom: 42px;
-  z-index: 2000;
-  background: #410C54;
-  width: 100%;
-  height: 50vh;
-}
-/* line 217, scss/partials/_updatedCanvas.scss */
-#tool-bar .element {
-  float: left;
-  border-right: 1px solid black;
-  height: 100%;
-  width: 33%;
-}
-/* line 223, scss/partials/_updatedCanvas.scss */
-#tool-bar .element h1 {
-  color: white;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 200;
-  padding-top: 10px;
-  margin-bottom: 20px;
-}
-/* line 232, scss/partials/_updatedCanvas.scss */
-#tool-bar .element .selected {
-  background: black;
-}
-/* line 236, scss/partials/_updatedCanvas.scss */
-#tool-bar .element .color-selected {
-  border: 1px solid white;
->>>>>>> ae1b2924bd6eff2b2c758668734070da341cc91b
 }
 @media screen and (min-width: 960px) {
-  /* line 244, scss/partials/_updatedCanvas.scss */
+  /* line 255, scss/partials/_updatedCanvas.scss */
   .closed {
     transform: translate3d(-300px, 0, 0);
     -webkit-transform: translate3d(-300px, 0, 0);
@@ -1861,25 +1810,25 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  /* line 368, scss/partials/_updatedCanvas.scss */
+  /* line 379, scss/partials/_updatedCanvas.scss */
   #tool-bar {
     transition: .3s;
     position: absolute;
     left: 0;
     z-index: 2000;
-    background: #3D3092;
+    background: #410C54;
     width: 100%;
     height: 250px;
     float: none;
   }
-  /* line 259, scss/partials/_updatedCanvas.scss */
+  /* line 270, scss/partials/_updatedCanvas.scss */
   #tool-bar .element {
     float: left;
-    border-right: 1px solid #1d1745;
+    border-right: 1px solid black;
     height: 100%;
     width: 33%;
   }
-  /* line 265, scss/partials/_updatedCanvas.scss */
+  /* line 276, scss/partials/_updatedCanvas.scss */
   #tool-bar .element h1 {
     color: white;
     text-align: center;
@@ -1888,18 +1837,18 @@ body {
     padding-top: 10px;
     margin-bottom: 20px;
   }
-  /* line 274, scss/partials/_updatedCanvas.scss */
+  /* line 285, scss/partials/_updatedCanvas.scss */
   #tool-bar .element .selected {
-    background: #1d1745;
+    background: black;
   }
-  /* line 278, scss/partials/_updatedCanvas.scss */
+  /* line 289, scss/partials/_updatedCanvas.scss */
   #tool-bar .element .color-selected {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid white;
   }
-  /* line 286, scss/partials/_updatedCanvas.scss */
+  /* line 297, scss/partials/_updatedCanvas.scss */
   #tool-bar .element div {
     height: 50px;
     width: 50px;
@@ -1909,44 +1858,44 @@ body {
     margin-left: -25px;
     text-align: center;
   }
-  /* line 295, scss/partials/_updatedCanvas.scss */
+  /* line 306, scss/partials/_updatedCanvas.scss */
   #tool-bar .element div i {
     color: white;
     margin-top: 10px;
     font-size: 25px;
   }
-  /* line 301, scss/partials/_updatedCanvas.scss */
+  /* line 312, scss/partials/_updatedCanvas.scss */
   #tool-bar .element div p {
     color: white;
     padding-top: 20px;
     font-size: 15px;
     text-align: center;
   }
-  /* line 311, scss/partials/_updatedCanvas.scss */
+  /* line 322, scss/partials/_updatedCanvas.scss */
   #tool-bar .element:nth-child(3) {
     border-right: none;
   }
 }
 @media screen and (min-width: 960px) and (max-height: 690px) {
-  /* line 368, scss/partials/_updatedCanvas.scss */
+  /* line 379, scss/partials/_updatedCanvas.scss */
   #tool-bar {
     transition: .3s;
     position: absolute;
     left: 0;
     z-index: 2000;
-    background: #3D3092;
+    background: #410C54;
     width: 100%;
     height: 250px;
     float: none;
   }
-  /* line 259, scss/partials/_updatedCanvas.scss */
+  /* line 270, scss/partials/_updatedCanvas.scss */
   #tool-bar .element {
     float: left;
-    border-right: 1px solid #1d1745;
+    border-right: 1px solid black;
     height: 100%;
     width: 33%;
   }
-  /* line 265, scss/partials/_updatedCanvas.scss */
+  /* line 276, scss/partials/_updatedCanvas.scss */
   #tool-bar .element h1 {
     color: white;
     text-align: center;
@@ -1955,18 +1904,18 @@ body {
     padding-top: 10px;
     margin-bottom: 20px;
   }
-  /* line 274, scss/partials/_updatedCanvas.scss */
+  /* line 285, scss/partials/_updatedCanvas.scss */
   #tool-bar .element .selected {
-    background: #1d1745;
+    background: black;
   }
-  /* line 278, scss/partials/_updatedCanvas.scss */
+  /* line 289, scss/partials/_updatedCanvas.scss */
   #tool-bar .element .color-selected {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid white;
   }
-  /* line 286, scss/partials/_updatedCanvas.scss */
+  /* line 297, scss/partials/_updatedCanvas.scss */
   #tool-bar .element div {
     height: 50px;
     width: 50px;
@@ -1976,40 +1925,40 @@ body {
     margin-left: -25px;
     text-align: center;
   }
-  /* line 295, scss/partials/_updatedCanvas.scss */
+  /* line 306, scss/partials/_updatedCanvas.scss */
   #tool-bar .element div i {
     color: white;
     margin-top: 10px;
     font-size: 25px;
   }
-  /* line 301, scss/partials/_updatedCanvas.scss */
+  /* line 312, scss/partials/_updatedCanvas.scss */
   #tool-bar .element div p {
     color: white;
     padding-top: 20px;
     font-size: 15px;
     text-align: center;
   }
-  /* line 311, scss/partials/_updatedCanvas.scss */
+  /* line 322, scss/partials/_updatedCanvas.scss */
   #tool-bar .element:nth-child(3) {
     border-right: none;
   }
 }
 @media screen and (min-width: 960px) and (min-height: 690px) {
-  /* line 368, scss/partials/_updatedCanvas.scss */
+  /* line 379, scss/partials/_updatedCanvas.scss */
   #tool-bar {
     transition: .3s;
     position: absolute;
     left: 0;
     z-index: 2000;
-    background: #3D3092;
+    background: #410C54;
     width: 80px;
     height: 100%;
   }
-  /* line 317, scss/partials/_updatedCanvas.scss */
+  /* line 328, scss/partials/_updatedCanvas.scss */
   #tool-bar .element {
     display: block;
   }
-  /* line 320, scss/partials/_updatedCanvas.scss */
+  /* line 331, scss/partials/_updatedCanvas.scss */
   #tool-bar .element h1 {
     color: white;
     text-align: center;
@@ -2017,22 +1966,22 @@ body {
     font-weight: 200;
     padding-top: 10px;
     margin-bottom: 20px;
-    background: #1d1745;
+    background: black;
     padding-bottom: 10px;
     margin-top: 10px;
   }
-  /* line 332, scss/partials/_updatedCanvas.scss */
+  /* line 343, scss/partials/_updatedCanvas.scss */
   #tool-bar .element .selected {
-    background: #1d1745;
+    background: black;
   }
-  /* line 336, scss/partials/_updatedCanvas.scss */
+  /* line 347, scss/partials/_updatedCanvas.scss */
   #tool-bar .element .color-selected {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid white;
   }
-  /* line 344, scss/partials/_updatedCanvas.scss */
+  /* line 355, scss/partials/_updatedCanvas.scss */
   #tool-bar .element div {
     height: 50px;
     width: 50px;
@@ -2041,13 +1990,13 @@ body {
     margin-left: -25px;
     text-align: center;
   }
-  /* line 352, scss/partials/_updatedCanvas.scss */
+  /* line 363, scss/partials/_updatedCanvas.scss */
   #tool-bar .element div i {
     color: white;
     margin-top: 10px;
     font-size: 25px;
   }
-  /* line 358, scss/partials/_updatedCanvas.scss */
+  /* line 369, scss/partials/_updatedCanvas.scss */
   #tool-bar .element div p {
     color: white;
     padding-top: 20px;
@@ -2056,37 +2005,37 @@ body {
   }
 }
 
-/* line 404, scss/partials/_updatedCanvas.scss */
+/* line 415, scss/partials/_updatedCanvas.scss */
 #color-blue {
   background-color: blue;
 }
 
-/* line 408, scss/partials/_updatedCanvas.scss */
+/* line 419, scss/partials/_updatedCanvas.scss */
 #color-red {
   background-color: red;
 }
 
-/* line 411, scss/partials/_updatedCanvas.scss */
+/* line 422, scss/partials/_updatedCanvas.scss */
 #color-green {
   background-color: green;
 }
 
-/* line 417, scss/partials/_updatedCanvas.scss */
+/* line 428, scss/partials/_updatedCanvas.scss */
 .circle-small {
   margin-top: 20px !important;
 }
 
-/* line 421, scss/partials/_updatedCanvas.scss */
+/* line 432, scss/partials/_updatedCanvas.scss */
 .circle-medium {
   margin-top: 15px !important;
 }
 
-/* line 425, scss/partials/_updatedCanvas.scss */
+/* line 436, scss/partials/_updatedCanvas.scss */
 .circle-large {
   margin-top: 10px !important;
 }
 
-/* line 433, scss/partials/_updatedCanvas.scss */
+/* line 444, scss/partials/_updatedCanvas.scss */
 .loading {
   position: absolute;
   z-index: 10000;
@@ -2124,6 +2073,40 @@ body {
 /* Floating part
 
 */
+/* line 477, scss/partials/_updatedCanvas.scss */
+#question-container {
+  -webkit-transform: translate3d(0, 0, 0);
+  position: absolute;
+  z-index: 1990;
+  height: 250px;
+  background: #410C54;
+  width: 100%;
+  transition: .3s ease-in-out;
+}
+/* line 485, scss/partials/_updatedCanvas.scss */
+#question-container h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 20px;
+}
+/* line 492, scss/partials/_updatedCanvas.scss */
+#question-container h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+/* line 503, scss/partials/_updatedCanvas.scss */
+#question-container.closed {
+  -webkit-transform: translate3d(0, -290px, 0);
+}
+
 /* line 1, scss/partials/_hamburger.scss */
 #menu {
   display: inline-block;
