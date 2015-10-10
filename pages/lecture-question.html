@@ -39,8 +39,8 @@
 		
 		<div class="theme-response-actions">
 			<!-- Enter PHP values in the spans -->
-			<h2> Responses <span id="responses">23</span> </h2>
-			<h2> Time: <span id="time-left"> 30 seconds </span></h2>
+			<!--<h2> Responses <span id="responses">23</span> </h2> -->
+			<h2> Time: <span id="time-left">02:00</span></h2>
 
 			<!-- Buttons -->
 			<button onclick="window.location.href='http://teamone.uqcloud.net/pages/lecture-responses.html'">View Responses</button>
@@ -78,5 +78,28 @@
 				results = regex.exec(location.search);
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
+
+	function startTimer(duration, display) {
+    	var timer = duration, minutes, seconds;
+    	setInterval(function () {
+        	minutes = parseInt(timer / 60, 10);
+        	seconds = parseInt(timer % 60, 10);
+
+        	minutes = minutes < 10 ? "0" + minutes : minutes;
+        	seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        	display.text(minutes + ":" + seconds);
+
+        	if (--timer < 0) {
+            	timer = 0;
+        		}
+    		}, 1000);
+	}
+
+	jQuery(function ($) {
+    	var twoMinutes = 60 * 2,
+        display = $('#time-left');
+    startTimer(twoMinutes, display);
+});
 </script>
 </html>
