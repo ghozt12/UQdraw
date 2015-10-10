@@ -1,4 +1,73 @@
-// Main.scss
+/* *************************
+  MAIN SCSS FILE 
+  
+  UQ DRAW
+  TEAM ONE
 
-@import 'modules/all';
-@import 'partials/all';
+************************* */
+
+
+
+/* *************************
+  COLOURS  
+************************* */
+
+//$uq-purple: #3D3092;
+//$uq-green: #16BF25;
+$uq-purple: #410C54;
+$uq-green: #8ED676;
+$header-height: 173px;
+
+/* *************************
+  MIXINS 
+************************* */
+
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50);
+  }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.width100 {
+  width: 100%;
+}
+
+/* *************************
+  IMPORTS 
+************************* */
+@import 'reset'; // CSS Reset
+@import 'headers'; // Headers 
+@import 'buttons'; // Buttons 
+@import 'canvas';
+@import 'start_three_input';
+@import 'images';
+@import 'headers';
+@import 'typography';
+@import 'theme';
+@import 'list';
+@import 'body'; // Headers 
+@import 'updatedCanvas'; // canvas 
+@import 'hamburger'; // Menu icon 
+
+
+/* *************************
+  MISC 
+************************* */

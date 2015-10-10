@@ -1,0 +1,52 @@
+// This is for the drawing tool
+
+// Canvas size is set in JS
+
+#drawing-app {
+	overflow: hidden;
+}
+
+
+
+// Top Bar
+#app-bar {
+	background: $uq-purple;
+	height: 70px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	.center {
+		position: relative;
+    	margin: auto;
+    	z-index: 10;
+    	width: 400px;
+	}
+
+
+	img {
+		height: 30px;
+		margin-top: 22px;
+		margin-left: 10px;
+	}
+
+	.size {
+		padding-left: 15px;
+	}
+
+	.icon-select {
+		display: inline-block;
+		height: 70px;
+		width: 13%;
+	}
+
+	.selected {
+		background: darken($uq-purple, 20%);
+	}
+
+	
+}
+
+
+
+

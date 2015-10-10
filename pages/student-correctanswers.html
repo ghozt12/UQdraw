@@ -2,21 +2,23 @@
 <head>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/gridism.css">
+  <link rel="stylesheet" href="../css/vendor/gridism.css">
+  <!-- Sets it as a mobile viewport if the user is on a mobile device -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
 
 	<section>
-		<div class="header-l-lecture">
-			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
-			<h3 class="typography-l-h3"> Correct Answers</h3>
-			<a href="lecture-prepare-responses.html"><div class="button-goto-lecture"> <p> Back </p></div></a>
-		</div>
+		<div id="headers-top-bar">
+			<img src="../assets/images/topbar-logo.png"></img>
+	    </div>
 	</section>
 
 	<section>
 
+	    <!-- Back button -->
+    <button class="drawing-app-back">Back</button>
 		<!-- Body Heading -->
 		<h2 class="type-body-heading"> Draw a House </h2>
 		<!-- Body Subheading - display number of responses-->

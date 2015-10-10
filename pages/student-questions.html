@@ -5,13 +5,15 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/test.css">
+        <link rel="stylesheet" href="../css/vendor/font-awesome.min.css">
 
+    <!-- Sets it as a mobile viewport if the user is on a mobile device -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
 
 
-  <body id="drawing-app">
+  <body>
     <div id="headers-top-bar">
       <img src="../assets/images/topbar-logo.png"></img>
     </div>
@@ -25,7 +27,6 @@
 		<!-- List the Questions -->
 		<ul class="student-list" >
 			<!-- Place PHP here, for each question in db, create a <li> element -->
-          <h2 class="type-body-heading"> <span> Question Available </span> </h2>
           <span id="openedQuestions"></span>
 			<a href="drawing-app.html"><li> <span> Question Available! </span></li></a>
 		</ul>
@@ -41,11 +42,7 @@
     
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/drawing_page.js"></script>
-  <script type="text/javascript" src="../js/uqdraw.js"></script>
-  <script type="text/javascript">
-     UQdraw.init();
-  </script>
+
   <script type='text/javascript'>
     var courseID ="";
     var enteringCode="";
@@ -101,7 +98,7 @@
     }
     function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
       //"<p>Lecture</p>"+questionItem.quwstionWeek+
-      return	"<a href='drawing-app2.html?questionID="+questionItem.questionID+"'><li> <span> "+questionItem.title+" </span></li></a>";
+      return	"<a href='drawing-app.html?questionID="+questionItem.questionID+"'><li> <span> "+questionItem.title+" </span></li></a>";
     }
 
 

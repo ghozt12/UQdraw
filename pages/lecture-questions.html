@@ -2,7 +2,9 @@
 <head>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/gridism.css">
+  <link rel="stylesheet" href="../css/vendor/gridism.css">
+  <!-- Sets it as a mobile viewport if the user is on a mobile device -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">	</script>
 <script type='text/javascript'>
@@ -47,10 +49,12 @@
 
 	<section>
 		<div class="header-l-lecture">
+		<div class="headerpos">
 			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
 			<h3 class="typography-l-h3"> Lecture Mode </h3>
+			</div>
 			<a href="lecture-makequestions.html"><div class="button-goto-prepare"> <p> goto Prepare Mode </p></div>
-			<a href="../pages/lecture-subjects.html"><div class="button-goto-prepare"> <p> Back</p></div></a>
+			<a href="../pages/lecture-subjects.html"><div class="button-back-lecture"> <p> Back</p></div></a>
 		</div>
 	</section>
 
@@ -60,30 +64,27 @@
 
 		<ul><span id="questionsList">
 			<li>
-				<label> Lecture 1 </label>
-				<div> 
-					Draw my House 
+				<div class="question-container"> 
+					<div class="question">
+					Draw my House Draw asaaaa aaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa
+					</div> 
+					<div class="question-button">
 					<button class="button"> Ask </button>
 					<button class="button"> Responses</button>
+					</div>
 				</div>
 
 			</li>
 
 			<li>
-				<label> Lecture 2 </label>
-				<div> 
+				<div class="question-container"> 
+					<div class="question">
 					Draw my House 
+					</div>
+					<div class="question-button">
 					<button class="button"> Ask </button>
 					<button class="button"> Responses </button>
-				</div>
-			</li>
-
-			<li>
-				<label> Lecture 3 </label>
-				<div> 
-					Draw my House 
-					<button class="button"> Ask </button>
-					<button class="button"> Responses </button>
+					<div class="question">
 				</div>
 			</li>
 

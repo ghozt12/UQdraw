@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> UQDraw </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/test.css">
+
+  </head>
+
+  <body id="drawing-app">
+    <div id="headers-top-bar">
+      <img src="../assets/images/topbar-logo.png"></img>
+    </div>
+
+    <!-- Back button -->
+    <button id="zoom" class="drawing-app-back">Back</button>
+
+    <!-- Submit button -->
+    <button class="drawing-app-submit">Submit</button>
+	
+	<!-- Question button -->
+    <button class="drawing-app-question">Question</button>
+
+    <!-- Drawing Canvas -->
+    <div id="canvasDiv"></div>
+    <div id="app-bar">
+      <div class="icon-select selected"><img src="../assets/images/icon-canvas-pen.svg"/> </div>
+      <div class="icon-select"><img src="../assets/images/icon-canvas-eraser.svg"/> </div>
+	  <div class="icon-select"><img src="../assets/images/icon-canvas-line.svg"/> </div>
+	  <div class="icon-select"><img src="../assets/images/icon-canvas-colour.svg"/> </div>
+	  <div class="icon-select"><img src="../assets/images/icon-canvas-size.svg"/> </div>
+	  <div class="icon-select"><img src="../assets/images/icon-canvas-text.svg"/> </div>
+    </div>
+    
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/drawing_page.js"></script>
+  <script type="text/javascript" src="../js/uqdraw.js"></script>
+  <script type="text/javascript">
+     UQdraw.init();
+     $("#zoom").click(function() {
+      
+        UQdraw.zoom();
+     });
+  </script>
+
+</html>

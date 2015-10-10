@@ -1,0 +1,143 @@
+/* *****
+** Font Family
+* *****/
+
+body {
+	font-family: 'open-sans-semibold', sans-serif;
+}
+
+
+/* *****
+** Typograhpy
+* *****/
+
+//new font quicksand
+@font-face{
+	font-family:'open-sans';
+	src:url('../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family:'open-sans-semibold';
+	src:url('../fonts/opensans/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face{
+	font-family:'open-sans-bold';
+	src:url('../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
+}
+
+
+// This is for the text "Welcome User"
+.type-welcome {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+// This is for the text "Welcome *User*" where it covers the user
+.type-welcome span {
+	font-weight: 600;
+}
+
+// This is for the title bar (page title)
+.type-title {
+	color: white;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 18px;
+}
+
+// Body heading
+.type-body-heading {
+	text-align: center;
+	padding-top: 10px;
+	font-weight: 800;
+	font-size: 40px;
+	color:black;
+}
+// Body subheading
+.type-body-subheading {
+	text-align: center;
+	padding-top: 10px;
+	font-weight: 500;
+	padding-bottom: 10px;
+}
+
+// Student Start Page
+
+.startpage-welcome {
+	color: white;
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+	font-weight: 100;
+	font-size: 1em;
+}
+
+.start-section-input {
+	opacity:.8;
+	h3 {
+		text-align: center;
+		padding-top: 10px;
+		font-weight: 800;
+	}
+}
+
+.start-section-subjects {
+
+	
+}
+
+// Lecturer Start Page
+
+.lecturer-startpage-welcome {
+	color: #000;
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+	font-weight: 100;
+	font-size: 1em;
+}
+
+#lecturer-start-username {
+	font-weight: 600;
+}
+
+.type-lecture-mode, .type-prepare-mode {
+	h2 {
+		color: white;
+		font-size: 50px;
+		text-align: center;
+		font-weight: 500;
+		padding-top: calc(55vh - 173px);
+		margin-bottom: 30px;
+	}
+
+	h3 {
+		color: white;
+		font-weight: 300;
+		text-align: center;
+	}
+}
+
+.typography-l-h3 {
+	color: white;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 18px;
+}
+
+.type-body-url {
+	font-size: 20px;
+	text-align:center;
+	color: black;
+	margin-top: 10px;
+}
+
+.type-body-response {
+	font-size: 20px;
+	text-align:left;
+	color: black;
+	margin-top: 50px;
+	margin-left: 50px;
+}

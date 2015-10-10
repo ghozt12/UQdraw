@@ -2,7 +2,10 @@
 <head>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/gridism.css">
+  <link rel="stylesheet" href="../css/vendor/gridism.css">
+  <!-- Sets it as a mobile viewport if the user is on a mobile device -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
 </head>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">	</script>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
@@ -153,12 +156,17 @@
 	<!-- Header -->
 	<section>
 		<div class='header-l-prepare'>
+			<!-- Back button -->
+			<a href='lecture-prepare.html'><div class='button-back-prepare'> <p> Go Back </p></div></a>
 			<!-- Logo (small) -->
+			<div class="headerpos">
 			<a href="#"><img class='images-l-subjects' src='../assets/images/topbar-logo.png' /></a>
 			<!-- Title of the page -->
 			<h3 class='type-title'> Create Questions </h3>
+			</div>
 			<!-- Switch button -->
-			<a href='lecture-subjects.html'><div class='button-goto-lecture'> <p> Lecture Mode </p></div></a>
+			<a href='lecture-questions.html'><div class='button-goto-lecture'> <p> Goto Lecture Mode </p></div></a>
+		
 		</div>
 	</section>
 
@@ -169,12 +177,12 @@
 		<!-- Body Subheading -->
 		<h3 class="type-body-subheading"> Click the plus button to create a new question </h3>
 		<!-- List the Questions -->
-		<ul class="list-questions-green">
+		<ul class="list-make-green">
 			<span id="questionsList">
 			<!-- Place PHP here, for each question in db, create a <li> element -->
-			<li> <span> Question 1: Draw a house </span> <button class="q-button">DELETE</button> <button class="q-button-long">VIEW RESPONSES</button> <button class="q-button">EDIT</button> </li>
-			<li> <span> Question 2: Draw a circle </span> <button class="q-button">DELETE</button> <button class="q-button-long">VIEW RESPONSES</button> <button class="q-button">EDIT</button></li>
-			<li> <span> Question 3: What is 1 + 0? </span> <button class="q-button">DELETE</button> <button class="q-button-long">VIEW RESPONSES</button> <button class="q-button">EDIT</button> </li>
+			<li> <span> Question 1: Draw a house </span> <button class="q-button">Delete</button> <button class="q-button-long">View Responses</button> <button class="q-button">Edit</button> </li>
+			<li> <span> Question 2: Draw a circle </span> <button class="q-button">Delete</button> <button class="q-button-long">View Responses</button> <button class="q-button">Edit</button></li>
+			<li> <span> Question 3: What is 1 + 0? </span> <button class="q-button">Delete</button> <button class="q-button-long">View Responses</button> <button class="q-button">Edit</button> </li>
 			<!-- Create new question button -->
 			</span>
 		</ul>
