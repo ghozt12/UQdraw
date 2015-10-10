@@ -663,10 +663,11 @@ input:focus {
 
 /* line 1, scss/_images.scss */
 .student-startpage-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
   width: 400px;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: 10px;
 }
 
 /* line 9, scss/_images.scss */

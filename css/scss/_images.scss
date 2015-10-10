@@ -1,9 +1,9 @@
 .student-startpage-logo {
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
+	position:absolute;
     width: 400px;
-
+	left: 50%;
+	margin-left:-200px;
+	margin-top:10px;
 }
 
 .lecturer-startpage-logo {
