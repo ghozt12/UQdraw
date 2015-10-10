@@ -4,7 +4,7 @@
 }
 
 /* line 1, scss/modules/_noselect.scss */
-.noselect, .list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li, .student-list li {
+.noselect, .list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li, .list-make-green li, .student-list li {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -97,22 +97,30 @@ table {
   background: #410C54;
 }
 /* line 31, scss/partials/_headers.scss */
-.header-l-prepare img {
-  margin-left: 10px;
+.header-l-prepare .headerpos {
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
-/* line 37, scss/partials/_headers.scss */
+/* line 40, scss/partials/_headers.scss */
 .header-l-lecture {
   height: 50px;
   width: 100%;
   background: #8ED676;
 }
-/* line 41, scss/partials/_headers.scss */
-.header-l-lecture img {
-  margin-left: 10px;
+/* line 44, scss/partials/_headers.scss */
+.header-l-lecture .headerpos {
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
-/* line 51, scss/partials/_headers.scss */
+/* line 56, scss/partials/_headers.scss */
 .header-startpage {
   height: 120px;
   width: 100%;
@@ -121,7 +129,7 @@ table {
   padding-bottom: 20px;
   box-shadow: 0px 1px 5px #000;
 }
-/* line 59, scss/partials/_headers.scss */
+/* line 64, scss/partials/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -131,11 +139,11 @@ table {
   font-size: 1em;
 }
 
-/* line 73, scss/partials/_headers.scss */
+/* line 78, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
-  background: #e9e9e9;
+  background: #ffffff;
 }
 
 /* *******
@@ -151,9 +159,9 @@ table {
 .submit, .drawing-app-submit, .drawing-app-question, .drawing-app-camera, .drawing-app-clear, .drawing-app-back, .back-button, .q-button, .q-button-long {
   height: 60px;
   width: 150px;
-  border: 2px solid #AFA5FF;
+  border: 2px solid #410C54;
   border-radius: 50px;
-  color: #AFA5FF;
+  color: #410C54;
   font-size: 16px;
   transition: 0.4s;
   outline-style: none;
@@ -186,6 +194,7 @@ input:focus {
 /* line 44, scss/partials/_buttons.scss */
 .button-add {
   width: 100%;
+  opacity: .8;
   border: 2px solid #410C54;
   background-color: white;
   color: #410C54;
@@ -195,59 +204,97 @@ input:focus {
   border-radius: 15px;
   cursor: pointer;
 }
-/* line 55, scss/partials/_buttons.scss */
+/* line 56, scss/partials/_buttons.scss */
 .button-add:hover {
   transition: 0.7s;
   background-color: #410C54;
   color: white;
 }
 
-/* line 65, scss/partials/_buttons.scss */
+/* line 66, scss/partials/_buttons.scss */
 .button-goto-prepare {
   background-color: #410C54;
-  width: 150px;
+  width: 120px;
   height: 100%;
   display: inline-block;
   float: right;
   color: white;
   text-align: center;
 }
-/* line 75, scss/partials/_buttons.scss */
+/* line 76, scss/partials/_buttons.scss */
 .button-goto-prepare p {
-  margin-top: 15px;
+  margin-top: 9px;
 }
-/* line 79, scss/partials/_buttons.scss */
+/* line 80, scss/partials/_buttons.scss */
 .button-goto-prepare:hover {
   background-color: #1e0627;
 }
 
-/* line 84, scss/partials/_buttons.scss */
+/* line 85, scss/partials/_buttons.scss */
+.button-back-prepare {
+  background-color: #8ED676;
+  width: 120px;
+  height: 50px;
+  display: inline-block;
+  float: left;
+  color: white;
+  text-align: center;
+}
+/* line 95, scss/partials/_buttons.scss */
+.button-back-prepare p {
+  margin-top: 15px;
+}
+/* line 99, scss/partials/_buttons.scss */
+.button-back-prepare:hover {
+  background-color: #6eca4f;
+}
+
+/* line 104, scss/partials/_buttons.scss */
+.button-back-lecture {
+  background-color: #410C54;
+  width: 120px;
+  height: 50px;
+  display: inline-block;
+  float: left;
+  color: white;
+  text-align: center;
+}
+/* line 114, scss/partials/_buttons.scss */
+.button-back-lecture p {
+  margin-top: 15px;
+}
+/* line 118, scss/partials/_buttons.scss */
+.button-back-lecture:hover {
+  background-color: #1e0627;
+}
+
+/* line 123, scss/partials/_buttons.scss */
 .button-goto-lecture {
   background-color: #8ED676;
-  width: 150px;
-  height: 100%;
+  width: 120px;
+  height: 50px;
   display: inline-block;
   float: right;
   color: white;
   text-align: center;
 }
-/* line 94, scss/partials/_buttons.scss */
+/* line 133, scss/partials/_buttons.scss */
 .button-goto-lecture p {
-  margin-top: 15px;
+  margin-top: 9px;
 }
-/* line 98, scss/partials/_buttons.scss */
+/* line 137, scss/partials/_buttons.scss */
 .button-goto-lecture:hover {
   background-color: #6eca4f;
 }
 
-/* line 103, scss/partials/_buttons.scss */
+/* line 142, scss/partials/_buttons.scss */
 .drawing-app-submit {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-/* line 113, scss/partials/_buttons.scss */
+/* line 152, scss/partials/_buttons.scss */
 .drawing-app-question {
   position: absolute;
   top: 60px;
@@ -255,7 +302,7 @@ input:focus {
   margin-right: -75px;
   z-index: 1000;
 }
-/* line 124, scss/partials/_buttons.scss */
+/* line 163, scss/partials/_buttons.scss */
 .drawing-app-question:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -263,14 +310,14 @@ input:focus {
   transition: 0.4s;
 }
 
-/* line 132, scss/partials/_buttons.scss */
+/* line 171, scss/partials/_buttons.scss */
 .drawing-app-camera {
   position: absolute;
   top: 60px;
   right: 10px;
   z-index: 1000;
 }
-/* line 142, scss/partials/_buttons.scss */
+/* line 181, scss/partials/_buttons.scss */
 .drawing-app-camera:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -278,14 +325,14 @@ input:focus {
   transition: 0.4s;
 }
 
-/* line 151, scss/partials/_buttons.scss */
+/* line 190, scss/partials/_buttons.scss */
 .drawing-app-clear {
   position: absolute;
   top: 60px;
   left: 10px;
   z-index: 1000;
 }
-/* line 161, scss/partials/_buttons.scss */
+/* line 200, scss/partials/_buttons.scss */
 .drawing-app-clear:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -293,51 +340,52 @@ input:focus {
   transition: 0.4s;
 }
 
-/* line 169, scss/partials/_buttons.scss */
+/* line 208, scss/partials/_buttons.scss */
 .drawing-app-back {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-/* line 178, scss/partials/_buttons.scss */
+/* line 217, scss/partials/_buttons.scss */
 .back-button {
   position: absolute;
   top: 60px;
   left: 10px;
 }
 
-/* line 187, scss/partials/_buttons.scss */
+/* line 226, scss/partials/_buttons.scss */
 .q-button {
   font-size: 12px;
-  border: 2px solid #8ED676;
   color: #8ED676;
-  width: 70px;
+  border: 2px solid #8ED676;
+  width: 60px;
+  margin: 1px;
 }
-/* line 193, scss/partials/_buttons.scss */
+/* line 233, scss/partials/_buttons.scss */
 .q-button:hover {
-  border: 2px solid white;
   background: #8ED676;
   color: white;
+  border: 2px solid #8ED676;
   transition: 0.4s;
 }
 
-/* line 201, scss/partials/_buttons.scss */
+/* line 241, scss/partials/_buttons.scss */
 .q-button-long {
   font-size: 12px;
   border: 2px solid #8ED676;
   color: #8ED676;
-  width: 155px;
+  width: 130px;
 }
-/* line 207, scss/partials/_buttons.scss */
+/* line 247, scss/partials/_buttons.scss */
 .q-button-long:hover {
-  border: 2px solid white;
+  border: 2px solid #8ED676;
   background: #8ED676;
   color: white;
   transition: 0.4s;
 }
 
-/* line 216, scss/partials/_buttons.scss */
+/* line 256, scss/partials/_buttons.scss */
 .button-hidden {
   opacity: 0;
   transition: opacity 0.3s linear;
@@ -352,7 +400,7 @@ input:focus {
   z-index: 100;
 }
 
-/* line 230, scss/partials/_buttons.scss */
+/* line 270, scss/partials/_buttons.scss */
 .grid-response:hover .button-hidden {
   opacity: 1;
 }
@@ -375,7 +423,7 @@ input:focus {
     color: #ffffff;
 }
 */
-/* line 253, scss/partials/_buttons.scss */
+/* line 293, scss/partials/_buttons.scss */
 .button-correct {
   -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
   -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
@@ -406,7 +454,11 @@ input:focus {
   outline: none;
 }
 
+<<<<<<< HEAD
 /* line 282, scss/partials/_buttons.scss */
+=======
+/* line 322, scss/partials/_buttons.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -418,13 +470,21 @@ input:focus {
   background-color: #77a809;
 }
 
+<<<<<<< HEAD
 /* line 292, scss/partials/_buttons.scss */
+=======
+/* line 332, scss/partials/_buttons.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
+<<<<<<< HEAD
 /* line 298, scss/partials/_buttons.scss */
+=======
+/* line 338, scss/partials/_buttons.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -455,7 +515,11 @@ input:focus {
   outline: none;
 }
 
+<<<<<<< HEAD
 /* line 327, scss/partials/_buttons.scss */
+=======
+/* line 367, scss/partials/_buttons.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -467,7 +531,11 @@ input:focus {
   background-color: #c62d1f;
 }
 
+<<<<<<< HEAD
 /* line 337, scss/partials/_buttons.scss */
+=======
+/* line 377, scss/partials/_buttons.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .button-incorrect:active {
   position: relative;
   top: 1px;
@@ -543,13 +611,13 @@ input:focus {
   margin-top: 20px;
   text-align: center;
 }
-/* line 26, scss/partials/_start_three_input.scss */
+/* line 25, scss/partials/_start_three_input.scss */
 .start-or span {
   position: relative;
   display: inline-block;
 }
 
-/* line 32, scss/partials/_start_three_input.scss */
+/* line 31, scss/partials/_start_three_input.scss */
 .start-or:before {
   content: '';
   border-top: 3px solid #000;
@@ -560,7 +628,7 @@ input:focus {
   margin-top: 10px;
 }
 
-/* line 42, scss/partials/_start_three_input.scss */
+/* line 41, scss/partials/_start_three_input.scss */
 .start-or:after {
   content: '';
   border-top: 3px solid #000;
@@ -571,17 +639,17 @@ input:focus {
   margin-top: 10px;
 }
 
-/* line 52, scss/partials/_start_three_input.scss */
+/* line 51, scss/partials/_start_three_input.scss */
 .start-section-subjects {
   margin-top: 20px;
   width: 100%;
 }
-/* line 57, scss/partials/_start_three_input.scss */
+/* line 56, scss/partials/_start_three_input.scss */
 .start-section-subjects ul {
   max-width: 400px;
   margin: auto;
 }
-/* line 62, scss/partials/_start_three_input.scss */
+/* line 61, scss/partials/_start_three_input.scss */
 .start-section-subjects ul li {
   color: white;
   text-align: center;
@@ -592,7 +660,7 @@ input:focus {
   padding-top: 12px;
   transition: .3s;
 }
-/* line 73, scss/partials/_start_three_input.scss */
+/* line 72, scss/partials/_start_three_input.scss */
 .start-section-subjects ul li:hover {
   background: #54b135;
 }
@@ -900,22 +968,30 @@ body:after {
   background: #410C54;
 }
 /* line 31, scss/partials/_headers.scss */
-.header-l-prepare img {
-  margin-left: 10px;
+.header-l-prepare .headerpos {
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
-/* line 37, scss/partials/_headers.scss */
+/* line 40, scss/partials/_headers.scss */
 .header-l-lecture {
   height: 50px;
   width: 100%;
   background: #8ED676;
 }
-/* line 41, scss/partials/_headers.scss */
-.header-l-lecture img {
-  margin-left: 10px;
+/* line 44, scss/partials/_headers.scss */
+.header-l-lecture .headerpos {
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
-/* line 51, scss/partials/_headers.scss */
+/* line 56, scss/partials/_headers.scss */
 .header-startpage {
   height: 120px;
   width: 100%;
@@ -924,7 +1000,7 @@ body:after {
   padding-bottom: 20px;
   box-shadow: 0px 1px 5px #000;
 }
-/* line 59, scss/partials/_headers.scss */
+/* line 64, scss/partials/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -934,11 +1010,11 @@ body:after {
   font-size: 1em;
 }
 
-/* line 73, scss/partials/_headers.scss */
+/* line 78, scss/partials/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
-  background: #e9e9e9;
+  background: #ffffff;
 }
 
 /* *****
@@ -989,9 +1065,10 @@ body {
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
+  color: black;
 }
 
-/* line 58, scss/partials/_typography.scss */
+/* line 59, scss/partials/_typography.scss */
 .type-body-subheading {
   text-align: center;
   padding-top: 10px;
@@ -999,7 +1076,11 @@ body {
   padding-bottom: 10px;
 }
 
+<<<<<<< HEAD
 /* line 67, scss/partials/_typography.scss */
+=======
+/* line 77, scss/partials/_typography.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .startpage-welcome {
   color: white;
   text-align: center;
@@ -1009,14 +1090,26 @@ body {
   font-size: 1em;
 }
 
+<<<<<<< HEAD
 /* line 78, scss/partials/_typography.scss */
+=======
+/* line 86, scss/partials/_typography.scss */
+.start-section-input {
+  opacity: .8;
+}
+/* line 88, scss/partials/_typography.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .start-section-input h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
 }
 
+<<<<<<< HEAD
 /* line 92, scss/partials/_typography.scss */
+=======
+/* line 102, scss/partials/_typography.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .lecturer-startpage-welcome {
   color: #000;
   text-align: center;
@@ -1026,12 +1119,20 @@ body {
   font-size: 1em;
 }
 
+<<<<<<< HEAD
 /* line 101, scss/partials/_typography.scss */
+=======
+/* line 111, scss/partials/_typography.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 #lecturer-start-username {
   font-weight: 600;
 }
 
+<<<<<<< HEAD
 /* line 106, scss/partials/_typography.scss */
+=======
+/* line 116, scss/partials/_typography.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .type-lecture-mode h2, .type-prepare-mode h2 {
   color: white;
   font-size: 50px;
@@ -1040,14 +1141,22 @@ body {
   padding-top: calc(55vh - 173px);
   margin-bottom: 30px;
 }
+<<<<<<< HEAD
 /* line 115, scss/partials/_typography.scss */
+=======
+/* line 125, scss/partials/_typography.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .type-lecture-mode h3, .type-prepare-mode h3 {
   color: white;
   font-weight: 300;
   text-align: center;
 }
 
+<<<<<<< HEAD
 /* line 122, scss/partials/_typography.scss */
+=======
+/* line 132, scss/partials/_typography.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -1055,7 +1164,11 @@ body {
   margin-top: 18px;
 }
 
+<<<<<<< HEAD
 /* line 129, scss/partials/_typography.scss */
+=======
+/* line 139, scss/partials/_typography.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .type-body-url {
   font-size: 20px;
   text-align: center;
@@ -1063,7 +1176,11 @@ body {
   margin-top: 10px;
 }
 
+<<<<<<< HEAD
 /* line 136, scss/partials/_typography.scss */
+=======
+/* line 146, scss/partials/_typography.scss */
+>>>>>>> e97c898c8825ad7c31ce5f53134ed0de012dd1e3
 .type-body-response {
   font-size: 20px;
   text-align: left;
@@ -1086,7 +1203,7 @@ body {
 }
 /* line 13, scss/partials/_theme.scss */
 .theme-lecture-mode:hover {
-  opacity: .8;
+  opacity: .7;
 }
 
 /* line 19, scss/partials/_theme.scss */
@@ -1301,14 +1418,14 @@ body {
 }
 
 /* line 1, scss/partials/_list.scss */
-.list-subjects, .list-subjects-purple, .list-subjects-green, .list-questions-green {
+.list-subjects, .list-subjects-purple, .list-subjects-green, .list-questions-green, .list-make-green {
   margin-top: 20px;
   width: 50%;
   margin: auto;
   padding-top: 30px;
 }
 /* line 10, scss/partials/_list.scss */
-.list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li {
+.list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li, .list-make-green li {
   color: white;
   text-align: center;
   height: 30px;
@@ -1335,7 +1452,7 @@ body {
 
 /* line 42, scss/partials/_list.scss */
 .list-subjects-green {
-  opacity: .9;
+  opacity: .8;
 }
 /* line 45, scss/partials/_list.scss */
 .list-subjects-green li {
@@ -1385,11 +1502,34 @@ body {
 }
 
 /* line 88, scss/partials/_list.scss */
+.list-make-green {
+  opacity: .9;
+}
+/* line 91, scss/partials/_list.scss */
+.list-make-green li {
+  background: #8ED676;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: auto;
+}
+/* line 98, scss/partials/_list.scss */
+.list-make-green h3 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+/* line 103, scss/partials/_list.scss */
+.list-make-green li button {
+  float: right;
+  margin-top: -5px;
+}
+
+/* line 109, scss/partials/_list.scss */
 .student-list {
   width: 80%;
   margin: auto;
 }
-/* line 93, scss/partials/_list.scss */
+/* line 114, scss/partials/_list.scss */
 .student-list li {
   margin-bottom: 10px;
   height: 50px;
@@ -1404,32 +1544,32 @@ body {
   font-size: 30px;
   text-align: center;
 }
-/* line 107, scss/partials/_list.scss */
+/* line 128, scss/partials/_list.scss */
 .student-list li:hover {
   background: white;
   color: #8ED676;
   transition: 0.4s;
 }
-/* line 114, scss/partials/_list.scss */
+/* line 135, scss/partials/_list.scss */
 .student-list li button {
   float: right;
 }
 
-/* line 119, scss/partials/_list.scss */
+/* line 140, scss/partials/_list.scss */
 .list-questions, .list-questions-purple {
   margin-top: 20px;
   width: 100%;
 }
-/* line 124, scss/partials/_list.scss */
+/* line 145, scss/partials/_list.scss */
 .list-questions ul, .list-questions-purple ul {
   max-width: 50%;
   margin: auto;
 }
-/* line 130, scss/partials/_list.scss */
+/* line 151, scss/partials/_list.scss */
 .list-questions ul li, .list-questions-purple ul li {
   margin-bottom: 10px;
 }
-/* line 134, scss/partials/_list.scss */
+/* line 155, scss/partials/_list.scss */
 .list-questions ul li div, .list-questions-purple ul li div {
   color: white;
   height: 30px;
@@ -1439,25 +1579,25 @@ body {
   transition: .3s;
   padding-left: 10px;
 }
-/* line 144, scss/partials/_list.scss */
+/* line 165, scss/partials/_list.scss */
 .list-questions h2, .list-questions-purple h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
 }
-/* line 151, scss/partials/_list.scss */
+/* line 172, scss/partials/_list.scss */
 .list-questions h3, .list-questions-purple h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 500;
   padding-bottom: 10px;
 }
-/* line 158, scss/partials/_list.scss */
+/* line 179, scss/partials/_list.scss */
 .list-questions label, .list-questions-purple label {
   font-size: 20px;
 }
-/* line 161, scss/partials/_list.scss */
+/* line 182, scss/partials/_list.scss */
 .list-questions button, .list-questions-purple button {
   border-radius: 12px;
   margin-right: 5px;
@@ -1473,7 +1613,7 @@ body {
   color: #410C54;
   width: 70px;
 }
-/* line 175, scss/partials/_list.scss */
+/* line 196, scss/partials/_list.scss */
 .list-questions button:hover, .list-questions-purple button:hover {
   border: 2px solid #410C54;
   background: #410C54;
@@ -1481,23 +1621,19 @@ body {
   transition: 0.4s;
 }
 
-/* line 188, scss/partials/_list.scss */
+/* line 209, scss/partials/_list.scss */
 .list-questions-purple ul li div {
   background: #410C54;
 }
-/* line 192, scss/partials/_list.scss */
-.list-questions-purple ul li div:hover {
-  background: #1e0627;
-}
 
-/* line 201, scss/partials/_list.scss */
+/* line 217, scss/partials/_list.scss */
 .grid-container {
   margin: 0 auto;
   width: 1200px;
   padding-top: 20px;
 }
 
-/* line 208, scss/partials/_list.scss */
+/* line 224, scss/partials/_list.scss */
 .grid-response {
   float: left;
   width: 110px;

@@ -10,9 +10,9 @@
 .submit {    
     height: 60px;
     width: 150px;
-    border: 2px solid #AFA5FF;
+    border: 2px solid $uq-purple;
     border-radius: 50px;
-    color: #AFA5FF;
+    color: $uq-purple;
     font-size: 16px;
     transition: 0.4s;
     outline-style: none;
@@ -44,6 +44,7 @@ input:focus {
 .button-add {
     @extend .remove-button-style;
     width: 100%;
+	opacity:.8;
     border: 2px solid $uq-purple;
     background-color: white;
     color: $uq-purple;
@@ -64,10 +65,48 @@ input:focus {
 // Lecturer go to prepare mode (header button on right)
 .button-goto-prepare {
     background-color: $uq-purple;
-    width: 150px;
+    width: 120px;
     height: 100%;
     display: inline-block;
     float: right;
+
+    color: white;
+    text-align: center;
+    
+    p {
+        margin-top: 9px;
+    }
+
+    &:hover {
+        background-color: darken($uq-purple, 10%);
+    }
+}
+
+.button-back-prepare{
+	background-color: $uq-green;
+    width: 120px;
+    height: $header-height;
+    display: inline-block;
+    float: left;
+
+    color: white;
+    text-align: center;
+    
+    p {
+        margin-top: 15px;
+    }
+
+    &:hover {
+        background-color: darken($uq-green, 10%);
+    }
+}
+
+.button-back-lecture{
+	background-color: $uq-purple;
+    width: 120px;
+    height: $header-height;
+    display: inline-block;
+    float: left;
 
     color: white;
     text-align: center;
@@ -83,8 +122,8 @@ input:focus {
 
 .button-goto-lecture {
     background-color: $uq-green;
-    width: 150px;
-    height: 100%;
+    width: 120px;
+    height: $header-height;
     display: inline-block;
     float: right;
 
@@ -92,7 +131,7 @@ input:focus {
     text-align: center;
     
     p {
-        margin-top: 15px;
+        margin-top: 9px;
     }
 
     &:hover {
@@ -187,13 +226,14 @@ input:focus {
 .q-button {
 	@extend .submit;
 	font-size: 12px;
-	border: 2px solid $uq-green;
 	color: $uq-green;
-	width: 70px;
+	border:2px solid $uq-green;
+	width: 60px;
+	margin:1px;
 	&:hover {
-        border: 2px solid white;
 		background: $uq-green;
         color: white;
+		border:2px solid $uq-green;
         transition: 0.4s;
 	}
 }
@@ -203,9 +243,9 @@ input:focus {
 	font-size: 12px;
 	border: 2px solid $uq-green;
 	color: $uq-green;
-	width: 155px;
+	width: 130px;
 	&:hover {
-        border: 2px solid white;
+        border: 2px solid $uq-green;
 		background: $uq-green;
         color: white;
         transition: 0.4s;
