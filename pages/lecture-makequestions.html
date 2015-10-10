@@ -48,10 +48,12 @@
 	}
 	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
  //"<p>Lecture</p>"+questionItem.quwstionWeek+
-		return	"<li> <span>" +questionItem.title+ "</span>" +
-		"<button class='q-button' onclick='deleteQuestion("+questionItem.questionID+")'>DELETE</button> " +
-		"<button class='q-button-long'>VIEW RESPONSES</button> " +
-		"<button class='q-button'>EDIT</button> ";
+		return	"<li id='"+questionItem.questionID+"'><div class='question-container'><div class='question'>" 
+		+questionItem.title+ "</div>" 
+		+"<div class='question-button'><button class='q-button' onclick='deleteQuestion("
+		+questionItem.questionID+")'>DELETE</button> " 
+		+"<button class='q-button-long'>VIEW RESPONSES</button> " 
+		+"<button class='q-button'>EDIT</button></div></div>";
 	}
 	function addQuestion(){
 		document.getElementById("addButton").innerHTML ="";

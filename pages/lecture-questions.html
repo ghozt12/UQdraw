@@ -39,9 +39,10 @@
 	}
 	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
 		return "<li id='"+questionItem.questionID+"'> <label> Lecture "+questionItem.questionWeek
-		+" </label> <div>"+questionItem.title
-		+" <button class='button' onclick='window.location.href="
-		+'"http://teamone.uqcloud.net/pages/lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'+"'> Ask </button> <button class='button'> View </button> </div> </li>"
+		+" </label> <div class='question-container'><div class='question'>"
+		+questionItem.title+"</div>"
+		+"<div class='question-button'><button class='button' onclick='window.location.href="
+		+'"http://teamone.uqcloud.net/pages/lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'+"'> Ask </button> <button class='button'> View </button> </div></div></li>"
 
 	}
 </script>
