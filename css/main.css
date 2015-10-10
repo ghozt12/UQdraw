@@ -141,21 +141,10 @@ table {
   height: 120px;
   width: 100%;
   background: #410C54;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  box-shadow: 0px 1px 5px #000;
-}
-/* line 64, scss/_headers.scss */
-.header-startpage h3 {
-  color: white;
-  text-align: center;
-  width: 100%;
-  margin-top: 10px;
-  font-weight: 100;
-  font-size: 1em;
+  box-shadow: 0px 1px 5px #000000;
 }
 
-/* line 78, scss/_headers.scss */
+/* line 66, scss/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
@@ -993,21 +982,10 @@ body:after {
   height: 120px;
   width: 100%;
   background: #410C54;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  box-shadow: 0px 1px 5px #000;
-}
-/* line 64, scss/_headers.scss */
-.header-startpage h3 {
-  color: white;
-  text-align: center;
-  width: 100%;
-  margin-top: 10px;
-  font-weight: 100;
-  font-size: 1em;
+  box-shadow: 0px 1px 5px #000000;
 }
 
-/* line 78, scss/_headers.scss */
+/* line 66, scss/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
@@ -1493,16 +1471,16 @@ body {
 /* line 114, scss/_list.scss */
 .student-list li {
   margin-bottom: 10px;
-  height: 50px;
   background: #8ED676;
   color: white;
   margin: 3px;
-  padding-top: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: .3s;
   cursor: pointer;
   font-size: 30px;
   padding-left: 20px;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
 }
 /* line 128, scss/_list.scss */
