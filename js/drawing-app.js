@@ -72,7 +72,7 @@ $(document).ready(function () {
 	// Check whether we should OPEN the tool bar 
 	// usually if on desktop or big screen
 	// *********************************************
-	if ($(window).height() >= 690 && $(window).width() >= 960) {
+	if ($(window).height() > 690 && $(window).width() > 960) {
 		$("#tool-bar").removeClass('closed');
 		$("#menu").addClass('flipper');
 	}
@@ -238,12 +238,13 @@ $(document).ready(function () {
 	$("#submit").click(function() {
 		var canvas = document.getElementById("canvas");
 		var data = canvas.toDataURL("image/png");
+		console.log(data);
 		var questionID = getParameterByName("questionID");
 		if (questionID=="") {
 			// if no question ID, won't upload
 			alert("no question is selected, can't send data");
 		} else {
-			document.getElementById("testImg").src = data;
+			// document.getElementById("testImg").src = data;
 			// Send to the server
 			// Uncomment code and add a php user
 			$.ajax({

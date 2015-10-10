@@ -250,7 +250,11 @@
 // *********************************************
 // Break points 
 $break-small: 960px;
+$break-small-a: 961px;
+
 $break-h-small: 690px;
+$break-h-small-a: 691px;
+
 
 .closed {
 	@media screen and (max-width: $break-small) {
@@ -258,7 +262,12 @@ $break-h-small: 690px;
 		-webkit-transform: translate3d(-100vw, 0, 0);
 	}
 
-	@media screen and (min-width: $break-small) {
+    @media screen and (min-width: $break-small-a) and (max-height: $break-h-small) {
+        transform: translate3d(-100vw, 0, 0);
+        -webkit-transform: translate3d(-100vw, 0, 0);
+    }
+
+    @media screen and (min-width: $break-small-a) and (min-height: $break-h-small-a) {
 		transform: translate3d(-300px, 0, 0);
 		-webkit-transform: translate3d(-300px, 0, 0);
 	}
@@ -393,7 +402,7 @@ $break-h-small: 690px;
         @include element;
 	}
 
-    @media screen and (min-width: $break-small) and (max-height: $break-h-small) {
+    @media screen and (min-width: $break-small-a) and (max-height: $break-h-small) {
          @include general;
         width: 100%;
         height: 250px;
@@ -401,7 +410,7 @@ $break-h-small: 690px;
         @include element;
     }
 
-    @media screen and (min-width: $break-small) and (min-height: $break-h-small) {
+    @media screen and (min-width: $break-small-a) and (min-height: $break-h-small-a) {
         @include general;
         width: 80px;
         height: 100%;
