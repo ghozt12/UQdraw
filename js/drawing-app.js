@@ -178,6 +178,7 @@ $(document).ready(function () {
 	  newCanvas();
 	  firstTime = true;
 	  $("#tool-bar").addClass('closed');
+	  $("#menu").removeClass('flipper');
 
 	});	
 
