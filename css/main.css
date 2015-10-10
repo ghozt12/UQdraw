@@ -1531,34 +1531,36 @@ body {
   margin-bottom: 10px;
 }
 /* line 155, scss/_list.scss */
-.list-questions ul li div, .list-questions-purple ul li div {
+.list-questions ul li, .list-questions-purple ul li {
   color: white;
-  height: 30px;
+  min-height: 30px;
   margin: 3px;
   border-radius: 15px;
   padding-top: 12px;
   transition: .3s;
-  padding-left: 10px;
+  padding-left: 3px;
+  display: table;
+  min-width: 680px;
 }
-/* line 165, scss/_list.scss */
+/* line 167, scss/_list.scss */
 .list-questions h2, .list-questions-purple h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
 }
-/* line 172, scss/_list.scss */
+/* line 174, scss/_list.scss */
 .list-questions h3, .list-questions-purple h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 500;
   padding-bottom: 10px;
 }
-/* line 179, scss/_list.scss */
+/* line 181, scss/_list.scss */
 .list-questions label, .list-questions-purple label {
   font-size: 20px;
 }
-/* line 182, scss/_list.scss */
+/* line 184, scss/_list.scss */
 .list-questions button, .list-questions-purple button {
   border-radius: 12px;
   margin-right: 5px;
@@ -1574,7 +1576,7 @@ body {
   color: #410C54;
   width: 70px;
 }
-/* line 196, scss/_list.scss */
+/* line 198, scss/_list.scss */
 .list-questions button:hover, .list-questions-purple button:hover {
   border: 2px solid #410C54;
   background: #410C54;
@@ -1582,19 +1584,19 @@ body {
   transition: 0.4s;
 }
 
-/* line 209, scss/_list.scss */
+/* line 211, scss/_list.scss */
 .list-questions-purple ul li div {
   background: #410C54;
 }
 
-/* line 217, scss/_list.scss */
+/* line 219, scss/_list.scss */
 .grid-container {
   margin: 0 auto;
   width: 1200px;
   padding-top: 20px;
 }
 
-/* line 224, scss/_list.scss */
+/* line 226, scss/_list.scss */
 .grid-response {
   float: left;
   width: 110px;
@@ -1605,6 +1607,32 @@ body {
   border-radius: 25px;
   border: 4px solid;
   border-color: #410C54;
+}
+
+/* line 238, scss/_list.scss */
+.question-container {
+  color: white;
+  min-height: 30px;
+  margin: 3px;
+  border-radius: 15px;
+  padding-top: 12px;
+  transition: .3s;
+  padding-left: 10px;
+  display: table;
+  min-width: 680px;
+}
+
+/* line 250, scss/_list.scss */
+.question {
+  float: left;
+  padding-bottom: 12px;
+}
+
+/* line 255, scss/_list.scss */
+.question-button {
+  float: right;
+  border-radius: 15px;
+  padding-bottom: 5px;
 }
 
 /*
