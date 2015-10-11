@@ -39,9 +39,10 @@
 	}
 	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
 		return "<li id='"+questionItem.questionID+"'> <label> Lecture "+questionItem.questionWeek
-		+" </label> <div>"+questionItem.title
-		+" <button class='button' onclick='window.location.href="
-		+'"http://teamone.uqcloud.net/pages/lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'+"'> Ask </button> <button class='button'> View </button> </div> </li>"
+		+" </label> <div class='question-container'><div class='question'>"
+		+questionItem.title+"</div>"
+		+"<div class='question-button'><button class='button' onclick='window.location.href="
+		+'"http://teamone.uqcloud.net/pages/lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'+"'> Ask </button> <button class='button'> View </button> </div></div></li>"
 
 	}
 </script>
@@ -64,30 +65,29 @@
 
 		<ul><span id="questionsList">
 			<li>
-				<label> Lecture 1 </label>
-				<div> 
-					Draw my House 
+				<label> Lecture 1</label>
+				<div class="question-container"> 
+					<div class="question">
+					Draw my House Draw asaaaa aaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa
+					</div> 
+					<div class="question-button">
 					<button class="button"> Ask </button>
 					<button class="button"> Responses</button>
+					</div>
 				</div>
 
 			</li>
 
 			<li>
-				<label> Lecture 2 </label>
-				<div> 
+				<label>Lecture 2</label>
+				<div class="question-container"> 
+					<div class="question">
 					Draw my House 
+					</div>
+					<div class="question-button">
 					<button class="button"> Ask </button>
 					<button class="button"> Responses </button>
-				</div>
-			</li>
-
-			<li>
-				<label> Lecture 3 </label>
-				<div> 
-					Draw my House 
-					<button class="button"> Ask </button>
-					<button class="button"> Responses </button>
+					<div class="question">
 				</div>
 			</li>
 
