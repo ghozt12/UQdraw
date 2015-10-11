@@ -79,12 +79,27 @@
 		render: function() {//pass data to different Items
 			return (
 					<div>
+					<Header />
 					<SubmissionInfo title = {this.state.title} week={this.state.week} qID={this.state.qID} success={this.state.success} listLength={this.state.listLength}/>
 	                <SubmissionList subList={this.state.subList}/>
 
 	                </div>
 	);
 	}
+	});
+
+	var Header = React.createClass({
+
+		render: function() {
+			return (
+				<div className="header-l-prepare">
+					<img className='images-l-subjects' src="../assets/images/topbar-logo.png" />
+					<h3 className="typography-l-h3"> Responses </h3>
+					<a href="lecture-responses.html"><div className="button-goto-prepare"> <p> Back </p></div></a>
+				</div>
+				);
+		}
+
 	});
 
 	var SubmissionInfo  = React.createClass({//basically it shows dynamic data of number of responses and titles
