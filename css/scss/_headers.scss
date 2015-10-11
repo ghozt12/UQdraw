@@ -4,11 +4,19 @@
 
 // Variables:
 $header-height: 50px;
+$break-small: 960px;
 
 // Top Bar
 #headers-top-bar {
     background: $uq-purple;
     height: 40px;
+
+    @media screen and (max-width: $break-small) {
+        img {
+            display: none;
+        }
+    }
+
 
     img {
         width: 100px;
@@ -51,13 +59,30 @@ $header-height: 50px;
 
 
 
+$break-small: 960px;
 
 // Student
 .header-startpage {
     height: 120px;
     width: 100%;
     background: $uq-purple;
-		box-shadow: 0px 1px 5px #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+		box-shadow: 0px 1px 5px #000;
+
+    h3 {
+        color: white;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+        font-weight: 100;
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: $break-small) {
+      height: 70px;
+    }
+    box-shadow: 0px 1px 5px #000000;
 }
 
 // Lecturer
