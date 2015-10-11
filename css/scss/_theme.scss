@@ -55,10 +55,12 @@ a {
 	}
 }
 .timer-div{
-	height:300px;
-	width:100%;
+	height:50vh;
+	width:50vh;
 	margin-left:auto;
 	margin-right:auto;
+	min-width:100px;
+	min-height:100px;
 }
 
 .theme-timer {
@@ -68,29 +70,32 @@ a {
 	-webkit-animation: size 120s linear;
 	animation: size 120s linear;
 	position:absolute;
-	top:140px;
+	top:50%;
+	margin-top: -25vmin;
 	left:50%;
+
 }
 @keyframes size{
-	0% {height: 300px; width:300px; margin-bottom:10px; margin-top:0px; margin-left: -150px; background:$uq-green; border-color:$uq-green;}
+	0% {height: 50vmin; width: 50vmin; margin-bottom:10px; margin-left: -25vmin; background:$uq-green; border-color:$uq-green;}
 	25% { background:#FFC842; border-color:#FFC842;}
 	50% { background:#D6492A; border-color:#D6492A;}
 	75% {background:red; border-color:red;}
-	100% {height: 0px; width: 0px; margin-bottom:160px; margin-top:150px; margin-left:0px; background:black; border-color:black;}
+	100% {height: 0px; width: 0px; margin-bottom:160px; margin-top:0px; margin-left:0px; background:black; border-color:black;}
 }
 
 .theme-time2 {
-	width:300px;
-	height:300px;
+	width:50vmin;
+	height:50vmin;
 	color:white;
 	font-weight:bold;
 	left: 50%;
-	margin-left:-150px;
+	margin-left:-25vmin;
 	margin-right:auto;
 	border: 5px solid white;
 	border-radius: 50%;
 	position:absolute;
-	top:140px;
+	top:50%;
+	margin-top: -25vmin;
 	text-align: center;
 	p{
 		margin-top:10px;
@@ -98,17 +103,18 @@ a {
 }
 
 .theme-time1 {
-	width:150px;
-	height:150px;
+	width:25vmin;
+	height:25vmin;
 	color:white;
 	font-weight:bold;
 	left:50%;
-	margin-left: -75px;
+	margin-left: -12.5vmin;
 	margin-right:auto;
 	border: 5px solid  white;
 	border-radius: 50%;
 	position:absolute;
-	top:215px;
+	top:50%;
+	margin-top: -12.5vmin;
 	text-align: center;
 	p{
 		margin-top:10px;
@@ -116,16 +122,17 @@ a {
 }
 
 .theme-time15 {
-	width:225px;
-	height:225px;
+	width:37.5vmin;
+	height:37.5vmin;
 	color:white;
 	left: 50%;
-	margin-left:-112.5px;
+	margin-left:-18.75vmin;
 	margin-right:auto;
 	border: 5px solid white;
 	border-radius: 50%;
 	position:absolute;
-	top:177px;
+	top:50%;
+	margin-top: -18.75vmin;
 	text-align: center;
 	p{
 		margin-top:10px;
@@ -133,16 +140,17 @@ a {
 }
 
 .theme-time05 {
-	width:75px;
-	height:75px;
+	width:12.5vmin;
+	height:12.5vmin;
 	color:white;
 	left:50%;
-	margin-left: -37.5px;
+	margin-left: -6.25vmin;
 	margin-right:auto;
 	border: 5px solid  white;
 	border-radius: 50%;
 	position:absolute;
-	top:252px;
+	top:50%;
+	margin-top: -6.25vmin;
 	text-align: center;
 	p{
 		margin-top:20px;
@@ -166,7 +174,11 @@ a {
 
 // This is for the buttons and time left lecture side 
 .theme-response-actions {
-	margin-top: 30px;
+	position:absolute;
+	bottom:10px;
+	left:50%;
+	margin-left:-200px;
+	width:400px;
 	text-align: center;
 
 	h2 {
