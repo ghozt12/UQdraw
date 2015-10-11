@@ -17,9 +17,14 @@
 		<div class="header-l-prepare">
 			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
 			<h3 class="typography-l-h3"> Prepare Mode </h3>
-			<a href="lecture-responses.html"><div class="button-goto-prepare"> <p> Back </p></div></a>
+			<div class="button-goto-prepare" onclick="btnBack()"> <p> Back </p></div>
 		</div>
 	</section>
+	<script>
+		function btnBack(){
+			window.history.back();
+		}
+	</script>
 
 	<section>
 		<span id="responseBox"></span>
@@ -192,9 +197,6 @@
 
 	//append incorrect icon in the marking div
 
-	function deleteItem(subID){
-		alert(subID);
-	}
 </script>
-  	</script>
+
 </html>

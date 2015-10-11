@@ -59,7 +59,8 @@ if ($insertDataResult) {
     echo $mysqli->error;
 }
 
-}else{echo"image upload fail";}
+}else{echo"image upload fail";
+echo $imagePath_full;}
 
 
 
