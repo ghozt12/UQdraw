@@ -11,7 +11,7 @@
 	$(document).ready(function() {
 		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
 			type: 'GET',
-			url: 'http://teamone.uqcloud.net/Brian/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
+			url: 'http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
 			success: function(data){
 				//alert(data);
 				//alert("success");
@@ -24,6 +24,7 @@
 					questionListHTML += getQuestionItem(question);
 				}
 				document.getElementById("questionsList").innerHTML = questionListHTML;
+				document.getElementById("goto-prepare-mode").href = "lecture-makequestions.html?courseID="+getParameterByName("courseID");
 			},
 			error: function(){
 				console.log(data);
@@ -39,9 +40,10 @@
 	}
 	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
 		return "<li id='"+questionItem.questionID+"'> <label> Lecture "+questionItem.questionWeek
-		+" </label> <div>"+questionItem.title
-		+" <button class='button' onclick='window.location.href="
-		+'"http://teamone.uqcloud.net/pages/lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'+"'> Ask </button> <button class='button'> View </button> </div> </li>"
+		+" </label> <div class='question-container'><div class='question'>"
+		+questionItem.title+"</div>"
+		+"<div class='question-button'><button class='button' onclick='window.location.href="
+		+'"lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='+questionItem.questionID+'"'+"'> View </button> </div></div></li>";
 
 	}
 </script>
@@ -53,7 +55,7 @@
 			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
 			<h3 class="typography-l-h3"> Lecture Mode </h3>
 			</div>
-			<a href="lecture-makequestions.html"><div class="button-goto-prepare"> <p> goto Prepare Mode </p></div>
+			<a id="goto-prepare-mode" href="lecture-makequestions.html"><div class="button-goto-prepare"> <p> goto Prepare Mode </p></div>
 			<a href="../pages/lecture-subjects.html"><div class="button-back-lecture"> <p> Back</p></div></a>
 		</div>
 	</section>
@@ -64,6 +66,7 @@
 
 		<ul><span id="questionsList">
 			<li>
+				<label> Lecture 1</label>
 				<div class="question-container"> 
 					<div class="question">
 					Draw my House Draw asaaaa aaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa
@@ -77,6 +80,7 @@
 			</li>
 
 			<li>
+				<label>Lecture 2</label>
 				<div class="question-container"> 
 					<div class="question">
 					Draw my House 

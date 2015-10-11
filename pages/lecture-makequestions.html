@@ -33,10 +33,11 @@
 						questionListHTML += getQuestionItem(question);
 					}
 					document.getElementById("questionsList").innerHTML = questionListHTML;
+					document.getElementById("goto-lecture-mode").href = "lecture-questions.html?courseID="+getParameterByName("courseID");
 				}else{alert("Fail to retrieve data please signon");}
 			},
 			error: function(){
-				alert('There was an error adding your comment');
+				alert('There was an error adding your courses');
 			}
 		});
 	});
@@ -48,10 +49,12 @@
 	}
 	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
  //"<p>Lecture</p>"+questionItem.quwstionWeek+
-		return	"<li> <span>" +questionItem.title+ "</span>" +
-		"<button class='q-button' onclick='deleteQuestion("+questionItem.questionID+")'>DELETE</button> " +
-		"<button class='q-button-long'>VIEW RESPONSES</button> " +
-		"<button class='q-button'>EDIT</button> ";
+		return	"<li id='"+questionItem.questionID+"'><div class='question-container'><div class='question'>" 
+		+questionItem.title+ "</div>" 
+		+"<div class='question-button'><button class='q-button' onclick='deleteQuestion("
+		+questionItem.questionID+")'>DELETE</button> " 
+		+"<button class='q-button-long' onClick='window.location.href="+'"lecture-prepare-responses.html?questionID='+questionItem.questionID+'"'+"'>VIEW RESPONSES</button>" 
+		+"<button class='q-button'>EDIT</button></div></div>";
 	}
 	function addQuestion(){
 		document.getElementById("addButton").innerHTML ="";
@@ -141,7 +144,7 @@
 					questionID: questionID,
 				},
 				success:function(result){
-					alert(result);
+					//alert(result);
 					location.reload();
 
 				},
@@ -165,7 +168,7 @@
 			<h3 class='type-title'> Create Questions </h3>
 			</div>
 			<!-- Switch button -->
-			<a href='lecture-questions.html'><div class='button-goto-lecture'> <p> Goto Lecture Mode </p></div></a>
+			<a id="goto-lecture-mode" href='lecture-questions.html'><div class='button-goto-lecture'> <p> Goto Lecture Mode </p></div></a>
 		
 		</div>
 	</section>
@@ -179,10 +182,45 @@
 		<!-- List the Questions -->
 		<ul class="list-make-green">
 			<span id="questionsList">
+			<label>Lecture 1</label>
 			<!-- Place PHP here, for each question in db, create a <li> element -->
-			<li> <span> Question 1: Draw a house </span> <button class="q-button">Delete</button> <button class="q-button-long">View Responses</button> <button class="q-button">Edit</button> </li>
-			<li> <span> Question 2: Draw a circle </span> <button class="q-button">Delete</button> <button class="q-button-long">View Responses</button> <button class="q-button">Edit</button></li>
-			<li> <span> Question 3: What is 1 + 0? </span> <button class="q-button">Delete</button> <button class="q-button-long">View Responses</button> <button class="q-button">Edit</button> </li>
+			<li> 
+				<div class="question-container">
+				<div class="question">
+					Question 1: Draw a house aaaaaaaaa aaaaaaa aaaaaa aaaaa aaa aaaaaa 
+				</div>
+				<div class="question-button">
+					<button class="make-button">Delete</button>
+					<button class="make-button-long">View Responses</button>
+					<button class="make-button">Edit</button> 
+				</div>
+			</li>
+
+			<li> 
+				<div class="question-container">
+				<div class="question">
+					Question 2: Draw a house aaaaaaaaa aaaaaaa aaaaaa aaaaa aaa aaaaaa 
+				</div>
+				<div class="question-button">
+					<button class="make-button">Delete</button>
+					<button class="make-button-long">View Responses</button>
+					<button class="make-button">Edit</button> 
+				</div>
+			</li>
+
+			<li> 
+				<div class="question-container">
+				<div class="question">
+					Question 3: Draw a house a
+				</div>
+				<div class="question-button">
+					<button class="make-button">Delete</button>
+					<button class="make-button-long">View Responses</button>
+					<button class="make-button">Edit</button> 
+				</div>
+			</li>
+
+			
 			<!-- Create new question button -->
 			</span>
 		</ul>
