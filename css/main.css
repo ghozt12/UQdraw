@@ -136,7 +136,7 @@ table {
   transform: translate(-50%, 0);
 }
 
-/* line 56, scss/_headers.scss */
+/* line 57, scss/_headers.scss */
 .header-startpage {
   height: 120px;
   width: 100%;
@@ -145,7 +145,7 @@ table {
   padding-bottom: 20px;
   box-shadow: 0px 1px 5px #000;
 }
-/* line 64, scss/_headers.scss */
+/* line 65, scss/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -154,8 +154,14 @@ table {
   font-weight: 100;
   font-size: 1em;
 }
+@media screen and (max-width: 960px) {
+  /* line 57, scss/_headers.scss */
+  .header-startpage {
+    height: 70px;
+  }
+}
 
-/* line 78, scss/_headers.scss */
+/* line 84, scss/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
@@ -661,15 +667,21 @@ input:focus {
   background: #54b135;
 }
 
-/* line 1, scss/_images.scss */
+/* line 3, scss/_images.scss */
 .student-startpage-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 400px;
 }
+@media screen and (max-width: 960px) {
+  /* line 3, scss/_images.scss */
+  .student-startpage-logo {
+    width: 200px;
+  }
+}
 
-/* line 9, scss/_images.scss */
+/* line 15, scss/_images.scss */
 .lecturer-startpage-logo {
   display: block;
   margin-left: auto;
@@ -677,7 +689,7 @@ input:focus {
   width: 400px;
 }
 
-/* line 16, scss/_images.scss */
+/* line 22, scss/_images.scss */
 .images-l-subjects {
   display: inline-block;
   height: 30px;
@@ -685,26 +697,26 @@ input:focus {
   float: left;
 }
 
-/* line 23, scss/_images.scss */
+/* line 29, scss/_images.scss */
 .single-response {
   z-index: -1;
   position: absolute;
   border-radius: 20px;
 }
 
-/* line 29, scss/_images.scss */
+/* line 35, scss/_images.scss */
 .marked {
   margin-left: 80px;
 }
 
 /* Preload images */
-/* line 35, scss/_images.scss */
+/* line 41, scss/_images.scss */
 body:after {
   content: url(../assets/images/lightbox-close.png) url(../assets/images/lightbox-loading.gif) url(../assets/images/lightbox-prev.png) url(../assets/images/lightbox-next.png);
   display: none;
 }
 
-/* line 43, scss/_images.scss */
+/* line 49, scss/_images.scss */
 .lightboxOverlay {
   position: absolute;
   top: 0;
@@ -716,7 +728,7 @@ body:after {
   display: none;
 }
 
-/* line 54, scss/_images.scss */
+/* line 60, scss/_images.scss */
 .lightbox {
   position: absolute;
   left: 0;
@@ -727,7 +739,7 @@ body:after {
   font-weight: normal;
 }
 
-/* line 64, scss/_images.scss */
+/* line 70, scss/_images.scss */
 .lightbox .lb-image {
   display: block;
   height: auto;
@@ -739,12 +751,12 @@ body:after {
   border-radius: 3px;
 }
 
-/* line 75, scss/_images.scss */
+/* line 81, scss/_images.scss */
 .lightbox a img {
   border: none;
 }
 
-/* line 79, scss/_images.scss */
+/* line 85, scss/_images.scss */
 .lb-outerContainer {
   position: relative;
   background-color: white;
@@ -759,19 +771,19 @@ body:after {
   border-radius: 4px;
 }
 
-/* line 93, scss/_images.scss */
+/* line 99, scss/_images.scss */
 .lb-outerContainer:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 99, scss/_images.scss */
+/* line 105, scss/_images.scss */
 .lb-container {
   padding: 4px;
 }
 
-/* line 103, scss/_images.scss */
+/* line 109, scss/_images.scss */
 .lb-loader {
   position: absolute;
   top: 43%;
@@ -782,7 +794,7 @@ body:after {
   line-height: 0;
 }
 
-/* line 113, scss/_images.scss */
+/* line 119, scss/_images.scss */
 .lb-cancel {
   display: block;
   width: 32px;
@@ -791,7 +803,7 @@ body:after {
   background: url(../assets/images/lightbox-loading.gif) no-repeat;
 }
 
-/* line 121, scss/_images.scss */
+/* line 127, scss/_images.scss */
 .lb-nav {
   position: absolute;
   top: 0;
@@ -801,25 +813,25 @@ body:after {
   z-index: 10;
 }
 
-/* line 130, scss/_images.scss */
+/* line 136, scss/_images.scss */
 .lb-container > .nav {
   left: 0;
 }
 
-/* line 134, scss/_images.scss */
+/* line 140, scss/_images.scss */
 .lb-nav a {
   outline: none;
   background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
 }
 
-/* line 139, scss/_images.scss */
+/* line 145, scss/_images.scss */
 .lb-prev, .lb-next {
   height: 100%;
   cursor: pointer;
   display: block;
 }
 
-/* line 145, scss/_images.scss */
+/* line 151, scss/_images.scss */
 .lb-nav a.lb-prev {
   width: 34%;
   left: 0;
@@ -833,13 +845,13 @@ body:after {
   transition: opacity 0.6s;
 }
 
-/* line 158, scss/_images.scss */
+/* line 164, scss/_images.scss */
 .lb-nav a.lb-prev:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 163, scss/_images.scss */
+/* line 169, scss/_images.scss */
 .lb-nav a.lb-next {
   width: 64%;
   right: 0;
@@ -853,13 +865,13 @@ body:after {
   transition: opacity 0.6s;
 }
 
-/* line 176, scss/_images.scss */
+/* line 182, scss/_images.scss */
 .lb-nav a.lb-next:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 181, scss/_images.scss */
+/* line 187, scss/_images.scss */
 .lb-dataContainer {
   margin: 0 auto;
   padding-top: 5px;
@@ -873,20 +885,20 @@ body:after {
   border-bottom-right-radius: 4px;
 }
 
-/* line 194, scss/_images.scss */
+/* line 200, scss/_images.scss */
 .lb-dataContainer:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 200, scss/_images.scss */
+/* line 206, scss/_images.scss */
 .lb-data {
   padding: 0 4px;
   color: #ccc;
 }
 
-/* line 205, scss/_images.scss */
+/* line 211, scss/_images.scss */
 .lb-data .lb-details {
   width: 85%;
   float: left;
@@ -894,14 +906,14 @@ body:after {
   line-height: 1.1em;
 }
 
-/* line 212, scss/_images.scss */
+/* line 218, scss/_images.scss */
 .lb-data .lb-caption {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
 }
 
-/* line 218, scss/_images.scss */
+/* line 224, scss/_images.scss */
 .lb-data .lb-number {
   display: block;
   clear: left;
@@ -910,7 +922,7 @@ body:after {
   color: #999999;
 }
 
-/* line 226, scss/_images.scss */
+/* line 232, scss/_images.scss */
 .lb-data .lb-close {
   display: block;
   float: right;
@@ -927,7 +939,7 @@ body:after {
   transition: opacity 0.2s;
 }
 
-/* line 242, scss/_images.scss */
+/* line 248, scss/_images.scss */
 .lb-data .lb-close:hover {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -987,7 +999,7 @@ body:after {
   transform: translate(-50%, 0);
 }
 
-/* line 56, scss/_headers.scss */
+/* line 57, scss/_headers.scss */
 .header-startpage {
   height: 120px;
   width: 100%;
@@ -996,7 +1008,7 @@ body:after {
   padding-bottom: 20px;
   box-shadow: 0px 1px 5px #000;
 }
-/* line 64, scss/_headers.scss */
+/* line 65, scss/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -1005,8 +1017,14 @@ body:after {
   font-weight: 100;
   font-size: 1em;
 }
+@media screen and (max-width: 960px) {
+  /* line 57, scss/_headers.scss */
+  .header-startpage {
+    height: 70px;
+  }
+}
 
-/* line 78, scss/_headers.scss */
+/* line 84, scss/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;

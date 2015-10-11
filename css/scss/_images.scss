@@ -1,8 +1,14 @@
+$break-small: 960px;
+
 .student-startpage-logo {
 	display: block;
     margin-left: auto;
     margin-right: auto;
     width: 400px;
+
+    @media screen and (max-width: $break-small) {
+      width: 200px;
+    }
 
 }
 

@@ -51,6 +51,7 @@ $header-height: 50px;
 
 
 
+$break-small: 960px;
 
 // Student
 .header-startpage {
@@ -69,6 +70,11 @@ $header-height: 50px;
         font-weight: 100;
         font-size: 1em;
     }
+
+    @media screen and (max-width: $break-small) {
+      height: 70px;
+    }
+
 
 }
 
