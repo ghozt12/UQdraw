@@ -1,17 +1,13 @@
 .list-subjects {
 	margin-top: 20px;
 	width: 50%;
-
-	
 	margin: auto;
-	
 	padding-top: 30px;
 	
 	li {
 		color: white;
 		text-align: center;
 		height: 30px;
-		
 		border-radius: 15px;
 		margin: 3px;
 		padding-top: 12px;
@@ -84,30 +80,8 @@
 	}
 }
 
-.list-make-green {
-	@extend .list-subjects;
-		opacity: .9;
-	li {
-		background: $uq-green;
-		text-align:left;
-		cursor: auto;
-		padding-top: 0px;
-		padding-right: 10px;
-	}
-	h3 {
-		text-align:center;
-		padding-bottom:10px;
-	}
 
-	li button {
-		float: right;
-	}
 
-	ul, li{
-		display: table;
-		min-width: 680px;
-	}
-}
 
 .student-list {
 	width: 80%;
@@ -141,30 +115,18 @@
 }
 
 .list-questions {
-
-	margin-top: 20px;
-	width: 100%;
-
-	ul {
-		max-width: 50%;
-		margin: auto;
-		
-	}
-
-	ul li {
-		margin-bottom: 10px;
-	}
+	@extend .list-subjects;
 
 	ul li {
 		color: white;
 		min-height: 30px;
-		margin: 3px;
+		margin: auto;
 		border-radius:15px;
 		padding-top: 12px;
 		transition: .3s;
 		padding-left: 3px;
 		display: table;
-		min-width: 680px;
+		width:100%;
 	}
 
 	h2 {
@@ -185,20 +147,18 @@
 		font-size: 20px;
 		color: black;
 	}
-	button {
+	.button {
 		border-radius: 12px;
 		margin-right:5px;
-		padding:2px;
 		transition: 0.4s;
 		cursor: pointer;
 		background:white;
-		margin-top:-5px;
-		height: 30px;
+		height: 25px;
 		float:right;
 		font-size: 12px;
 		border: 2px solid white;
 		color: $uq-purple;
-		width: 70px;
+		width: 75px;
 		&:hover {
 			border: 2px solid $uq-purple;
 			background: $uq-purple;
@@ -206,6 +166,28 @@
 			transition: 0.4s;
 		}
 	}
+
+}
+
+.list-make-green {
+	@extend .list-questions;
+
+ div {
+		background:  $uq-green;
+	}
+	
+	.button {
+		color: $uq-green;
+		&:hover {
+			border: 2px solid $uq-green;
+			background: $uq-green;
+			color: white;
+			transition: 0.4s;
+		}
+	}
+ #addbutton{
+	width:100%;
+ }
 
 }
 
@@ -242,67 +224,32 @@
 .question-container{
 		color: white;
 		min-height: 30px;
-		margin: 3px;
+		margin-top: 3px;
 		border-radius:15px;
 		padding-top: 8px;
 		transition: .3s;
 		padding-left: 10px;
 		display: table;
-		min-width: 680px;
+		min-width: 100%;
 }
 
 .question{
 	float: left;
 	padding-bottom: 12px;
+	text-align: left;
+	white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+	width:30vw;
+	&:hover{
+		white-space: normal; 
+		text-overflow: inherit;
+		overflow: visible;
+	}
 }
 
 .question-button{
-	float: right;
-	border-radius:15px;
-	padding-bottom: 5px;
-
-}
-
-.make-button {
-		border-radius: 12px;
-		margin-right:5px;
-		padding:2px;
-		transition: 0.4s;
-		cursor: pointer;
-		background:white;
-		margin-top:-5px;
-		height: 30px;
-		float:right;
-		font-size: 12px;
-		border: 2px solid white;
-		color: $uq-green;
-		width: 70px;
-		&:hover {
-			border: 2px solid $uq-green;
-			background: $uq-green;
-			color: white;
-			transition: 0.4s;
-		}
-}
-
-.make-button-long {
-		border-radius: 12px;
-		margin-right:5px;
-		padding:2px;
-		transition: 0.4s;
-		cursor: pointer;
-		background:white;
-		margin-top:-5px;
-		height: 30px;
-		float:right;
-		font-size: 12px;
-		border: 2px solid white;
-		color: $uq-green;
-		width: 130px;
-		&:hover {
-			border: 2px solid $uq-green;
-			background: $uq-green;
-			color: white;
-			transition: 0.4s;
-		}
+	float:right;
+	width:38%;
+	border-radius:200px;
 }
