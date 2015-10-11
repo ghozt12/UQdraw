@@ -86,12 +86,18 @@ table {
 /* *******
 ** Headers
 ** ******/
-/* line 9, scss/_headers.scss */
+/* line 10, scss/_headers.scss */
 #headers-top-bar {
   background: #410C54;
   height: 40px;
 }
-/* line 13, scss/_headers.scss */
+@media screen and (max-width: 960px) {
+  /* line 15, scss/_headers.scss */
+  #headers-top-bar img {
+    display: none;
+  }
+}
+/* line 21, scss/_headers.scss */
 #headers-top-bar img {
   width: 100px;
   margin-top: 7px;
@@ -101,18 +107,18 @@ table {
   left: 50%;
   transform: translate(-50%, 0);
 }
-/* line 21, scss/_headers.scss */
+/* line 29, scss/_headers.scss */
 #headers-top-bar #submit {
   height: 40px !important;
 }
 
-/* line 27, scss/_headers.scss */
+/* line 35, scss/_headers.scss */
 .header-l-prepare {
   height: 50px;
   width: 100%;
   background: #410C54;
 }
-/* line 31, scss/_headers.scss */
+/* line 39, scss/_headers.scss */
 .header-l-prepare .headerpos {
   margin-right: auto;
   margin-left: auto;
@@ -121,13 +127,13 @@ table {
   transform: translate(-50%, 0);
 }
 
-/* line 40, scss/_headers.scss */
+/* line 48, scss/_headers.scss */
 .header-l-lecture {
   height: 50px;
   width: 100%;
   background: #8ED676;
 }
-/* line 44, scss/_headers.scss */
+/* line 52, scss/_headers.scss */
 .header-l-lecture .headerpos {
   margin-right: auto;
   margin-left: auto;
@@ -136,7 +142,7 @@ table {
   transform: translate(-50%, 0);
 }
 
-/* line 57, scss/_headers.scss */
+/* line 65, scss/_headers.scss */
 .header-startpage {
   height: 120px;
   width: 100%;
@@ -146,7 +152,7 @@ table {
   box-shadow: 0px 1px 5px #000;
   box-shadow: 0px 1px 5px #000000;
 }
-/* line 65, scss/_headers.scss */
+/* line 73, scss/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -156,13 +162,13 @@ table {
   font-size: 1em;
 }
 @media screen and (max-width: 960px) {
-  /* line 57, scss/_headers.scss */
+  /* line 65, scss/_headers.scss */
   .header-startpage {
     height: 70px;
   }
 }
 
-/* line 83, scss/_headers.scss */
+/* line 91, scss/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
@@ -954,12 +960,18 @@ body:after {
 /* *******
 ** Headers
 ** ******/
-/* line 9, scss/_headers.scss */
+/* line 10, scss/_headers.scss */
 #headers-top-bar {
   background: #410C54;
   height: 40px;
 }
-/* line 13, scss/_headers.scss */
+@media screen and (max-width: 960px) {
+  /* line 15, scss/_headers.scss */
+  #headers-top-bar img {
+    display: none;
+  }
+}
+/* line 21, scss/_headers.scss */
 #headers-top-bar img {
   width: 100px;
   margin-top: 7px;
@@ -969,18 +981,18 @@ body:after {
   left: 50%;
   transform: translate(-50%, 0);
 }
-/* line 21, scss/_headers.scss */
+/* line 29, scss/_headers.scss */
 #headers-top-bar #submit {
   height: 40px !important;
 }
 
-/* line 27, scss/_headers.scss */
+/* line 35, scss/_headers.scss */
 .header-l-prepare {
   height: 50px;
   width: 100%;
   background: #410C54;
 }
-/* line 31, scss/_headers.scss */
+/* line 39, scss/_headers.scss */
 .header-l-prepare .headerpos {
   margin-right: auto;
   margin-left: auto;
@@ -989,13 +1001,13 @@ body:after {
   transform: translate(-50%, 0);
 }
 
-/* line 40, scss/_headers.scss */
+/* line 48, scss/_headers.scss */
 .header-l-lecture {
   height: 50px;
   width: 100%;
   background: #8ED676;
 }
-/* line 44, scss/_headers.scss */
+/* line 52, scss/_headers.scss */
 .header-l-lecture .headerpos {
   margin-right: auto;
   margin-left: auto;
@@ -1004,7 +1016,7 @@ body:after {
   transform: translate(-50%, 0);
 }
 
-/* line 57, scss/_headers.scss */
+/* line 65, scss/_headers.scss */
 .header-startpage {
   height: 120px;
   width: 100%;
@@ -1014,7 +1026,7 @@ body:after {
   box-shadow: 0px 1px 5px #000;
   box-shadow: 0px 1px 5px #000000;
 }
-/* line 65, scss/_headers.scss */
+/* line 73, scss/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -1024,13 +1036,13 @@ body:after {
   font-size: 1em;
 }
 @media screen and (max-width: 960px) {
-  /* line 57, scss/_headers.scss */
+  /* line 65, scss/_headers.scss */
   .header-startpage {
     height: 70px;
   }
 }
 
-/* line 83, scss/_headers.scss */
+/* line 91, scss/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;

@@ -4,11 +4,19 @@
 
 // Variables:
 $header-height: 50px;
+$break-small: 960px;
 
 // Top Bar
 #headers-top-bar {
     background: $uq-purple;
     height: 40px;
+
+    @media screen and (max-width: $break-small) {
+        img {
+            display: none;
+        }
+    }
+
 
     img {
         width: 100px;
