@@ -1043,7 +1043,16 @@ body {
   color: black;
 }
 
-/* line 59, scss/_typography.scss */
+/* line 60, scss/_typography.scss */
+.question-body-heading {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 4vmin;
+  color: black;
+}
+
+/* line 69, scss/_typography.scss */
 .type-body-subheading {
   text-align: center;
   padding-top: 10px;
@@ -1051,7 +1060,7 @@ body {
   padding-bottom: 10px;
 }
 
-/* line 68, scss/_typography.scss */
+/* line 78, scss/_typography.scss */
 .startpage-welcome {
   color: white;
   text-align: center;
@@ -1061,18 +1070,18 @@ body {
   font-size: 1em;
 }
 
-/* line 77, scss/_typography.scss */
+/* line 87, scss/_typography.scss */
 .start-section-input {
   opacity: .8;
 }
-/* line 79, scss/_typography.scss */
+/* line 89, scss/_typography.scss */
 .start-section-input h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
 }
 
-/* line 93, scss/_typography.scss */
+/* line 103, scss/_typography.scss */
 .lecturer-startpage-welcome {
   color: #000;
   text-align: center;
@@ -1082,12 +1091,12 @@ body {
   font-size: 1em;
 }
 
-/* line 102, scss/_typography.scss */
+/* line 112, scss/_typography.scss */
 #lecturer-start-username {
   font-weight: 600;
 }
 
-/* line 107, scss/_typography.scss */
+/* line 117, scss/_typography.scss */
 .type-lecture-mode h2, .type-prepare-mode h2 {
   color: white;
   font-size: 50px;
@@ -1096,14 +1105,14 @@ body {
   padding-top: calc(55vh - 173px);
   margin-bottom: 30px;
 }
-/* line 116, scss/_typography.scss */
+/* line 126, scss/_typography.scss */
 .type-lecture-mode h3, .type-prepare-mode h3 {
   color: white;
   font-weight: 300;
   text-align: center;
 }
 
-/* line 123, scss/_typography.scss */
+/* line 133, scss/_typography.scss */
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -1111,7 +1120,7 @@ body {
   margin-top: 18px;
 }
 
-/* line 130, scss/_typography.scss */
+/* line 140, scss/_typography.scss */
 .type-body-url {
   font-size: 20px;
   text-align: center;
@@ -1119,7 +1128,7 @@ body {
   margin-top: 10px;
 }
 
-/* line 137, scss/_typography.scss */
+/* line 147, scss/_typography.scss */
 .type-body-response {
   font-size: 20px;
   text-align: left;
@@ -1188,7 +1197,7 @@ body {
 
 /* line 57, scss/_theme.scss */
 .timer-div {
-  height: 400px;
+  height: 300px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -1208,11 +1217,11 @@ body {
 
 @keyframes size {
   0% {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     margin-bottom: 10px;
     margin-top: 0px;
-    margin-left: -200px;
+    margin-left: -150px;
     background: #8ED676;
     border-color: #8ED676;
   }
@@ -1232,7 +1241,7 @@ body {
     height: 0px;
     width: 0px;
     margin-bottom: 160px;
-    margin-top: 200px;
+    margin-top: 150px;
     margin-left: 0px;
     background: black;
     border-color: black;
@@ -1240,12 +1249,12 @@ body {
 }
 /* line 82, scss/_theme.scss */
 .theme-time2 {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   color: white;
   font-weight: bold;
   left: 50%;
-  margin-left: -200px;
+  margin-left: -150px;
   margin-right: auto;
   border: 5px solid white;
   border-radius: 50%;
@@ -1255,65 +1264,65 @@ body {
 }
 /* line 95, scss/_theme.scss */
 .theme-time2 p {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 /* line 100, scss/_theme.scss */
 .theme-time1 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   color: white;
   font-weight: bold;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -75px;
   margin-right: auto;
   border: 5px solid  white;
   border-radius: 50%;
   position: absolute;
-  top: 240px;
+  top: 215px;
   text-align: center;
 }
 /* line 113, scss/_theme.scss */
 .theme-time1 p {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 /* line 118, scss/_theme.scss */
 .theme-time15 {
-  width: 300px;
-  height: 300px;
+  width: 225px;
+  height: 225px;
   color: white;
   left: 50%;
-  margin-left: -150px;
+  margin-left: -112.5px;
   margin-right: auto;
   border: 5px solid white;
   border-radius: 50%;
   position: absolute;
-  top: 190px;
+  top: 177px;
   text-align: center;
 }
 /* line 130, scss/_theme.scss */
 .theme-time15 p {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 /* line 135, scss/_theme.scss */
 .theme-time05 {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   color: white;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -37.5px;
   margin-right: auto;
   border: 5px solid  white;
   border-radius: 50%;
   position: absolute;
-  top: 290px;
+  top: 252px;
   text-align: center;
 }
 /* line 147, scss/_theme.scss */
 .theme-time05 p {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 /* line 152, scss/_theme.scss */
