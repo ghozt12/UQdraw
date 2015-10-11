@@ -11,7 +11,7 @@
 	$(document).ready(function() {
 		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
 			type: 'GET',
-			url: 'http://teamone.uqcloud.net/Brian/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
+			url: 'http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
 			success: function(data){
 				//alert(data);
 				//alert("success");
