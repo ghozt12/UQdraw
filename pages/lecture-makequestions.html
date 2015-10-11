@@ -33,6 +33,7 @@
 						questionListHTML += getQuestionItem(question);
 					}
 					document.getElementById("questionsList").innerHTML = questionListHTML;
+					document.getElementById("goto-lecture-mode").href = "lecture-questions.html?courseID="+getParameterByName("courseID");
 				}else{alert("Fail to retrieve data please signon");}
 			},
 			error: function(){
@@ -167,7 +168,7 @@
 			<h3 class='type-title'> Create Questions </h3>
 			</div>
 			<!-- Switch button -->
-			<a href='lecture-questions.html'><div class='button-goto-lecture'> <p> Goto Lecture Mode </p></div></a>
+			<a id="goto-lecture-mode" href='lecture-questions.html'><div class='button-goto-lecture'> <p> Goto Lecture Mode </p></div></a>
 		
 		</div>
 	</section>

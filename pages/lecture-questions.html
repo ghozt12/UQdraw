@@ -24,6 +24,7 @@
 					questionListHTML += getQuestionItem(question);
 				}
 				document.getElementById("questionsList").innerHTML = questionListHTML;
+				document.getElementById("goto-prepare-mode").href = "lecture-makequestions.html?courseID="+getParameterByName("courseID");
 			},
 			error: function(){
 				console.log(data);
@@ -54,7 +55,7 @@
 			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
 			<h3 class="typography-l-h3"> Lecture Mode </h3>
 			</div>
-			<a href="lecture-makequestions.html"><div class="button-goto-prepare"> <p> goto Prepare Mode </p></div>
+			<a id="goto-prepare-mode" href="lecture-makequestions.html"><div class="button-goto-prepare"> <p> goto Prepare Mode </p></div>
 			<a href="../pages/lecture-subjects.html"><div class="button-back-lecture"> <p> Back</p></div></a>
 		</div>
 	</section>
