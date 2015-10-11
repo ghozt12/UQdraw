@@ -42,7 +42,7 @@
 		+" </label> <div class='question-container'><div class='question'>"
 		+questionItem.title+"</div>"
 		+"<div class='question-button'><button class='button' onclick='window.location.href="
-		+'"http://teamone.uqcloud.net/pages/lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'+"'> Ask </button> <button class='button'> View </button> </div></div></li>"
+		+'"lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='+questionItem.questionID+'"'+"'> View </button> </div></div></li>";
 
 	}
 </script>
