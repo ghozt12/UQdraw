@@ -52,13 +52,14 @@
 // ON READY 
 // *********************************************
 $(document).ready(function () {
-
+	document.getElementById("questionTitle").innerHTML = getParameterByName("questionTitle");
 	// Prevent the user from dragging the screen
 	$(window).bind(
 		'touchmove',
    	function(e) {
     	e.preventDefault();
   	}
+
 	);
 
 	// Image loader

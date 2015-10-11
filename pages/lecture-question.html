@@ -20,14 +20,16 @@
 	<!-- Questions -->
 	<section>
 		<!-- The question goes here, get id question -->
-		<h2 class="question-body-heading"> <span id="question-title">testing questions that will be very long and take up more than 1 line to see what it would look like cool thanks</span> </h2>
+		<h2 class="type-body-heading"> <span id="question-title">Draw My House</span> </h2>
 		<h3 class="type-body-url"> teamone.uqcloud.net ENTER CODE: <span id = "code"> 3fg </span></h3>
 
 		<!-- RESPONSE FILLER -->
 		<!-- This works by increasing the inner divs width, so grab
 		theme-response-inner and change the width accordinly -->
 		<div class="timer-div">
+			
 			<div class="theme-timer"> </div>
+			
 		</div>
 		<div class="theme-time2"><p>2 minutes</p> </div>
 		<div class="theme-time15"><p>1.5 minutes</p> </div>
@@ -36,12 +38,12 @@
 		
 		<div class="theme-response-actions">
 			<!-- Enter PHP values in the spans -->
-			<!--<h2> Responses <span id="responses">23</span> </h2> -->
-			<h2> Time: <span id="time-left">02:00</span></h2>
+			<h2> Responses <span id="responses">23</span> </h2>
+			<h2> Time: <span id="time-left"> 30 seconds </span></h2>
 
 			<!-- Buttons -->
-			<button class="q-button-long" onclick="window.location.href='http://teamone.uqcloud.net/pages/lecture-responses.html'">View Responses</button>
-			<button class="q-button">End</button>
+			<button class="q-button-long" onclick="btnViewResponses()">View Responses</button>
+			<button class="q-button" onclick="btnEnd()">End</button>
 			<button class="q-button">Next</button>
 		</div>
 	</section>
@@ -54,7 +56,7 @@
 	$(document).ready(function() {
 		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
 			type: 'GET',
-			url: 'http://teamone.uqcloud.net/uqDrawBackend/getQuestion.php?courseID='+getParameterByName("courseID")+'&questionID='+getParameterByName("questionID"),
+			url: '../uqDrawBackend/getQuestion.php?courseID='+getParameterByName("courseID")+'&questionID='+getParameterByName("questionID"),
 			success: function(data){
 				//alert(data);
 				//alert("success");
@@ -62,6 +64,7 @@
 				document.getElementById("code").textContent=questionsListObject.enteringCode;// 3 digit code
 				//document.getElementById("subject").textContent=questionsListObject.subject;// course code
 				document.getElementById("question-title").textContent=questionsListObject.questionList[0].title;
+
 			},
 			error: function(){
 				console.log(data);
@@ -75,28 +78,11 @@
 				results = regex.exec(location.search);
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
-
-	function startTimer(duration, display) {
-    	var timer = duration, minutes, seconds;
-    	setInterval(function () {
-        	minutes = parseInt(timer / 60, 10);
-        	seconds = parseInt(timer % 60, 10);
-
-        	minutes = minutes < 10 ? "0" + minutes : minutes;
-        	seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        	display.text(minutes + ":" + seconds);
-
-        	if (--timer < 0) {
-            	timer = 0;
-        		}
-    		}, 1000);
-	}
-
-	jQuery(function ($) {
-    	var twoMinutes = 60 * 2,
-        display = $('#time-left');
-    startTimer(twoMinutes, display);
-});
+		function btnEnd(){
+			window.location.href = "../pages/lecture-questions.html?courseID="+getParameterByName("courseID");
+		}
+		function btnViewResponses(){
+			window.location.href = "../pages/lecture-responses.html?questionID="+getParameterByName("questionID")+"&courseID="+getParameterByName("courseID");
+		}
 </script>
 </html>
