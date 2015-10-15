@@ -10,6 +10,8 @@ $break-small: 960px;
 #headers-top-bar {
     background: $uq-purple;
     height: 40px;
+    position: relative;
+    z-index: 3000;
 
     @media screen and (max-width: $break-small) {
         img {
