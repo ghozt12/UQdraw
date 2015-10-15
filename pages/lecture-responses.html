@@ -89,13 +89,16 @@
 	});
 
 	var Header = React.createClass({
-
+        btnBack: function(){
+			window.location.href = "http://teamone.uqcloud.net/pages/lecture-questions.html?courseID="+getParameterByName("courseID");
+		}
+			,
 		render: function() {
 			return (
 				<div className="header-l-prepare">
 					<img className='images-l-subjects' src="../assets/images/topbar-logo.png" />
 					<h3 className="typography-l-h3"> Responses </h3>
-					<a href="lecture-responses.html"><div className="button-goto-prepare"> <p> Back </p></div></a>
+					<a onClick={this.btnBack}><div className="button-goto-prepare"> <p > Back </p></div></a>
 				</div>
 				);
 		}
@@ -163,6 +166,8 @@
 				results = regex.exec(location.search);
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
+
+
 </script>
 
 

@@ -291,7 +291,7 @@ function imageExists(image_url){
 		var questionID = getParameterByName("questionID");
 		if (questionID=="") {
 			// if no question ID, won't upload
-			alert("no question is selected, can't send data");
+		   alert("no question is selected, can't send data");
 		} else {
 			// document.getElementById("testImg").src = data;
 			// Send to the server
@@ -307,6 +307,7 @@ function imageExists(image_url){
 				alert(data);//get result from php
 				console.log(data);
 				console.log('saved successfully saved');
+				window.history.back();
 			});
 
 		}
