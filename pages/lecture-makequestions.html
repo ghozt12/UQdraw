@@ -28,10 +28,20 @@
 					document.getElementById("code").textContent = questionsListObject.enteringCode;// 3 digit code
 					document.getElementById("subject").textContent = questionsListObject.subject;// course code
 					var questionListHTML = "";
-					for (var i = 0; i < questionsListObject.questionsList.length; i++) {//generate all question from JSON
-						var question = questionsListObject.questionsList[i];
-						questionListHTML += getQuestionItem(question);
+					//for (var i = 0; i < questionsListObject.questionsList.length; i++) {//generate all question from JSON
+						var question = questionsListObject.questionsList[0];
+					var index = 0;
+					console.log(question);
+					for(var key in question) {
+						if(question.hasOwnProperty(key)) {
+							questionListHTML += getQuestionItem(question[key],Object.keys(question)[index]);
+							console.log("print HTML");
+							index ++;
+						}
 					}
+					console.log(index);
+
+					//}
 					document.getElementById("questionsList").innerHTML = questionListHTML;
 					document.getElementById("goto-lecture-mode").href = "lecture-questions.html?courseID="+getParameterByName("courseID");
 				}else{alert("Fail to retrieve data please signon");}
@@ -47,14 +57,20 @@
 				results = regex.exec(location.search);
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
-	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
- //"<p>Lecture</p>"+questionItem.quwstionWeek+
-		return	"<li id='"+questionItem.questionID+"'><div class='question-container'><div class='question'>" 
-		+questionItem.title+ "</div>" 
-		+"<div class='question-button'><button class='q-button' onclick='deleteQuestion("
-		+questionItem.questionID+")'>DELETE</button> " 
-		+"<button class='q-button-long' onClick='window.location.href="+'"lecture-prepare-responses.html?questionID='+questionItem.questionID+'"'+"'>VIEW RESPONSES</button>" 
-		+"<button class='q-button'>EDIT</button></div></div>";
+	function getQuestionItem(questionObjbyWeek,week){ // input the question Object from JSON array, output a HTML List Item
+        var lectureHeader="<p>Lecture "+week+"</p>";
+		var questionList = "";
+		for(var i = 0; i < questionObjbyWeek.length; i++){
+			var questionItem = questionObjbyWeek[i];
+			questionList+="<li id='"+questionItem.questionID+"'><div class='question-container'><div class='question'>"
+					+questionItem.title+ "</div>"
+					+"<div class='question-button'><button class='button' onclick='deleteQuestion("
+					+questionItem.questionID+")'>Delete</button> "
+					+"<button class='button' onClick='window.location.href="+'"lecture-prepare-responses.html?questionID='+questionItem.questionID+'"'+"'>Responses</button>"
+					+"<button class='button'>Edit</button></div></div></li>";
+
+		}
+		return	lectureHeader+questionList;
 	}
 	function addQuestion(){
 		document.getElementById("addButton").innerHTML ="";
@@ -177,7 +193,8 @@
 		<!-- List the Questions -->
 	<section class = "list-make-green">
 		<!-- Body Heading -->
-		<h2 class="type-body-heading"> <span id="subject"> MATH 1061 </span>  CODE: <span id="code">3FC</span> </h2>
+		<h2 class="type-body-heading"> <span id="subject"> MATH 1061</h2> </span> 
+		<h2> CODE: <span id="code">3FC</span> </h2>
 		<!-- Body Subheading -->
 		<h3 class="type-body-subheading"> Click the plus button to create a new question </h3>
 
