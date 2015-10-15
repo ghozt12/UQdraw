@@ -33,10 +33,12 @@
 			mysqli_query($mysqli, $addLecturer);
 			//Display their name
 			echo $nameArray->{'firstname'};
+			echo "(".$userType.")";
 		}
 		else
 		{
 			echo $nameArray->{'firstname'};
+			echo "(".$userType.")";
 		}
 	/*}*/
 	mysqli_close($mysqli);

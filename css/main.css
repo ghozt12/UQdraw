@@ -11,7 +11,7 @@
 /* *************************
   MIXINS 
 ************************* */
-/* line 40, scss/main.scss */
+/* line 38, scss/main.scss */
 .noselect, .list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li, .list-questions li, .list-make-green li, .list-questions-purple li, .student-list li {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -21,7 +21,7 @@
   user-select: none;
 }
 
-/* line 49, scss/main.scss */
+/* line 47, scss/main.scss */
 .width100 {
   width: 100%;
 }
@@ -91,14 +91,16 @@ table {
 #headers-top-bar {
   background: #410C54;
   height: 40px;
+  position: relative;
+  z-index: 3000;
 }
 @media screen and (max-width: 960px) {
-  /* line 15, scss/_headers.scss */
+  /* line 17, scss/_headers.scss */
   #headers-top-bar img {
     display: none;
   }
 }
-/* line 21, scss/_headers.scss */
+/* line 23, scss/_headers.scss */
 #headers-top-bar img {
   width: 100px;
   margin-top: 7px;
@@ -108,18 +110,18 @@ table {
   left: 50%;
   transform: translate(-50%, 0);
 }
-/* line 29, scss/_headers.scss */
+/* line 31, scss/_headers.scss */
 #headers-top-bar #submit {
   height: 40px !important;
 }
 
-/* line 35, scss/_headers.scss */
+/* line 37, scss/_headers.scss */
 .header-l-prepare {
   height: 50px;
   width: 100%;
   background: #410C54;
 }
-/* line 39, scss/_headers.scss */
+/* line 41, scss/_headers.scss */
 .header-l-prepare .headerpos {
   margin-right: auto;
   margin-left: auto;
@@ -128,13 +130,13 @@ table {
   transform: translate(-50%, 0);
 }
 
-/* line 48, scss/_headers.scss */
+/* line 50, scss/_headers.scss */
 .header-l-lecture {
   height: 50px;
   width: 100%;
   background: #8ED676;
 }
-/* line 52, scss/_headers.scss */
+/* line 54, scss/_headers.scss */
 .header-l-lecture .headerpos {
   margin-right: auto;
   margin-left: auto;
@@ -143,7 +145,7 @@ table {
   transform: translate(-50%, 0);
 }
 
-/* line 65, scss/_headers.scss */
+/* line 67, scss/_headers.scss */
 .header-startpage {
   height: 120px;
   width: 100%;
@@ -153,7 +155,7 @@ table {
   box-shadow: 0px 1px 5px #000;
   box-shadow: 0px 1px 5px #000000;
 }
-/* line 73, scss/_headers.scss */
+/* line 75, scss/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -163,13 +165,13 @@ table {
   font-size: 1em;
 }
 @media screen and (max-width: 960px) {
-  /* line 65, scss/_headers.scss */
+  /* line 67, scss/_headers.scss */
   .header-startpage {
     height: 70px;
   }
 }
 
-/* line 91, scss/_headers.scss */
+/* line 93, scss/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
@@ -1003,14 +1005,16 @@ body:after {
 #headers-top-bar {
   background: #410C54;
   height: 40px;
+  position: relative;
+  z-index: 3000;
 }
 @media screen and (max-width: 960px) {
-  /* line 15, scss/_headers.scss */
+  /* line 17, scss/_headers.scss */
   #headers-top-bar img {
     display: none;
   }
 }
-/* line 21, scss/_headers.scss */
+/* line 23, scss/_headers.scss */
 #headers-top-bar img {
   width: 100px;
   margin-top: 7px;
@@ -1020,18 +1024,18 @@ body:after {
   left: 50%;
   transform: translate(-50%, 0);
 }
-/* line 29, scss/_headers.scss */
+/* line 31, scss/_headers.scss */
 #headers-top-bar #submit {
   height: 40px !important;
 }
 
-/* line 35, scss/_headers.scss */
+/* line 37, scss/_headers.scss */
 .header-l-prepare {
   height: 50px;
   width: 100%;
   background: #410C54;
 }
-/* line 39, scss/_headers.scss */
+/* line 41, scss/_headers.scss */
 .header-l-prepare .headerpos {
   margin-right: auto;
   margin-left: auto;
@@ -1040,13 +1044,13 @@ body:after {
   transform: translate(-50%, 0);
 }
 
-/* line 48, scss/_headers.scss */
+/* line 50, scss/_headers.scss */
 .header-l-lecture {
   height: 50px;
   width: 100%;
   background: #8ED676;
 }
-/* line 52, scss/_headers.scss */
+/* line 54, scss/_headers.scss */
 .header-l-lecture .headerpos {
   margin-right: auto;
   margin-left: auto;
@@ -1055,7 +1059,7 @@ body:after {
   transform: translate(-50%, 0);
 }
 
-/* line 65, scss/_headers.scss */
+/* line 67, scss/_headers.scss */
 .header-startpage {
   height: 120px;
   width: 100%;
@@ -1065,7 +1069,7 @@ body:after {
   box-shadow: 0px 1px 5px #000;
   box-shadow: 0px 1px 5px #000000;
 }
-/* line 73, scss/_headers.scss */
+/* line 75, scss/_headers.scss */
 .header-startpage h3 {
   color: white;
   text-align: center;
@@ -1075,13 +1079,13 @@ body:after {
   font-size: 1em;
 }
 @media screen and (max-width: 960px) {
-  /* line 65, scss/_headers.scss */
+  /* line 67, scss/_headers.scss */
   .header-startpage {
     height: 70px;
   }
 }
 
-/* line 91, scss/_headers.scss */
+/* line 93, scss/_headers.scss */
 .lecturer-startpage-header {
   height: 163px;
   width: 100%;
@@ -1850,7 +1854,7 @@ body {
 #content p {
   position: absolute;
   top: 40%;
-  z-index: 2000;
+  z-index: 1000;
   color: #8ED676;
   text-align: center;
   font-size: 20px;
@@ -1936,7 +1940,7 @@ body {
 }
 
 /* line 175, scss/_updatedCanvas.scss */
-.button-removal, #tools, #camera, #question, #submit {
+.button-removal, #tools, #camera, #insert-into-canvas, #question, #submit {
   outline: 0;
   border: 0;
   background: 0;
@@ -1955,14 +1959,47 @@ body {
 /* line 191, scss/_updatedCanvas.scss */
 #camera {
   position: absolute;
+  cursor: pointer;
+}
+/* line 194, scss/_updatedCanvas.scss */
+#camera:hover {
+  background: #1e0627;
 }
 
-/* line 196, scss/_updatedCanvas.scss */
+/* line 200, scss/_updatedCanvas.scss */
+#insert-into-canvas {
+  background: white;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 207, scss/_updatedCanvas.scss */
 #question {
+  height: 100%;
+  top: 0px;
   position: absolute;
+  padding: 0;
+  width: 100px;
+  transition: .3s;
+  outline: 0;
+  border: none;
+}
+/* line 218, scss/_updatedCanvas.scss */
+#question:focus {
+  outline: none;
+  border: none;
+}
+/* line 223, scss/_updatedCanvas.scss */
+#question:hover {
+  background: #1e0627;
 }
 
-/* line 201, scss/_updatedCanvas.scss */
+/* line 228, scss/_updatedCanvas.scss */
+#question.close {
+  background: red;
+}
+
+/* line 232, scss/_updatedCanvas.scss */
 .input-group {
   display: inline-block;
   width: 50px;
@@ -1970,7 +2007,7 @@ body {
   overflow: hidden;
   position: relative;
 }
-/* line 208, scss/_updatedCanvas.scss */
+/* line 239, scss/_updatedCanvas.scss */
 .input-group input {
   height: 40px;
   opacity: 0;
@@ -1986,7 +2023,7 @@ body {
   margin: 0;
 }
 
-/* line 221, scss/_updatedCanvas.scss */
+/* line 252, scss/_updatedCanvas.scss */
 #submit {
   background: #8ED676;
   height: 100%;
@@ -1997,37 +2034,37 @@ body {
   outline: 0;
   border: none;
 }
-/* line 232, scss/_updatedCanvas.scss */
+/* line 263, scss/_updatedCanvas.scss */
 #submit:focus {
   outline: none;
   border: none;
 }
-/* line 237, scss/_updatedCanvas.scss */
+/* line 268, scss/_updatedCanvas.scss */
 #submit:hover {
   background: #6eca4f;
 }
 
-/* line 241, scss/_updatedCanvas.scss */
+/* line 272, scss/_updatedCanvas.scss */
 *:focus {
   outline: none;
 }
 
 @media screen and (max-width: 960px) {
-  /* line 259, scss/_updatedCanvas.scss */
+  /* line 290, scss/_updatedCanvas.scss */
   .closed {
     transform: translate3d(-100vw, 0, 0);
     -webkit-transform: translate3d(-100vw, 0, 0);
   }
 }
 @media screen and (min-width: 961px) and (max-height: 690px) {
-  /* line 259, scss/_updatedCanvas.scss */
+  /* line 290, scss/_updatedCanvas.scss */
   .closed {
     transform: translate3d(-100vw, 0, 0);
     -webkit-transform: translate3d(-100vw, 0, 0);
   }
 }
 @media screen and (min-width: 961px) and (min-height: 691px) {
-  /* line 259, scss/_updatedCanvas.scss */
+  /* line 290, scss/_updatedCanvas.scss */
   .closed {
     transform: translate3d(-300px, 0, 0);
     -webkit-transform: translate3d(-300px, 0, 0);
@@ -2035,7 +2072,7 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  /* line 388, scss/_updatedCanvas.scss */
+  /* line 424, scss/_updatedCanvas.scss */
   #tool-bar {
     transition: .3s;
     position: absolute;
@@ -2046,14 +2083,14 @@ body {
     height: 250px;
     float: none;
   }
-  /* line 279, scss/_updatedCanvas.scss */
+  /* line 310, scss/_updatedCanvas.scss */
   #tool-bar .element {
     float: left;
     border-right: 1px solid black;
     height: 100%;
     width: 33%;
   }
-  /* line 285, scss/_updatedCanvas.scss */
+  /* line 317, scss/_updatedCanvas.scss */
   #tool-bar .element h1 {
     color: white;
     text-align: center;
@@ -2062,18 +2099,18 @@ body {
     padding-top: 10px;
     margin-bottom: 20px;
   }
-  /* line 294, scss/_updatedCanvas.scss */
+  /* line 326, scss/_updatedCanvas.scss */
   #tool-bar .element .selected {
     background: black;
   }
-  /* line 298, scss/_updatedCanvas.scss */
+  /* line 330, scss/_updatedCanvas.scss */
   #tool-bar .element .color-selected {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid white;
   }
-  /* line 306, scss/_updatedCanvas.scss */
+  /* line 338, scss/_updatedCanvas.scss */
   #tool-bar .element div {
     height: 50px;
     width: 50px;
@@ -2083,26 +2120,28 @@ body {
     margin-left: -25px;
     text-align: center;
   }
-  /* line 315, scss/_updatedCanvas.scss */
+  /* line 347, scss/_updatedCanvas.scss */
   #tool-bar .element div i {
+    cursor: pointer;
     color: white;
     margin-top: 10px;
     font-size: 25px;
   }
-  /* line 321, scss/_updatedCanvas.scss */
+  /* line 354, scss/_updatedCanvas.scss */
   #tool-bar .element div p {
+    cursor: pointer;
     color: white;
     padding-top: 20px;
     font-size: 15px;
     text-align: center;
   }
-  /* line 331, scss/_updatedCanvas.scss */
+  /* line 365, scss/_updatedCanvas.scss */
   #tool-bar .element:nth-child(3) {
     border-right: none;
   }
 }
 @media screen and (min-width: 961px) and (max-height: 690px) {
-  /* line 388, scss/_updatedCanvas.scss */
+  /* line 424, scss/_updatedCanvas.scss */
   #tool-bar {
     transition: .3s;
     position: absolute;
@@ -2113,14 +2152,14 @@ body {
     height: 250px;
     float: none;
   }
-  /* line 279, scss/_updatedCanvas.scss */
+  /* line 310, scss/_updatedCanvas.scss */
   #tool-bar .element {
     float: left;
     border-right: 1px solid black;
     height: 100%;
     width: 33%;
   }
-  /* line 285, scss/_updatedCanvas.scss */
+  /* line 317, scss/_updatedCanvas.scss */
   #tool-bar .element h1 {
     color: white;
     text-align: center;
@@ -2129,18 +2168,18 @@ body {
     padding-top: 10px;
     margin-bottom: 20px;
   }
-  /* line 294, scss/_updatedCanvas.scss */
+  /* line 326, scss/_updatedCanvas.scss */
   #tool-bar .element .selected {
     background: black;
   }
-  /* line 298, scss/_updatedCanvas.scss */
+  /* line 330, scss/_updatedCanvas.scss */
   #tool-bar .element .color-selected {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid white;
   }
-  /* line 306, scss/_updatedCanvas.scss */
+  /* line 338, scss/_updatedCanvas.scss */
   #tool-bar .element div {
     height: 50px;
     width: 50px;
@@ -2150,26 +2189,28 @@ body {
     margin-left: -25px;
     text-align: center;
   }
-  /* line 315, scss/_updatedCanvas.scss */
+  /* line 347, scss/_updatedCanvas.scss */
   #tool-bar .element div i {
+    cursor: pointer;
     color: white;
     margin-top: 10px;
     font-size: 25px;
   }
-  /* line 321, scss/_updatedCanvas.scss */
+  /* line 354, scss/_updatedCanvas.scss */
   #tool-bar .element div p {
+    cursor: pointer;
     color: white;
     padding-top: 20px;
     font-size: 15px;
     text-align: center;
   }
-  /* line 331, scss/_updatedCanvas.scss */
+  /* line 365, scss/_updatedCanvas.scss */
   #tool-bar .element:nth-child(3) {
     border-right: none;
   }
 }
 @media screen and (min-width: 961px) and (min-height: 691px) {
-  /* line 388, scss/_updatedCanvas.scss */
+  /* line 424, scss/_updatedCanvas.scss */
   #tool-bar {
     transition: .3s;
     position: absolute;
@@ -2179,11 +2220,11 @@ body {
     width: 80px;
     height: 100%;
   }
-  /* line 337, scss/_updatedCanvas.scss */
+  /* line 371, scss/_updatedCanvas.scss */
   #tool-bar .element {
     display: block;
   }
-  /* line 340, scss/_updatedCanvas.scss */
+  /* line 374, scss/_updatedCanvas.scss */
   #tool-bar .element h1 {
     color: white;
     text-align: center;
@@ -2195,18 +2236,18 @@ body {
     padding-bottom: 10px;
     margin-top: 10px;
   }
-  /* line 352, scss/_updatedCanvas.scss */
+  /* line 386, scss/_updatedCanvas.scss */
   #tool-bar .element .selected {
     background: black;
   }
-  /* line 356, scss/_updatedCanvas.scss */
+  /* line 390, scss/_updatedCanvas.scss */
   #tool-bar .element .color-selected {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid white;
   }
-  /* line 364, scss/_updatedCanvas.scss */
+  /* line 398, scss/_updatedCanvas.scss */
   #tool-bar .element div {
     height: 50px;
     width: 50px;
@@ -2215,13 +2256,13 @@ body {
     margin-left: -25px;
     text-align: center;
   }
-  /* line 372, scss/_updatedCanvas.scss */
+  /* line 407, scss/_updatedCanvas.scss */
   #tool-bar .element div i {
     color: white;
     margin-top: 10px;
     font-size: 25px;
   }
-  /* line 378, scss/_updatedCanvas.scss */
+  /* line 413, scss/_updatedCanvas.scss */
   #tool-bar .element div p {
     color: white;
     padding-top: 20px;
@@ -2230,37 +2271,37 @@ body {
   }
 }
 
-/* line 424, scss/_updatedCanvas.scss */
+/* line 460, scss/_updatedCanvas.scss */
 #color-blue {
   background-color: blue;
 }
 
-/* line 428, scss/_updatedCanvas.scss */
+/* line 464, scss/_updatedCanvas.scss */
 #color-red {
   background-color: red;
 }
 
-/* line 431, scss/_updatedCanvas.scss */
+/* line 467, scss/_updatedCanvas.scss */
 #color-green {
   background-color: green;
 }
 
-/* line 437, scss/_updatedCanvas.scss */
+/* line 473, scss/_updatedCanvas.scss */
 .circle-small {
   margin-top: 20px !important;
 }
 
-/* line 441, scss/_updatedCanvas.scss */
+/* line 477, scss/_updatedCanvas.scss */
 .circle-medium {
   margin-top: 15px !important;
 }
 
-/* line 445, scss/_updatedCanvas.scss */
+/* line 481, scss/_updatedCanvas.scss */
 .circle-large {
   margin-top: 10px !important;
 }
 
-/* line 453, scss/_updatedCanvas.scss */
+/* line 489, scss/_updatedCanvas.scss */
 .loading {
   position: absolute;
   z-index: 10000;
@@ -2298,17 +2339,18 @@ body {
 /* Floating part
 
 */
-/* line 486, scss/_updatedCanvas.scss */
+/* line 522, scss/_updatedCanvas.scss */
 #question-container {
   -webkit-transform: translate3d(0, 0, 0);
   position: absolute;
-  z-index: 1990;
-  height: 250px;
+  z-index: 2000;
+  margin: 0 auto;
   background: #410C54;
   width: 100%;
   transition: .3s ease-in-out;
+  margin: auto;
 }
-/* line 494, scss/_updatedCanvas.scss */
+/* line 531, scss/_updatedCanvas.scss */
 #question-container h1 {
   color: white;
   font-size: 40px;
@@ -2316,7 +2358,16 @@ body {
   text-align: center;
   padding-top: 20px;
 }
-/* line 501, scss/_updatedCanvas.scss */
+/* line 539, scss/_updatedCanvas.scss */
+#question-container button {
+  max-width: 80%;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  background: #8ED676;
+}
+/* line 547, scss/_updatedCanvas.scss */
 #question-container h2 {
   color: white;
   font-size: 20px;
@@ -2326,10 +2377,54 @@ body {
   width: 80%;
   margin: auto;
 }
+@media screen and (max-width: 960px) {
+  /* line 522, scss/_updatedCanvas.scss */
+  #question-container {
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 961px) and (max-height: 690px) {
+  /* line 522, scss/_updatedCanvas.scss */
+  #question-container {
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 961px) and (min-height: 691px) {
+  /* line 522, scss/_updatedCanvas.scss */
+  #question-container {
+    height: 100%;
+  }
+}
+/* line 570, scss/_updatedCanvas.scss */
+#question-container img {
+  max-width: 80%;
+  margin: auto;
+  border: 1px solid white;
+  display: block;
+}
 
-/* line 512, scss/_updatedCanvas.scss */
-#question-container.closed {
-  -webkit-transform: translate3d(0, -290px, 0);
+@media screen and (max-width: 960px) {
+  /* line 578, scss/_updatedCanvas.scss */
+  #question-container.closed {
+    -webkit-transform: translate3d(0, -120vh, 0);
+  }
+}
+@media screen and (min-width: 961px) and (max-height: 690px) {
+  /* line 578, scss/_updatedCanvas.scss */
+  #question-container.closed {
+    -webkit-transform: translate3d(0, -120vh, 0);
+  }
+}
+@media screen and (min-width: 961px) and (min-height: 691px) {
+  /* line 578, scss/_updatedCanvas.scss */
+  #question-container.closed {
+    -webkit-transform: translate3d(0, -100%, 0);
+  }
+}
+
+/* line 593, scss/_updatedCanvas.scss */
+#starting-text {
+  color: black;
 }
 
 /* line 1, scss/_hamburger.scss */
