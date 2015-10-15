@@ -191,6 +191,10 @@
 #camera {
 	@extend .button-removal;
 	position: absolute;
+    &:hover {
+        background: darken($uq-purple, 10%);
+    }
+    cursor: pointer;
 }
 
 #insert-into-canvas {
@@ -202,7 +206,23 @@
 
 #question {
     @extend .button-removal;
+    height: 100%;
+    top: 0px;
     position: absolute;
+    padding: 0;
+    width: 100px;
+    transition: .3s;
+    outline: 0;
+    border: none;
+
+    &:focus {
+        outline: none;
+        border: none;
+    }
+
+    &:hover {
+        background: darken($uq-purple, 10%);
+    }
 }
 
 #question.close {
@@ -293,6 +313,7 @@ $break-h-small-a: 691px;
         height: 100%;
         width: 33%;
 
+
         h1 {
             color: white;
             text-align: center;
@@ -324,12 +345,14 @@ $break-h-small-a: 691px;
             text-align:center;
 
                 i {
+                    cursor: pointer;
                     color: white;
                     margin-top: 10px;
                     font-size: 25px;
                 }
 
                 p {
+                    cursor: pointer;
                     color: white;
                     padding-top: 20px;
                     font-size: 15px;
@@ -379,6 +402,7 @@ $break-h-small-a: 691px;
             left: 50%;
             margin-left: -25px;
             text-align:center;
+            
 
             i {
                 color: white;
@@ -390,6 +414,7 @@ $break-h-small-a: 691px;
                 color: white;
                 padding-top: 20px;
                 font-size: 15px;
+
                 text-align: center;
             }
         }
@@ -516,7 +541,8 @@ $break-h-small-a: 691px;
         margin: auto;
         display: block;
         margin-bottom: 10px;
-        color: $uq-purple;
+        color: white;
+        background: $uq-green;
     }
     h2 {
         color: white;
@@ -544,6 +570,7 @@ $break-h-small-a: 691px;
     img {
         max-width: 80%;
         margin: auto;
+        border: 1px solid white;
         display: block;
     }
 }
