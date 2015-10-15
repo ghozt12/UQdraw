@@ -118,14 +118,17 @@ body {
 		font-size: 50px;
 		text-align: center;
 		font-weight: 500;
-		padding-top: calc(55vh - 173px);
+		padding-top: 10px;
 		margin-bottom: 30px;
 	}
 
-	h3 {
-		color: white;
-		font-weight: 300;
-		text-align: center;
+	.prepare-use{
+		position:absolute;
+		left:50%;
+		bottom:10px;
+	}
+	img {
+		width:25%;
 	}
 }
 
