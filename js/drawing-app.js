@@ -13,7 +13,6 @@
 	// Checkers
 	var firstTime = true;
 	
-
 	// draggable
 	var isLeft = true;
 
@@ -98,17 +97,66 @@ $(document).ready(function () {
 		if (questionClosed) {
 			questionClosed = !questionClosed;
 			$("#question-container").removeClass('closed');
-			$("#question").html('Close Q');
+			$("#question").addClass('close');
+
+			$("#question").html('Close');
 		} else {
 			questionClosed = !questionClosed;
 			$("#question-container").addClass('closed');
+			$("#question").removeClass('close');
+
 			$("#question").html('Question');
 	  }
 
 	});
 
 
-	
+	// on insert image into canvas 
+	$("#insert-into-canvas").click(function() {
+		var width = $(document).width();
+		var height = $(document).height();
+		var a,b;
+		// Get url
+		var url = $("#image-question").attr('src');
+		var img = document.getElementById("image-question");
+		
+		// Check if image exists first
+		if (!imageExists(url))
+			return;
+		
+		console.log(img.naturalWidth + ' a ' + width);
+
+		if (img.naturalWidth >= width) {
+			console.log("too big");
+			a = width;
+			console.log(100*img.naturalHeight / a);
+
+			// Check the height 
+			if (img.naturalHeight >= height) {
+				b = height;
+				ctx.drawImage(img, 0, 0, a, a * b / a);
+			} else {
+				ctx.drawImage(img, 0, 0, a, a * img.naturalHeight / a);
+			}
+
+		} else {
+			console.log("good");
+			ctx.drawImage(img, 0, 0);
+		}
+
+		// Then insert the image
+		
+	});
+
+// http://stackoverflow.com/questions/18837735/check-if-image-exists-on-server-using-javascript
+function imageExists(image_url){
+    var http = new XMLHttpRequest();
+
+    http.open('HEAD', image_url, false);
+    http.send();
+
+    return http.status != 404;
+}
 
 	// Colour
 	$( "#color-blue" ).click(function() {
@@ -243,7 +291,7 @@ $(document).ready(function () {
 		var questionID = getParameterByName("questionID");
 		if (questionID=="") {
 			// if no question ID, won't upload
-			alert("no question is selected, can't send data");
+		   alert("no question is selected, can't send data");
 		} else {
 			// document.getElementById("testImg").src = data;
 			// Send to the server
@@ -259,6 +307,7 @@ $(document).ready(function () {
 				alert(data);//get result from php
 				console.log(data);
 				console.log('saved successfully saved');
+				window.history.back();
 			});
 
 		}
