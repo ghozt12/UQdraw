@@ -538,10 +538,6 @@ $break-h-small-a: 691px;
 }
 
 
-
-
-
-
 // Circles
 
 .circle-small {
@@ -652,14 +648,17 @@ $break-h-small-a: 691px;
 #question-container.closed {
 
     @media screen and (max-width: $break-small) {
+        transform: translate3d(0, -120vh, 0);
         -webkit-transform: translate3d(0, -120vh, 0);
     }
 
     @media screen and (min-width: $break-small-a) and (max-height: $break-h-small) {
+        transform: translate3d(0, -120vh, 0);
         -webkit-transform: translate3d(0, -120vh, 0);
     }
 
     @media screen and (min-width: $break-small-a) and (min-height: $break-h-small-a) {
+        transform: translate3d(0, -100%, 0);
         -webkit-transform: translate3d(0, -100%, 0);
     }
 }
