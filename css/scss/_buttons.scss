@@ -101,7 +101,7 @@ input:focus {
 }
 
 .button-back-lecture-response{
-    background-color: darken($uq-green, 15%);
+    background-color: darken($uq-green, 10%);
     width: 120px;
     height: $header-height;
     display: inline-block;
@@ -115,7 +115,7 @@ input:focus {
     }
 
     &:hover {
-        background-color: darken($uq-green, 30%);
+        background-color: darken($uq-green, 15%);
     }
 }
 
