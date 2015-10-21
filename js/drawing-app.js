@@ -18,10 +18,22 @@
 
 	// Colours
 	var color = "#000";	
-	var red = "#C02323";
-	var green = "#329F24";
-	var blue = "#2360C0";
 	var white = "#FFFFFF";
+
+	var red = 'red';
+	var blue = 'blue';
+	var green = 'green';
+	var yellow = 'yellow';
+
+	var pumkin = '#D35400';
+	var orange = 'orange';
+	var purple = 'purple';
+	var pink = 'pink';
+
+	var silver = '#BDC3C7';
+	var gray = '#7F8C8D';
+	var black = 'black';
+	var white = 'white';
 
 	// Size
 	var thin = 5;
@@ -158,20 +170,22 @@ function imageExists(image_url){
     return http.status != 404;
 }
 
-	// Colour
-	$( "#color-blue" ).click(function() {
-	  removeColourClasses(this);
-	  ctx.beginPath();
-	  ctx.strokeStyle = blue;
-	  currentColor = 'blue';
-	  ctx.lineWidth = currentSize;
-	});
-
+	// COLOUR SELECTION
+	// *******************************
+	// BLOCK 1
 	$( "#color-red" ).click(function() {
 	  removeColourClasses(this);
 	  ctx.beginPath();
 	  ctx.strokeStyle = red;
 	  currentColor = 'red';
+	  ctx.lineWidth = currentSize;
+	});
+
+	$( "#color-blue" ).click(function() {
+	  removeColourClasses(this);
+	  ctx.beginPath();
+	  ctx.strokeStyle = blue;
+	  currentColor = 'blue';
 	  ctx.lineWidth = currentSize;
 	});
 
@@ -184,6 +198,95 @@ function imageExists(image_url){
 		currentColor = 'green';
 		ctx.lineWidth = currentSize;
 	});
+
+	$( "#color-yellow").click(function() {
+	  // Box colour
+	  removeColourClasses(this);
+	  // Action
+		ctx.beginPath();
+		ctx.strokeStyle = yellow;
+		currentColor = 'yellow';
+		ctx.lineWidth = currentSize;
+	});
+
+
+	// BLOCK 2
+
+	$( "#color-pumkin" ).click(function() {
+	  removeColourClasses(this);
+	  ctx.beginPath();
+	  ctx.strokeStyle = pumkin;
+	  currentColor = '#D35400';
+	  ctx.lineWidth = currentSize;
+	});
+
+	$( "#color-orange" ).click(function() {
+	  removeColourClasses(this);
+	  ctx.beginPath();
+	  ctx.strokeStyle = orange;
+	  currentColor = 'orange';
+	  ctx.lineWidth = currentSize;
+	});
+
+	$( "#color-purple" ).click(function() {
+	  // Box colour
+	  removeColourClasses(this);
+	  // Action
+		ctx.beginPath();
+		ctx.strokeStyle = purple;
+		currentColor = 'purple';
+		ctx.lineWidth = currentSize;
+	});
+
+	$( "#color-pink").click(function() {
+	  // Box colour
+	  removeColourClasses(this);
+	  // Action
+		ctx.beginPath();
+		ctx.strokeStyle = pink;
+		currentColor = 'pink';
+		ctx.lineWidth = currentSize;
+	});
+
+
+	// BLOCK 3 
+
+	$( "#color-silver" ).click(function() {
+	  removeColourClasses(this);
+	  ctx.beginPath();
+	  ctx.strokeStyle = silver;
+	  currentColor = '#BDC3C7';
+	  ctx.lineWidth = currentSize;
+	});
+
+	$( "#color-gray" ).click(function() {
+	  removeColourClasses(this);
+	  ctx.beginPath();
+	  ctx.strokeStyle = gray;
+	  currentColor = '#7F8C8D';
+	  ctx.lineWidth = currentSize;
+	});
+
+	$( "#color-black" ).click(function() {
+	  // Box colour
+	  removeColourClasses(this);
+	  // Action
+		ctx.beginPath();
+		ctx.strokeStyle = black;
+		currentColor = 'black';
+		ctx.lineWidth = currentSize;
+	});
+
+	$( "#color-white").click(function() {
+	  // Box colour
+	  removeColourClasses(this);
+	  // Action
+		ctx.beginPath();
+		ctx.strokeStyle = white;
+		currentColor = 'white';
+		ctx.lineWidth = currentSize;
+	});
+
 
 	// Size
 	$( "#size-small" ).click(function() {
@@ -237,9 +340,22 @@ function imageExists(image_url){
 		removeErasorClass();
 		$("#tool-2").removeClass('selected');
 		$("#tool-1").addClass('selected');
+		
 		$("#color-blue").removeClass('color-selected');
 		$("#color-red").removeClass('color-selected');
 		$("#color-green").removeClass('color-selected');
+		$("#color-yellow").removeClass('color-selected');
+
+		$("#color-pumkin").removeClass('color-selected');
+		$("#color-orange").removeClass('color-selected');
+		$("#color-purple").removeClass('color-selected');
+		$("#color-pink").removeClass('color-selected');
+
+		$("#color-silver").removeClass('color-selected');
+		$("#color-gray").removeClass('color-selected');
+		$("#color-black").removeClass('color-selected');
+		$("#color-white").removeClass('color-selected');
+
 		$(selected).addClass('color-selected');		
 	}
 

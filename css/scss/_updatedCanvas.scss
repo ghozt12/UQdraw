@@ -456,24 +456,91 @@ $break-h-small-a: 691px;
 }
 
 
+/* *********
+    COLOURS
+********* */
 
+#color-red {
+    background-color: red;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+}
 #color-blue {
-	background-color: blue;
+    background-color: blue;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+}
+#color-green {
+    background-color: green;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+}
+#color-yellow {
+    background-color: yellow;
     width: 20px !important;
     height: 20px !important;
     display: inline-block;
 }
 
-#color-red {
-	background-color: red;
+// ---
+#color-pumkin {
+    background-color: #D35400;
     width: 20px !important;
     height: 20px !important;
+    display: inline-block;
 }
-#color-green {
-	background-color: green;
+#color-orange {
+    background-color: orange;
     width: 20px !important;
     height: 20px !important;
+    display: inline-block;
 }
+#color-purple {
+    background-color: purple;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+}
+#color-pink {
+    background-color: pink;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+}
+
+// ---
+#color-silver {
+    background-color: #BDC3C7;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+}
+#color-gray {
+    background-color: #7F8C8D;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+}
+#color-black {
+    background-color: black;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+}
+#color-white {
+    background-color: white;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+}
+
+
+
+
+
 
 // Circles
 

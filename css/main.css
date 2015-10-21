@@ -1212,29 +1212,18 @@ body {
   padding-top: 10px;
   margin-bottom: 30px;
 }
-<<<<<<< HEAD
-/* line 125, scss/_typography.scss */
+/* line 136, scss/_typography.scss */
 .type-lecture-mode .prepare-use, .type-prepare-mode .prepare-use {
   position: absolute;
   left: 50%;
   bottom: 10px;
 }
-/* line 130, scss/_typography.scss */
+/* line 141, scss/_typography.scss */
 .type-lecture-mode img, .type-prepare-mode img {
   width: 25%;
 }
 
-/* line 135, scss/_typography.scss */
-=======
-/* line 136, scss/_typography.scss */
-.type-lecture-mode h3, .type-prepare-mode h3 {
-  color: white;
-  font-weight: 300;
-  text-align: center;
-}
-
-/* line 143, scss/_typography.scss */
->>>>>>> 476c7de8a8eda698dfcb9cbd890d5a583998606f
+/* line 146, scss/_typography.scss */
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -1243,11 +1232,7 @@ body {
   font-family: "open-sans-semibold", Arial;
 }
 
-<<<<<<< HEAD
-/* line 142, scss/_typography.scss */
-=======
-/* line 151, scss/_typography.scss */
->>>>>>> 476c7de8a8eda698dfcb9cbd890d5a583998606f
+/* line 154, scss/_typography.scss */
 .type-body-url {
   font-size: 20px;
   text-align: center;
@@ -1255,11 +1240,7 @@ body {
   margin-top: 10px;
 }
 
-<<<<<<< HEAD
-/* line 149, scss/_typography.scss */
-=======
-/* line 158, scss/_typography.scss */
->>>>>>> 476c7de8a8eda698dfcb9cbd890d5a583998606f
+/* line 161, scss/_typography.scss */
 .type-body-response {
   font-size: 20px;
   text-align: left;
@@ -2294,7 +2275,18 @@ body {
   }
 }
 
-/* line 460, scss/_updatedCanvas.scss */
+/* *********
+    COLOURS
+********* */
+/* line 463, scss/_updatedCanvas.scss */
+#color-red {
+  background-color: red;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+/* line 469, scss/_updatedCanvas.scss */
 #color-blue {
   background-color: blue;
   width: 20px !important;
@@ -2302,36 +2294,102 @@ body {
   display: inline-block;
 }
 
-/* line 467, scss/_updatedCanvas.scss */
-#color-red {
-  background-color: red;
-  width: 20px !important;
-  height: 20px !important;
-}
-
-/* line 472, scss/_updatedCanvas.scss */
+/* line 475, scss/_updatedCanvas.scss */
 #color-green {
   background-color: green;
   width: 20px !important;
   height: 20px !important;
+  display: inline-block;
 }
 
-/* line 480, scss/_updatedCanvas.scss */
+/* line 481, scss/_updatedCanvas.scss */
+#color-yellow {
+  background-color: yellow;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+/* line 489, scss/_updatedCanvas.scss */
+#color-pumkin {
+  background-color: #D35400;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+/* line 495, scss/_updatedCanvas.scss */
+#color-orange {
+  background-color: orange;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+/* line 501, scss/_updatedCanvas.scss */
+#color-purple {
+  background-color: purple;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+/* line 507, scss/_updatedCanvas.scss */
+#color-pink {
+  background-color: pink;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+/* line 515, scss/_updatedCanvas.scss */
+#color-silver {
+  background-color: #BDC3C7;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+/* line 521, scss/_updatedCanvas.scss */
+#color-gray {
+  background-color: #7F8C8D;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+/* line 527, scss/_updatedCanvas.scss */
+#color-black {
+  background-color: black;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+/* line 533, scss/_updatedCanvas.scss */
+#color-white {
+  background-color: white;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+/* line 547, scss/_updatedCanvas.scss */
 .circle-small {
   margin-top: 20px !important;
 }
 
-/* line 484, scss/_updatedCanvas.scss */
+/* line 551, scss/_updatedCanvas.scss */
 .circle-medium {
   margin-top: 15px !important;
 }
 
-/* line 488, scss/_updatedCanvas.scss */
+/* line 555, scss/_updatedCanvas.scss */
 .circle-large {
   margin-top: 10px !important;
 }
 
-/* line 496, scss/_updatedCanvas.scss */
+/* line 563, scss/_updatedCanvas.scss */
 .loading {
   position: absolute;
   z-index: 10000;
@@ -2369,7 +2427,7 @@ body {
 /* Floating part
 
 */
-/* line 529, scss/_updatedCanvas.scss */
+/* line 596, scss/_updatedCanvas.scss */
 #question-container {
   -webkit-transform: translate3d(0, 0, 0);
   position: absolute;
@@ -2380,7 +2438,7 @@ body {
   transition: .3s ease-in-out;
   margin: auto;
 }
-/* line 538, scss/_updatedCanvas.scss */
+/* line 605, scss/_updatedCanvas.scss */
 #question-container h1 {
   color: white;
   font-size: 40px;
@@ -2388,7 +2446,7 @@ body {
   text-align: center;
   padding-top: 20px;
 }
-/* line 546, scss/_updatedCanvas.scss */
+/* line 613, scss/_updatedCanvas.scss */
 #question-container button {
   max-width: 80%;
   margin: auto;
@@ -2397,7 +2455,7 @@ body {
   color: white;
   background: #8ED676;
 }
-/* line 554, scss/_updatedCanvas.scss */
+/* line 621, scss/_updatedCanvas.scss */
 #question-container h2 {
   color: white;
   font-size: 20px;
@@ -2408,24 +2466,24 @@ body {
   margin: auto;
 }
 @media screen and (max-width: 960px) {
-  /* line 529, scss/_updatedCanvas.scss */
+  /* line 596, scss/_updatedCanvas.scss */
   #question-container {
     height: 100vh;
   }
 }
 @media screen and (min-width: 961px) and (max-height: 690px) {
-  /* line 529, scss/_updatedCanvas.scss */
+  /* line 596, scss/_updatedCanvas.scss */
   #question-container {
     height: 100vh;
   }
 }
 @media screen and (min-width: 961px) and (min-height: 691px) {
-  /* line 529, scss/_updatedCanvas.scss */
+  /* line 596, scss/_updatedCanvas.scss */
   #question-container {
     height: 100%;
   }
 }
-/* line 577, scss/_updatedCanvas.scss */
+/* line 644, scss/_updatedCanvas.scss */
 #question-container img {
   max-width: 80%;
   margin: auto;
@@ -2434,25 +2492,25 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  /* line 585, scss/_updatedCanvas.scss */
+  /* line 652, scss/_updatedCanvas.scss */
   #question-container.closed {
     -webkit-transform: translate3d(0, -120vh, 0);
   }
 }
 @media screen and (min-width: 961px) and (max-height: 690px) {
-  /* line 585, scss/_updatedCanvas.scss */
+  /* line 652, scss/_updatedCanvas.scss */
   #question-container.closed {
     -webkit-transform: translate3d(0, -120vh, 0);
   }
 }
 @media screen and (min-width: 961px) and (min-height: 691px) {
-  /* line 585, scss/_updatedCanvas.scss */
+  /* line 652, scss/_updatedCanvas.scss */
   #question-container.closed {
     -webkit-transform: translate3d(0, -100%, 0);
   }
 }
 
-/* line 600, scss/_updatedCanvas.scss */
+/* line 667, scss/_updatedCanvas.scss */
 #starting-text {
   color: black;
 }
