@@ -2525,7 +2525,7 @@ body {
   width: 50px;
   position: relative;
   cursor: pointer;
-  top: 0px;
+  top: 2px;
   left: 6px;
   -webkit-transition: .3s ease-in-out;
   -moz-transition: .1s ease-in-out;
@@ -2543,7 +2543,13 @@ body {
     top: -4px;
   }
 }
-/* line 26, scss/_hamburger.scss */
+@-moz-document url-prefix() {
+  /* line 27, scss/_hamburger.scss */
+  #menu {
+    top: -4px;
+  }
+}
+/* line 32, scss/_hamburger.scss */
 #menu span {
   position: absolute;
   background-color: white;
@@ -2562,17 +2568,17 @@ body {
   transition: .3s ease-in-out;
 }
 
-/* line 44, scss/_hamburger.scss */
+/* line 50, scss/_hamburger.scss */
 #menu span:nth-child(1) {
   top: 0px;
 }
 
-/* line 48, scss/_hamburger.scss */
+/* line 54, scss/_hamburger.scss */
 #menu span:nth-child(2) {
   top: 8px;
 }
 
-/* line 53, scss/_hamburger.scss */
+/* line 59, scss/_hamburger.scss */
 #menu.flipper span:nth-child(2) {
   -webkit-transform: rotateZ(-45deg) translate3d(0, -5.5px, 0);
   -moz-transform: rotateZ(-45deg) translate3d(0, -5.5px, 0);
@@ -2580,7 +2586,7 @@ body {
   transform: rotateZ(-45deg) translate3d(0, -5.5px, 0);
 }
 
-/* line 60, scss/_hamburger.scss */
+/* line 66, scss/_hamburger.scss */
 #menu.flipper span:nth-child(1) {
   -webkit-transform: rotateZ(45deg) translate3d(0, 5.5px, 0);
   -moz-transform: rotateZ(45deg) translate3d(0, 5.5px, 0);

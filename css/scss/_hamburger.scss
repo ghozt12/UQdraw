@@ -4,7 +4,7 @@
   width: 50px;
   position: relative;
   cursor: pointer;
-  top: 0px;
+  top: 2px;
   left: 6px;
   -webkit-transition: .3s ease-in-out;
   -moz-transition: .1s ease-in-out;
@@ -21,6 +21,12 @@
   #menu {
     top: -4px;
   }  
+}
+
+@-moz-document url-prefix() {
+#menu {
+    top: -4px;
+  } 
 }
 
 #menu span {
