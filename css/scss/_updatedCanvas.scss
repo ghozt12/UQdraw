@@ -590,6 +590,7 @@ $break-h-small-a: 691px;
 
 */
 #question-container {
+    overflow: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     position: absolute;
     z-index: 2000;
@@ -633,12 +634,13 @@ $break-h-small-a: 691px;
     }
 
     @media screen and (min-width: $break-small-a) and (min-height: $break-h-small-a) {
-        height: 100%;
+        height: 100vh;
     }
     margin: auto;
 
     img {
-        max-width: 80%;
+        max-width: 50%;
+        max-height: 50%;
         margin: auto;
         border: 1px solid white;
         display: block;
