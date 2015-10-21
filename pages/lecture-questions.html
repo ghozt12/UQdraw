@@ -19,9 +19,20 @@
 				document.getElementById("code").textContent=questionsListObject.enteringCode;// 3 digit code
 				document.getElementById("subject").textContent=questionsListObject.subject;// course code
 				var questionListHTML="";
+
 				for (var i = 0; i < questionsListObject.questionsList.length; i++) {//generate all question from JSON
 					var question = questionsListObject.questionsList[i];
-					questionListHTML += getQuestionItem(question);
+					console.log(question);
+					var index = 0;
+					for(var key in question) {
+						if(question.hasOwnProperty(key)) {
+							questionListHTML += getQuestionItem(question[key],Object.keys(question)[index]);
+							index ++;
+						}
+					}
+
+
+
 				}
 				document.getElementById("questionsList").innerHTML = questionListHTML;
 				document.getElementById("goto-prepare-mode").href = "lecture-makequestions.html?courseID="+getParameterByName("courseID");
@@ -38,12 +49,21 @@
 				results = regex.exec(location.search);
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
-	function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
-		return "<li id='"+questionItem.questionID+"'> <label> Lecture "+questionItem.questionWeek
-		+" </label> <div class='question-container'><div class='question'>"
-		+questionItem.title+"</div>"
-		+"<div class='question-button'><button class='button' onclick='window.location.href="
-		+'"lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='+questionItem.questionID+'"'+"'> View </button> </div></div></li>";
+	function getQuestionItem(questionObjbyWeek,week){ // input the question Object from JSON array, output a HTML List Item
+
+		var lectureHead="<li id='"+questionObjbyWeek.questionID+"'> <label> Lecture "+week +" </label></li>";
+        var lectureList="";
+		for(var i = 0; i < questionObjbyWeek.length; i++){
+			var questionItem = questionObjbyWeek[i];
+			lectureList+= " <li> <div class='question-container'><div class='question'>"
+					+questionItem.title+"</div>"
+					+"<div class='question-button'><button class='button' onclick='window.location.href="
+					+'"lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'
+					+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='
+					+questionItem.questionID+'"'+"'> View </button> </div></div></li>";
+		}
+		return lectureHead+lectureList;
+
 
 	}
 </script>

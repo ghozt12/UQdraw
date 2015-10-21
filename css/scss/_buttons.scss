@@ -82,6 +82,43 @@ input:focus {
     }
 }
 
+.button-back-prepare-response {
+    background-color: darken(#825194,5%);
+    width: 120px;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    color: white;
+    text-align: center;
+    
+    p {
+        margin-top: 15px;
+    }
+
+    &:hover {
+        background-color: lighten(#825194, 10%);
+    }
+}
+
+.button-back-lecture-response{
+    background-color: darken($uq-green, 10%);
+    width: 120px;
+    height: $header-height;
+    display: inline-block;
+    float: left;
+
+    color: white;
+    text-align: center;
+    
+    p {
+        margin-top: 15px;
+    }
+
+    &:hover {
+        background-color: darken($uq-green, 15%);
+    }
+}
+
 .button-back-prepare{
 	background-color: $uq-green;
     width: 120px;

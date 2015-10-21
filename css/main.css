@@ -263,6 +263,44 @@ input:focus {
 }
 
 /* line 85, scss/_buttons.scss */
+.button-back-prepare-response {
+  background-color: #744884;
+  width: 120px;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  color: white;
+  text-align: center;
+}
+/* line 94, scss/_buttons.scss */
+.button-back-prepare-response p {
+  margin-top: 15px;
+}
+/* line 98, scss/_buttons.scss */
+.button-back-prepare-response:hover {
+  background-color: #9c6aae;
+}
+
+/* line 103, scss/_buttons.scss */
+.button-back-lecture-response {
+  background-color: #6eca4f;
+  width: 120px;
+  height: 50px;
+  display: inline-block;
+  float: left;
+  color: white;
+  text-align: center;
+}
+/* line 113, scss/_buttons.scss */
+.button-back-lecture-response p {
+  margin-top: 15px;
+}
+/* line 117, scss/_buttons.scss */
+.button-back-lecture-response:hover {
+  background-color: #5dc43b;
+}
+
+/* line 122, scss/_buttons.scss */
 .button-back-prepare {
   background-color: #8ED676;
   width: 120px;
@@ -272,16 +310,16 @@ input:focus {
   color: white;
   text-align: center;
 }
-/* line 95, scss/_buttons.scss */
+/* line 132, scss/_buttons.scss */
 .button-back-prepare p {
   margin-top: 15px;
 }
-/* line 99, scss/_buttons.scss */
+/* line 136, scss/_buttons.scss */
 .button-back-prepare:hover {
   background-color: #6eca4f;
 }
 
-/* line 104, scss/_buttons.scss */
+/* line 141, scss/_buttons.scss */
 .button-back-lecture {
   background-color: #410C54;
   width: 120px;
@@ -291,16 +329,16 @@ input:focus {
   color: white;
   text-align: center;
 }
-/* line 114, scss/_buttons.scss */
+/* line 151, scss/_buttons.scss */
 .button-back-lecture p {
   margin-top: 15px;
 }
-/* line 118, scss/_buttons.scss */
+/* line 155, scss/_buttons.scss */
 .button-back-lecture:hover {
   background-color: #1e0627;
 }
 
-/* line 123, scss/_buttons.scss */
+/* line 160, scss/_buttons.scss */
 .button-goto-lecture {
   background-color: #8ED676;
   width: 120px;
@@ -310,23 +348,23 @@ input:focus {
   color: white;
   text-align: center;
 }
-/* line 133, scss/_buttons.scss */
+/* line 170, scss/_buttons.scss */
 .button-goto-lecture p {
   margin-top: 9px;
 }
-/* line 137, scss/_buttons.scss */
+/* line 174, scss/_buttons.scss */
 .button-goto-lecture:hover {
   background-color: #6eca4f;
 }
 
-/* line 142, scss/_buttons.scss */
+/* line 179, scss/_buttons.scss */
 .drawing-app-submit {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-/* line 152, scss/_buttons.scss */
+/* line 189, scss/_buttons.scss */
 .drawing-app-question {
   position: absolute;
   top: 60px;
@@ -334,7 +372,7 @@ input:focus {
   margin-right: -75px;
   z-index: 1000;
 }
-/* line 163, scss/_buttons.scss */
+/* line 200, scss/_buttons.scss */
 .drawing-app-question:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -342,14 +380,14 @@ input:focus {
   transition: 0.4s;
 }
 
-/* line 171, scss/_buttons.scss */
+/* line 208, scss/_buttons.scss */
 .drawing-app-camera {
   position: absolute;
   top: 60px;
   right: 10px;
   z-index: 1000;
 }
-/* line 181, scss/_buttons.scss */
+/* line 218, scss/_buttons.scss */
 .drawing-app-camera:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -357,14 +395,14 @@ input:focus {
   transition: 0.4s;
 }
 
-/* line 190, scss/_buttons.scss */
+/* line 227, scss/_buttons.scss */
 .drawing-app-clear {
   position: absolute;
   top: 60px;
   left: 10px;
   z-index: 1000;
 }
-/* line 200, scss/_buttons.scss */
+/* line 237, scss/_buttons.scss */
 .drawing-app-clear:hover {
   border: 2px solid #410C54;
   color: #FFF;
@@ -372,21 +410,21 @@ input:focus {
   transition: 0.4s;
 }
 
-/* line 208, scss/_buttons.scss */
+/* line 245, scss/_buttons.scss */
 .drawing-app-back {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-/* line 217, scss/_buttons.scss */
+/* line 254, scss/_buttons.scss */
 .back-button {
   position: absolute;
   top: 60px;
   left: 10px;
 }
 
-/* line 226, scss/_buttons.scss */
+/* line 263, scss/_buttons.scss */
 .q-button {
   font-size: 12px;
   color: #410C54;
@@ -394,7 +432,7 @@ input:focus {
   width: 60px;
   margin: 1px;
 }
-/* line 233, scss/_buttons.scss */
+/* line 270, scss/_buttons.scss */
 .q-button:hover {
   background: #410C54;
   color: white;
@@ -402,14 +440,14 @@ input:focus {
   transition: 0.4s;
 }
 
-/* line 241, scss/_buttons.scss */
+/* line 278, scss/_buttons.scss */
 .q-button-long {
   font-size: 12px;
   border: 2px solid #410C54;
   color: #410C54;
   width: 130px;
 }
-/* line 247, scss/_buttons.scss */
+/* line 284, scss/_buttons.scss */
 .q-button-long:hover {
   border: 2px solid #410C54;
   background: #410C54;
@@ -417,7 +455,7 @@ input:focus {
   transition: 0.4s;
 }
 
-/* line 256, scss/_buttons.scss */
+/* line 293, scss/_buttons.scss */
 .button-hidden {
   opacity: 0;
   transition: opacity 0.3s linear;
@@ -432,7 +470,7 @@ input:focus {
   z-index: 100;
 }
 
-/* line 270, scss/_buttons.scss */
+/* line 307, scss/_buttons.scss */
 .grid-response:hover .button-hidden {
   opacity: 1;
 }
@@ -455,7 +493,7 @@ input:focus {
     color: #ffffff;
 }
 */
-/* line 293, scss/_buttons.scss */
+/* line 330, scss/_buttons.scss */
 .button-correct {
   -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
   -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
@@ -486,7 +524,7 @@ input:focus {
   outline: none;
 }
 
-/* line 322, scss/_buttons.scss */
+/* line 359, scss/_buttons.scss */
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -498,13 +536,13 @@ input:focus {
   background-color: #77a809;
 }
 
-/* line 332, scss/_buttons.scss */
+/* line 369, scss/_buttons.scss */
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
-/* line 338, scss/_buttons.scss */
+/* line 375, scss/_buttons.scss */
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -535,7 +573,7 @@ input:focus {
   outline: none;
 }
 
-/* line 367, scss/_buttons.scss */
+/* line 404, scss/_buttons.scss */
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -547,7 +585,7 @@ input:focus {
   background-color: #c62d1f;
 }
 
-/* line 377, scss/_buttons.scss */
+/* line 414, scss/_buttons.scss */
 .button-incorrect:active {
   position: relative;
   top: 1px;
@@ -1171,9 +1209,23 @@ body {
   font-size: 50px;
   text-align: center;
   font-weight: 500;
-  padding-top: calc(55vh - 173px);
+  padding-top: 10px;
   margin-bottom: 30px;
 }
+<<<<<<< HEAD
+/* line 125, scss/_typography.scss */
+.type-lecture-mode .prepare-use, .type-prepare-mode .prepare-use {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+}
+/* line 130, scss/_typography.scss */
+.type-lecture-mode img, .type-prepare-mode img {
+  width: 25%;
+}
+
+/* line 135, scss/_typography.scss */
+=======
 /* line 136, scss/_typography.scss */
 .type-lecture-mode h3, .type-prepare-mode h3 {
   color: white;
@@ -1182,6 +1234,7 @@ body {
 }
 
 /* line 143, scss/_typography.scss */
+>>>>>>> 476c7de8a8eda698dfcb9cbd890d5a583998606f
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -1190,7 +1243,11 @@ body {
   font-family: "open-sans-semibold", Arial;
 }
 
+<<<<<<< HEAD
+/* line 142, scss/_typography.scss */
+=======
 /* line 151, scss/_typography.scss */
+>>>>>>> 476c7de8a8eda698dfcb9cbd890d5a583998606f
 .type-body-url {
   font-size: 20px;
   text-align: center;
@@ -1198,7 +1255,11 @@ body {
   margin-top: 10px;
 }
 
+<<<<<<< HEAD
+/* line 149, scss/_typography.scss */
+=======
 /* line 158, scss/_typography.scss */
+>>>>>>> 476c7de8a8eda698dfcb9cbd890d5a583998606f
 .type-body-response {
   font-size: 20px;
   text-align: left;
@@ -1212,7 +1273,7 @@ body {
 ** ******/
 /* line 5, scss/_theme.scss */
 .theme-lecture-mode {
-  background-image: url(../assets/images/trialbgl.png);
+  background: url(../assets/images/trialbl.png) center;
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 163px);
@@ -1231,7 +1292,7 @@ body {
 
 /* line 24, scss/_theme.scss */
 .theme-prepare-mode {
-  background-image: url(../assets/images/trialbgp.png);
+  background: url(../assets/images/trialbp.png) center;
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 163px);
