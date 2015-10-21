@@ -328,14 +328,14 @@ $break-h-small-a: 691px;
         }
 
         .color-selected {
-                        box-sizing: border-box;
+            box-sizing: border-box;
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
 
             border: 1px solid white;
         }
 
-        div {
+        .cont {
             height: 50px;
             width: 50px;
             margin-bottom: 5px;
@@ -395,7 +395,7 @@ $break-h-small-a: 691px;
             border: 1px solid white;
         }
 
-        div {
+        .cont {
             height: 50px;
             width: 50px;
             position: relative;
@@ -459,13 +459,20 @@ $break-h-small-a: 691px;
 
 #color-blue {
 	background-color: blue;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
 }
 
 #color-red {
 	background-color: red;
+    width: 20px !important;
+    height: 20px !important;
 }
 #color-green {
 	background-color: green;
+    width: 20px !important;
+    height: 20px !important;
 }
 
 // Circles

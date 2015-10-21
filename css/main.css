@@ -2073,7 +2073,7 @@ body {
     border: 1px solid white;
   }
   /* line 338, scss/_updatedCanvas.scss */
-  #tool-bar .element div {
+  #tool-bar .element .cont {
     height: 50px;
     width: 50px;
     margin-bottom: 5px;
@@ -2083,14 +2083,14 @@ body {
     text-align: center;
   }
   /* line 347, scss/_updatedCanvas.scss */
-  #tool-bar .element div i {
+  #tool-bar .element .cont i {
     cursor: pointer;
     color: white;
     margin-top: 10px;
     font-size: 25px;
   }
   /* line 354, scss/_updatedCanvas.scss */
-  #tool-bar .element div p {
+  #tool-bar .element .cont p {
     cursor: pointer;
     color: white;
     padding-top: 20px;
@@ -2142,7 +2142,7 @@ body {
     border: 1px solid white;
   }
   /* line 338, scss/_updatedCanvas.scss */
-  #tool-bar .element div {
+  #tool-bar .element .cont {
     height: 50px;
     width: 50px;
     margin-bottom: 5px;
@@ -2152,14 +2152,14 @@ body {
     text-align: center;
   }
   /* line 347, scss/_updatedCanvas.scss */
-  #tool-bar .element div i {
+  #tool-bar .element .cont i {
     cursor: pointer;
     color: white;
     margin-top: 10px;
     font-size: 25px;
   }
   /* line 354, scss/_updatedCanvas.scss */
-  #tool-bar .element div p {
+  #tool-bar .element .cont p {
     cursor: pointer;
     color: white;
     padding-top: 20px;
@@ -2210,7 +2210,7 @@ body {
     border: 1px solid white;
   }
   /* line 398, scss/_updatedCanvas.scss */
-  #tool-bar .element div {
+  #tool-bar .element .cont {
     height: 50px;
     width: 50px;
     position: relative;
@@ -2219,13 +2219,13 @@ body {
     text-align: center;
   }
   /* line 407, scss/_updatedCanvas.scss */
-  #tool-bar .element div i {
+  #tool-bar .element .cont i {
     color: white;
     margin-top: 10px;
     font-size: 25px;
   }
   /* line 413, scss/_updatedCanvas.scss */
-  #tool-bar .element div p {
+  #tool-bar .element .cont p {
     color: white;
     padding-top: 20px;
     font-size: 15px;
@@ -2236,34 +2236,41 @@ body {
 /* line 460, scss/_updatedCanvas.scss */
 #color-blue {
   background-color: blue;
-}
-
-/* line 464, scss/_updatedCanvas.scss */
-#color-red {
-  background-color: red;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
 }
 
 /* line 467, scss/_updatedCanvas.scss */
-#color-green {
-  background-color: green;
+#color-red {
+  background-color: red;
+  width: 20px !important;
+  height: 20px !important;
 }
 
-/* line 473, scss/_updatedCanvas.scss */
+/* line 472, scss/_updatedCanvas.scss */
+#color-green {
+  background-color: green;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* line 480, scss/_updatedCanvas.scss */
 .circle-small {
   margin-top: 20px !important;
 }
 
-/* line 477, scss/_updatedCanvas.scss */
+/* line 484, scss/_updatedCanvas.scss */
 .circle-medium {
   margin-top: 15px !important;
 }
 
-/* line 481, scss/_updatedCanvas.scss */
+/* line 488, scss/_updatedCanvas.scss */
 .circle-large {
   margin-top: 10px !important;
 }
 
-/* line 489, scss/_updatedCanvas.scss */
+/* line 496, scss/_updatedCanvas.scss */
 .loading {
   position: absolute;
   z-index: 10000;
@@ -2301,7 +2308,7 @@ body {
 /* Floating part
 
 */
-/* line 522, scss/_updatedCanvas.scss */
+/* line 529, scss/_updatedCanvas.scss */
 #question-container {
   -webkit-transform: translate3d(0, 0, 0);
   position: absolute;
@@ -2312,7 +2319,7 @@ body {
   transition: .3s ease-in-out;
   margin: auto;
 }
-/* line 531, scss/_updatedCanvas.scss */
+/* line 538, scss/_updatedCanvas.scss */
 #question-container h1 {
   color: white;
   font-size: 40px;
@@ -2320,7 +2327,7 @@ body {
   text-align: center;
   padding-top: 20px;
 }
-/* line 539, scss/_updatedCanvas.scss */
+/* line 546, scss/_updatedCanvas.scss */
 #question-container button {
   max-width: 80%;
   margin: auto;
@@ -2329,7 +2336,7 @@ body {
   color: white;
   background: #8ED676;
 }
-/* line 547, scss/_updatedCanvas.scss */
+/* line 554, scss/_updatedCanvas.scss */
 #question-container h2 {
   color: white;
   font-size: 20px;
@@ -2340,24 +2347,24 @@ body {
   margin: auto;
 }
 @media screen and (max-width: 960px) {
-  /* line 522, scss/_updatedCanvas.scss */
+  /* line 529, scss/_updatedCanvas.scss */
   #question-container {
     height: 100vh;
   }
 }
 @media screen and (min-width: 961px) and (max-height: 690px) {
-  /* line 522, scss/_updatedCanvas.scss */
+  /* line 529, scss/_updatedCanvas.scss */
   #question-container {
     height: 100vh;
   }
 }
 @media screen and (min-width: 961px) and (min-height: 691px) {
-  /* line 522, scss/_updatedCanvas.scss */
+  /* line 529, scss/_updatedCanvas.scss */
   #question-container {
     height: 100%;
   }
 }
-/* line 570, scss/_updatedCanvas.scss */
+/* line 577, scss/_updatedCanvas.scss */
 #question-container img {
   max-width: 80%;
   margin: auto;
@@ -2366,25 +2373,25 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  /* line 578, scss/_updatedCanvas.scss */
+  /* line 585, scss/_updatedCanvas.scss */
   #question-container.closed {
     -webkit-transform: translate3d(0, -120vh, 0);
   }
 }
 @media screen and (min-width: 961px) and (max-height: 690px) {
-  /* line 578, scss/_updatedCanvas.scss */
+  /* line 585, scss/_updatedCanvas.scss */
   #question-container.closed {
     -webkit-transform: translate3d(0, -120vh, 0);
   }
 }
 @media screen and (min-width: 961px) and (min-height: 691px) {
-  /* line 578, scss/_updatedCanvas.scss */
+  /* line 585, scss/_updatedCanvas.scss */
   #question-container.closed {
     -webkit-transform: translate3d(0, -100%, 0);
   }
 }
 
-/* line 593, scss/_updatedCanvas.scss */
+/* line 600, scss/_updatedCanvas.scss */
 #starting-text {
   color: black;
 }
