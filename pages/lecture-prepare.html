@@ -56,9 +56,7 @@
 
 			function addCourse(){
 				//alert("Add Course");
-				document.getElementById("addButton").innerHTML ="<li><form id ='addSubjectForm' class='subject-form'><span>Course Code:<input id='courseID' style='width:30%;'type='text' name='courseID' maxlength='8' data-inputmask='AAAA9999'>" +
-						"Year: <input style='width:10%;'  type='number' name='year' maxlength='2' value ='"+getCurrentYear()
-						+"'>Semester: <input style='width:10%;' type='number' name='semester'maxlength='1' value ='"+getCurrentSem()+"'><button onclick='submitCourse()'>Add</button></span></form></li>";
+				document.getElementById("addButton").innerHTML ="<li><form id ='addSubjectForm' class='subject-form'><span class='input input--isao'><input id='courseID' style='width:100%;'type='text' name='courseID' maxlength='8' data-inputmask='AAAA9999' class='input__field input__field--isao' autocomplete='off'><label class='input__label input__label--isao' for='courseID' data-content='Course Code'><span class='input__label-content input__label-content--isao'>Course Code</span></label></span>" + "<span class='input input--isao'><input id='year' style='width:100%;'type='number' name='year' maxlength='2' class='input__field input__field--isao'><label class='input__label input__label--isao' for='year' data-content='Year'><span class='input__label-content input__label-content--isao'>Year</span></label></span>" + "<span class='input input--isao'><input id='semester' style='width:100%;'type='number' name='semester' maxlength='1' class='input__field input__field--isao'><label class='input__label input__label--isao' for='semester' data-content='Semester'><span class='input__label-content input__label-content--isao'>Semester</span></label></span><button onclick='submitCourse()'>Add</button></span></form></li>";
 
 			}
 		 function submitCourse(){//get data from the form
