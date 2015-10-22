@@ -18,7 +18,7 @@
 	$(document).ready(function() {
 		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
 			type: 'GET',
-			url: 'http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
+			url: '../uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
 			success: function(data){
 				//alert(data);
 				//alert("success");
@@ -77,7 +77,8 @@
 		document.getElementById("addButton").innerHTML =/*"<li><form id ='addSubjectForm' class='subject-form'><span>Title:<input style='width:70%;'type='text' name='title' >" +
 				"<button  type='submit' id ='addButton';class= 'q-button' '>Add</button>" +
 				"<button  class= 'q-button' onclick='parseImage()'>Image</button></span></form></li>";*/
-				"<li><span>Title:<input style='width:70%;'type='text' name='title' >" +
+				"<li><span>Title:<input style='width:55%;'type='text' name='title' ></span>" +
+				"<span>Lecture Week:<input style='width:10%;' type='text' name='lectureWeek'></span>"+
 				"<button  class='q-button' onclick='submitCourse()' >Add</button>" +
 				"<input  type='file' onchange='parseImage()''></span></li>" +
 				"<li><img id='preview'src='' height='500px' width='500px' alt='Image preview...'></li>";
@@ -118,25 +119,18 @@
 		console.log(imageBlob);
 	}
 
-
-
-
-	function getCurrentWeek(){
-		var d =new Date();//to be discuss
-		return 1;
-	}
-
 	function submitCourse(){ //ajax Post
 	//$("#addButton").click(function(){
 		title = document.getElementsByName("title")[0].value;
+		var questionWeek = document.getElementsByName("lectureWeek")[0].value;
 		if(title!="") {
 			var DataObj = {
 				courseID: courseID,
 				title: title,
+				questionWeek: questionWeek,
 				haveImage: haveImage,
 				fileFormat: ".jpg", // since it is blob, no matter it is .jpg / .png, it will still saved in .png format
 				image: imageBlob,
-				questionWeek: getCurrentWeek()
 			};
 			$.post('../uqDrawBackend/addQuestion.php', DataObj, function (data) {//url must be in file path, Can't POST data through HTTP
 				alert(data);
@@ -176,7 +170,7 @@
 	<section>
 		<div class='header-l-prepare'>
 			<!-- Back button -->
-			<a href='lecture-prepare.html'><div class='button-back-prepare'> <p> Go Back </p></div></a>
+			<a href='lecture-prepare.html'><div class='button-back-prepare'> <p> Back </p></div></a>
 			<!-- Logo (small) -->
 			<div class="headerpos">
 			<a href="#"><img class='images-l-subjects' src='../assets/images/topbar-logo.png' /></a>

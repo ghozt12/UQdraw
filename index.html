@@ -82,7 +82,7 @@
 		var str = courseItem;
     	var separators = [ '-',  '_', '\\\?'];
     	var res  = str.split(new RegExp(separators.join('|'), 'g'));
-		var output = "Course ID: "+res[0]+", Year: "+res[1]+"', Semester: "+res[2];
+		var output = res[0]+" - Semester "+res[2]+", 20"+res[1];
 		return	'<a href="pages/student-questions.html?courseID='+output+'"><li> <span class="subject">'+output+'</span> </lI></a>';
 		//end here
 		//return	'<a href="pages/student-questions.html?courseID='+courseItem+'"><li> <span class="subject">'+courseItem+'</span> </lI></a>';
