@@ -57,15 +57,28 @@
 			var questionItem = questionObjbyWeek[i];
 			lectureList+= " <li> <div class='question-container'><div class='question'>"
 					+questionItem.title+"</div>"
-					+"<div class='question-button'><button class='button' onclick='window.location.href="
-					+'"lecture-question.html?courseID='+getParameterByName("courseID")+'&questionID='+questionItem.questionID+'"'
-					+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='
+					+"<div class='question-button'><button class='button' onclick='askQuestion("+'"'+getParameterByName("courseID")+'","'+questionItem.questionID+'")'+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='
 					+questionItem.questionID+'"'+"'> View </button> </div></div></li>";
 		}
 		return lectureHead+lectureList;
 
 
 	}
+	function askQuestion(courseID, questionID){
+		
+			$.ajax({
+				type: "POST",
+				url: "../uqDrawBackend/askQuestion.php",
+				data: {
+					questionID: questionID,
+					courseID: courseID,
+					status: 1,
+				}
+			}).done(function (data) {
+				//alert(data);//get result from php
+				window.location.href='lecture-question.html?courseID='+courseID+'&questionID='+questionID;
+			   });
+		    }
 </script>
 <body class="bg-lecture">
 

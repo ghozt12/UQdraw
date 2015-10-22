@@ -80,7 +80,20 @@
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
 		function btnEnd(){
-			window.location.href = "../pages/lecture-questions.html?courseID="+getParameterByName("courseID");
+			var questionID = getParameterByName("questionID");
+			$.ajax({
+				type: "POST",
+				url: "../uqDrawBackend/askQuestion.php",
+				data: {
+					questionID: questionID,
+					status: 0,
+				}
+			}).done(function (data) {
+				alert(data);//get result from php
+				window.location.href = "../pages/lecture-questions.html?courseID="+getParameterByName("courseID");
+			   });	
+
+			
 		}
 		function btnViewResponses(){
 			window.location.href = "../pages/lecture-responses.html?questionID="+getParameterByName("questionID")+"&courseID="+getParameterByName("courseID");
