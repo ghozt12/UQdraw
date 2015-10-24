@@ -188,8 +188,6 @@ a {
 }
 
 .subject-form{
-	padding-top:12px;
-	padding-bottom:12px;
     width: 100%;
     background-color: $uq-purple;
     color: white;
@@ -197,4 +195,8 @@ a {
     font-size: 20px;
     border-radius: 15px;
     cursor: pointer;
+	
+	button{
+		margin-top:20px;
+	}
 }
