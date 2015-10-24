@@ -188,7 +188,7 @@ table {
 }
 
 /* line 10, scss/_buttons.scss */
-.submit, .drawing-app-submit, .drawing-app-question, .drawing-app-camera, .drawing-app-clear, .drawing-app-back, .back-button, .q-button, .q-button-long {
+.submit, .drawing-app-submit, .drawing-app-question, .drawing-app-camera, .drawing-app-clear, .drawing-app-back, .back-button, .q-button, .q-button-long, .add-button, .add-button-m {
   height: 60px;
   width: 150px;
   border: 2px solid #410C54;
@@ -204,15 +204,15 @@ table {
   background-color: #FFF;
 }
 /* line 23, scss/_buttons.scss */
-.submit:focus, .drawing-app-submit:focus, .drawing-app-question:focus, .drawing-app-camera:focus, .drawing-app-clear:focus, .drawing-app-back:focus, .back-button:focus, .q-button:focus, .q-button-long:focus {
+.submit:focus, .drawing-app-submit:focus, .drawing-app-question:focus, .drawing-app-camera:focus, .drawing-app-clear:focus, .drawing-app-back:focus, .back-button:focus, .q-button:focus, .q-button-long:focus, .add-button:focus, .add-button-m:focus {
   outline: 0;
 }
 /* line 26, scss/_buttons.scss */
-.submit *:focus, .drawing-app-submit *:focus, .drawing-app-question *:focus, .drawing-app-camera *:focus, .drawing-app-clear *:focus, .drawing-app-back *:focus, .back-button *:focus, .q-button *:focus, .q-button-long *:focus {
+.submit *:focus, .drawing-app-submit *:focus, .drawing-app-question *:focus, .drawing-app-camera *:focus, .drawing-app-clear *:focus, .drawing-app-back *:focus, .back-button *:focus, .q-button *:focus, .q-button-long *:focus, .add-button *:focus, .add-button-m *:focus {
   outline: 0;
 }
 /* line 32, scss/_buttons.scss */
-.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover, .drawing-app-camera:hover, .drawing-app-clear:hover, .drawing-app-back:hover, .back-button:hover, .q-button:hover, .q-button-long:hover {
+.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover, .drawing-app-camera:hover, .drawing-app-clear:hover, .drawing-app-back:hover, .back-button:hover, .q-button:hover, .q-button-long:hover, .add-button:hover, .add-button-m:hover {
   border: 2px solid #FFF;
   color: #410C54;
   transition: 0.4s;
@@ -456,6 +456,40 @@ input:focus {
 }
 
 /* line 293, scss/_buttons.scss */
+.add-button {
+  font-size: 14px;
+  color: #410C54;
+  margin-top: 18px;
+  margin-left: 20px;
+  width: 80px;
+  border: none;
+}
+/* line 301, scss/_buttons.scss */
+.add-button:hover {
+  background: #8ED676;
+  border: none;
+  color: white;
+  transition: 0.4s;
+}
+
+/* line 310, scss/_buttons.scss */
+.add-button-m {
+  font-size: 14px;
+  color: #8ED676;
+  margin-top: 18px;
+  margin-left: 20px;
+  width: 80px;
+  border: none;
+}
+/* line 318, scss/_buttons.scss */
+.add-button-m:hover {
+  background: #410C54;
+  border: none;
+  color: white;
+  transition: 0.4s;
+}
+
+/* line 327, scss/_buttons.scss */
 .button-hidden {
   opacity: 0;
   transition: opacity 0.3s linear;
@@ -470,7 +504,7 @@ input:focus {
   z-index: 100;
 }
 
-/* line 307, scss/_buttons.scss */
+/* line 341, scss/_buttons.scss */
 .grid-response:hover .button-hidden {
   opacity: 1;
 }
@@ -493,7 +527,7 @@ input:focus {
     color: #ffffff;
 }
 */
-/* line 330, scss/_buttons.scss */
+/* line 364, scss/_buttons.scss */
 .button-correct {
   -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
   -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
@@ -524,7 +558,7 @@ input:focus {
   outline: none;
 }
 
-/* line 359, scss/_buttons.scss */
+/* line 393, scss/_buttons.scss */
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -536,13 +570,13 @@ input:focus {
   background-color: #77a809;
 }
 
-/* line 369, scss/_buttons.scss */
+/* line 403, scss/_buttons.scss */
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
-/* line 375, scss/_buttons.scss */
+/* line 409, scss/_buttons.scss */
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -573,7 +607,7 @@ input:focus {
   outline: none;
 }
 
-/* line 404, scss/_buttons.scss */
+/* line 438, scss/_buttons.scss */
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -585,161 +619,39 @@ input:focus {
   background-color: #c62d1f;
 }
 
-/* line 414, scss/_buttons.scss */
+/* line 448, scss/_buttons.scss */
 .button-incorrect:active {
   position: relative;
   top: 1px;
 }
 
-/*progress button animation*/
-/* Button container */
-/* line 427, scss/_buttons.scss */
-.progress-button {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  width: 45%;
-  min-width: 250px;
-  margin: 10px;
-}
-
-/* Button style */
-/* line 437, scss/_buttons.scss */
-.progress-button button {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-  width: 250px;
-  height: 70px;
-  border: 2px solid #1ECD97;
-  border-radius: 40px;
-  background: transparent;
-  color: #1ECD97;
-  letter-spacing: 1px;
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
-  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
-}
-
+/*input file button in makequestion page*/
 /* line 455, scss/_buttons.scss */
-.progress-button button:hover {
-  background-color: #1ECD97;
-  color: #fff;
-}
-
-/* line 460, scss/_buttons.scss */
-.progress-button button:focus {
-  outline: none;
-}
-
-/* Text (transition for when returning to initial state) */
-/* line 465, scss/_buttons.scss */
-.progress-button button span {
-  -webkit-transition: opacity 0.3s 0.1s;
-  transition: opacity 0.3s 0.1s;
-}
-
-/* Common style of SVGs */
-/* line 471, scss/_buttons.scss */
-.progress-button svg {
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
   position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  pointer-events: none;
+  z-index: -1;
 }
 
-/* line 480, scss/_buttons.scss */
-.progress-button svg path {
-  opacity: 0;
-  fill: none;
+/* line 464, scss/_buttons.scss */
+.upload-file {
+  font-size: 14px;
+  color: #8ED676;
+  background-color: white;
+  padding: 10px;
+  width: 100px;
+  border-radius: 18px;
 }
-
-/* line 485, scss/_buttons.scss */
-.progress-button svg.progress-circle path {
-  stroke: #1ECD97;
-  stroke-width: 5;
-}
-
-/* line 490, scss/_buttons.scss */
-.progress-button svg.checkmark path,
-.progress-button svg.cross path {
-  stroke: #fff;
-  stroke-linecap: round;
-  stroke-width: 4;
-  -webkit-transition: opacity 0.1s;
-  transition: opacity 0.1s;
-}
-
-/* Loading, success and error effects */
-/* line 500, scss/_buttons.scss */
-.loading.progress-button button {
-  width: 70px;
-  /* make a circle */
-  border-width: 5px;
-  border-color: #ddd;
-  background-color: transparent;
-  color: #fff;
-}
-
-/* line 508, scss/_buttons.scss */
-.loading.progress-button span {
-  -webkit-transition: opacity 0.15s;
-  transition: opacity 0.15s;
-}
-
-/* line 513, scss/_buttons.scss */
-.loading.progress-button span,
-.success.progress-button span,
-.error.progress-button span {
-  opacity: 0;
-  /* keep it hidden in all states */
-}
-
-/* line 519, scss/_buttons.scss */
-.success.progress-button button,
-.error.progress-button button {
-  -webkit-transition: background-color 0.3s, width 0.3s, border-width 0.3s;
-  transition: background-color 0.3s, width 0.3s, border-width 0.3s;
-}
-
-/* line 525, scss/_buttons.scss */
-.success.progress-button button {
-  border-color: #1ECD97;
-  background-color: #1ECD97;
-}
-
-/* line 530, scss/_buttons.scss */
-.error.progress-button button {
-  border-color: #FB797E;
-  background-color: #FB797E;
-}
-
-/* line 535, scss/_buttons.scss */
-.loading.progress-button svg.progress-circle path,
-.success.progress-button svg.checkmark path,
-.error.progress-button svg.cross path {
-  opacity: 1;
-  -webkit-transition: stroke-dashoffset 0.3s;
-  transition: stroke-dashoffset 0.3s;
-}
-
-/* Optional elastic effect for the width of the button */
-/* line 544, scss/_buttons.scss */
-.elastic.progress-button button {
-  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1), border-width 0.3s, border-color 0.3s;
-  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
-  transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
-}
-
-/* line 550, scss/_buttons.scss */
-.loading.elastic.progress-button button {
-  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, 0, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
-  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
-  transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+/* line 471, scss/_buttons.scss */
+.upload-file:hover {
+  background: #410C54;
+  border: none;
+  color: white;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 /* line 5, scss/_canvas.scss */
@@ -1147,6 +1059,13 @@ body:after {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+/*preview upload image in makequestion page*/
+/* line 257, scss/_images.scss */
+.preview {
+  margin-top: 20px;
+  border: 4px solid #fff;
 }
 
 /* *******
@@ -1763,27 +1682,28 @@ body {
   padding-left: 3px;
   display: table;
   width: 100%;
+  cursor: default;
 }
-/* line 132, scss/_list.scss */
+/* line 133, scss/_list.scss */
 .list-questions h2, .list-make-green h2, .list-questions-purple h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
   font-size: 40px;
 }
-/* line 139, scss/_list.scss */
+/* line 140, scss/_list.scss */
 .list-questions h3, .list-make-green h3, .list-questions-purple h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 500;
   padding-bottom: 10px;
 }
-/* line 146, scss/_list.scss */
+/* line 147, scss/_list.scss */
 .list-questions label, .list-make-green label, .list-questions-purple label {
   font-size: 20px;
   color: black;
 }
-/* line 150, scss/_list.scss */
+/* line 151, scss/_list.scss */
 .list-questions .button, .list-make-green .button, .list-questions-purple .button {
   border-radius: 12px;
   margin-right: 5px;
@@ -1797,7 +1717,7 @@ body {
   color: #410C54;
   width: 75px;
 }
-/* line 162, scss/_list.scss */
+/* line 163, scss/_list.scss */
 .list-questions .button:hover, .list-make-green .button:hover, .list-questions-purple .button:hover {
   border: 2px solid #410C54;
   background: #410C54;
@@ -1805,39 +1725,44 @@ body {
   transition: 0.4s;
 }
 
-/* line 175, scss/_list.scss */
+/* line 177, scss/_list.scss */
 .list-make-green div {
   background: #8ED676;
 }
-/* line 179, scss/_list.scss */
+/* line 181, scss/_list.scss */
 .list-make-green .button {
   color: #8ED676;
 }
-/* line 181, scss/_list.scss */
+/* line 183, scss/_list.scss */
 .list-make-green .button:hover {
   border: 2px solid #8ED676;
   background: #8ED676;
   color: white;
   transition: 0.4s;
 }
-/* line 188, scss/_list.scss */
+/* line 191, scss/_list.scss */
+.list-make-green ul li div {
+  cursor: default;
+}
+/* line 194, scss/_list.scss */
 .list-make-green #addbutton {
   width: 100%;
 }
 
-/* line 197, scss/_list.scss */
+/* line 203, scss/_list.scss */
 .list-questions-purple ul li div {
   background: #410C54;
+  cursor: default;
 }
 
-/* line 205, scss/_list.scss */
+/* line 212, scss/_list.scss */
 .grid-container {
   margin: 0 auto;
   width: 1200px;
   padding-top: 20px;
 }
 
-/* line 212, scss/_list.scss */
+/* line 219, scss/_list.scss */
 .grid-response {
   float: left;
   width: 110px;
@@ -1850,7 +1775,7 @@ body {
   border-color: #410C54;
 }
 
-/* line 224, scss/_list.scss */
+/* line 231, scss/_list.scss */
 .question-container {
   color: white;
   min-height: 30px;
@@ -1863,7 +1788,19 @@ body {
   min-width: 100%;
 }
 
-/* line 236, scss/_list.scss */
+/* line 243, scss/_list.scss */
+.question-container-m {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  padding-top: 8px;
+  padding-left: 10px;
+  padding-bottom: 30px;
+  cursor: default;
+}
+
+/* line 254, scss/_list.scss */
 .question {
   float: left;
   padding-bottom: 12px;
@@ -1873,14 +1810,14 @@ body {
   text-overflow: ellipsis;
   width: 30vw;
 }
-/* line 244, scss/_list.scss */
+/* line 262, scss/_list.scss */
 .question:hover {
   white-space: normal;
   text-overflow: inherit;
   overflow: visible;
 }
 
-/* line 251, scss/_list.scss */
+/* line 269, scss/_list.scss */
 .question-button {
   float: right;
   width: 38%;
@@ -1888,7 +1825,7 @@ body {
 }
 
 /* Style for text input animation Isao */
-/* line 259, scss/_list.scss */
+/* line 277, scss/_list.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -1897,7 +1834,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* line 267, scss/_list.scss */
+/* line 285, scss/_list.scss */
 .input {
   position: relative;
   z-index: 1;
@@ -1908,7 +1845,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 277, scss/_list.scss */
+/* line 295, scss/_list.scss */
 .input__field {
   position: relative;
   display: block;
@@ -1925,12 +1862,12 @@ input[type=number]::-webkit-outer-spin-button {
   /* for box shadows to show on iOS */
 }
 
-/* line 292, scss/_list.scss */
+/* line 310, scss/_list.scss */
 .input__field:focus {
   outline: none;
 }
 
-/* line 296, scss/_list.scss */
+/* line 314, scss/_list.scss */
 .input__label {
   display: inline-block;
   float: right;
@@ -1949,7 +1886,7 @@ input[type=number]::-webkit-outer-spin-button {
   user-select: none;
 }
 
-/* line 314, scss/_list.scss */
+/* line 332, scss/_list.scss */
 .input__label-content {
   position: relative;
   display: block;
@@ -1957,7 +1894,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
 }
 
-/* line 321, scss/_list.scss */
+/* line 339, scss/_list.scss */
 .graphic {
   position: absolute;
   top: 0;
@@ -1965,13 +1902,13 @@ input[type=number]::-webkit-outer-spin-button {
   fill: none;
 }
 
-/* line 328, scss/_list.scss */
+/* line 346, scss/_list.scss */
 .icon {
   color: #ddd;
   font-size: 150%;
 }
 
-/* line 333, scss/_list.scss */
+/* line 351, scss/_list.scss */
 .input__field--isao {
   z-index: 10;
   padding: 0.75em 0.1em 0.25em;
@@ -1982,7 +1919,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 343, scss/_list.scss */
+/* line 361, scss/_list.scss */
 .input__label--isao {
   position: relative;
   overflow: hidden;
@@ -1992,7 +1929,7 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: left;
 }
 
-/* line 352, scss/_list.scss */
+/* line 370, scss/_list.scss */
 .input__label--isao::before {
   content: '';
   position: absolute;
@@ -2010,7 +1947,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 369, scss/_list.scss */
+/* line 387, scss/_list.scss */
 .input__label--isao::after {
   content: attr(data-content);
   position: absolute;
@@ -2028,26 +1965,26 @@ input[type=number]::-webkit-outer-spin-button {
   pointer-events: none;
 }
 
-/* line 386, scss/_list.scss */
+/* line 404, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao::before {
   background-color: #8ED676;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 
-/* line 392, scss/_list.scss */
+/* line 410, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao {
   pointer-events: none;
 }
 
-/* line 396, scss/_list.scss */
+/* line 414, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 402, scss/_list.scss */
+/* line 420, scss/_list.scss */
 .input__label-content--isao {
   padding: 0.75em 0.15em;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -2056,8 +1993,198 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 410, scss/_list.scss */
+/* line 428, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao .input__label-content--isao {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+/*make question text input*/
+/* line 436, scss/_list.scss */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* line 444, scss/_list.scss */
+.input-m-t {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-right: 1em;
+  max-width: 65%;
+  width: calc(100% - 2em);
+  vertical-align: top;
+}
+
+/* line 454, scss/_list.scss */
+.input-m {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-right: 1em;
+  max-width: 10%;
+  width: calc(100% - 2em);
+  vertical-align: top;
+}
+
+/* line 464, scss/_list.scss */
+.input__field-m {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */
+}
+
+/* line 479, scss/_list.scss */
+.input__field-m:focus {
+  outline: none;
+}
+
+/* line 483, scss/_list.scss */
+.input__label-m {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 50%;
+  color: #6a7989;
+  font-weight: bold;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 501, scss/_list.scss */
+.input__label-content-m {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* line 509, scss/_list.scss */
+.graphic-m {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+}
+
+/* line 516, scss/_list.scss */
+.icon-m {
+  color: #ddd;
+  font-size: 150%;
+}
+
+/* line 521, scss/_list.scss */
+.input__field--isao-m {
+  z-index: 10;
+  padding: 0.75em 0.1em 0.25em;
+  width: 100%;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+/* line 531, scss/_list.scss */
+.input__label--isao-m {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* line 541, scss/_list.scss */
+.input__label--isao-m::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 7px;
+  background: white;
+  -webkit-transform: scale3d(1, 0.4, 1);
+  transform: scale3d(1, 0.4, 1);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* line 558, scss/_list.scss */
+.input__label--isao-m::after {
+  content: attr(data-content);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.75em 0.15em;
+  color: #410C54;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50%, 0);
+  transform: translate3d(0, 50%, 0);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  pointer-events: none;
+  font-size: 14px;
+}
+
+/* line 576, scss/_list.scss */
+.input__field--isao-m:focus + .input__label--isao-m::before {
+  background-color: #410C54;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+/* line 582, scss/_list.scss */
+.input__field--isao-m:focus + .input__label--isao-m {
+  pointer-events: none;
+}
+
+/* line 586, scss/_list.scss */
+.input__field--isao-m:focus + .input__label--isao-m::after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 592, scss/_list.scss */
+.input__label-content--isao-m {
+  color: white;
+  padding: 0.75em 0.15em;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* line 601, scss/_list.scss */
+.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);

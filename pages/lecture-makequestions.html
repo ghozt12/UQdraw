@@ -77,11 +77,11 @@
 		document.getElementById("addButton").innerHTML =/*"<li><form id ='addSubjectForm' class='subject-form'><span>Title:<input style='width:70%;'type='text' name='title' >" +
 				"<button  type='submit' id ='addButton';class= 'q-button' '>Add</button>" +
 				"<button  class= 'q-button' onclick='parseImage()'>Image</button></span></form></li>";*/
-				"<li><span>Title:<input style='width:55%;'type='text' name='title' ></span>" +
-				"<span>Lecture Week:<input style='width:10%;' type='text' name='lectureWeek'></span>"+
-				"<button  class='q-button' onclick='submitCourse()' >Add</button>" +
-				"<input  type='file' onchange='parseImage()''></span></li>" +
-				"<li><img id='preview'src='' height='500px' width='500px' alt='Image preview...'></li>";
+				"<div class='question-container-m'><li><span class='input-m-t input--isao-m'><input id='title' style='width:100%;'type='text' name='title' maxlength='100' data-inputmask='AAAA9999' class='input__field-m input__field--isao-m' autocomplete='off'><label class='input__label-m input__label--isao-m' for='title' data-content='Question Title'><span class='input__label-content-m input__label-content--isao-m'>Question Title</span></label></span>" +
+				"<span class='input-m input--isao-m'><input id='year' style='width:100%;'type='number' name='lectureWeek' maxlength='2' class='input__field-m input__field--isao-m'><label class='input__label-m input__label--isao-m' for='lectureWeek' data-content='Lecture Week'><span class='input__label-content-m input__label-content--isao-m'>Lecture Week</span></label></span>"+
+				"<button  class='add-button-m' onclick='submitCourse()' >Add</button>" +
+				"<label><input type='file' class='inputfile' onchange='parseImage()''><span class='upload-file'>Upload Image</span></label></span></li>" +
+				"<li><img outline='none' class='preview' id='preview'src='' height='100px' width='177px' alt='Image preview'></li></div>";
 				//"<textarea id='base64textarea' placeholder='Base64 will appear here' cols='50' rows='15'></textarea>";
 	}
 
