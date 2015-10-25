@@ -90,7 +90,7 @@
 
 	var Header = React.createClass({
         btnBack: function(){
-			window.location.href = "http://teamone.uqcloud.net/pages/lecture-questions.html?courseID="+getParameterByName("courseID");
+			window.history.back();
 		}
 			,
 		render: function() {

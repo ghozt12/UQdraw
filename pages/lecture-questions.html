@@ -58,7 +58,7 @@
 			lectureList+= " <li> <div class='question-container'><div class='question'>"
 					+questionItem.title+"</div>"
 					+"<div class='question-button'><button class='button' onclick='askQuestion("+'"'+getParameterByName("courseID")+'","'+questionItem.questionID+'")'+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='
-					+questionItem.questionID+'"'+"'> View </button> </div></div></li>";
+					+questionItem.questionID+'"'+"'> Responses </button> </div></div></li>";
 		}
 		return lectureHead+lectureList;
 
@@ -89,7 +89,7 @@
 			<h3 class="typography-l-h3"> Lecture Mode </h3>
 			</div>
 			<a id="goto-prepare-mode" href="lecture-makequestions.html"><div class="button-goto-prepare"> <p> goto Prepare Mode </p></div>
-			<a href="../pages/lecture-subjects.html"><div class="button-back-lecture"> <p> Back</p></div></a>
+			<a href="../pages/lecture-subjects.html"><div class="button-back-lecture-response"> <p> Back</p></div></a>
 		</div>
 	</section>
 
