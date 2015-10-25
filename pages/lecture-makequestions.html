@@ -67,7 +67,7 @@
 					+"<div class='question-button'><button class='button' onclick='deleteQuestion("
 					+questionItem.questionID+")'>Delete</button> "
 					+"<button class='button' onClick='window.location.href="+'"lecture-prepare-responses.html?questionID='+questionItem.questionID+'"'+"'>Responses</button>"
-					+"<button class='button'>Edit</button></div></div></li>";
+					+"<button class='button' onClick='editQuestion("+'"'+questionItem.questionID+'","'+questionItem.title+'","'+week+'")'+"'>Edit</button></div></div></li>";
 
 		}
 		return	lectureHeader+questionList;
@@ -79,10 +79,39 @@
 				"<button  class= 'q-button' onclick='parseImage()'>Image</button></span></form></li>";*/
 				"<li><form id ='addSubjectForm' class='subject-form'><li><span class='input-m-t input--isao-m'><input id='title' style='width:100%;'type='text' name='title' maxlength='100' data-inputmask='AAAA9999' class='input__field-m input__field--isao-m' autocomplete='off'><label class='input__label-m input__label--isao-m' for='title' data-content='Question Title'><span class='input__label-content-m input__label-content--isao-m'>Question Title</span></label></span>" +
 				"<span class='input-m input--isao-m'><input id='year' style='width:100%;'type='number' name='lectureWeek' maxlength='2' class='input__field-m input__field--isao-m'><label class='input__label-m input__label--isao-m' for='lectureWeek' data-content='Lecture Week'><span class='input__label-content-m input__label-content--isao-m'>Lecture Week</span></label></span>"+
-				"<button  class='add-button-m' onclick='submitCourse()' >Add</button>" +
-				"<label><input type='file' class='inputfile' onchange='parseImage()''><span class='upload-file'>Upload Image</span></label></span></li>" +
-				"<li><img outline='none' class='preview' id='preview'src='' height='100px' width='177px' alt='Image preview'/></li></form></li>";
+				"<button  class='add-button-m' onclick='submitCourse()' >Add</button></li>" +
+				"<li><label><input type='file' class='inputfile' onchange='parseImage()''><span class='upload-file'>Upload Image</span></label></span></li>" +
+				"<li><img outline='none' class='preview' id='preview'src='' height='200px' width='auto' alt='Image preview'/></li></form></li>";
 				//"<textarea id='base64textarea' placeholder='Base64 will appear here' cols='50' rows='15'></textarea>";
+	}
+
+	function editQuestion(questionID, title, lectureWeek){
+
+		document.getElementById(questionID).innerHTML = "<div class='question-container'><div class='question' style='width: 40vw;''><span class='input-m-t input--isao-m' style='max-width: 70%;'><input id='title' style='width:100%;'type='text' name='title' maxlength='100' data-inputmask='AAAA9999' class='input__field-m input__field--isao-m' autocomplete='off' value='"+title+"'><label class='input__label-m input__label--isao-m' for='title' data-content='Question Title'><span class='input__label-content-m input__label-content--isao-m'>Question Title</span></label></span><span class='input-m input--isao-m' style='max-width: 20%;''><input id='year' style='width:100%;'type='number' name='lectureWeek' maxlength='2' class='input__field-m input__field--isao-m' value='"+lectureWeek+"'><label class='input__label-m input__label--isao-m' for='lectureWeek' data-content='Lecture Week'><span class='input__label-content-m input__label-content--isao-m'>Lecture Week</span></label></span></div><div class='question-button' style='width:19%;'><button class='add-button-m' style='color:#8ED676;' onclick='submitChanges("+questionID+")'>Submit</button></div>";
+	}
+
+	function submitChanges(questionID){
+		var title = document.getElementsByName("title")[0].value;
+		var questionWeek = document.getElementsByName("lectureWeek")[0].value;
+		$(document).ready(function(){
+			$.ajax({//delete question through ajax so it updates instantly
+				type: "POST",
+				url: '../uqDrawBackend/editQuestion.php',
+				data: {
+					title: title,
+					questionWeek: questionWeek,
+					questionID: questionID,
+				},
+				success:function(data){
+					//alert(data);
+					location.reload();
+
+				},
+				error:function(data){
+					alert("Can't Reach server");
+				}
+			});
+		});
 	}
 
 	function parseImage(){
@@ -133,8 +162,10 @@
 				image: imageBlob,
 			};
 			$.post('../uqDrawBackend/addQuestion.php', DataObj, function (data) {//url must be in file path, Can't POST data through HTTP
-				alert(data);
-				location.reload();// reload page when data is inserted
+				//alert(data);
+				location.reload();
+				//window.location.href = "lecture-questions.html?courseID="+courseID;
+				// reload page when data is inserted
 
 			}).fail(function () {
 				// just in case posting your form failed
@@ -153,17 +184,18 @@
 				data: {
 					questionID: questionID,
 				},
-				success:function(result){
+				success:function(data){
 					//alert(result);
 					location.reload();
 
 				},
-				error:function(){
+				error:function(data){
 					alert("Can't Reach server")
 				}
 			});
 		});
 	}
+
 </script>
 <body class="bg-prepare">
 	<!-- Header -->
