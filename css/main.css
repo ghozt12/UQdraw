@@ -177,6 +177,12 @@ table {
   width: 100%;
   background: #ffffff;
 }
+@media screen and (max-width: 960px) {
+  /* line 93, scss/_headers.scss */
+  .lecturer-startpage-header {
+    width: 100px;
+  }
+}
 
 /* *******
 ** BUTTONS 
@@ -475,7 +481,7 @@ input:focus {
 /* line 310, scss/_buttons.scss */
 .add-button-m {
   font-size: 14px;
-  color: #8ED676;
+  color: #410C54;
   margin-top: 18px;
   margin-left: 20px;
   width: 80px;
@@ -483,7 +489,7 @@ input:focus {
 }
 /* line 318, scss/_buttons.scss */
 .add-button-m:hover {
-  background: #410C54;
+  background: #8ED676;
   border: none;
   color: white;
   transition: 0.4s;
@@ -639,7 +645,7 @@ input:focus {
 /* line 464, scss/_buttons.scss */
 .upload-file {
   font-size: 14px;
-  color: #8ED676;
+  color: #410C54;
   background-color: white;
   padding: 10px;
   width: 100px;
@@ -647,7 +653,7 @@ input:focus {
 }
 /* line 471, scss/_buttons.scss */
 .upload-file:hover {
-  background: #410C54;
+  background: #8ED676;
   border: none;
   color: white;
   transition: 0.4s;
@@ -1061,10 +1067,10 @@ body:after {
   opacity: 1;
 }
 
-/*preview upload image in makequestion page*/
-/* line 257, scss/_images.scss */
+/* line 255, scss/_images.scss */
 .preview {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 4px solid #fff;
 }
 
@@ -1160,6 +1166,12 @@ body:after {
   height: 163px;
   width: 100%;
   background: #ffffff;
+}
+@media screen and (max-width: 960px) {
+  /* line 93, scss/_headers.scss */
+  .lecturer-startpage-header {
+    width: 100px;
+  }
 }
 
 /* *****
@@ -1324,7 +1336,7 @@ body {
 ** ******/
 /* line 5, scss/_theme.scss */
 .theme-lecture-mode {
-  background: url(../assets/images/trialbl.png) center;
+  background: url(../assets/images/trialbgl.png) center;
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 163px);
@@ -1336,40 +1348,59 @@ body {
   opacity: .7;
 }
 
-/* line 19, scss/_theme.scss */
+/* line 20, scss/_theme.scss */
 .theme-lecture-start a {
   text-decoration: none;
 }
 
-/* line 24, scss/_theme.scss */
+/* line 25, scss/_theme.scss */
 .theme-prepare-mode {
-  background: url(../assets/images/trialbp.png) center;
+  background: url(../assets/images/trialbgp.png) center;
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 163px);
   cursor: pointer;
   transition: .3s;
 }
-/* line 32, scss/_theme.scss */
+/* line 33, scss/_theme.scss */
 .theme-prepare-mode:hover {
   opacity: .8;
 }
 
-/* line 37, scss/_theme.scss */
+/* line 38, scss/_theme.scss */
+.info {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-top: 12.5%;
+  font-size: 20px;
+}
+/* line 44, scss/_theme.scss */
+.info img {
+  width: 20%;
+}
+/* line 47, scss/_theme.scss */
+.info p {
+  color: white;
+  float: right;
+  margin-top: 5%;
+}
+
+/* line 55, scss/_theme.scss */
 .bg-prepare {
   background-image: url(../assets/images/bg-prepare.jpg);
   background-repeat: none;
   background-size: cover;
 }
 
-/* line 43, scss/_theme.scss */
+/* line 61, scss/_theme.scss */
 .bg-lecture {
   background-image: url(../assets/images/bg-lecture.jpg);
   background-repeat: none;
   background-size: cover;
 }
 
-/* line 50, scss/_theme.scss */
+/* line 68, scss/_theme.scss */
 .theme-question-purple h2 {
   text-align: center;
   padding-top: 10px;
@@ -1377,7 +1408,7 @@ body {
   font-size: 40px;
 }
 
-/* line 57, scss/_theme.scss */
+/* line 75, scss/_theme.scss */
 .timer-div {
   height: 50vh;
   width: 50vh;
@@ -1387,7 +1418,7 @@ body {
   min-height: 100px;
 }
 
-/* line 66, scss/_theme.scss */
+/* line 84, scss/_theme.scss */
 .theme-timer {
   border: 5px solid #410C54;
   background: #410C54;
@@ -1431,7 +1462,7 @@ body {
     border-color: black;
   }
 }
-/* line 86, scss/_theme.scss */
+/* line 104, scss/_theme.scss */
 .theme-time2 {
   width: 50vmin;
   height: 50vmin;
@@ -1447,12 +1478,12 @@ body {
   margin-top: -25vmin;
   text-align: center;
 }
-/* line 100, scss/_theme.scss */
+/* line 118, scss/_theme.scss */
 .theme-time2 p {
   margin-top: 10px;
 }
 
-/* line 105, scss/_theme.scss */
+/* line 123, scss/_theme.scss */
 .theme-time1 {
   width: 25vmin;
   height: 25vmin;
@@ -1468,12 +1499,12 @@ body {
   margin-top: -12.5vmin;
   text-align: center;
 }
-/* line 119, scss/_theme.scss */
+/* line 137, scss/_theme.scss */
 .theme-time1 p {
   margin-top: 10px;
 }
 
-/* line 124, scss/_theme.scss */
+/* line 142, scss/_theme.scss */
 .theme-time15 {
   width: 37.5vmin;
   height: 37.5vmin;
@@ -1488,12 +1519,12 @@ body {
   margin-top: -18.75vmin;
   text-align: center;
 }
-/* line 137, scss/_theme.scss */
+/* line 155, scss/_theme.scss */
 .theme-time15 p {
   margin-top: 10px;
 }
 
-/* line 142, scss/_theme.scss */
+/* line 160, scss/_theme.scss */
 .theme-time05 {
   width: 12.5vmin;
   height: 12.5vmin;
@@ -1508,29 +1539,29 @@ body {
   margin-top: -6.25vmin;
   text-align: center;
 }
-/* line 155, scss/_theme.scss */
+/* line 173, scss/_theme.scss */
 .theme-time05 p {
   margin-top: 20px;
 }
 
-/* line 160, scss/_theme.scss */
+/* line 178, scss/_theme.scss */
 .theme-response-inner {
   width: 30%;
   height: 50px;
   background: #8ED676;
 }
 
-/* line 167, scss/_theme.scss */
+/* line 185, scss/_theme.scss */
 .student-question {
   margin-top: 30px;
 }
 
-/* line 171, scss/_theme.scss */
+/* line 189, scss/_theme.scss */
 .student-responses {
   margin-top: 30px;
 }
 
-/* line 176, scss/_theme.scss */
+/* line 194, scss/_theme.scss */
 .theme-response-actions {
   position: absolute;
   bottom: 10px;
@@ -1539,12 +1570,12 @@ body {
   width: 400px;
   text-align: center;
 }
-/* line 184, scss/_theme.scss */
+/* line 202, scss/_theme.scss */
 .theme-response-actions h2 {
   font-size: 30px;
 }
 
-/* line 190, scss/_theme.scss */
+/* line 208, scss/_theme.scss */
 .subject-form {
   width: 100%;
   background-color: #410C54;
@@ -1554,7 +1585,7 @@ body {
   border-radius: 15px;
   cursor: pointer;
 }
-/* line 199, scss/_theme.scss */
+/* line 217, scss/_theme.scss */
 .subject-form button {
   margin-top: 20px;
 }
@@ -1691,7 +1722,7 @@ body {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 20px;
 }
 /* line 140, scss/_list.scss */
 .list-questions h3, .list-make-green h3, .list-questions-purple h3 {
@@ -2062,7 +2093,7 @@ input[type=number]::-webkit-outer-spin-button {
   float: right;
   padding: 0 1em;
   width: 50%;
-  color: #6a7989;
+  color: white;
   font-weight: bold;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
@@ -2144,7 +2175,7 @@ input[type=number]::-webkit-outer-spin-button {
   top: 0;
   left: 0;
   padding: 0.75em 0.15em;
-  color: #410C54;
+  color: white;
   opacity: 0;
   -webkit-transform: translate3d(0, 50%, 0);
   transform: translate3d(0, 50%, 0);
@@ -2158,7 +2189,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* line 576, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m::before {
-  background-color: #410C54;
+  background-color: #8ED676;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }

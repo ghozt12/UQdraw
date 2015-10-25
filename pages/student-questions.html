@@ -1,109 +1,209 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> UQDraw </title>
+<head>
+  <title> UQDraw </title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/main.css">
-        <link rel="stylesheet" href="../css/vendor/font-awesome.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/vendor/font-awesome.min.css">
 
-    <!-- Sets it as a mobile viewport if the user is on a mobile device -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
+  <!-- Sets it as a mobile viewport if the user is on a mobile device -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--React JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
 
 
 
-  <body>
-    <div id="headers-top-bar">
-      <img src="../assets/images/topbar-logo.png"></img>
-    </div>
+<body>
+<div id="headers-top-bar">
+  <img src="../assets/images/topbar-logo.png"></img>
+</div>
 
-    <!-- Back button -->
-    <button class="drawing-app-back" onClick="window.location.href='http://teamone.uqcloud.net'">Back</button>
+<!-- Back button -->
+<button class="drawing-app-back" onClick="window.location.href='http://teamone.uqcloud.net'">Back</button>
+<span id="questionController"></span>
+<!--
+<section class="student-question">
+    <!-- Body Heading -->
 
-	<section class="student-question">
-		<!-- Body Heading -->
-		<h2 class="type-body-heading"> <span id="subject">  </span>  CODE: <span id="code">3FC</span> </h2>
-    <h2 class="type-body-heading">Feedback Please - <a href="http://goo.gl/forms/CjTHoSM2pu">http://goo.gl/forms/CjTHoSM2pu</a></h2>
-		<!-- List the Questions -->
-		<ul class="student-list" >
-			<!-- Place PHP here, for each question in db, create a <li> element -->
-          <span id="openedQuestions"></span>
-			<!--<a href="drawing-app.html"><li> <span> Question Available! </span></li></a> -->
-		</ul>
-		</section>
-		<section class="student-responses">
-		<h2 class="type-body-heading"> <span> PREVIOUS RESPONSES </span> </h2>
-		<!-- Place PHP here, for each question in db, create a <li> element -->
-		<ul class="student-list" >
-          <span id="closedQuestions"></span><!-- don't link to drawing app, since it already submitted-->
-         <!-- <a ><li> <span> Draw my house </span> </li></a>-->
-		</ul>
-	</section>
-    
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- <h2 class="type-body-heading"> <span id="subject">  </span>  CODE: <span id="code">3FC</span> </h2>
+ <h2 class="type-body-heading">Feedback Please - <a href="http://goo.gl/forms/CjTHoSM2pu">http://goo.gl/forms/CjTHoSM2pu</a></h2>-->
+<!-- List the Questions -->
+<ul class="student-list" >
+  <!-- Place PHP here, for each question in db, create a <li> element -->
+  <span id="openedQuestions"></span>
+  <!--<a href="drawing-app.html"><li> <span> Question Available! </span></li></a> -->
+</ul>
+</section>
+<section class="student-responses">
+  <!--<h2 class="type-body-heading"> <span> PREVIOUS RESPONSES </span> </h2>-->
+  <!-- Place PHP here, for each question in db, create a <li> element -->
+  <ul class="student-list" >
+    <span id="closedQuestions"></span><!-- don't link to drawing app, since it already submitted-->
+    <!-- <a ><li> <span> Draw my house </span> </li></a>-->
+  </ul>
+</section>
 
-  <script type='text/javascript'>
-    var courseID ="";
-    var enteringCode="";
-    var url="";
-    $(document).ready(function() {
-      if(getParameterByName("courseID")!=""){
-        courseID = getParameterByName("courseID");
-        url = "http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID="+courseID;
-      }
-      else {
-        if (getParameterByName("enteringCode") != "") {
-          enteringCode = getParameterByName("enteringCode");
-         url= "http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromThreeDigitCode.php?enteringCode="+enteringCode;
-        }
-      }
-      $.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
-        type: 'GET',
-        url: url,
-        success: function(data){
-          //alert(data);
-          //alert("success");
-          var questionsListObject = JSON.parse(data);
-          if(questionsListObject.success==1) {
-            courseID = questionsListObject.subjectFull;
-            document.getElementById("code").textContent = questionsListObject.enteringCode;// 3 digit code
-            document.getElementById("subject").textContent = questionsListObject.subject;// course code
-            var questionListHTML_open = ""; // status = 0
-            var questionListHTML_close = "";//status = 1
-            for (var i = 0; i < questionsListObject.questionsList.length; i++) {//generate all question from JSON
-              var question = questionsListObject.questionsList[i];
-              if(question.status== 0){
-                questionListHTML_open += getQuestionItem(question);
-              }
-              if(question.status == 1){
-                questionListHTML_close += getQuestionItem(question);
-              }
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
+<script type="text/babel">
+  var courseID ="";
+  var enteringCode="";
+  var Requesturl="";
+  $(document).ready(function() {
+            if(getParameterByName("courseID")!=""){
+              courseID = getParameterByName("courseID");
+              Requesturl = "http://teamone.uqcloud.net/uqDrawBackend/retrieveStudentQuestionsbyCourseId.php?courseID="+courseID;
+              //console.log(Requesturl);
             }
-            document.getElementById("openedQuestions").innerHTML = questionListHTML_open;
-            document.getElementById("closedQuestions").innerHTML = questionListHTML_close;
-          }else{alert("Fail to retrieve data please signon");}
-        },
-        error: function(){
-          alert('There was an error adding your comment');
-        }
-      });
-    });
-    function getParameterByName(name) { // get url parameter
-      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-              results = regex.exec(location.search);
-      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            else {
+              if (getParameterByName("enteringCode") != "") {
+                enteringCode = getParameterByName("enteringCode");
+                Requesturl= "http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromThreeDigitCode.php?enteringCode="+enteringCode;
+              //console.log("3digit");
+              }
+            }
+
+            //-------React JS -------
+            var QuestionBox = React.createClass({ //props means the parameter pass from parent
+                    getInitialState: function() {//default data as empty
+              return {subList: [], enteringCode:"", subject:"",success:"" };
+            },
+            loadCommentsFromServer: function() {//load every 2 sec
+              $.ajax({
+                url: Requesturl,
+                dataType: 'json',
+                cache: false,
+                success: function(data) {
+                  this.setState({subList: data.questionsList, enteringCode: data.enteringCode, subject: data.subject, success : data.success});
+                }.bind(this),
+                error: function(xhr, status, err) {
+                  console.error(this.props.url, status, err.toString());
+                }.bind(this)
+              });
+            }, componentDidMount: function() {//initial run
+              this.loadCommentsFromServer();
+              setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+            },
+            render: function() {//pass data to different Items
+              console.log(this.state.subList);
+              return (
+                      <div>
+                      <section className="student-question">
+                      <CourseInfo enteringCode = {this.state.enteringCode} subject={this.state.subject}/>
+          <QuestionsList subList={this.state.subList}/>
+  </section>
+  </div>
+
+  );
+  }
+  });
+
+  var CourseInfo  = React.createClass({//print out course code and id
+            render: function(){
+
+              return(
+                      <div>
+                      <h2 className="type-body-heading"> {this.props.subject}  CODE: {this.props.enteringCode}</h2>
+          </div>
+  );
+  }
+  });
+
+
+  var QuestionsList = React.createClass({// sort and show every subjects
+    render: function() {
+      var counter=-1;
+      var openQuestions = this.props.subList.map(function (question) {
+                if (question.status == 1 &&question.attempted ==0 ){//the question is open and std havn't answered yet
+                  return(<OpenQuestion  questionID={question.questionID} title={question.title}>
+              </OpenQuestion>);
     }
-    function getQuestionItem(questionItem){ // input the question Object from JSON array, output a HTML List Item
-      //"<p>Lecture</p>"+questionItem.quwstionWeek+
-      return	"<a href='drawing-app.html?questionID="+questionItem.questionID+"&questionTitle="+questionItem.title+"'><li> <span> "+questionItem.title+" </span></li></a>";
-    }
+    return null;
+  });
+  var notOpenQuestions=this.props.subList.map(function (question) {//the question is closed and std havn't answered yet
+            if (question.status == 0 && question.attempted ==0 ){
+              return(<NotOpenQuestion  questionID={question.questionID} title={question.title}>
+          </NotOpenQuestion>);
+  }
+  return null;
+  });
+  var prevQuestions=this.props.subList.map(function (question) {//answered question
+            if (question.attempted ==1 ){
+              return(<PrevQuestion  questionID={question.questionID} title={question.title}>
+          </PrevQuestion>);
+  }
+  return null;
+  });
+  return (
+          <section className="student-responses">
+          <h2 className="type-body-heading"> <span> Open Questions </span> </h2>
+  <ul className="student-list" >  {openQuestions}</ul>
+          <h2 className="type-body-heading"> <span> Closed Questions</span> </h2>
+  <ul className="student-list" >  {notOpenQuestions}</ul>
+          <h2 className="type-body-heading"> <span> PREVIOUS RESPONSES </span> </h2>
+  <ul className="student-list" > {prevQuestions}</ul>
+          </section>
+
+  );
+  }
+  });
+
+  var OpenQuestion = React.createClass({//item of each record
+            render: function() {
+              var drawingLink = "drawing-app.html?questionID="+this.props.questionID+"&questionTitle="+this.props.title;
+              return (
+                      <div>
+                      <a href={drawingLink}><li>
+                      <span> {this.props.title} </span></li></a>
+          </div>
+  );
+  }
+  });
+  var NotOpenQuestion = React.createClass({//item of each record
+            render: function() {
+              return (
+                      <div>
+                      <li>
+                      <span> {this.props.title} </span></li>
+          </div>
+  );
+  }
+  });
+  var PrevQuestion = React.createClass({//item of each record
+            render: function() {
+              var resultLink = "";//tobe confirm
+              return (
+                      <div>
+                      <a href={resultLink}><li>
+                      <span> {this.props.title} </span></li></a>
+          </div>
+  );
+  }
+  });
+
+  React.render( //pass data to SubmissionBox, it relresh every 2sec
+  < QuestionBox
+  pollInterval = {2000} / >,
+          document.getElementById('questionController')
+  );
+
+
+  });
+  function getParameterByName(name) { // get url parameter
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
 
 
 
-  </script>
+
+</script>
 
 </html>

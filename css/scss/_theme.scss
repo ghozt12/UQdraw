@@ -3,7 +3,7 @@
 ** ******/
 
 .theme-lecture-mode {
-	background: url(../assets/images/trialbl.png) center;
+	background: url(../assets/images/trialbgl.png) center;
 	background-repeat: no-repeat;
     background-size: cover;
 	height: calc(100vh - 163px);
@@ -13,6 +13,7 @@
 	&:hover {
 		opacity: .7;
 	}
+	
 }
 
 .theme-lecture-start{
@@ -22,7 +23,7 @@ a {
 }
 
 .theme-prepare-mode {
-	background: url(../assets/images/trialbp.png)center;
+	background: url(../assets/images/trialbgp.png)center;
 	background-repeat: no-repeat;
     background-size: cover;
 	height: calc(100vh - 163px);
@@ -32,6 +33,23 @@ a {
 	&:hover {
 		opacity: .8;
 	}
+}
+
+.info{
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+	margin-top:12.5%;
+	font-size:20px;
+	img{
+		width:20%;
+	}
+	p{
+		color:white;
+		float:right;
+		margin-top:5%;
+	}
+	
 }
 
 .bg-prepare{

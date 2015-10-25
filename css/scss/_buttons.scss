@@ -310,13 +310,13 @@ input:focus {
 .add-button-m {
     @extend .submit;
     font-size: 14px;
-    color: $uq-green;
+    color: $uq-purple;
     margin-top: 18px;
     margin-left: 20px;
     width: 80px;
     border: none;
     &:hover {
-        background: $uq-purple;
+        background: $uq-green;
         border: none;
         color: white;
         transition: 0.4s;
@@ -463,13 +463,13 @@ input:focus {
 
 .upload-file {
     font-size: 14px;
-    color: $uq-green;
+    color: $uq-purple;
     background-color: white;
     padding: 10px; 
     width: 100px;
     border-radius: 18px;
     &:hover {
-        background: $uq-purple;
+        background: $uq-green;
         border: none;
         color: white;
         transition: 0.4s;
