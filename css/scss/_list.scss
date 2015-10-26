@@ -82,7 +82,7 @@
 
 
 
-
+/*style for question list in student question page*/
 .student-list {
 	width: 80%;
 	margin: auto;
@@ -102,8 +102,9 @@
 		padding-left:20px;
 		font-size: 20px;
 		text-align:center;
+		border-radius: 14px;
 	&:hover {
-		background: white;
+		background: lighten($uq-green, 25%);
         color: $uq-green;
         transition: 0.4s;
 	}
@@ -113,6 +114,40 @@
 		float: right;
 	}
 }
+
+
+.closed-questions {
+	width: 80%;
+	margin: auto;
+	
+	
+	li {
+		margin-bottom: 10px;
+		background: lighten(black, 50%);
+		color: $uq-green;
+		margin: 3px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		transition: .3s;
+		cursor: pointer;
+		@extend .noselect;
+		font-size: 30px;
+		padding-left:20px;
+		font-size: 20px;
+		text-align:center;
+		border-radius: 14px;
+	&:hover {
+		background: lighten(black, 50%);
+		color: $uq-green;
+		cursor: default;
+	}
+	}
+
+	li button {
+		float: right;
+	}
+}
+
 
 .list-questions {
 	@extend .list-subjects;
