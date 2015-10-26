@@ -323,6 +323,21 @@ input:focus {
     }
 }
 
+.add-button-e {
+    @extend .submit;
+    font-size: 14px;
+    color: $uq-green;
+    width: 80px;
+    border: none;
+    margin-top: 20px;
+    &:hover {
+        background: $uq-purple;
+        border: none;
+        color: white;
+        transition: 0.4s;
+    }
+}
+
 //style for buttons in a single response
 .button-hidden {
     opacity: 0;
