@@ -2,22 +2,23 @@
 /**
  * Created by PhpStorm.
  * User: kinngaileung
- * Date: 9/9/15
- * Time: 2:43 PM
+ * Date: 25/10/2015
+ * Time: 8:06 PM
  */
+
 include "connectDB.php";
 $studentID = $_SERVER['HTTP_X_UQ_USER'];//std ID to check did that user ansewed that questin or not
 
-$code = $_GET["enteringCode"];//the request should be http://<this url>/?code=XXX
+$courseID = $_GET["courseID"];//the request should be http://<this url>/?code=XXX
 //$code ="4rt";//ID for testing
-if($code!=NULL&& strlen($code)==3) {//stop running if code is invaild
+if($courseID!=NULL&& strlen($courseID)<20) {//stop running if code is invaild
     $IMG_DIR = "Brian/uqDrawBackend/";
     $response = array();//JSON
     $response["questionsList"] = array();//JSON array
     $response["enteringCode"]=$code;
-    $query = "SELECT * FROM `Question` WHERE `courseID` = (SELECT `courseID` FROM `Course` WHERE `enteringCode`='$code')";
+    $query = "SELECT * FROM `Question` WHERE `courseID` = '$courseID'";
     $result = mysqli_query($mysqli, $query);
-    $studentAnswerQuery = "SELECT questionID FROM `Submission` WHERE `studentID`='$studentID' AND questionID IN(SELECT questionID from Question WHERE CourseID = (SELECT `courseID` FROM `Course` WHERE `enteringCode`='$code'))";
+    $studentAnswerQuery = "SELECT questionID FROM `Submission` WHERE `studentID`='$studentID' AND questionID IN(SELECT questionID from Question WHERE CourseID = '$courseID')";
     $studentAnswerResult = mysqli_query($mysqli, $studentAnswerQuery);// get all question that student answered in that course
     $submittedQuestion = array();
     if ($studentAnswerResult){
@@ -62,4 +63,5 @@ if($code!=NULL&& strlen($code)==3) {//stop running if code is invaild
     $response["success"] = 0;
 }
 echo json_encode($response, JSON_UNESCAPED_SLASHES);// display JSON
+
 ?>

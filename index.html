@@ -23,12 +23,12 @@
 
 	<!-- All styles in this section are in scss/partials/_start_three_input.scss -->
 	<section class="start-section-input">
+		<h3> Enter Subject Code </h3>
 		<form id="start-input">
 			<input id="CodeInputOne" onkeyup="return forceLower(this);" class='CodeInput' type='text' value='' maxlength="1" />
 			<input id="CodeInputTwo" onkeyup="return forceLower(this);" class='CodeInput' type='text' value='' maxlength="1"/>
 			<input id="CodeInputThree" onkeyup="return forceLower(this);" class='CodeInput' type='text' value='' maxlength="1"/>
 		</form>
-		<h3> Enter subject Code </h3>
 	</section>
 
 
@@ -83,7 +83,7 @@
     	var separators = [ '-',  '_', '\\\?'];
     	var res  = str.split(new RegExp(separators.join('|'), 'g'));
 		var output = res[0]+" - Semester "+res[2]+", 20"+res[1];
-		return	'<a href="pages/student-questions.html?courseID='+courseItem+'><li> <span class="subject">'+output+'</span> </lI></a>';
+		return	'<a href="pages/student-questions.html?courseID='+courseItem+'"><li><span class="subject">'+output+'</span> </li></a>';
 		//end here
 		//return	'<a href="pages/student-questions.html?courseID='+courseItem+'"><li> <span class="subject">'+courseItem+'</span> </lI></a>';
 	}
