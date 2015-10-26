@@ -1274,7 +1274,7 @@ body {
 .student-intruct {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  top: 55px;
   left: 0;
 }
 
@@ -1283,30 +1283,37 @@ body {
   display: inline-block;
   position: absolute;
   width: 100%;
-  bottom: 0;
+  top: 5px;
   left: 0;
-  background: #8ED676;
   text-align: center;
 }
-/* line 103, scss/_typography.scss */
+/* line 102, scss/_typography.scss */
+.instruction-container .question-instruct {
+  color: white;
+}
+/* line 105, scss/_typography.scss */
+.instruction-container .question-goto {
+  color: #8ED676;
+}
+/* line 108, scss/_typography.scss */
 .instruction-container h3 {
   color: black;
   display: inline-block;
   font-size: 30px;
   font-weight: 900;
 }
-/* line 109, scss/_typography.scss */
+/* line 114, scss/_typography.scss */
 .instruction-container h3 span {
   background: #410C54;
   color: white;
   padding: 4px;
 }
-/* line 116, scss/_typography.scss */
+/* line 121, scss/_typography.scss */
 .instruction-container .circle-number {
   margin-right: 1px;
   margin-left: 10px;
-  width: 30px;
   height: 30px;
+  width: 30px;
   font-size: 20px;
   color: white;
   text-align: center;
@@ -1317,12 +1324,12 @@ body {
   margin-bottom: 10px;
   display: inline-block;
 }
-/* line 128, scss/_typography.scss */
+/* line 133, scss/_typography.scss */
 .instruction-container .circle-number p {
   padding-top: 5px;
 }
 
-/* line 141, scss/_typography.scss */
+/* line 146, scss/_typography.scss */
 .instruction-question {
   font-weight: 900;
   font-size: 30px;
@@ -1330,13 +1337,13 @@ body {
   margin-top: 10px;
 }
 
-/* line 152, scss/_typography.scss */
+/* line 157, scss/_typography.scss */
 .text-subject {
   font-size: 5vmin;
   font-weight: 900;
 }
 
-/* line 159, scss/_typography.scss */
+/* line 164, scss/_typography.scss */
 .instruction-q {
   font-size: 15px;
   font-weight: 900;
@@ -1345,7 +1352,7 @@ body {
   color: #410C54;
 }
 
-/* line 170, scss/_typography.scss */
+/* line 175, scss/_typography.scss */
 .question-body-heading {
   text-align: center;
   padding-top: 10px;
@@ -1353,7 +1360,7 @@ body {
   color: black;
 }
 
-/* line 178, scss/_typography.scss */
+/* line 183, scss/_typography.scss */
 .type-body-subheading {
   text-align: center;
   padding-top: 10px;
@@ -1361,7 +1368,7 @@ body {
   padding-bottom: 10px;
 }
 
-/* line 187, scss/_typography.scss */
+/* line 192, scss/_typography.scss */
 .startpage-welcome {
   color: white;
   text-align: center;
@@ -1371,18 +1378,18 @@ body {
   font-size: 1em;
 }
 
-/* line 196, scss/_typography.scss */
+/* line 201, scss/_typography.scss */
 .start-section-input {
   opacity: .8;
 }
-/* line 198, scss/_typography.scss */
+/* line 203, scss/_typography.scss */
 .start-section-input h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
 }
 
-/* line 212, scss/_typography.scss */
+/* line 217, scss/_typography.scss */
 .lecturer-startpage-welcome {
   color: #000;
   text-align: center;
@@ -1392,12 +1399,12 @@ body {
   font-size: 1em;
 }
 
-/* line 221, scss/_typography.scss */
+/* line 226, scss/_typography.scss */
 #lecturer-start-username {
   font-weight: 600;
 }
 
-/* line 226, scss/_typography.scss */
+/* line 231, scss/_typography.scss */
 .type-lecture-mode h2, .type-prepare-mode h2 {
   color: white;
   font-size: 50px;
@@ -1406,18 +1413,18 @@ body {
   padding-top: 10px;
   margin-bottom: 30px;
 }
-/* line 235, scss/_typography.scss */
+/* line 240, scss/_typography.scss */
 .type-lecture-mode .prepare-use, .type-prepare-mode .prepare-use {
   position: absolute;
   left: 50%;
   bottom: 10px;
 }
-/* line 240, scss/_typography.scss */
+/* line 245, scss/_typography.scss */
 .type-lecture-mode img, .type-prepare-mode img {
   width: 25%;
 }
 
-/* line 245, scss/_typography.scss */
+/* line 250, scss/_typography.scss */
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -1426,7 +1433,7 @@ body {
   font-family: "open-sans-semibold", Arial;
 }
 
-/* line 254, scss/_typography.scss */
+/* line 259, scss/_typography.scss */
 .type-body-response {
   font-size: 20px;
   text-align: left;
@@ -1709,10 +1716,10 @@ body {
 
 /* line 3, scss/_list.scss */
 .list-subjects, .list-subjects-purple, .list-subjects-green, .list-questions-green, .list-questions, .list-make-green, .list-questions-purple {
-  margin-top: 5px;
+  margin-top: 50px;
   width: 80%;
   margin: auto;
-  padding-top: 5px;
+  padding-top: 60px;
 }
 /* line 9, scss/_list.scss */
 .list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li, .list-questions li, .list-make-green li, .list-questions-purple li {

@@ -88,7 +88,7 @@ body {
 .student-intruct{
 	position: absolute;
 	width:100%;
-	bottom:0;
+	top:55px;
 	left:0;
 }
 
@@ -96,10 +96,15 @@ body {
 	display: inline-block;
 	position: absolute;
 	width:100%;
-	bottom:0;
+	top:5px;
 	left:0;
-	background:$uq-green;
 	text-align:center;
+	.question-instruct{
+		color:white;
+	}
+	.question-goto{
+		color:$uq-green;
+	}
 	h3 {
 		color: black;
 		display: inline-block;
@@ -116,8 +121,8 @@ body {
 	.circle-number {
 		margin-right: 1px;
 		margin-left: 10px;
-		width: 30px;
 		height: 30px;
+		width: 30px;
 		font-size: 20px;
 		color: white;
 		text-align: center;
