@@ -5,8 +5,10 @@
   <link rel="stylesheet" href="../css/vendor/gridism.css">
   <!-- Sets it as a mobile viewport if the user is on a mobile device -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">	</script>
+	<script src="../js/jquery.cookie.js">	</script>
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">	</script>
+
 <script type='text/javascript'>
 	$(document).ready(function() {
 		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
@@ -30,10 +32,8 @@
 							index ++;
 						}
 					}
-
-
-
 				}
+
 				document.getElementById("questionsList").innerHTML = questionListHTML;
 				document.getElementById("goto-prepare-mode").href = "lecture-makequestions.html?courseID="+getParameterByName("courseID");
 			},
@@ -53,19 +53,30 @@
 
 		var lectureHead="<li id='"+questionObjbyWeek.questionID+"'> <label> Lecture "+week +" </label></li>";
         var lectureList="";
+		var qidList=[];
 		for(var i = 0; i < questionObjbyWeek.length; i++){
 			var questionItem = questionObjbyWeek[i];
+
+			qidList.push(questionItem.questionID);
 			lectureList+= " <li> <div class='question-container'><div class='question'>"
 					+questionItem.title+"</div>"
-					+"<div class='question-button'><button class='button' onclick='askQuestion("+'"'+getParameterByName("courseID")+'","'+questionItem.questionID+'")'+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='
-					+questionItem.questionID+'"'+"'> Responses </button> </div></div></li>";
+					+"<div class='question-button'><button class='button' onclick='askQuestion("+'"'+getParameterByName("courseID")+'","'+questionItem.questionID+'","'+week+'")'+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='
+					+questionItem.questionID+'"'+"'> View </button> </div></div></li>";
 		}
+		$.cookie(week,qidList ,{ expires: 1 });
 		return lectureHead+lectureList;
 
 
 	}
-	function askQuestion(courseID, questionID){
-		
+	function setCookie(key,value){ // store Week and Qid in Cookie, so the "NEXT" function can load it everytime
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = key + "=" + cvalue + "; " + expires;
+	}
+
+	function askQuestion(courseID, questionID,week){
+
 			$.ajax({
 				type: "POST",
 				url: "../uqDrawBackend/askQuestion.php",
@@ -76,7 +87,7 @@
 				}
 			}).done(function (data) {
 				//alert(data);//get result from php
-				window.location.href='lecture-question.html?courseID='+courseID+'&questionID='+questionID;
+				window.location.href='lecture-question.html?courseID='+courseID+'&questionID='+questionID+'&week='+week;
 			   });
 		    }
 </script>
@@ -89,7 +100,7 @@
 			<h3 class="typography-l-h3"> Lecture Mode </h3>
 			</div>
 			<a id="goto-prepare-mode" href="lecture-makequestions.html"><div class="button-goto-prepare"> <p> goto Prepare Mode </p></div>
-			<a href="../pages/lecture-subjects.html"><div class="button-back-lecture-response"> <p> Back</p></div></a>
+			<a href="../pages/lecture-subjects.html"><div class="button-back-lecture"> <p> Back</p></div></a>
 		</div>
 	</section>
 
@@ -101,10 +112,10 @@
 		<ul><span id="questionsList">
 			<li>
 				<label> Lecture 1</label>
-				<div class="question-container"> 
+				<div class="question-container">
 					<div class="question">
 					Draw my House Draw asaaaa aaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa
-					</div> 
+					</div>
 					<div class="question-button">
 					<button class="button"> Ask </button>
 					<button class="button"> Responses</button>
@@ -115,9 +126,9 @@
 
 			<li>
 				<label>Lecture 2</label>
-				<div class="question-container"> 
+				<div class="question-container">
 					<div class="question">
-					Draw my House 
+					Draw my House
 					</div>
 					<div class="question-button">
 					<button class="button"> Ask </button>
