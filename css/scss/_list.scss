@@ -1,10 +1,10 @@
 $break-small: 960px;
 
 .list-subjects {
-	margin-top: 20px;
-	width: 50%;
+	margin-top: 5px;
+	width: 80%;
 	margin: auto;
-	padding-top: 30px;
+	padding-top: 5px;
 	
 	li {
 		color: white;
@@ -61,7 +61,7 @@ $break-small: 960px;
 }
 
 #addbutton{
-	width:50%;
+	width:80%;
 	margin: auto;
 	text-align:center;
 }
@@ -302,7 +302,7 @@ $break-small: 960px;
 	white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
-	width:30vw;
+	width:50vw;
 	&:hover{
 		white-space: normal; 
 		text-overflow: inherit;
@@ -312,8 +312,10 @@ $break-small: 960px;
 
 .question-button{
 	float:right;
-	width:38%;
 	border-radius:200px;
+	margin-left:auto;
+	width:300px;
+	margin-right:auto;
 }
 
 

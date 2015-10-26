@@ -53,10 +53,10 @@ a {
 }
 
 .bg-prepare{
-	// Background or white 
-	// background-image: url(../assets/images/bg-prepare.jpg);
-	// background-repeat:none;
-	// background-size:cover;
+
+	background-image: url(../assets/images/bg-prepare.jpg);
+	background-repeat:none;
+	background-size:cover;
 }
 
 .bg-lecture{
@@ -87,9 +87,9 @@ a {
 	background:$uq-purple;
 	border-radius: 50%;
 	-webkit-animation: size 120s linear;
-	animation: size 120s linear;
+	animation: size 240s linear;
 	position:absolute;
-	top:60%;
+	top:50%;
 	margin-top: -25vmin;
 	left:50%;
 
@@ -113,7 +113,7 @@ a {
 	border: 5px solid white;
 	border-radius: 50%;
 	position:absolute;
-	top:60%;
+	top:50%;
 	margin-top: -25vmin;
 	text-align: center;
 	p{
@@ -132,7 +132,7 @@ a {
 	border: 5px solid  white;
 	border-radius: 50%;
 	position:absolute;
-	top:60%;
+	top:50%;
 	margin-top: -12.5vmin;
 	text-align: center;
 	p{
@@ -150,7 +150,7 @@ a {
 	border: 5px solid white;
 	border-radius: 50%;
 	position:absolute;
-	top:60%;
+	top:50%;
 	margin-top: -18.75vmin;
 	text-align: center;
 	p{
@@ -168,7 +168,7 @@ a {
 	border: 5px solid  white;
 	border-radius: 50%;
 	position:absolute;
-	top:60%;
+	top:50%;
 	margin-top: -6.25vmin;
 	text-align: center;
 	p{
@@ -194,7 +194,7 @@ a {
 // This is for the buttons and time left lecture side 
 .theme-response-actions {
 	position:absolute;
-	bottom:10px;
+	bottom:60px;
 	left:50%;
 	margin-left:-200px;
 	width:400px;
