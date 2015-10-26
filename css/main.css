@@ -180,7 +180,7 @@ table {
 @media screen and (max-width: 960px) {
   /* line 93, scss/_headers.scss */
   .lecturer-startpage-header {
-    width: 100px;
+    height: 100px;
   }
 }
 
@@ -1187,7 +1187,7 @@ body:after {
 @media screen and (max-width: 960px) {
   /* line 93, scss/_headers.scss */
   .lecturer-startpage-header {
-    width: 100px;
+    height: 100px;
   }
 }
 
@@ -1451,13 +1451,19 @@ body {
 .theme-lecture-mode:hover {
   opacity: .7;
 }
+@media screen and (max-width: 960px) {
+  /* line 5, scss/_theme.scss */
+  .theme-lecture-mode {
+    height: calc(100vh - 100px);
+  }
+}
 
-/* line 20, scss/_theme.scss */
+/* line 23, scss/_theme.scss */
 .theme-lecture-start a {
   text-decoration: none;
 }
 
-/* line 25, scss/_theme.scss */
+/* line 28, scss/_theme.scss */
 .theme-prepare-mode {
   background: url(../assets/images/trialbgp.png) center;
   background-repeat: no-repeat;
@@ -1466,12 +1472,18 @@ body {
   cursor: pointer;
   transition: .3s;
 }
-/* line 33, scss/_theme.scss */
+/* line 36, scss/_theme.scss */
 .theme-prepare-mode:hover {
   opacity: .8;
 }
+@media screen and (max-width: 960px) {
+  /* line 28, scss/_theme.scss */
+  .theme-prepare-mode {
+    height: calc(100vh - 100px);
+  }
+}
 
-/* line 38, scss/_theme.scss */
+/* line 44, scss/_theme.scss */
 .info {
   margin-left: auto;
   margin-right: auto;
@@ -1479,32 +1491,32 @@ body {
   margin-top: 12.5%;
   font-size: 20px;
 }
-/* line 44, scss/_theme.scss */
+/* line 50, scss/_theme.scss */
 .info img {
   width: 20%;
 }
-/* line 47, scss/_theme.scss */
+/* line 53, scss/_theme.scss */
 .info p {
   color: white;
   float: right;
   margin-top: 5%;
 }
 
-/* line 55, scss/_theme.scss */
+/* line 61, scss/_theme.scss */
 .bg-prepare {
   background-image: url(../assets/images/bg-prepare.jpg);
   background-repeat: none;
   background-size: cover;
 }
 
-/* line 62, scss/_theme.scss */
+/* line 68, scss/_theme.scss */
 .bg-lecture {
   background-image: url(../assets/images/bg-lecture.jpg);
   background-repeat: none;
   background-size: cover;
 }
 
-/* line 69, scss/_theme.scss */
+/* line 75, scss/_theme.scss */
 .theme-question-purple h2 {
   text-align: center;
   padding-top: 10px;
@@ -1512,7 +1524,7 @@ body {
   font-size: 40px;
 }
 
-/* line 76, scss/_theme.scss */
+/* line 82, scss/_theme.scss */
 .timer-div {
   height: 50vh;
   width: 50vh;
@@ -1522,7 +1534,7 @@ body {
   min-height: 100px;
 }
 
-/* line 85, scss/_theme.scss */
+/* line 91, scss/_theme.scss */
 .theme-timer {
   border: 5px solid #410C54;
   background: #410C54;
@@ -1566,7 +1578,7 @@ body {
     border-color: black;
   }
 }
-/* line 105, scss/_theme.scss */
+/* line 111, scss/_theme.scss */
 .theme-time2 {
   width: 50vmin;
   height: 50vmin;
@@ -1582,12 +1594,12 @@ body {
   margin-top: -25vmin;
   text-align: center;
 }
-/* line 119, scss/_theme.scss */
+/* line 125, scss/_theme.scss */
 .theme-time2 p {
   margin-top: 10px;
 }
 
-/* line 124, scss/_theme.scss */
+/* line 130, scss/_theme.scss */
 .theme-time1 {
   width: 25vmin;
   height: 25vmin;
@@ -1603,12 +1615,12 @@ body {
   margin-top: -12.5vmin;
   text-align: center;
 }
-/* line 138, scss/_theme.scss */
+/* line 144, scss/_theme.scss */
 .theme-time1 p {
   margin-top: 10px;
 }
 
-/* line 143, scss/_theme.scss */
+/* line 149, scss/_theme.scss */
 .theme-time15 {
   width: 37.5vmin;
   height: 37.5vmin;
@@ -1623,12 +1635,12 @@ body {
   margin-top: -18.75vmin;
   text-align: center;
 }
-/* line 156, scss/_theme.scss */
+/* line 162, scss/_theme.scss */
 .theme-time15 p {
   margin-top: 10px;
 }
 
-/* line 161, scss/_theme.scss */
+/* line 167, scss/_theme.scss */
 .theme-time05 {
   width: 12.5vmin;
   height: 12.5vmin;
@@ -1643,29 +1655,29 @@ body {
   margin-top: -6.25vmin;
   text-align: center;
 }
-/* line 174, scss/_theme.scss */
+/* line 180, scss/_theme.scss */
 .theme-time05 p {
   margin-top: 20px;
 }
 
-/* line 179, scss/_theme.scss */
+/* line 185, scss/_theme.scss */
 .theme-response-inner {
   width: 30%;
   height: 50px;
   background: #8ED676;
 }
 
-/* line 186, scss/_theme.scss */
+/* line 192, scss/_theme.scss */
 .student-question {
   margin-top: 30px;
 }
 
-/* line 190, scss/_theme.scss */
+/* line 196, scss/_theme.scss */
 .student-responses {
   margin-top: 30px;
 }
 
-/* line 195, scss/_theme.scss */
+/* line 201, scss/_theme.scss */
 .theme-response-actions {
   position: absolute;
   bottom: 60px;
@@ -1674,12 +1686,12 @@ body {
   width: 400px;
   text-align: center;
 }
-/* line 203, scss/_theme.scss */
+/* line 209, scss/_theme.scss */
 .theme-response-actions h2 {
   font-size: 30px;
 }
 
-/* line 209, scss/_theme.scss */
+/* line 215, scss/_theme.scss */
 .subject-form {
   width: 100%;
   background: #410C54;
@@ -1690,7 +1702,7 @@ body {
   cursor: pointer;
   margin-top: 20px;
 }
-/* line 219, scss/_theme.scss */
+/* line 225, scss/_theme.scss */
 .subject-form button {
   margin-top: 20px;
 }

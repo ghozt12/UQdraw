@@ -13,6 +13,9 @@
 	&:hover {
 		opacity: .7;
 	}
+	 @media screen and (max-width: $break-small) {
+      height: calc(100vh - 100px);
+    }
 	
 }
 
@@ -33,6 +36,9 @@ a {
 	&:hover {
 		opacity: .8;
 	}
+	 @media screen and (max-width: $break-small) {
+      height: calc(100vh - 100px);
+    }
 }
 
 .info{
