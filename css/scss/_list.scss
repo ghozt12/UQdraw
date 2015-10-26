@@ -1,3 +1,5 @@
+$break-small: 960px;
+
 .list-subjects {
 	margin-top: 20px;
 	width: 50%;
@@ -15,6 +17,13 @@
 		cursor: pointer;
 		@extend .noselect;
 	}
+
+
+	// Sizing for mobile
+	@media screen and (max-width: $break-small) {
+		width: 80%;
+	}
+
 }
 
 .list-subjects-purple {
