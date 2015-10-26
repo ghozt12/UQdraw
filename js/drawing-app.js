@@ -156,7 +156,12 @@ $(document).ready(function () {
 			ctx.drawImage(img, 0, 0);
 		}
 
-		// Then insert the image
+		// Close the image opening
+		questionClosed = !questionClosed;
+		$("#question-container").addClass('closed');
+		$("#question").removeClass('close');
+
+		$("#question").html('Question');
 		
 	});
 
