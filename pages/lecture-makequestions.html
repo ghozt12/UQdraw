@@ -5,9 +5,9 @@
   <link rel="stylesheet" href="../css/vendor/gridism.css">
   <!-- Sets it as a mobile viewport if the user is on a mobile device -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">	</script>
 </head>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">	</script>-->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
 <script type='text/javascript'>
 	var courseID ="";
@@ -50,6 +50,8 @@
 				alert('There was an error adding your courses');
 			}
 		});
+
+
 	});
 	function getParameterByName(name) { // get url parameter
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -77,11 +79,11 @@
 		document.getElementById("addButton").innerHTML =/*"<li><form id ='addSubjectForm' class='subject-form'><span>Title:<input style='width:70%;'type='text' name='title' >" +
 				"<button  type='submit' id ='addButton';class= 'q-button' '>Add</button>" +
 				"<button  class= 'q-button' onclick='parseImage()'>Image</button></span></form></li>";*/
-				"<li><form id ='addSubjectForm' class='subject-form'><li><span class='input-m-t input--isao-m'><input id='title' style='width:100%;'type='text' name='title' maxlength='100' data-inputmask='AAAA9999' class='input__field-m input__field--isao-m' autocomplete='off'><label class='input__label-m input__label--isao-m' for='title' data-content='Question Title'><span class='input__label-content-m input__label-content--isao-m'>Question Title</span></label></span>" +
+				"<div id ='addSubjectForm' class='subject-form'><li><li><span class='input-m-t input--isao-m'><input id='title' style='width:100%;'type='text' name='addTitle' maxlength='100' data-inputmask='AAAA9999' class='input__field-m input__field--isao-m' autocomplete='off'><label class='input__label-m input__label--isao-m' for='title' data-content='Question Title'><span class='input__label-content-m input__label-content--isao-m'>Question Title</span></label></span>" +
 				"<span class='input-m input--isao-m'><input id='year' style='width:100%;'type='number' name='lectureWeek' maxlength='2' class='input__field-m input__field--isao-m'><label class='input__label-m input__label--isao-m' for='lectureWeek' data-content='Lecture Week'><span class='input__label-content-m input__label-content--isao-m'>Lecture Week</span></label></span>"+
-				"<button  class='add-button-m' onclick='submitCourse()' >Add</button></li>" +
+				"<button  class='add-button-m' onclick='submitQuestion()' >Add</button></li>" +
 				"<li><label><input type='file' class='inputfile' onchange='parseImage()''><span class='upload-file'>Upload Image</span></label></span></li>" +
-				"<li><img outline='none' class='preview' id='preview'src='' height='200px' width='auto' alt='Image preview'/></li></form></li>";
+				"<li><img outline='none' class='preview' id='preview'src='' height='200px' width='auto' alt='Image preview'/></li></li><div>";
 				//"<textarea id='base64textarea' placeholder='Base64 will appear here' cols='50' rows='15'></textarea>";
 	}
 
@@ -148,35 +150,10 @@
 		console.log(imageBlob);
 	}
 
-	function submitCourse(){ //ajax Post
-	//$("#addButton").click(function(){
-		title = document.getElementsByName("title")[0].value;
-		var questionWeek = document.getElementsByName("lectureWeek")[0].value;
-		if(title!="") {
-			var DataObj = {
-				courseID: courseID,
-				title: title,
-				questionWeek: questionWeek,
-				haveImage: haveImage,
-				fileFormat: ".jpg", // since it is blob, no matter it is .jpg / .png, it will still saved in .png format
-				image: imageBlob,
-			};
-			$.post('../uqDrawBackend/addQuestion.php', DataObj, function (data) {//url must be in file path, Can't POST data through HTTP
-				//alert(data);
-				location.reload();
-				//window.location.href = "lecture-questions.html?courseID="+courseID;
-				// reload page when data is inserted
 
-			}).fail(function () {
-				// just in case posting your form failed
-				alert("Posting failed.");
-
-			});
-		}else{alert("Type something, dude");}
-	}
 
 	function deleteQuestion(questionID){
-		
+
 		$(document).ready(function(){
 			$.ajax({//delete question through ajax so it updates instantly
 				type: "POST",
@@ -196,6 +173,36 @@
 		});
 	}
 
+    function submitQuestion(){
+        var title = document.getElementsByName("addTitle")[0].value;
+        var questionWeek = document.getElementsByName("lectureWeek")[0].value;
+    if(title!="") {
+     var DataObj = {
+     courseID: courseID,
+     title: title,
+     questionWeek: questionWeek,
+     haveImage: haveImage,
+     fileFormat: ".jpg", // since it is blob, no matter it is .jpg / .png, it will still saved in .png format
+     image: imageBlob,
+     };
+        $.post('../uqDrawBackend/addQuestion.php', DataObj, function (data) {//url must be in file path, Can't POST data through HTTP
+         //alert(data);
+         //cation.reload();
+        // alert("post OK");
+         window.location.href = "lecture-makequestions.html?courseID="+courseID;
+         //document.getElementById("addSubjectForm").submit;
+         // reload page when data is inserted
+
+         }).fail(function () {
+         // just in case posting your form failed
+         alert("Posting failed.");
+
+         });
+         }else{alert("Please enter all input text");}
+
+
+    }
+
 </script>
 <body class="bg-prepare">
 	<!-- Header -->
@@ -211,7 +218,7 @@
 			</div>
 			<!-- Switch button -->
 			<a id="goto-lecture-mode" href='lecture-questions.html'><div class='button-goto-lecture'> <p> goto Lecture Mode </p></div></a>
-		
+
 		</div>
 	</section>
 
@@ -226,10 +233,10 @@
 		<ul><span id="questionsList">
 			<li>
 				<label> Lecture 1</label>
-				<div class="question-container"> 
+				<div class="question-container">
 					<div class="question">
 					Draw my House Draw asaaaa aaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa
-					</div> 
+					</div>
 					<div class="question-button">
 					<button class="button"> Edit </button>
 					<button class="button"> Responses</button>
@@ -241,9 +248,9 @@
 
 			<li>
 				<label>Lecture 2</label>
-				<div class="question-container"> 
+				<div class="question-container">
 					<div class="question">
-					Draw my House 
+					Draw my House
 					</div>
 					<div class="question-button">
 					<button class="button"> Edit </button>
