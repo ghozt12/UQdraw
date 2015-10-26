@@ -1088,6 +1088,7 @@ body:after {
   margin-top: 10px;
   margin-bottom: 10px;
   border: 4px solid #fff;
+  max-width: 80%;
 }
 
 /* *******
