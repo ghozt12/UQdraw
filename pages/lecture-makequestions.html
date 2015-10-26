@@ -53,6 +53,7 @@
 
 
 	});
+
 	function getParameterByName(name) { // get url parameter
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -87,9 +88,17 @@
 				//"<textarea id='base64textarea' placeholder='Base64 will appear here' cols='50' rows='15'></textarea>";
 	}
 
+	var questionContent;
+
 	function editQuestion(questionID, title, lectureWeek){
 
-		document.getElementById(questionID).innerHTML = "<div class='question-container'><div class='question' style='width: 40vw;''><span class='input-e-t input--isao-e' style='max-width: 70%;'><input id='title' style='width:100%;'type='text' name='title' maxlength='100' data-inputmask='AAAA9999' class='input__field-e input__field--isao-e' autocomplete='off' value='"+title+"'><label class='input__label-e input__label--isao-e' for='title' data-content='Question Title'><span class='input__label-content-e input__label-content--isao-e'>Question Title</span></label></span><span class='input-e input--isao-e' style='max-width: 20%;''><input id='year' style='width:100%;'type='number' name='lectureWeek' maxlength='2' class='input__field-e input__field--isao-e' value='"+lectureWeek+"'><label class='input__label-e input__label--isao-e' for='lectureWeek' data-content='Lecture Week'><span class='input__label-content-e input__label-content--isao-e'>Lecture Week</span></label></span></div><div class='question-button' style='width:18%;'><button class='add-button-e' onclick='submitChanges("+questionID+")'>Submit</button></div>";
+		window.questionContent = document.getElementById(questionID).innerHTML;
+		document.getElementById(questionID).innerHTML = "<div class='question-container'><div class='question' style='width: 37vw;''><span class='input-e-t input--isao-e' style='max-width: 70%;'><input id='title' style='width:100%;'type='text' name='title' maxlength='100' data-inputmask='AAAA9999' class='input__field-e input__field--isao-e' autocomplete='off' value='"+title+"'><label class='input__label-e input__label--isao-e' for='title' data-content='Question Title'><span class='input__label-content-e input__label-content--isao-e'>Question Title</span></label></span><span class='input-e input--isao-e' style='max-width: 20%;''><input id='year' style='width:100%;'type='number' name='lectureWeek' maxlength='2' class='input__field-e input__field--isao-e' value='"+lectureWeek+"'><label class='input__label-e input__label--isao-e' for='lectureWeek' data-content='Lecture Week'><span class='input__label-content-e input__label-content--isao-e'>Lecture Week</span></label></span></div><div class='question-button' style='width:22.5%;'><button class='add-button-e' onclick='cancelEdit("+questionID+")'style='margin-right:5px;'>Cancel</button><button class='add-button-e' onclick='submitChanges("+questionID+")'>Submit</button></div>";
+	}
+
+
+	function cancelEdit(questionID){
+			document.getElementById(questionID).innerHTML = window.questionContent;
 	}
 
 	function submitChanges(questionID){
