@@ -5,6 +5,9 @@
   <link rel="stylesheet" href="../css/vendor/gridism.css">
   <!-- Sets it as a mobile viewport if the user is on a mobile device -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../js/jquery.cookie.js">	</script>
 </head>
 
 <body>
@@ -54,19 +57,24 @@
 			<!-- Buttons -->
 			<button class="q-button-long" onclick="btnViewResponses()">View Responses</button>
 			<button class="q-button" onclick="btnEnd()">End</button>
+            <span id="nextButton"></span>
 			<!---<button class="q-button">Next</button>-->
 		</div>
 	</section>
 
 </body>
-	<!-- Library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 	<!-- JS -->
 	<script type='text/javascript'>
+		var questionID = getParameterByName("questionID");
+		var week= getParameterByName("week");
+		var courseID = getParameterByName("courseID");
+		var cookieQuestion=$.cookie(week).split(",");
+
 	$(document).ready(function() {
 		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
 			type: 'GET',
-			url: '../uqDrawBackend/getQuestion.php?courseID='+getParameterByName("courseID")+'&questionID='+getParameterByName("questionID"),
+			url: '../uqDrawBackend/getQuestion.php?courseID='+courseID+'&questionID='+questionID,
 			success: function(data){
 				//alert(data);
 				//alert("success");
@@ -81,6 +89,13 @@
 				alert('There was an error adding your comment');
 			}
 		});
+		console.log(cookieQuestion);
+		if(cookieQuestion.indexOf(questionID)<cookieQuestion.length-1){
+			document.getElementById("nextButton").innerHTML= "<button class='q-button' onclick='btnNext()'>Next</button>";
+		}
+
+
+
 	});
 	function getParameterByName(name) { // get url parameter
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -107,6 +122,11 @@
 		function btnViewResponses(){
 			window.location.href = "../pages/lecture-responses.html?questionID="+getParameterByName("questionID")+"&courseID="+getParameterByName("courseID");
 		}
+	function btnNext(){
+		btnEnd();
+		var nextQ= cookieQuestion[cookieQuestion.indexOf(questionID)+1];
+		window.location.href = 'lecture-question.html?courseID='+courseID+'&questionID='+nextQ+'&week='+week;
+	}
 
 	function startTimer(duration, display) {
     	var timer = duration, minutes, seconds;

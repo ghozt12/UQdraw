@@ -58,7 +58,7 @@
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
 	function getQuestionItem(questionObjbyWeek,week){ // input the question Object from JSON array, output a HTML List Item
-        var lectureHeader="<p>Lecture "+week+"</p>";
+        var lectureHeader="<li><label>Lecture "+week+"</label></li>";
 		var questionList = "";
 		for(var i = 0; i < questionObjbyWeek.length; i++){
 			var questionItem = questionObjbyWeek[i];
@@ -87,7 +87,7 @@
 
 	function editQuestion(questionID, title, lectureWeek){
 
-		document.getElementById(questionID).innerHTML = "<div class='question-container'><div class='question' style='width: 40vw;''><span class='input-m-t input--isao-m' style='max-width: 70%;'><input id='title' style='width:100%;'type='text' name='title' maxlength='100' data-inputmask='AAAA9999' class='input__field-m input__field--isao-m' autocomplete='off' value='"+title+"'><label class='input__label-m input__label--isao-m' for='title' data-content='Question Title'><span class='input__label-content-m input__label-content--isao-m'>Question Title</span></label></span><span class='input-m input--isao-m' style='max-width: 20%;''><input id='year' style='width:100%;'type='number' name='lectureWeek' maxlength='2' class='input__field-m input__field--isao-m' value='"+lectureWeek+"'><label class='input__label-m input__label--isao-m' for='lectureWeek' data-content='Lecture Week'><span class='input__label-content-m input__label-content--isao-m'>Lecture Week</span></label></span></div><div class='question-button' style='width:19%;'><button class='add-button-m' style='color:#8ED676;' onclick='submitChanges("+questionID+")'>Submit</button></div>";
+		document.getElementById(questionID).innerHTML = "<div class='question-container'><div class='question' style='width: 40vw;''><span class='input-e-t input--isao-e' style='max-width: 70%;'><input id='title' style='width:100%;'type='text' name='title' maxlength='100' data-inputmask='AAAA9999' class='input__field-e input__field--isao-e' autocomplete='off' value='"+title+"'><label class='input__label-e input__label--isao-e' for='title' data-content='Question Title'><span class='input__label-content-e input__label-content--isao-e'>Question Title</span></label></span><span class='input-e input--isao-e' style='max-width: 20%;''><input id='year' style='width:100%;'type='number' name='lectureWeek' maxlength='2' class='input__field-e input__field--isao-e' value='"+lectureWeek+"'><label class='input__label-e input__label--isao-e' for='lectureWeek' data-content='Lecture Week'><span class='input__label-content-e input__label-content--isao-e'>Lecture Week</span></label></span></div><div class='question-button' style='width:18%;'><button class='add-button-e' onclick='submitChanges("+questionID+")'>Submit</button></div>";
 	}
 
 	function submitChanges(questionID){
