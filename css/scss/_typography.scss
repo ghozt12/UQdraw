@@ -64,8 +64,96 @@ body {
 	padding-top: 10px;
 	font-weight: 800;
 	font-size: 4vmin;
-	color:black;
+	color: black;
 }
+
+.type-body-url {
+	text-align: center;
+	padding-top: 10px;
+	font-weight: 500;
+	font-size: 2vmin;
+	color: $uq-green;
+}
+
+.type-code {
+	font-size: 5vmin;
+	color: black;
+	font-weight: 900;
+
+	span {
+		background: black;
+		color: white;
+	}
+}
+
+.instruction-container {
+	display: block;
+	margin: auto;
+	width: 400px;
+
+	h3 {
+		color: black;
+		display: inline-block;
+		font-size: 3vmin;
+
+		span {
+			background: black;
+			color: white;
+			padding: 4px;
+		}
+	}
+
+	.circle-number {
+		margin-right: 20px;
+		width: 50px;
+		height: 50px;
+		font-size: 30px;
+		color: white;
+		text-align: center;
+		font-weight: 900;
+		background: $uq-purple;
+		border-radius: 50%;
+		
+		p {
+				padding-top: 10px;
+
+		}
+		
+		margin-top: 10px;
+		margin-bottom: 10px;
+		display: inline-block;
+		
+
+	}
+
+
+}
+
+.instruction-question {
+	font-weight: 900;
+	font-size: 30px;
+	text-align: center;
+	span {
+
+
+	}
+}
+
+.instruction-q {
+	font-size: 15px;
+	font-weight: 900;
+	color: black;
+	text-align: center;
+	color: $uq-purple;
+}
+
+.instruction-bottom {
+	width: 100%;
+	height: 2px;
+	background: $uq-purple;
+	margin-bottom: 20px;
+}
+
 
 // question heading
 .question-body-heading {
@@ -151,12 +239,6 @@ body {
 	font-family: "open-sans-semibold", Arial;
 }
 
-.type-body-url {
-	font-size: 20px;
-	text-align:center;
-	color: black;
-	margin-top: 10px;
-}
 
 .type-body-response {
 	font-size: 20px;
