@@ -139,7 +139,7 @@ input:focus {
 }
 
 .button-back-lecture{
-	background-color: $uq-purple;
+	background-color: darken($uq-green, 10%);
     width: 120px;
     height: $header-height;
     display: inline-block;
@@ -153,7 +153,7 @@ input:focus {
     }
 
     &:hover {
-        background-color: darken($uq-purple, 10%);
+        background-color: darken($uq-green, 20%);
     }
 }
 
