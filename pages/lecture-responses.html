@@ -14,10 +14,23 @@
 </head>
 
 <body>
-
-
+	<section>
+		<div class="header-l-lecture">
+			<div class="button-back-lecture-response" onclick="btnBack()"> <p> Back </p></div>
+			<div class="headerpos">
+			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
+			<h3 class="typography-l-h3"> Responses - Prepare Mode </h3>
+			</div>
+		</div>
+	</section>
+	<script>
+		function btnBack(){
+			window.history.back();
+		}
+	</script>
 
 <section>
+
 
 	<!-- Body Heading -->
 	<!--<h2 class="type-body-heading"> Draw a House </h2>
@@ -86,24 +99,6 @@
 	                </div>
 	);
 	}
-	});
-
-	var Header = React.createClass({
-        btnBack: function(){
-			window.history.back();
-		}
-			,
-		render: function() {
-			return (
-				<div className="header-l-lecture">
-					<a onClick={this.btnBack}><div className="button-back-lecture-response"> <p > Back </p></div></a>
-					<div className="headerpos">
-					<img className='images-l-subjects' src="../assets/images/topbar-logo.png" />
-					<h3 className="typography-l-h3"> Responses </h3></div>
-				</div>
-				);
-		}
-
 	});
 
 	var SubmissionInfo  = React.createClass({//basically it shows dynamic data of number of responses and titles
