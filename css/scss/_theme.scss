@@ -208,12 +208,13 @@ a {
 
 .subject-form{
     width: 100%;
-    background-color: $uq-purple;
+    background: $uq-purple;
     color: white;
     font-weight: 600;
     font-size: 20px;
     border-radius: 15px;
     cursor: pointer;
+    margin-top: 20px;
 	
 	button{
 		margin-top:20px;

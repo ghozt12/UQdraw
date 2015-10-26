@@ -1088,6 +1088,7 @@ body:after {
   margin-top: 10px;
   margin-bottom: 10px;
   border: 4px solid #fff;
+  max-width: 80%;
 }
 
 /* *******
@@ -1483,21 +1484,14 @@ body {
   margin-top: 5%;
 }
 
-/* line 55, scss/_theme.scss */
-.bg-prepare {
-  background-image: url(../assets/images/bg-prepare.jpg);
-  background-repeat: none;
-  background-size: cover;
-}
-
-/* line 61, scss/_theme.scss */
+/* line 62, scss/_theme.scss */
 .bg-lecture {
   background-image: url(../assets/images/bg-lecture.jpg);
   background-repeat: none;
   background-size: cover;
 }
 
-/* line 68, scss/_theme.scss */
+/* line 69, scss/_theme.scss */
 .theme-question-purple h2 {
   text-align: center;
   padding-top: 10px;
@@ -1505,7 +1499,7 @@ body {
   font-size: 40px;
 }
 
-/* line 75, scss/_theme.scss */
+/* line 76, scss/_theme.scss */
 .timer-div {
   height: 50vh;
   width: 50vh;
@@ -1515,7 +1509,7 @@ body {
   min-height: 100px;
 }
 
-/* line 84, scss/_theme.scss */
+/* line 85, scss/_theme.scss */
 .theme-timer {
   border: 5px solid #410C54;
   background: #410C54;
@@ -1559,7 +1553,7 @@ body {
     border-color: black;
   }
 }
-/* line 104, scss/_theme.scss */
+/* line 105, scss/_theme.scss */
 .theme-time2 {
   width: 50vmin;
   height: 50vmin;
@@ -1575,12 +1569,12 @@ body {
   margin-top: -25vmin;
   text-align: center;
 }
-/* line 118, scss/_theme.scss */
+/* line 119, scss/_theme.scss */
 .theme-time2 p {
   margin-top: 10px;
 }
 
-/* line 123, scss/_theme.scss */
+/* line 124, scss/_theme.scss */
 .theme-time1 {
   width: 25vmin;
   height: 25vmin;
@@ -1596,12 +1590,12 @@ body {
   margin-top: -12.5vmin;
   text-align: center;
 }
-/* line 137, scss/_theme.scss */
+/* line 138, scss/_theme.scss */
 .theme-time1 p {
   margin-top: 10px;
 }
 
-/* line 142, scss/_theme.scss */
+/* line 143, scss/_theme.scss */
 .theme-time15 {
   width: 37.5vmin;
   height: 37.5vmin;
@@ -1616,12 +1610,12 @@ body {
   margin-top: -18.75vmin;
   text-align: center;
 }
-/* line 155, scss/_theme.scss */
+/* line 156, scss/_theme.scss */
 .theme-time15 p {
   margin-top: 10px;
 }
 
-/* line 160, scss/_theme.scss */
+/* line 161, scss/_theme.scss */
 .theme-time05 {
   width: 12.5vmin;
   height: 12.5vmin;
@@ -1636,29 +1630,29 @@ body {
   margin-top: -6.25vmin;
   text-align: center;
 }
-/* line 173, scss/_theme.scss */
+/* line 174, scss/_theme.scss */
 .theme-time05 p {
   margin-top: 20px;
 }
 
-/* line 178, scss/_theme.scss */
+/* line 179, scss/_theme.scss */
 .theme-response-inner {
   width: 30%;
   height: 50px;
   background: #8ED676;
 }
 
-/* line 185, scss/_theme.scss */
+/* line 186, scss/_theme.scss */
 .student-question {
   margin-top: 30px;
 }
 
-/* line 189, scss/_theme.scss */
+/* line 190, scss/_theme.scss */
 .student-responses {
   margin-top: 30px;
 }
 
-/* line 194, scss/_theme.scss */
+/* line 195, scss/_theme.scss */
 .theme-response-actions {
   position: absolute;
   bottom: 10px;
@@ -1667,34 +1661,35 @@ body {
   width: 400px;
   text-align: center;
 }
-/* line 202, scss/_theme.scss */
+/* line 203, scss/_theme.scss */
 .theme-response-actions h2 {
   font-size: 30px;
 }
 
-/* line 208, scss/_theme.scss */
+/* line 209, scss/_theme.scss */
 .subject-form {
   width: 100%;
-  background-color: #410C54;
+  background: #410C54;
   color: white;
   font-weight: 600;
   font-size: 20px;
   border-radius: 15px;
   cursor: pointer;
+  margin-top: 20px;
 }
-/* line 217, scss/_theme.scss */
+/* line 219, scss/_theme.scss */
 .subject-form button {
   margin-top: 20px;
 }
 
-/* line 1, scss/_list.scss */
+/* line 3, scss/_list.scss */
 .list-subjects, .list-subjects-purple, .list-subjects-green, .list-questions-green, .list-questions, .list-make-green, .list-questions-purple {
   margin-top: 20px;
   width: 50%;
   margin: auto;
   padding-top: 30px;
 }
-/* line 7, scss/_list.scss */
+/* line 9, scss/_list.scss */
 .list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li, .list-questions li, .list-make-green li, .list-questions-purple li {
   color: white;
   text-align: center;
@@ -1705,78 +1700,84 @@ body {
   transition: .3s;
   cursor: pointer;
 }
+@media screen and (max-width: 960px) {
+  /* line 3, scss/_list.scss */
+  .list-subjects, .list-subjects-purple, .list-subjects-green, .list-questions-green, .list-questions, .list-make-green, .list-questions-purple {
+    width: 80%;
+  }
+}
 
-/* line 23, scss/_list.scss */
+/* line 32, scss/_list.scss */
 .list-subjects-purple li {
   background: #410C54;
 }
-/* line 28, scss/_list.scss */
+/* line 37, scss/_list.scss */
 .list-subjects-purple li:hover {
   background: #1e0627;
 }
-/* line 31, scss/_list.scss */
+/* line 40, scss/_list.scss */
 .list-subjects-purple h3 {
   text-align: center;
   padding-bottom: 10px;
 }
 
-/* line 38, scss/_list.scss */
+/* line 47, scss/_list.scss */
 .list-subjects-green {
   opacity: .8;
 }
-/* line 41, scss/_list.scss */
+/* line 50, scss/_list.scss */
 .list-subjects-green li {
   background: #8ED676;
 }
-/* line 45, scss/_list.scss */
+/* line 54, scss/_list.scss */
 .list-subjects-green li:hover {
   background: #54b135;
 }
-/* line 48, scss/_list.scss */
+/* line 57, scss/_list.scss */
 .list-subjects-green h3 {
   text-align: center;
   padding-bottom: 10px;
 }
 
-/* line 54, scss/_list.scss */
+/* line 63, scss/_list.scss */
 #addbutton {
   width: 50%;
   margin: auto;
   text-align: center;
 }
 
-/* line 60, scss/_list.scss */
+/* line 69, scss/_list.scss */
 .list-questions-green {
   opacity: .9;
 }
-/* line 63, scss/_list.scss */
+/* line 72, scss/_list.scss */
 .list-questions-green li {
   background: #8ED676;
   text-align: left;
   padding-right: 5px;
 }
-/* line 69, scss/_list.scss */
+/* line 78, scss/_list.scss */
 .list-questions-green li:hover {
   background: #54b135;
 }
-/* line 72, scss/_list.scss */
+/* line 81, scss/_list.scss */
 .list-questions-green h3 {
   text-align: center;
   padding-bottom: 10px;
 }
-/* line 77, scss/_list.scss */
+/* line 86, scss/_list.scss */
 .list-questions-green li button {
   float: right;
   margin-top: -5px;
 }
 
 /*style for question list in student question page*/
-/* line 86, scss/_list.scss */
+/* line 95, scss/_list.scss */
 .student-list {
   width: 80%;
   margin: auto;
 }
-/* line 91, scss/_list.scss */
+/* line 100, scss/_list.scss */
 .student-list li {
   margin-bottom: 10px;
   background: #8ED676;
@@ -1792,23 +1793,23 @@ body {
   text-align: center;
   border-radius: 14px;
 }
-/* line 106, scss/_list.scss */
+/* line 115, scss/_list.scss */
 .student-list li:hover {
   background: #dff3d8;
   color: #8ED676;
   transition: 0.4s;
 }
-/* line 113, scss/_list.scss */
+/* line 122, scss/_list.scss */
 .student-list li button {
   float: right;
 }
 
-/* line 119, scss/_list.scss */
+/* line 128, scss/_list.scss */
 .closed-questions {
   width: 80%;
   margin: auto;
 }
-/* line 124, scss/_list.scss */
+/* line 133, scss/_list.scss */
 .closed-questions li {
   margin-bottom: 10px;
   background: gray;
@@ -1824,18 +1825,18 @@ body {
   text-align: center;
   border-radius: 14px;
 }
-/* line 139, scss/_list.scss */
+/* line 148, scss/_list.scss */
 .closed-questions li:hover {
   background: gray;
   color: #8ED676;
   cursor: default;
 }
-/* line 146, scss/_list.scss */
+/* line 155, scss/_list.scss */
 .closed-questions li button {
   float: right;
 }
 
-/* line 155, scss/_list.scss */
+/* line 164, scss/_list.scss */
 .list-questions ul li, .list-make-green ul li, .list-questions-purple ul li {
   color: white;
   min-height: 30px;
@@ -1848,26 +1849,26 @@ body {
   width: 100%;
   cursor: default;
 }
-/* line 168, scss/_list.scss */
+/* line 177, scss/_list.scss */
 .list-questions h2, .list-make-green h2, .list-questions-purple h2 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
   font-size: 20px;
 }
-/* line 175, scss/_list.scss */
+/* line 184, scss/_list.scss */
 .list-questions h3, .list-make-green h3, .list-questions-purple h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 500;
   padding-bottom: 10px;
 }
-/* line 182, scss/_list.scss */
+/* line 191, scss/_list.scss */
 .list-questions label, .list-make-green label, .list-questions-purple label {
   font-size: 20px;
   color: black;
 }
-/* line 186, scss/_list.scss */
+/* line 195, scss/_list.scss */
 .list-questions .button, .list-make-green .button, .list-questions-purple .button {
   border-radius: 12px;
   margin-right: 5px;
@@ -1881,7 +1882,7 @@ body {
   color: #410C54;
   width: 75px;
 }
-/* line 198, scss/_list.scss */
+/* line 207, scss/_list.scss */
 .list-questions .button:hover, .list-make-green .button:hover, .list-questions-purple .button:hover {
   border: 2px solid #410C54;
   background: #410C54;
@@ -1889,44 +1890,44 @@ body {
   transition: 0.4s;
 }
 
-/* line 212, scss/_list.scss */
+/* line 221, scss/_list.scss */
 .list-make-green div {
   background: #8ED676;
 }
-/* line 216, scss/_list.scss */
+/* line 225, scss/_list.scss */
 .list-make-green .button {
   color: #8ED676;
 }
-/* line 218, scss/_list.scss */
+/* line 227, scss/_list.scss */
 .list-make-green .button:hover {
   border: 2px solid #8ED676;
   background: #8ED676;
   color: white;
   transition: 0.4s;
 }
-/* line 226, scss/_list.scss */
+/* line 235, scss/_list.scss */
 .list-make-green ul li div {
   cursor: default;
 }
-/* line 229, scss/_list.scss */
+/* line 238, scss/_list.scss */
 .list-make-green #addbutton {
   width: 100%;
 }
 
-/* line 238, scss/_list.scss */
+/* line 247, scss/_list.scss */
 .list-questions-purple ul li div {
   background: #410C54;
   cursor: default;
 }
 
-/* line 247, scss/_list.scss */
+/* line 256, scss/_list.scss */
 .grid-container {
   margin: 0 auto;
   width: 1200px;
   padding-top: 20px;
 }
 
-/* line 254, scss/_list.scss */
+/* line 263, scss/_list.scss */
 .grid-response {
   float: left;
   width: 110px;
@@ -1939,7 +1940,7 @@ body {
   border-color: #410C54;
 }
 
-/* line 266, scss/_list.scss */
+/* line 275, scss/_list.scss */
 .question-container {
   color: white;
   min-height: 30px;
@@ -1952,7 +1953,7 @@ body {
   min-width: 100%;
 }
 
-/* line 278, scss/_list.scss */
+/* line 287, scss/_list.scss */
 .question-container-m {
   color: white;
   margin-top: 20px;
@@ -1964,7 +1965,7 @@ body {
   cursor: default;
 }
 
-/* line 289, scss/_list.scss */
+/* line 298, scss/_list.scss */
 .question {
   float: left;
   padding-bottom: 12px;
@@ -1974,14 +1975,14 @@ body {
   text-overflow: ellipsis;
   width: 30vw;
 }
-/* line 297, scss/_list.scss */
+/* line 306, scss/_list.scss */
 .question:hover {
   white-space: normal;
   text-overflow: inherit;
   overflow: visible;
 }
 
-/* line 304, scss/_list.scss */
+/* line 313, scss/_list.scss */
 .question-button {
   float: right;
   width: 38%;
@@ -1989,7 +1990,7 @@ body {
 }
 
 /* Style for text input animation Isao */
-/* line 312, scss/_list.scss */
+/* line 321, scss/_list.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -1998,7 +1999,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* line 320, scss/_list.scss */
+/* line 329, scss/_list.scss */
 .input {
   position: relative;
   z-index: 1;
@@ -2009,7 +2010,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 330, scss/_list.scss */
+/* line 339, scss/_list.scss */
 .input__field {
   position: relative;
   display: block;
@@ -2026,12 +2027,12 @@ input[type=number]::-webkit-outer-spin-button {
   /* for box shadows to show on iOS */
 }
 
-/* line 345, scss/_list.scss */
+/* line 354, scss/_list.scss */
 .input__field:focus {
   outline: none;
 }
 
-/* line 349, scss/_list.scss */
+/* line 358, scss/_list.scss */
 .input__label {
   display: inline-block;
   float: right;
@@ -2050,7 +2051,7 @@ input[type=number]::-webkit-outer-spin-button {
   user-select: none;
 }
 
-/* line 367, scss/_list.scss */
+/* line 376, scss/_list.scss */
 .input__label-content {
   position: relative;
   display: block;
@@ -2058,7 +2059,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
 }
 
-/* line 374, scss/_list.scss */
+/* line 383, scss/_list.scss */
 .graphic {
   position: absolute;
   top: 0;
@@ -2066,13 +2067,13 @@ input[type=number]::-webkit-outer-spin-button {
   fill: none;
 }
 
-/* line 381, scss/_list.scss */
+/* line 390, scss/_list.scss */
 .icon {
   color: #ddd;
   font-size: 150%;
 }
 
-/* line 386, scss/_list.scss */
+/* line 395, scss/_list.scss */
 .input__field--isao {
   z-index: 10;
   padding: 0.75em 0.1em 0.25em;
@@ -2083,7 +2084,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 396, scss/_list.scss */
+/* line 405, scss/_list.scss */
 .input__label--isao {
   position: relative;
   overflow: hidden;
@@ -2093,7 +2094,7 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: left;
 }
 
-/* line 405, scss/_list.scss */
+/* line 414, scss/_list.scss */
 .input__label--isao::before {
   content: '';
   position: absolute;
@@ -2111,7 +2112,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 422, scss/_list.scss */
+/* line 431, scss/_list.scss */
 .input__label--isao::after {
   content: attr(data-content);
   position: absolute;
@@ -2129,26 +2130,26 @@ input[type=number]::-webkit-outer-spin-button {
   pointer-events: none;
 }
 
-/* line 439, scss/_list.scss */
+/* line 448, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao::before {
   background-color: #8ED676;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 
-/* line 445, scss/_list.scss */
+/* line 454, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao {
   pointer-events: none;
 }
 
-/* line 449, scss/_list.scss */
+/* line 458, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 455, scss/_list.scss */
+/* line 464, scss/_list.scss */
 .input__label-content--isao {
   padding: 0.75em 0.15em;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -2157,7 +2158,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 463, scss/_list.scss */
+/* line 472, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao .input__label-content--isao {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
@@ -2165,7 +2166,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /*make question text input*/
-/* line 471, scss/_list.scss */
+/* line 480, scss/_list.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -2174,7 +2175,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* line 479, scss/_list.scss */
+/* line 488, scss/_list.scss */
 .input-m-t {
   position: relative;
   z-index: 1;
@@ -2185,7 +2186,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 489, scss/_list.scss */
+/* line 498, scss/_list.scss */
 .input-m {
   position: relative;
   z-index: 1;
@@ -2196,7 +2197,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 499, scss/_list.scss */
+/* line 508, scss/_list.scss */
 .input__field-m {
   position: relative;
   display: block;
@@ -2213,12 +2214,12 @@ input[type=number]::-webkit-outer-spin-button {
   /* for box shadows to show on iOS */
 }
 
-/* line 514, scss/_list.scss */
+/* line 523, scss/_list.scss */
 .input__field-m:focus {
   outline: none;
 }
 
-/* line 518, scss/_list.scss */
+/* line 527, scss/_list.scss */
 .input__label-m {
   display: inline-block;
   float: right;
@@ -2237,7 +2238,7 @@ input[type=number]::-webkit-outer-spin-button {
   user-select: none;
 }
 
-/* line 536, scss/_list.scss */
+/* line 545, scss/_list.scss */
 .input__label-content-m {
   position: relative;
   display: block;
@@ -2246,7 +2247,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 544, scss/_list.scss */
+/* line 553, scss/_list.scss */
 .graphic-m {
   position: absolute;
   top: 0;
@@ -2254,13 +2255,13 @@ input[type=number]::-webkit-outer-spin-button {
   fill: none;
 }
 
-/* line 551, scss/_list.scss */
+/* line 560, scss/_list.scss */
 .icon-m {
   color: #ddd;
   font-size: 150%;
 }
 
-/* line 556, scss/_list.scss */
+/* line 565, scss/_list.scss */
 .input__field--isao-m {
   z-index: 10;
   padding: 0.75em 0.1em 0.25em;
@@ -2270,7 +2271,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 566, scss/_list.scss */
+/* line 575, scss/_list.scss */
 .input__label--isao-m {
   position: relative;
   overflow: hidden;
@@ -2281,7 +2282,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 
-/* line 576, scss/_list.scss */
+/* line 585, scss/_list.scss */
 .input__label--isao-m::before {
   content: '';
   position: absolute;
@@ -2299,7 +2300,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 593, scss/_list.scss */
+/* line 602, scss/_list.scss */
 .input__label--isao-m::after {
   content: attr(data-content);
   position: absolute;
@@ -2318,26 +2319,26 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 611, scss/_list.scss */
+/* line 620, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m::before {
   background-color: #8ED676;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 
-/* line 617, scss/_list.scss */
+/* line 626, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m {
   pointer-events: none;
 }
 
-/* line 621, scss/_list.scss */
+/* line 630, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 627, scss/_list.scss */
+/* line 636, scss/_list.scss */
 .input__label-content--isao-m {
   color: white;
   padding: 0.75em 0.15em;
@@ -2347,7 +2348,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 636, scss/_list.scss */
+/* line 645, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
@@ -2355,7 +2356,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /*edit question text input*/
-/* line 651, scss/_list.scss */
+/* line 660, scss/_list.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -2364,7 +2365,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* line 659, scss/_list.scss */
+/* line 668, scss/_list.scss */
 .input-e-t {
   position: relative;
   z-index: 1;
@@ -2375,7 +2376,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 669, scss/_list.scss */
+/* line 678, scss/_list.scss */
 .input-e {
   position: relative;
   z-index: 1;
@@ -2386,7 +2387,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 679, scss/_list.scss */
+/* line 688, scss/_list.scss */
 .input__field-e {
   position: relative;
   display: block;
@@ -2403,12 +2404,12 @@ input[type=number]::-webkit-outer-spin-button {
   /* for box shadows to show on iOS */
 }
 
-/* line 694, scss/_list.scss */
+/* line 703, scss/_list.scss */
 .input__field-e:focus {
   outline: none;
 }
 
-/* line 698, scss/_list.scss */
+/* line 707, scss/_list.scss */
 .input__label-e {
   display: inline-block;
   float: right;
@@ -2427,7 +2428,7 @@ input[type=number]::-webkit-outer-spin-button {
   user-select: none;
 }
 
-/* line 716, scss/_list.scss */
+/* line 725, scss/_list.scss */
 .input__label-content-e {
   position: relative;
   display: block;
@@ -2436,7 +2437,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 724, scss/_list.scss */
+/* line 733, scss/_list.scss */
 .graphic-e {
   position: absolute;
   top: 0;
@@ -2444,13 +2445,13 @@ input[type=number]::-webkit-outer-spin-button {
   fill: none;
 }
 
-/* line 731, scss/_list.scss */
+/* line 740, scss/_list.scss */
 .icon-e {
   color: #ddd;
   font-size: 150%;
 }
 
-/* line 736, scss/_list.scss */
+/* line 745, scss/_list.scss */
 .input__field--isao-e {
   z-index: 10;
   padding: 0.75em 0.1em 0.25em;
@@ -2460,7 +2461,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 746, scss/_list.scss */
+/* line 755, scss/_list.scss */
 .input__label--isao-e {
   position: relative;
   overflow: hidden;
@@ -2471,7 +2472,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 
-/* line 756, scss/_list.scss */
+/* line 765, scss/_list.scss */
 .input__label--isao-e::before {
   content: '';
   position: absolute;
@@ -2489,7 +2490,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 773, scss/_list.scss */
+/* line 782, scss/_list.scss */
 .input__label--isao-e::after {
   content: attr(data-content);
   position: absolute;
@@ -2508,26 +2509,26 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 791, scss/_list.scss */
+/* line 800, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e::before {
   background-color: #410C54;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 
-/* line 797, scss/_list.scss */
+/* line 806, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e {
   pointer-events: none;
 }
 
-/* line 801, scss/_list.scss */
+/* line 810, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 807, scss/_list.scss */
+/* line 816, scss/_list.scss */
 .input__label-content--isao-e {
   color: white;
   padding: 0.75em 0.15em;
@@ -2537,7 +2538,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 816, scss/_list.scss */
+/* line 825, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e .input__label-content--isao-e {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
