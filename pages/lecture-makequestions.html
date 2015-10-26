@@ -58,7 +58,7 @@
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
 	function getQuestionItem(questionObjbyWeek,week){ // input the question Object from JSON array, output a HTML List Item
-        var lectureHeader="<p>Lecture "+week+"</p>";
+        var lectureHeader="<li><label>Lecture "+week+"</label></li>";
 		var questionList = "";
 		for(var i = 0; i < questionObjbyWeek.length; i++){
 			var questionItem = questionObjbyWeek[i];
