@@ -194,7 +194,7 @@ table {
 }
 
 /* line 10, scss/_buttons.scss */
-.submit, .drawing-app-submit, .drawing-app-question, .drawing-app-camera, .drawing-app-clear, .drawing-app-back, .back-button, .q-button, .q-button-long, .add-button, .add-button-m {
+.submit, .drawing-app-submit, .drawing-app-question, .drawing-app-camera, .drawing-app-clear, .drawing-app-back, .back-button, .q-button, .q-button-long, .add-button, .add-button-m, .add-button-e {
   height: 60px;
   width: 150px;
   border: 2px solid #410C54;
@@ -210,15 +210,15 @@ table {
   background-color: #FFF;
 }
 /* line 23, scss/_buttons.scss */
-.submit:focus, .drawing-app-submit:focus, .drawing-app-question:focus, .drawing-app-camera:focus, .drawing-app-clear:focus, .drawing-app-back:focus, .back-button:focus, .q-button:focus, .q-button-long:focus, .add-button:focus, .add-button-m:focus {
+.submit:focus, .drawing-app-submit:focus, .drawing-app-question:focus, .drawing-app-camera:focus, .drawing-app-clear:focus, .drawing-app-back:focus, .back-button:focus, .q-button:focus, .q-button-long:focus, .add-button:focus, .add-button-m:focus, .add-button-e:focus {
   outline: 0;
 }
 /* line 26, scss/_buttons.scss */
-.submit *:focus, .drawing-app-submit *:focus, .drawing-app-question *:focus, .drawing-app-camera *:focus, .drawing-app-clear *:focus, .drawing-app-back *:focus, .back-button *:focus, .q-button *:focus, .q-button-long *:focus, .add-button *:focus, .add-button-m *:focus {
+.submit *:focus, .drawing-app-submit *:focus, .drawing-app-question *:focus, .drawing-app-camera *:focus, .drawing-app-clear *:focus, .drawing-app-back *:focus, .back-button *:focus, .q-button *:focus, .q-button-long *:focus, .add-button *:focus, .add-button-m *:focus, .add-button-e *:focus {
   outline: 0;
 }
 /* line 32, scss/_buttons.scss */
-.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover, .drawing-app-camera:hover, .drawing-app-clear:hover, .drawing-app-back:hover, .back-button:hover, .q-button:hover, .q-button-long:hover, .add-button:hover, .add-button-m:hover {
+.submit:hover, .drawing-app-submit:hover, .drawing-app-question:hover, .drawing-app-camera:hover, .drawing-app-clear:hover, .drawing-app-back:hover, .back-button:hover, .q-button:hover, .q-button-long:hover, .add-button:hover, .add-button-m:hover, .add-button-e:hover {
   border: 2px solid #FFF;
   color: #410C54;
   transition: 0.4s;
@@ -495,7 +495,23 @@ input:focus {
   transition: 0.4s;
 }
 
-/* line 327, scss/_buttons.scss */
+/* line 326, scss/_buttons.scss */
+.add-button-e {
+  font-size: 14px;
+  color: #8ED676;
+  width: 80px;
+  border: none;
+  margin-top: 20px;
+}
+/* line 333, scss/_buttons.scss */
+.add-button-e:hover {
+  background: #410C54;
+  border: none;
+  color: white;
+  transition: 0.4s;
+}
+
+/* line 342, scss/_buttons.scss */
 .button-hidden {
   opacity: 0;
   transition: opacity 0.3s linear;
@@ -510,7 +526,7 @@ input:focus {
   z-index: 100;
 }
 
-/* line 341, scss/_buttons.scss */
+/* line 356, scss/_buttons.scss */
 .grid-response:hover .button-hidden {
   opacity: 1;
 }
@@ -533,7 +549,7 @@ input:focus {
     color: #ffffff;
 }
 */
-/* line 364, scss/_buttons.scss */
+/* line 379, scss/_buttons.scss */
 .button-correct {
   -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
   -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
@@ -564,7 +580,7 @@ input:focus {
   outline: none;
 }
 
-/* line 393, scss/_buttons.scss */
+/* line 408, scss/_buttons.scss */
 .button-correct:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
   background: -moz-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -576,13 +592,13 @@ input:focus {
   background-color: #77a809;
 }
 
-/* line 403, scss/_buttons.scss */
+/* line 418, scss/_buttons.scss */
 .button-correct:active {
   position: relative;
   top: 1px;
 }
 
-/* line 409, scss/_buttons.scss */
+/* line 424, scss/_buttons.scss */
 .button-incorrect {
   -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
@@ -613,7 +629,7 @@ input:focus {
   outline: none;
 }
 
-/* line 438, scss/_buttons.scss */
+/* line 453, scss/_buttons.scss */
 .button-incorrect:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
   background: -moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -625,14 +641,14 @@ input:focus {
   background-color: #c62d1f;
 }
 
-/* line 448, scss/_buttons.scss */
+/* line 463, scss/_buttons.scss */
 .button-incorrect:active {
   position: relative;
   top: 1px;
 }
 
 /*input file button in makequestion page*/
-/* line 455, scss/_buttons.scss */
+/* line 470, scss/_buttons.scss */
 .inputfile {
   width: 0.1px;
   height: 0.1px;
@@ -642,7 +658,7 @@ input:focus {
   z-index: -1;
 }
 
-/* line 464, scss/_buttons.scss */
+/* line 479, scss/_buttons.scss */
 .upload-file {
   font-size: 14px;
   color: #410C54;
@@ -651,7 +667,7 @@ input:focus {
   width: 100px;
   border-radius: 18px;
 }
-/* line 471, scss/_buttons.scss */
+/* line 486, scss/_buttons.scss */
 .upload-file:hover {
   background: #8ED676;
   border: none;
@@ -2221,18 +2237,20 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
-  /*edit question text input*/
 }
-/* line 609, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m input[type=number]::-webkit-inner-spin-button,
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m input[type=number]::-webkit-outer-spin-button {
+
+/*edit question text input*/
+/* line 616, scss/_list.scss */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin: 0;
 }
-/* line 617, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input-e-t {
+
+/* line 624, scss/_list.scss */
+.input-e-t {
   position: relative;
   z-index: 1;
   display: inline-block;
@@ -2241,8 +2259,9 @@ input[type=number]::-webkit-outer-spin-button {
   width: calc(100% - 2em);
   vertical-align: top;
 }
-/* line 627, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input-e {
+
+/* line 634, scss/_list.scss */
+.input-e {
   position: relative;
   z-index: 1;
   display: inline-block;
@@ -2251,8 +2270,9 @@ input[type=number]::-webkit-outer-spin-button {
   width: calc(100% - 2em);
   vertical-align: top;
 }
-/* line 637, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__field-e {
+
+/* line 644, scss/_list.scss */
+.input__field-e {
   position: relative;
   display: block;
   float: right;
@@ -2267,12 +2287,14 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   /* for box shadows to show on iOS */
 }
-/* line 652, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__field-e:focus {
+
+/* line 659, scss/_list.scss */
+.input__field-e:focus {
   outline: none;
 }
-/* line 656, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__label-e {
+
+/* line 663, scss/_list.scss */
+.input__label-e {
   display: inline-block;
   float: right;
   padding: 0 1em;
@@ -2289,28 +2311,32 @@ input[type=number]::-webkit-outer-spin-button {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 674, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__label-content-e {
+
+/* line 681, scss/_list.scss */
+.input__label-content-e {
   position: relative;
   display: block;
   padding: 1.6em 0;
   width: 100%;
   font-size: 14px;
 }
-/* line 682, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .graphic-e {
+
+/* line 689, scss/_list.scss */
+.graphic-e {
   position: absolute;
   top: 0;
   left: 0;
   fill: none;
 }
-/* line 689, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .icon-e {
+
+/* line 696, scss/_list.scss */
+.icon-e {
   color: #ddd;
   font-size: 150%;
 }
-/* line 694, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__field--isao-e {
+
+/* line 701, scss/_list.scss */
+.input__field--isao-e {
   z-index: 10;
   padding: 0.75em 0.1em 0.25em;
   width: 100%;
@@ -2318,8 +2344,9 @@ input[type=number]::-webkit-outer-spin-button {
   color: white;
   font-size: 14px;
 }
-/* line 704, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__label--isao-e {
+
+/* line 711, scss/_list.scss */
+.input__label--isao-e {
   position: relative;
   overflow: hidden;
   padding: 0;
@@ -2328,8 +2355,9 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: left;
   font-weight: bold;
 }
-/* line 714, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__label--isao-e::before {
+
+/* line 721, scss/_list.scss */
+.input__label--isao-e::before {
   content: '';
   position: absolute;
   top: 0;
@@ -2345,8 +2373,9 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
-/* line 731, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__label--isao-e::after {
+
+/* line 738, scss/_list.scss */
+.input__label--isao-e::after {
   content: attr(data-content);
   position: absolute;
   top: 0;
@@ -2363,24 +2392,28 @@ input[type=number]::-webkit-outer-spin-button {
   pointer-events: none;
   font-size: 14px;
 }
-/* line 749, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__field--isao-e:focus + .input__label--isao-e::before {
+
+/* line 756, scss/_list.scss */
+.input__field--isao-e:focus + .input__label--isao-e::before {
   background-color: #410C54;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
-/* line 755, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__field--isao-e:focus + .input__label--isao-e {
+
+/* line 762, scss/_list.scss */
+.input__field--isao-e:focus + .input__label--isao-e {
   pointer-events: none;
 }
-/* line 759, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__field--isao-e:focus + .input__label--isao-e::after {
+
+/* line 766, scss/_list.scss */
+.input__field--isao-e:focus + .input__label--isao-e::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 765, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__label-content--isao-e {
+
+/* line 772, scss/_list.scss */
+.input__label-content--isao-e {
   color: white;
   padding: 0.75em 0.15em;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -2388,8 +2421,9 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
-/* line 774, scss/_list.scss */
-.input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m .input__field--isao-e:focus + .input__label--isao-e .input__label-content--isao-e {
+
+/* line 781, scss/_list.scss */
+.input__field--isao-e:focus + .input__label--isao-e .input__label-content--isao-e {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
