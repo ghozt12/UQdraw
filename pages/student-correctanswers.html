@@ -2,11 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/vendor/gridism.css">
 	<!-- Sets it as a mobile viewport if the user is on a mobile device -->
-	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
@@ -19,7 +20,7 @@
 		<div class="button-back-lecture-response" onclick="btnBack()"> <p> Back </p></div>
 		<div class="headerpos">
 			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
-			<h3 class="typography-l-h3"> Responses - Prepare Mode </h3>
+			<h3 class="typography-l-h3"> Responses </h3>
 		</div>
 	</div>
 </section>
@@ -67,75 +68,84 @@
 </body>
 <script src="../js/lightbox-lecture.js"></script>
 <script src="../js/responses_page.js"></script>
+
 <script type="text/babel">
+
 	$(document).ready(function() {
-		var ResultBox = React.createClass({ //props means the parameter pass from parent
-				getInitialState: function() {//default data as empty
-			return {subList: [], title:"",week:"", qID:"",success:"" , listLength:""};
-		},
-		loadCommentsFromServer: function() {//load every 2 sec
-			$.ajax({
-				url: this.props.url+getParameterByName("questionID"),
-				dataType: 'json',
-				cache: false,
-				success: function(data) {
-					this.setState({subList: data.submissionList,title:data.questionTitle,week:data.questionWeek,qID:data.questionID,success:data.success, listLength:data.submissionList.length});
-				}.bind(this),
-				error: function(xhr, status, err) {
-					console.error(this.props.url, status, err.toString());
-				}.bind(this)
-			});
-		}, componentDidMount: function() {//initial run
-			this.loadCommentsFromServer();
-			setInterval(this.loadCommentsFromServer, this.props.pollInterval);
-		},
-		render: function() {//pass data to different Items
-			return (
-					<div>
+		
+		var ResultBox = React.createClass({ 
+		//props means the parameter pass from parent
+		
+			getInitialState: function() {//default data as empty
+				return {subList: [], title:"",week:"", qID:"",success:"" , listLength:""};
+			},
+			
+			loadCommentsFromServer: function() {//load every 2 sec
+				$.ajax({
+					url: this.props.url+getParameterByName("questionID"),
+					dataType: 'json',
+					cache: false,
+					success: function(data) {
+						this.setState({subList: data.submissionList,title:data.questionTitle,week:data.questionWeek,qID:data.questionID,success:data.success, listLength:data.submissionList.length});
+					}.bind(this),
+					error: function(xhr, status, err) {
+						console.error(this.props.url, status, err.toString());
+					}.bind(this)
+				});
+			}, 
 
-					<SubmissionInfo title = {this.state.title} week={this.state.week} qID={this.state.qID} success={this.state.success} listLength={this.state.listLength}/>
-	<SubmissionList subList={this.state.subList}/>
-
-	</div>
-	);
-	}
+			componentDidMount: function() {//initial run
+				this.loadCommentsFromServer();
+				setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+			},
+			
+			render: function() {//pass data to different Items
+				return (
+						<div>
+							<SubmissionInfo title = {this.state.title} week={this.state.week} qID={this.state.qID} success={this.state.success} listLength={this.state.listLength}/>
+							<SubmissionList subList={this.state.subList}/>
+					</div>
+				);
+			}
 	});
 
-	var SubmissionInfo  = React.createClass({//basically it shows dynamic data of number of responses and titles
-			render: function(){
-
-		return(
+	var SubmissionInfo  = React.createClass({
+	//basically it shows dynamic data of number of responses and titles
+		render: function(){
+			return(
 				<div>
-
-				<h2 className="type-body-heading">{this.props.title}</h2>
-
-	</div>
-	);
-	}
+					<h2 className="type-body-heading">{this.props.title}</h2>
+				</div>
+			);
+		}
 	});
 
 
-	var SubmissionList = React.createClass({ //ListView contain mutiple submissions
-			render: function() {
-		var submissionNodes= this.props.subList.map(function (submission) {
-if(parseInt(submission.result)==1){
-	return (
-			<Submission std_id = {submission.studentID} img_link = {submission.submittedImage}id = {submission.submissionID}>
-			</Submission>
-	);
-}else{return null;}
-
-	});
-	return (
+	var SubmissionList = React.createClass({ 
+	//ListView contain mutiple submissions
+		render: function() {
+			var submissionNodes= this.props.subList.map(function (submission) {
+				if(parseInt(submission.result)==1){
+					return (
+						<Submission std_id = {submission.studentID} img_link = {submission.submittedImage}id = {submission.submissionID}>
+						</Submission>
+					);
+				} else {
+					return null;
+				}
+			});
+		
+		return (
 			<div className="grid-container">
-			{submissionNodes}
+				{submissionNodes}
 			</div>
 
-	);
-	}
+			);
+		}
 	});
 
-	var Submission = React.createClass({//item of each record
+	var Submission = React.createClass({
+	//item of each record
 			render: function() {
 		return (
 				<div className="grid-response">
@@ -148,13 +158,13 @@ if(parseInt(submission.result)==1){
 	});
 	var urlLink = '../uqDrawBackend/getSubmissionsFromQid.php?questionID='+getParameterByName("questionID");
 
-	React.render( //pass data to SubmissionBox, it relresh every 2sec
-	< ResultBox
-	url = "../uqDrawBackend/getSubmissionsFromQid.php?questionID="
-	pollInterval = {2000} / >,
+	React.render( 
+		//pass data to SubmissionBox, it relresh every 2sec
+		<ResultBox
+			url = "../uqDrawBackend/getSubmissionsFromQid.php?questionID="
+			pollInterval = {2000} />,
 			document.getElementById('responseBox')
-	)
-	;
+			);
 	});
 
 	function getParameterByName(name) { // get url parameter

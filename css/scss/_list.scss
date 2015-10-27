@@ -260,8 +260,12 @@ $break-small: 960px;
 //style for response page grid layout
 .grid-container {
 	margin: 0 auto;
-	width: 1200px;
+	max-width: 1200px;
 	padding-top: 20px; 
+
+	@media screen and (max-width: $break-small) {
+		max-width: $break-small;
+	}
 }
 
 //style for single grid block

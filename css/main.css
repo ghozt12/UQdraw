@@ -2008,11 +2008,17 @@ body {
 /* line 261, scss/_list.scss */
 .grid-container {
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1200px;
   padding-top: 20px;
 }
+@media screen and (max-width: 960px) {
+  /* line 261, scss/_list.scss */
+  .grid-container {
+    max-width: 960px;
+  }
+}
 
-/* line 268, scss/_list.scss */
+/* line 272, scss/_list.scss */
 .grid-response {
   float: left;
   width: 110px;
@@ -2025,7 +2031,7 @@ body {
   border-color: #410C54;
 }
 
-/* line 280, scss/_list.scss */
+/* line 284, scss/_list.scss */
 .question-container {
   color: white;
   min-height: 30px;
@@ -2038,7 +2044,7 @@ body {
   min-width: 100%;
 }
 
-/* line 292, scss/_list.scss */
+/* line 296, scss/_list.scss */
 .question-container-m {
   color: white;
   margin-top: 20px;
@@ -2050,7 +2056,7 @@ body {
   cursor: default;
 }
 
-/* line 303, scss/_list.scss */
+/* line 307, scss/_list.scss */
 .question {
   float: left;
   padding-bottom: 12px;
@@ -2060,14 +2066,14 @@ body {
   text-overflow: ellipsis;
   width: 50vw;
 }
-/* line 311, scss/_list.scss */
+/* line 315, scss/_list.scss */
 .question:hover {
   white-space: normal;
   text-overflow: inherit;
   overflow: visible;
 }
 
-/* line 318, scss/_list.scss */
+/* line 322, scss/_list.scss */
 .question-button {
   float: right;
   border-radius: 200px;
@@ -2077,7 +2083,7 @@ body {
 }
 
 /* Style for text input animation Isao */
-/* line 328, scss/_list.scss */
+/* line 332, scss/_list.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -2086,7 +2092,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* line 336, scss/_list.scss */
+/* line 340, scss/_list.scss */
 .input {
   position: relative;
   z-index: 1;
@@ -2097,7 +2103,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 346, scss/_list.scss */
+/* line 350, scss/_list.scss */
 .input__field {
   position: relative;
   display: block;
@@ -2114,12 +2120,12 @@ input[type=number]::-webkit-outer-spin-button {
   /* for box shadows to show on iOS */
 }
 
-/* line 361, scss/_list.scss */
+/* line 365, scss/_list.scss */
 .input__field:focus {
   outline: none;
 }
 
-/* line 365, scss/_list.scss */
+/* line 369, scss/_list.scss */
 .input__label {
   display: inline-block;
   float: right;
@@ -2138,7 +2144,7 @@ input[type=number]::-webkit-outer-spin-button {
   user-select: none;
 }
 
-/* line 383, scss/_list.scss */
+/* line 387, scss/_list.scss */
 .input__label-content {
   position: relative;
   display: block;
@@ -2146,7 +2152,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
 }
 
-/* line 390, scss/_list.scss */
+/* line 394, scss/_list.scss */
 .graphic {
   position: absolute;
   top: 0;
@@ -2154,13 +2160,13 @@ input[type=number]::-webkit-outer-spin-button {
   fill: none;
 }
 
-/* line 397, scss/_list.scss */
+/* line 401, scss/_list.scss */
 .icon {
   color: #ddd;
   font-size: 150%;
 }
 
-/* line 402, scss/_list.scss */
+/* line 406, scss/_list.scss */
 .input__field--isao {
   z-index: 10;
   padding: 0.75em 0.1em 0.25em;
@@ -2171,7 +2177,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 412, scss/_list.scss */
+/* line 416, scss/_list.scss */
 .input__label--isao {
   position: relative;
   overflow: hidden;
@@ -2181,7 +2187,7 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: left;
 }
 
-/* line 421, scss/_list.scss */
+/* line 425, scss/_list.scss */
 .input__label--isao::before {
   content: '';
   position: absolute;
@@ -2199,7 +2205,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 438, scss/_list.scss */
+/* line 442, scss/_list.scss */
 .input__label--isao::after {
   content: attr(data-content);
   position: absolute;
@@ -2217,26 +2223,26 @@ input[type=number]::-webkit-outer-spin-button {
   pointer-events: none;
 }
 
-/* line 455, scss/_list.scss */
+/* line 459, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao::before {
   background-color: #8ED676;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 
-/* line 461, scss/_list.scss */
+/* line 465, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao {
   pointer-events: none;
 }
 
-/* line 465, scss/_list.scss */
+/* line 469, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 471, scss/_list.scss */
+/* line 475, scss/_list.scss */
 .input__label-content--isao {
   padding: 0.75em 0.15em;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -2245,7 +2251,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 479, scss/_list.scss */
+/* line 483, scss/_list.scss */
 .input__field--isao:focus + .input__label--isao .input__label-content--isao {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
@@ -2253,7 +2259,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /*make question text input*/
-/* line 487, scss/_list.scss */
+/* line 491, scss/_list.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -2262,7 +2268,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* line 495, scss/_list.scss */
+/* line 499, scss/_list.scss */
 .input-m-t {
   position: relative;
   z-index: 1;
@@ -2273,7 +2279,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 505, scss/_list.scss */
+/* line 509, scss/_list.scss */
 .input-m {
   position: relative;
   z-index: 1;
@@ -2284,7 +2290,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 515, scss/_list.scss */
+/* line 519, scss/_list.scss */
 .input__field-m {
   position: relative;
   display: block;
@@ -2301,12 +2307,12 @@ input[type=number]::-webkit-outer-spin-button {
   /* for box shadows to show on iOS */
 }
 
-/* line 530, scss/_list.scss */
+/* line 534, scss/_list.scss */
 .input__field-m:focus {
   outline: none;
 }
 
-/* line 534, scss/_list.scss */
+/* line 538, scss/_list.scss */
 .input__label-m {
   display: inline-block;
   float: right;
@@ -2325,7 +2331,7 @@ input[type=number]::-webkit-outer-spin-button {
   user-select: none;
 }
 
-/* line 552, scss/_list.scss */
+/* line 556, scss/_list.scss */
 .input__label-content-m {
   position: relative;
   display: block;
@@ -2334,7 +2340,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 560, scss/_list.scss */
+/* line 564, scss/_list.scss */
 .graphic-m {
   position: absolute;
   top: 0;
@@ -2342,13 +2348,13 @@ input[type=number]::-webkit-outer-spin-button {
   fill: none;
 }
 
-/* line 567, scss/_list.scss */
+/* line 571, scss/_list.scss */
 .icon-m {
   color: #ddd;
   font-size: 150%;
 }
 
-/* line 572, scss/_list.scss */
+/* line 576, scss/_list.scss */
 .input__field--isao-m {
   z-index: 10;
   padding: 0.75em 0.1em 0.25em;
@@ -2358,7 +2364,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 582, scss/_list.scss */
+/* line 586, scss/_list.scss */
 .input__label--isao-m {
   position: relative;
   overflow: hidden;
@@ -2369,7 +2375,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 
-/* line 592, scss/_list.scss */
+/* line 596, scss/_list.scss */
 .input__label--isao-m::before {
   content: '';
   position: absolute;
@@ -2387,7 +2393,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 609, scss/_list.scss */
+/* line 613, scss/_list.scss */
 .input__label--isao-m::after {
   content: attr(data-content);
   position: absolute;
@@ -2406,26 +2412,26 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 627, scss/_list.scss */
+/* line 631, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m::before {
   background-color: #8ED676;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 
-/* line 633, scss/_list.scss */
+/* line 637, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m {
   pointer-events: none;
 }
 
-/* line 637, scss/_list.scss */
+/* line 641, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 643, scss/_list.scss */
+/* line 647, scss/_list.scss */
 .input__label-content--isao-m {
   color: white;
   padding: 0.75em 0.15em;
@@ -2435,7 +2441,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 652, scss/_list.scss */
+/* line 656, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
@@ -2443,7 +2449,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /*edit question text input*/
-/* line 667, scss/_list.scss */
+/* line 671, scss/_list.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -2452,7 +2458,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* line 675, scss/_list.scss */
+/* line 679, scss/_list.scss */
 .input-e-t {
   position: relative;
   z-index: 1;
@@ -2463,7 +2469,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 685, scss/_list.scss */
+/* line 689, scss/_list.scss */
 .input-e {
   position: relative;
   z-index: 1;
@@ -2474,7 +2480,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 695, scss/_list.scss */
+/* line 699, scss/_list.scss */
 .input__field-e {
   position: relative;
   display: block;
@@ -2491,12 +2497,12 @@ input[type=number]::-webkit-outer-spin-button {
   /* for box shadows to show on iOS */
 }
 
-/* line 710, scss/_list.scss */
+/* line 714, scss/_list.scss */
 .input__field-e:focus {
   outline: none;
 }
 
-/* line 714, scss/_list.scss */
+/* line 718, scss/_list.scss */
 .input__label-e {
   display: inline-block;
   float: right;
@@ -2515,7 +2521,7 @@ input[type=number]::-webkit-outer-spin-button {
   user-select: none;
 }
 
-/* line 732, scss/_list.scss */
+/* line 736, scss/_list.scss */
 .input__label-content-e {
   position: relative;
   display: block;
@@ -2524,7 +2530,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 740, scss/_list.scss */
+/* line 744, scss/_list.scss */
 .graphic-e {
   position: absolute;
   top: 0;
@@ -2532,13 +2538,13 @@ input[type=number]::-webkit-outer-spin-button {
   fill: none;
 }
 
-/* line 747, scss/_list.scss */
+/* line 751, scss/_list.scss */
 .icon-e {
   color: #ddd;
   font-size: 150%;
 }
 
-/* line 752, scss/_list.scss */
+/* line 756, scss/_list.scss */
 .input__field--isao-e {
   z-index: 10;
   padding: 0.75em 0.1em 0.25em;
@@ -2548,7 +2554,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 762, scss/_list.scss */
+/* line 766, scss/_list.scss */
 .input__label--isao-e {
   position: relative;
   overflow: hidden;
@@ -2559,7 +2565,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 
-/* line 772, scss/_list.scss */
+/* line 776, scss/_list.scss */
 .input__label--isao-e::before {
   content: '';
   position: absolute;
@@ -2577,7 +2583,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 789, scss/_list.scss */
+/* line 793, scss/_list.scss */
 .input__label--isao-e::after {
   content: attr(data-content);
   position: absolute;
@@ -2596,26 +2602,26 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 807, scss/_list.scss */
+/* line 811, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e::before {
   background-color: #410C54;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 
-/* line 813, scss/_list.scss */
+/* line 817, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e {
   pointer-events: none;
 }
 
-/* line 817, scss/_list.scss */
+/* line 821, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 823, scss/_list.scss */
+/* line 827, scss/_list.scss */
 .input__label-content--isao-e {
   color: white;
   padding: 0.75em 0.15em;
@@ -2625,7 +2631,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 832, scss/_list.scss */
+/* line 836, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e .input__label-content--isao-e {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
