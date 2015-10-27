@@ -1,18 +1,31 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<title>UQ Draw</title>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/vendor/gridism.css">
   <!-- Sets it as a mobile viewport if the user is on a mobile device -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600,400' rel='stylesheet' type='text/css'>
+  <!-- Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- JS -->
+	<script>
+  		 // DISRESPECT
+ 
+  		 $(document).ready(function() {
+  		 	$("#subjects").load("../uqDrawBackend/subListForALecturer.php");
+  		 });
+  	</script>
 </head>
 <body class="bg-lecture">
 
 	<section>
 		<div class="header-l-lecture">
 			<div class="headerpos">
-			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
+			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" alt=""/>
 			<h3 class="typography-l-h3"> Lecture Mode </h3>
 			</div>
 			<a href="lecture-prepare.html"><div class="button-goto-prepare"> <p> goto Prepare Mode </p></div></a>
@@ -35,15 +48,5 @@
 	</section>
 
 </body>
-	<!-- Library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-	<!-- JS -->
-	<script>
-  		 // DISRESPECT
- 
-  		 $(document).ready(function() {
-  		 	$("#subjects").load("../uqDrawBackend/subListForALecturer.php");
-  		 });
-  	</script>
+	
 </html>

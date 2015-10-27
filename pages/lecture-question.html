@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<title>UQ Draw</title>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/vendor/gridism.css">
@@ -8,60 +10,7 @@
 	<!-- Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="../js/jquery.cookie.js">	</script>
-</head>
-
-<body>
-	<!-- Header -->
-	<section>
-		<div class="header-l-prepare">
-		<div class="headerpos">
-			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
-			</div>
-		</div>
-	</section>
-
-	<!-- Questions -->
-	<section>
-
-		<!-- Instructions (step 1 and step 2) -->
-		<div class="instruction-container"><h3 class="question-instruct">For Students:</h3> <h3 class="question-instruct"> Goto <span class="question-goto">teamone.uqcloud.net</span> </h3>
-		 <h3 class="question-instruct"> Enter code <span class="question-goto" id = "code"> 9ag </span> </h3></div>
-		
-		<!-- The question goes here, get id question -->
-		<h2 class="instruction-question">Question: <span id="question-title">Draw My House with a purple window and the sun shining outside</span> </h2>
-
-		<!-- RESPONSE FILLER -->
-		<!-- This works by increasing the inner divs width, so grab
-		theme-response-inner and change the width accordinly -->
-		<div class="timer-div">
-			
-			<div class="theme-timer"> </div>
-			
-		</div>
-		<div class="theme-time2"><p>4 minutes</p> </div>
-		<div class="theme-time15"><p>3 minutes</p> </div>
-		<div class="theme-time1"><p>2 minutes</p> </div>
-		<div class="theme-time05"><p>1 minute</p> </div>
-		
-		
-		
-		<div class="theme-response-actions">
-
-
-			<!-- Enter PHP values in the spans -->
-			<!--<h2> Responses <span id="responses">23</span> </h2> -->
-			<h2> Time: <span id="time-left">04:00</span></h2>
-
-			<!-- Buttons -->
-			<button class="q-button-long" onclick="btnViewResponses()">View Responses</button>
-			<button class="q-button" onclick="btnEnd()">End</button>
-            <span id="nextButton"></span>
-			<!---<button class="q-button">Next</button>-->
-		</div>
-	</section>
-
-</body>
-
+	
 	<!-- JS -->
 	<script type='text/javascript'>
 		var questionID = getParameterByName("questionID");
@@ -151,4 +100,58 @@
 });
 
 </script>
+</head>
+
+<body>
+	<!-- Header -->
+	<section>
+		<div class="header-l-prepare">
+		<div class="headerpos">
+			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" alt=""/>
+			</div>
+		</div>
+	</section>
+
+	<!-- Questions -->
+	<section>
+
+		<!-- Instructions (step 1 and step 2) -->
+		<div class="instruction-container"><h3 class="question-instruct">For Students:</h3> <h3 class="question-instruct"> Goto <span class="question-goto">teamone.uqcloud.net</span> </h3>
+		 <h3 class="question-instruct"> Enter code <span class="question-goto" id = "code"> 9ag </span> </h3></div>
+		
+		<!-- The question goes here, get id question -->
+		<h2 class="instruction-question">Question: <span id="question-title">Draw My House with a purple window and the sun shining outside</span> </h2>
+
+		<!-- RESPONSE FILLER -->
+		<!-- This works by increasing the inner divs width, so grab
+		theme-response-inner and change the width accordinly -->
+		<div class="timer-div">
+			
+			<div class="theme-timer"> </div>
+			
+		</div>
+		<div class="theme-time2"><p>4 minutes</p> </div>
+		<div class="theme-time15"><p>3 minutes</p> </div>
+		<div class="theme-time1"><p>2 minutes</p> </div>
+		<div class="theme-time05"><p>1 minute</p> </div>
+		
+		
+		
+		<div class="theme-response-actions">
+
+
+			<!-- Enter PHP values in the spans -->
+			<!--<h2> Responses <span id="responses">23</span> </h2> -->
+			<h2> Time: <span id="time-left">04:00</span></h2>
+
+			<!-- Buttons -->
+			<button class="q-button-long" onclick="btnViewResponses()">View Responses</button>
+			<button class="q-button" onclick="btnEnd()">End</button>
+            <span id="nextButton"></span>
+			<!---<button class="q-button">Next</button>-->
+		</div>
+	</section>
+
+</body>
+
 </html>

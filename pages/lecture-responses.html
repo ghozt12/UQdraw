@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>UQ Draw</title>
 	<meta charset="utf-8">
 	<!-- CSS -->
 	<link rel="stylesheet" href="../css/main.css">
@@ -11,61 +12,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-</head>
-
-<body>
-	<section>
-		<div class="header-l-lecture">
-			<div class="button-back-lecture-response" onclick="btnBack()"> <p> Back </p></div>
-			<div class="headerpos">
-			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
-			<h3 class="typography-l-h3"> Lecture Mode - Responses </h3>
-			</div>
-		</div>
-	</section>
-	<script>
-		function btnBack(){
-			window.history.back();
-		}
-	</script>
-
-<section>
-
-
-	<!-- Body Heading -->
-	<!--<h2 class="type-body-heading"> Draw a House </h2>
-    Body Subheading - display number of responses-->
-	<!-- <h3 class="type-body-response"> 2 Correct Responses Lecture 1 - Intro</h3>-->
-
-
-	<span id="responseBox"></span>
-
-	<!--example buttons-->
-	<!--<div class="grid-response" id="response9">
-            <img class="single-response" src="..\assets\images\response-1.jpg" height="110px" width="110px" >
-            <a href="..\assets\images\response-1.jpg" data-lightbox="responses" data-title="First Response" >
-                    <button type="button" class="button-hidden">Expand</button>
-            </a>
-            <div id="mark0">
-
-            </div>
-    </div>
-
-    <div class="grid-response" id="response2">
-            <img class="single-response" src="..\assets\images\response-2.jpg" height="110px" width="110px" ></img>
-            <a href="..\assets\images\response-2.jpg" data-lightbox="responses" data-title="Second Response" >
-                    <button type="button" class="button-hidden">Expand</button>
-            </a>
-            <div id="mark1">
-            </div>-->
-
-	</div>
-
-
-</section>
-
-</body>
-<script src="../js/lightbox-lecture.js"></script>
+	<script src="../js/lightbox-lecture.js"></script>
 <script src="../js/responses_page.js"></script>
 <script type="text/babel">
 	$(document).ready(function() {
@@ -166,7 +113,59 @@
 
 </script>
 
+</head>
+
+<body>
+	<section>
+		<div class="header-l-lecture">
+			<div class="button-back-lecture-response" onclick="btnBack()"> <p> Back </p></div>
+			<div class="headerpos">
+			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" alt=""/>
+			<h3 class="typography-l-h3"> Lecture Mode - Responses </h3>
+			</div>
+		</div>
+	</section>
+	<script>
+		function btnBack(){
+			window.history.back();
+		}
+	</script>
+
+<section>
 
 
+	<!-- Body Heading -->
+	<!--<h2 class="type-body-heading"> Draw a House </h2>
+    Body Subheading - display number of responses-->
+	<!-- <h3 class="type-body-response"> 2 Correct Responses Lecture 1 - Intro</h3>-->
+
+
+	<span id="responseBox"></span>
+
+	<!--example buttons-->
+	<!--<div class="grid-response" id="response9">
+            <img class="single-response" src="..\assets\images\response-1.jpg" height="110px" width="110px" >
+            <a href="..\assets\images\response-1.jpg" data-lightbox="responses" data-title="First Response" >
+                    <button type="button" class="button-hidden">Expand</button>
+            </a>
+            <div id="mark0">
+
+            </div>
+    </div>
+
+    <div class="grid-response" id="response2">
+            <img class="single-response" src="..\assets\images\response-2.jpg" height="110px" width="110px" ></img>
+            <a href="..\assets\images\response-2.jpg" data-lightbox="responses" data-title="Second Response" >
+                    <button type="button" class="button-hidden">Expand</button>
+            </a>
+            <div id="mark1">
+            </div>
+
+	</div>-->
+
+
+</section>
+
+</body>
 
 </html>

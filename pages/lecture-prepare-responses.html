@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<title>UQ Draw</title>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/vendor/gridism.css">
@@ -9,57 +11,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-</head>
-
-<body>
-
-	<section>
-		<div class="header-l-prepare">
-			<div class="button-back-prepare-response" onclick="btnBack()"> <p> Back </p></div>
-			<div class="headerpos">
-			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" />
-			<h3 class="typography-l-h3"> Prepare Mode - Responses</h3>
-			</div>
-		</div>
-	</section>
-	<script>
-		function btnBack(){
-			window.history.back();
-		}
-	</script>
-
-	<section>
-		<span id="responseBox"></span>
-		<!-- Body Heading -->
-		<!--<h2 class="type-body-heading"> Draw a House </h2>
-		<!-- Body Subheading - display number of responses-->
-		<!--<h3 class="type-body-response"> 9 Responses Lecture 1 - Intro</h3>
-		
-		<div class="grid-container">
-
-
-			<!--<div class="grid-response" id="response2">
-				<img class="single-response" src="..\assets\images\response-2.jpg" height="110px" width="110px" >
-				<a href="..\assets\images\response-2.jpg" data-lightbox="responses" data-title="Second Response" >
-					<button type="button" class="button-hidden">Expand</button>
-				</a>
-				<button type="button" class="button-hidden">Delete</button>
-				<div id="mark1">
-				</div>
-
-			</div>
-
-			<div class="grid-response">
-				<button type="button" class="button-hidden">Expand</button>
-				<button type="button" class="button-hidden">Delete</button>	
-			</div>
-
-		</div>-->
-
-	</section>
-
-</body>
-<script src="../js/lightbox.js"></script>
+	<script src="../js/lightbox.js"></script>
 <script src="../js/responses_page.js"></script>
 <script type="text/babel">
 	$(document).ready(function() {
@@ -203,5 +155,55 @@
 	//append incorrect icon in the marking div
 
 </script>
+</head>
+
+<body>
+
+	<section>
+		<div class="header-l-prepare">
+			<div class="button-back-prepare-response" onclick="btnBack()"> <p> Back </p></div>
+			<div class="headerpos">
+			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" alt="" />
+			<h3 class="typography-l-h3"> Prepare Mode - Responses</h3>
+			</div>
+		</div>
+	</section>
+	<script>
+		function btnBack(){
+			window.history.back();
+		}
+	</script>
+
+	<section>
+		<span id="responseBox"></span>
+		<!-- Body Heading -->
+		<!--<h2 class="type-body-heading"> Draw a House </h2>-->
+		<!-- Body Subheading - display number of responses-->
+		<!--<h3 class="type-body-response"> 9 Responses Lecture 1 - Intro</h3>
+		
+		<div class="grid-container">-->
+
+
+			<!--<div class="grid-response" id="response2">
+				<img class="single-response" src="..\assets\images\response-2.jpg" height="110px" width="110px" >
+				<a href="..\assets\images\response-2.jpg" data-lightbox="responses" data-title="Second Response" >
+					<button type="button" class="button-hidden">Expand</button>
+				</a>
+				<button type="button" class="button-hidden">Delete</button>
+				<div id="mark1">
+				</div>
+
+			</div>
+
+			<div class="grid-response">
+				<button type="button" class="button-hidden">Expand</button>
+				<button type="button" class="button-hidden">Delete</button>	
+			</div>
+
+		</div>-->
+
+	</section>
+
+</body>
 
 </html>

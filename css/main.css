@@ -1589,7 +1589,7 @@ body {
   border: 5px solid #410C54;
   background: #410C54;
   border-radius: 50%;
-  -webkit-animation: size 120s linear;
+  -webkit-animation: size 240s linear;
   animation: size 240s linear;
   position: absolute;
   top: 50%;
