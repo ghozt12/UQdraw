@@ -61,7 +61,7 @@
 			lectureList+= " <li> <div class='question-container'><div class='question'>"
 					+questionItem.title+"</div>"
 					+"<div class='question-button'><button class='button' onclick='askQuestion("+'"'+getParameterByName("courseID")+'","'+questionItem.questionID+'","'+week+'")'+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='
-					+questionItem.questionID+'"'+"'> View </button> </div></div></li>";
+					+questionItem.questionID+'"'+"'> Responses </button> </div></div></li>";
 		}
 		$.cookie(week,qidList ,{ expires: 1 });
 		return lectureHead+lectureList;
@@ -100,7 +100,7 @@
 			<h3 class="typography-l-h3"> Lecture Mode </h3>
 			</div>
 			<a id="goto-prepare-mode" href="lecture-makequestions.html"><div class="button-goto-prepare"> <p> goto Prepare Mode </p></div>
-			<a href="../pages/lecture-subjects.html"><div class="button-back-lecture"> <p> Back</p></div></a>
+			<a href="../pages/lecture-subjects.html"><div class="button-back-lecture-response"> <p> Back</p></div></a>
 		</div>
 	</section>
 
@@ -110,9 +110,11 @@
 
 
 		<!-- Instructions (step 1 and step 2) -->
-		<div class="instruction-container"><div class="circle-number"><p>1</p></div> <h3> Goto <span>teamone.uqcloud.net</span> </h3></div>
-		<div class="instruction-container"><div class="circle-number code"><p>2</p></div> <h3> Enter code <span id = "code"> 9ag </span> </h3></div>
-		<div class="instruction-bottom"></div>
+		<div class="student-intruct">
+		
+		<div class="instruction-container"><h3> For Students: </h3><div class="circle-number"><p>1</p></div> <h3> Goto <span>teamone.uqcloud.net</span> </h3>
+<div class="circle-number code"><p>2</p></div> <h3> Enter code <span id = "code"> 9ag </span> </h3></div>
+		</div>
 	
 		<!-- -->
 

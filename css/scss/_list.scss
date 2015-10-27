@@ -1,10 +1,10 @@
 $break-small: 960px;
 
 .list-subjects {
-	margin-top: 20px;
-	width: 50%;
+	margin-top: 50px;
+	width: 80%;
 	margin: auto;
-	padding-top: 30px;
+	padding-top: 60px;
 	
 	li {
 		color: white;
@@ -61,7 +61,7 @@ $break-small: 960px;
 }
 
 #addbutton{
-	width:50%;
+	width:80%;
 	margin: auto;
 	text-align:center;
 }
@@ -91,7 +91,7 @@ $break-small: 960px;
 
 
 
-
+/*style for question list in student question page*/
 .student-list {
 	width: 80%;
 	margin: auto;
@@ -111,8 +111,9 @@ $break-small: 960px;
 		padding-left:20px;
 		font-size: 20px;
 		text-align:center;
+		border-radius: 14px;
 	&:hover {
-		background: white;
+		background: lighten($uq-green, 25%);
         color: $uq-green;
         transition: 0.4s;
 	}
@@ -122,6 +123,40 @@ $break-small: 960px;
 		float: right;
 	}
 }
+
+
+.closed-questions {
+	width: 80%;
+	margin: auto;
+	
+	
+	li {
+		margin-bottom: 10px;
+		background: lighten(black, 50%);
+		color: $uq-green;
+		margin: 3px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		transition: .3s;
+		cursor: pointer;
+		@extend .noselect;
+		font-size: 30px;
+		padding-left:20px;
+		font-size: 20px;
+		text-align:center;
+		border-radius: 14px;
+	&:hover {
+		background: lighten(black, 50%);
+		color: $uq-green;
+		cursor: default;
+	}
+	}
+
+	li button {
+		float: right;
+	}
+}
+
 
 .list-questions {
 	@extend .list-subjects;
@@ -267,7 +302,7 @@ $break-small: 960px;
 	white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
-	width:30vw;
+	width:50vw;
 	&:hover{
 		white-space: normal; 
 		text-overflow: inherit;
@@ -277,8 +312,10 @@ $break-small: 960px;
 
 .question-button{
 	float:right;
-	width:38%;
 	border-radius:200px;
+	margin-left:auto;
+	width:300px;
+	margin-right:auto;
 }
 
 

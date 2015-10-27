@@ -67,7 +67,6 @@
               if (getParameterByName("enteringCode") != "") {
                 enteringCode = getParameterByName("enteringCode");
                 Requesturl= "http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromThreeDigitCode.php?enteringCode="+enteringCode;
-              //console.log("3digit");
               }
             }
 
@@ -147,7 +146,7 @@
           <h2 className="type-body-heading"> <span> Open Questions </span> </h2>
   <ul className="student-list" >  {openQuestions}</ul>
           <h2 className="type-body-heading"> <span> Closed Questions</span> </h2>
-  <ul className="student-list" >  {notOpenQuestions}</ul>
+  <ul className="closed-questions" >  {notOpenQuestions}</ul>
           <h2 className="type-body-heading"> <span> PREVIOUS RESPONSES </span> </h2>
   <ul className="student-list" > {prevQuestions}</ul>
           </section>
@@ -171,7 +170,7 @@
             render: function() {
               return (
                       <div>
-                      <li>
+                      <li >
                       <span> {this.props.title} </span></li>
           </div>
   );
@@ -179,7 +178,7 @@
   });
   var PrevQuestion = React.createClass({//item of each record
             render: function() {
-              var resultLink = "";//tobe confirm
+              var resultLink = "student-correctanswers.html?questionID="+this.props.questionID;//tobe confirm
               return (
                       <div>
                       <a href={resultLink}><li>
