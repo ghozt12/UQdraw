@@ -80,6 +80,10 @@ input:focus {
     &:hover {
         background-color: darken($uq-purple, 10%);
     }
+
+    @media screen and (max-width: $break-small) {
+        width: 80px;
+    }
 }
 
 .button-back-prepare-response {
@@ -97,6 +101,10 @@ input:focus {
 
     &:hover {
         background-color: lighten(#825194, 10%);
+    }
+
+    @media screen and (max-width: $break-small) {
+        width: 80px;
     }
 }
 
@@ -117,6 +125,10 @@ input:focus {
     &:hover {
         background-color: darken($uq-green, 15%);
     }
+
+    @media screen and (max-width: $break-small) {
+        width: 80px;
+    }
 }
 
 .button-back-prepare{
@@ -135,6 +147,10 @@ input:focus {
 
     &:hover {
         background-color: darken($uq-green, 10%);
+    }
+
+    @media screen and (max-width: $break-small) {
+        width: 80px;
     }
 }
 
@@ -155,6 +171,10 @@ input:focus {
     &:hover {
         background-color: darken($uq-green, 20%);
     }
+
+    @media screen and (max-width: $break-small) {
+        width: 80px;
+    }
 }
 
 .button-goto-lecture {
@@ -173,6 +193,10 @@ input:focus {
 
     &:hover {
         background-color: darken($uq-green, 10%);
+    }
+
+    @media screen and (max-width: $break-small) {
+        width: 80px;
     }
 }
 

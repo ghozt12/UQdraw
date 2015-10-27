@@ -93,10 +93,11 @@
             },
             render: function() {//pass data to different Items
               console.log(this.state.subList);
+                var subject = this.state.subject.substring(0,7);
               return (
                       <div>
                       <section className="student-question">
-                      <CourseInfo enteringCode = {this.state.enteringCode} subject={this.state.subject}/>
+                      <CourseInfo enteringCode = {this.state.enteringCode} subject={subject}/>
           <QuestionsList subList={this.state.subList}/>
   </section>
   </div>
