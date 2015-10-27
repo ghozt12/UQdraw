@@ -61,7 +61,7 @@
 			lectureList+= " <li> <div class='question-container'><div class='question'>"
 					+questionItem.title+"</div>"
 					+"<div class='question-button'><button class='button' onclick='askQuestion("+'"'+getParameterByName("courseID")+'","'+questionItem.questionID+'","'+week+'")'+"'> Ask</button><button class='button' onclick='window.location.href="+'"lecture-responses.html?questionID='
-					+questionItem.questionID+'"'+"'> View </button> </div></div></li>";
+					+questionItem.questionID+'"'+"'> Responses </button> </div></div></li>";
 		}
 		$.cookie(week,qidList ,{ expires: 1 });
 		return lectureHead+lectureList;

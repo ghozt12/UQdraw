@@ -26,6 +26,10 @@ $break-small: 960px;
 
 }
 
+.list-subject {
+	margin-top: 15px;
+}
+
 .list-subjects-purple {
 	@extend .list-subjects;
 
@@ -47,6 +51,7 @@ $break-small: 960px;
 .list-subjects-green {
 	@extend .list-subjects;
 		opacity: .8;
+		margin-top:-45px;
 	li {
 		background: $uq-green;
 	}
@@ -216,7 +221,7 @@ $break-small: 960px;
 
 .list-make-green {
 	@extend .list-questions;
-
+		margin-top:-45px;
 
  div {
 		background:  $uq-green;
