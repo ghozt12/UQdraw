@@ -11,13 +11,8 @@
 /* *************************
   MIXINS 
 ************************* */
-<<<<<<< HEAD
 /* line 39, scss/main.scss */
-.noselect, .list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li, .list-questions li, .list-make-green li, .list-questions-purple li, .student-list li {
-=======
-/* line 38, scss/main.scss */
 .noselect, .list-subjects li, .list-subjects-purple li, .list-subjects-green li, .list-questions-green li, .list-questions li, .list-make-green li, .list-questions-purple li, .student-list li, .closed-questions li {
->>>>>>> 2b5d3f4c0633965be038fe1edbfc219c7d0260ef
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -1312,6 +1307,13 @@ body {
 }
 
 /* line 88, scss/_typography.scss */
+.instruction-container {
+  display: block;
+  margin: auto;
+  width: 450px;
+}
+
+/* line 93, scss/_typography.scss */
 .student-intruct {
   position: absolute;
   width: 100%;
@@ -1319,13 +1321,8 @@ body {
   left: 0;
 }
 
-/* line 95, scss/_typography.scss */
+/* line 100, scss/_typography.scss */
 .instruction-container {
-<<<<<<< HEAD
-  display: block;
-  margin: auto;
-  width: 450px;
-=======
   display: inline-block;
   position: absolute;
   width: 100%;
@@ -1333,29 +1330,28 @@ body {
   left: 0;
   text-align: center;
 }
-/* line 102, scss/_typography.scss */
+/* line 108, scss/_typography.scss */
 .instruction-container .question-instruct {
   color: white;
 }
-/* line 105, scss/_typography.scss */
+/* line 112, scss/_typography.scss */
 .instruction-container .question-goto {
   color: #8ED676;
->>>>>>> 2b5d3f4c0633965be038fe1edbfc219c7d0260ef
 }
-/* line 108, scss/_typography.scss */
+/* line 116, scss/_typography.scss */
 .instruction-container h3 {
   color: black;
   display: inline-block;
   font-size: 30px;
   font-weight: 900;
 }
-/* line 114, scss/_typography.scss */
+/* line 122, scss/_typography.scss */
 .instruction-container h3 span {
   background: #410C54;
   color: white;
   padding: 4px;
 }
-/* line 121, scss/_typography.scss */
+/* line 129, scss/_typography.scss */
 .instruction-container .circle-number {
   margin-right: 1px;
   margin-left: 10px;
@@ -1371,12 +1367,12 @@ body {
   margin-bottom: 10px;
   display: inline-block;
 }
-/* line 133, scss/_typography.scss */
+/* line 141, scss/_typography.scss */
 .instruction-container .circle-number p {
   padding-top: 5px;
 }
 
-/* line 146, scss/_typography.scss */
+/* line 154, scss/_typography.scss */
 .instruction-question {
   font-weight: 900;
   font-size: 30px;
@@ -1384,13 +1380,13 @@ body {
   margin-top: 10px;
 }
 
-/* line 157, scss/_typography.scss */
+/* line 165, scss/_typography.scss */
 .text-subject {
   font-size: 5vmin;
   font-weight: 900;
 }
 
-/* line 164, scss/_typography.scss */
+/* line 172, scss/_typography.scss */
 .instruction-q {
   font-size: 15px;
   font-weight: 900;
@@ -1399,7 +1395,7 @@ body {
   color: #410C54;
 }
 
-/* line 175, scss/_typography.scss */
+/* line 183, scss/_typography.scss */
 .question-body-heading {
   text-align: center;
   padding-top: 10px;
@@ -1407,7 +1403,7 @@ body {
   color: black;
 }
 
-/* line 183, scss/_typography.scss */
+/* line 191, scss/_typography.scss */
 .type-body-subheading {
   text-align: center;
   padding-top: 10px;
@@ -1415,7 +1411,7 @@ body {
   padding-bottom: 10px;
 }
 
-/* line 192, scss/_typography.scss */
+/* line 200, scss/_typography.scss */
 .startpage-welcome {
   color: white;
   text-align: center;
@@ -1425,18 +1421,18 @@ body {
   font-size: 1em;
 }
 
-/* line 201, scss/_typography.scss */
+/* line 209, scss/_typography.scss */
 .start-section-input {
   opacity: .8;
 }
-/* line 203, scss/_typography.scss */
+/* line 211, scss/_typography.scss */
 .start-section-input h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
 }
 
-/* line 217, scss/_typography.scss */
+/* line 225, scss/_typography.scss */
 .lecturer-startpage-welcome {
   color: #000;
   text-align: center;
@@ -1446,12 +1442,12 @@ body {
   font-size: 1em;
 }
 
-/* line 226, scss/_typography.scss */
+/* line 234, scss/_typography.scss */
 #lecturer-start-username {
   font-weight: 600;
 }
 
-/* line 231, scss/_typography.scss */
+/* line 239, scss/_typography.scss */
 .type-lecture-mode h2, .type-prepare-mode h2 {
   color: white;
   font-size: 50px;
@@ -1460,18 +1456,18 @@ body {
   padding-top: 10px;
   margin-bottom: 30px;
 }
-/* line 240, scss/_typography.scss */
+/* line 248, scss/_typography.scss */
 .type-lecture-mode .prepare-use, .type-prepare-mode .prepare-use {
   position: absolute;
   left: 50%;
   bottom: 10px;
 }
-/* line 245, scss/_typography.scss */
+/* line 253, scss/_typography.scss */
 .type-lecture-mode img, .type-prepare-mode img {
   width: 25%;
 }
 
-/* line 250, scss/_typography.scss */
+/* line 258, scss/_typography.scss */
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -1480,7 +1476,7 @@ body {
   font-family: "open-sans-semibold", Arial;
 }
 
-/* line 259, scss/_typography.scss */
+/* line 266, scss/_typography.scss */
 .type-body-response {
   font-size: 20px;
   text-align: left;

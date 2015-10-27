@@ -85,19 +85,17 @@ body {
 	}
 }
 
-<<<<<<< HEAD
 .instruction-container {
 	display: block;
 	margin: auto;
 	width: 450px;
-=======
+}
 .student-intruct{
 	position: absolute;
 	width:100%;
 	top:55px;
 	left:0;
 }
->>>>>>> 2b5d3f4c0633965be038fe1edbfc219c7d0260ef
 
 .instruction-container {
 	display: inline-block;
@@ -106,12 +104,15 @@ body {
 	top:5px;
 	left:0;
 	text-align:center;
+
 	.question-instruct{
 		color:white;
 	}
+
 	.question-goto{
 		color:$uq-green;
 	}
+
 	h3 {
 		color: black;
 		display: inline-block;
@@ -261,7 +262,6 @@ body {
 	margin-top: 18px;
 	font-family: "open-sans-semibold", Arial;
 }
-
 
 .type-body-response {
 	font-size: 20px;
