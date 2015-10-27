@@ -1511,14 +1511,14 @@ body {
 
 /* line 61, scss/_theme.scss */
 .bg-prepare {
-  background-image: url(../assets/images/bg-prepare.jpg);
+  //background-image: url(../assets/images/bg-prepare.jpg);
   background-repeat: none;
   background-size: cover;
 }
 
 /* line 68, scss/_theme.scss */
 .bg-lecture {
-  background-image: url(../assets/images/bg-lecture.jpg);
+  //background-image: url(../assets/images/bg-lecture.jpg);
   background-repeat: none;
   background-size: cover;
 }

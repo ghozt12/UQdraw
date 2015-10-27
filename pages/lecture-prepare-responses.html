@@ -100,7 +100,7 @@
 		return(
 				<div>
 
-				<h2 className="type-body-heading">{this.props.title}</h2>
+				<h2 className="type-body-heading">Question: {this.props.title}</h2>
 	<h3 className="type-body-response"> Response-{this.props.listLength} - Lecture {this.props.week}</h3>
 
 	</div>
@@ -131,6 +131,8 @@
 	var Submission = React.createClass({//item of each record
 			handleDelete:function(){
 		    //deleteItem from server
+		    var confirmDelete = confirm("Are you sure you want to delete this submission?");
+	if(confirmDelete){
 		$.ajax({
 			url: "../uqDrawBackend/deleteSubmission.php?submissionID="+this.props.id,
 			dataType: 'json',
@@ -142,6 +144,7 @@
 				console.error(this.props.url, status, err.toString());
 			}.bind(this)
 		});
+	}
 	       },
 			render: function() {
 		var markID = "mark"+this.props.index;
