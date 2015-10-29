@@ -1230,7 +1230,7 @@ body:after {
 /* *****
 ** Font Family
 * *****/
-/* line 5, scss/_typography.scss */
+/* line 9, scss/_typography.scss */
 body {
   font-family: 'open-sans-semibold', sans-serif;
 }
@@ -1258,18 +1258,18 @@ body {
   font-family: 'quicksand-bold';
   src: url("../css/fonts/quicksand/quicksand-bold.ttf") format("truetype");
 }
-/* line 43, scss/_typography.scss */
+/* line 47, scss/_typography.scss */
 .type-welcome {
   text-align: center;
   padding-bottom: 10px;
 }
 
-/* line 49, scss/_typography.scss */
+/* line 53, scss/_typography.scss */
 .type-welcome span {
   font-weight: 600;
 }
 
-/* line 54, scss/_typography.scss */
+/* line 58, scss/_typography.scss */
 .type-title {
   color: white;
   display: inline-block;
@@ -1277,7 +1277,7 @@ body {
   margin-top: 18px;
 }
 
-/* line 62, scss/_typography.scss */
+/* line 66, scss/_typography.scss */
 .type-body-heading {
   text-align: center;
   font-weight: 800;
@@ -1285,7 +1285,7 @@ body {
   color: black;
 }
 
-/* line 69, scss/_typography.scss */
+/* line 73, scss/_typography.scss */
 .type-body-url {
   text-align: center;
   padding-top: 10px;
@@ -1294,26 +1294,26 @@ body {
   color: #8ED676;
 }
 
-/* line 77, scss/_typography.scss */
+/* line 81, scss/_typography.scss */
 .type-code {
   font-size: 5vmin;
   color: black;
   font-weight: 900;
 }
-/* line 82, scss/_typography.scss */
+/* line 86, scss/_typography.scss */
 .type-code span {
   background: black;
   color: white;
 }
 
-/* line 88, scss/_typography.scss */
+/* line 92, scss/_typography.scss */
 .instruction-container {
   display: block;
   margin: auto;
   width: 450px;
 }
 
-/* line 93, scss/_typography.scss */
+/* line 97, scss/_typography.scss */
 .student-intruct {
   position: absolute;
   width: 100%;
@@ -1321,7 +1321,7 @@ body {
   left: 0;
 }
 
-/* line 100, scss/_typography.scss */
+/* line 104, scss/_typography.scss */
 .instruction-container {
   display: inline-block;
   position: absolute;
@@ -1330,28 +1330,28 @@ body {
   left: 0;
   text-align: center;
 }
-/* line 108, scss/_typography.scss */
+/* line 112, scss/_typography.scss */
 .instruction-container .question-instruct {
   color: white;
 }
-/* line 112, scss/_typography.scss */
+/* line 116, scss/_typography.scss */
 .instruction-container .question-goto {
   color: #8ED676;
 }
-/* line 116, scss/_typography.scss */
+/* line 120, scss/_typography.scss */
 .instruction-container h3 {
   color: black;
   display: inline-block;
   font-size: 30px;
   font-weight: 900;
 }
-/* line 122, scss/_typography.scss */
+/* line 126, scss/_typography.scss */
 .instruction-container h3 span {
   background: #410C54;
   color: white;
   padding: 4px;
 }
-/* line 129, scss/_typography.scss */
+/* line 133, scss/_typography.scss */
 .instruction-container .circle-number {
   margin-right: 1px;
   margin-left: 10px;
@@ -1367,12 +1367,12 @@ body {
   margin-bottom: 10px;
   display: inline-block;
 }
-/* line 141, scss/_typography.scss */
+/* line 145, scss/_typography.scss */
 .instruction-container .circle-number p {
   padding-top: 5px;
 }
 
-/* line 154, scss/_typography.scss */
+/* line 158, scss/_typography.scss */
 .instruction-question {
   font-weight: 900;
   font-size: 30px;
@@ -1380,13 +1380,13 @@ body {
   margin-top: 10px;
 }
 
-/* line 165, scss/_typography.scss */
+/* line 169, scss/_typography.scss */
 .text-subject {
   font-size: 5vmin;
   font-weight: 900;
 }
 
-/* line 172, scss/_typography.scss */
+/* line 176, scss/_typography.scss */
 .instruction-q {
   font-size: 15px;
   font-weight: 900;
@@ -1395,7 +1395,7 @@ body {
   color: #410C54;
 }
 
-/* line 183, scss/_typography.scss */
+/* line 187, scss/_typography.scss */
 .question-body-heading {
   text-align: center;
   padding-top: 10px;
@@ -1403,7 +1403,7 @@ body {
   color: black;
 }
 
-/* line 191, scss/_typography.scss */
+/* line 195, scss/_typography.scss */
 .type-body-subheading {
   text-align: center;
   padding-top: 10px;
@@ -1411,7 +1411,7 @@ body {
   padding-bottom: 10px;
 }
 
-/* line 200, scss/_typography.scss */
+/* line 204, scss/_typography.scss */
 .startpage-welcome {
   color: white;
   text-align: center;
@@ -1421,18 +1421,18 @@ body {
   font-size: 1em;
 }
 
-/* line 209, scss/_typography.scss */
+/* line 213, scss/_typography.scss */
 .start-section-input {
   opacity: .8;
 }
-/* line 211, scss/_typography.scss */
+/* line 215, scss/_typography.scss */
 .start-section-input h3 {
   text-align: center;
   padding-top: 10px;
   font-weight: 800;
 }
 
-/* line 225, scss/_typography.scss */
+/* line 229, scss/_typography.scss */
 .lecturer-startpage-welcome {
   color: #000;
   text-align: center;
@@ -1442,12 +1442,12 @@ body {
   font-size: 1em;
 }
 
-/* line 234, scss/_typography.scss */
+/* line 238, scss/_typography.scss */
 #lecturer-start-username {
   font-weight: 600;
 }
 
-/* line 239, scss/_typography.scss */
+/* line 243, scss/_typography.scss */
 .type-lecture-mode h2, .type-prepare-mode h2 {
   color: white;
   font-size: 50px;
@@ -1456,18 +1456,18 @@ body {
   padding-top: 10px;
   margin-bottom: 30px;
 }
-/* line 248, scss/_typography.scss */
+/* line 252, scss/_typography.scss */
 .type-lecture-mode .prepare-use, .type-prepare-mode .prepare-use {
   position: absolute;
   left: 50%;
   bottom: 10px;
 }
-/* line 253, scss/_typography.scss */
+/* line 257, scss/_typography.scss */
 .type-lecture-mode img, .type-prepare-mode img {
   width: 25%;
 }
 
-/* line 258, scss/_typography.scss */
+/* line 262, scss/_typography.scss */
 .typography-l-h3 {
   color: white;
   display: inline-block;
@@ -1475,8 +1475,16 @@ body {
   margin-top: 18px;
   font-family: "open-sans-semibold", Arial;
 }
+@media screen and (max-width: 370px) {
+  /* line 262, scss/_typography.scss */
+  .typography-l-h3 {
+    margin-left: 2px;
+    font-size: 10px;
+    margin-top: 22px;
+  }
+}
 
-/* line 266, scss/_typography.scss */
+/* line 277, scss/_typography.scss */
 .type-body-response {
   font-size: 20px;
   text-align: left;
