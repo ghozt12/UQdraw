@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>UQ Draw</title>
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/vendor/font-awesome.min.css">
+	<title>UQDraw</title>
 
-   	<!-- JavaScript -->
+	<!-- Meta Data -->
+	<meta charset="UTF-8">
+  <meta name="author" contents="TeamOne">
+  <meta name="description" contents="Drawing Application">
+
+  <!-- Mobile viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/vendor/font-awesome.min.css">
+
+  <!-- JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="../js/libs/img-lib.js"></script>
 
+<<<<<<< HEAD
 	<script src="js/drawing-app.js"></script>
 
+=======
+	<!-- Drawing application js -->
+	<script src="../js/drawing-app.js"></script>
+>>>>>>> f9c4cbd9993fd35e5ada9c2841c87e9a8dc604dd
 </head>
 
 <body class="special-body">
+
 	<div id="page">
-			
 		<!-- Header Bar -->
 		<div id="headers-top-bar">
-			<img src="../assets/images/topbar-logo.png" alt=""/>
-			<button id="menu"><span></span><span></span></button>
+			
+			<!-- Header Bar -->
+			<img src="../assets/images/topbar-logo.png" alt="UQDraw logo"/>
+			<!-- Hamburger menu -->
+			<button id="menu">
+				<span></span><span></span>
+			</button>
 
+			<!-- Buttons -->
 			<div class="input-group">
+				<!-- Camera -->
 				<button id="camera"> <i class="fa fa-camera"></i></button>
+				<!-- This input is absolutly positioned over the button -->
 				<input type="file" id="imageLoader" accept="image/*" title="camera" capture="camera">				
 			</div>
 
+			<!-- Buttons -->
 			<button id="question"> Question </button>
 	    <button id="submit"> Submit </button>
-	   </div>
+	  </div>
 
-	    <div id="question-container" class="closed">
-	    	<h1>Question:</h1>
-	    	<h2><span id="questionTitle"></span></h2>
-	    	<button id="insert-into-canvas">INSERT IMAGE INTO CANVAS</button>
-	    	<img id="image-question" src="../assets/images/graph.png"  />
-	    </div>
+	  <!-- Question container (holds the question and the image) -->
+	  <div id="question-container" class="closed">
+			<h1>Question:</h1>
+			<!-- Question is inserted by PHP -->
+			<h2><span id="questionTitle"></span></h2>
+			<!-- button to inser the image into the canvas -->
+			<button id="insert-into-canvas">INSERT IMAGE INTO CANVAS</button>
+			<!-- Image is inserted by PHP -->
+			<img id="image-question" src="../assets/images/graph.png"  />
+		</div>
+
 
 	    <!-- Initial Loader -->
 	    <div id="content">
@@ -49,10 +75,14 @@
 	    <!-- Question bar -->
 	    <div id="quesition-bar"></div>
 	    <!-- Tool bar -->
+
 		<div id="tool-bar" class="closed">
+	    	
+	    	<!-- COLOURs -->
 	    	<div class="element">
 	    		<h1>Colour</h1>
-	    		
+
+	    		<!-- Colours for the drawing application -->
 	    		<div class="cont">
 	    			<div id="color-red" class="color-selected"></div>
 	    			<div id="color-blue"></div>
@@ -73,22 +103,24 @@
 	    			<div id="color-white"></div>
 	    			<div id="color-black"></div>
 	    		</div>
-
-
 	    	</div>
+
+	    	<!-- SIZEs -->
 	    	<div class="element">
 	    		<h1>Size</h1>
 	    		<div class="cont" id="size-small"><img class="circle-small" src="../assets/images/canvas/10by10.svg"></div>
 	    		<div class="cont" id="size-medium" class="selected"><img class="circle-medium" src="../assets/images/canvas/20by20.svg"></div>
 	    		<div class="cont" id="size-large"><img class="circle-large" src="../assets/images/canvas/30by30.svg"></div>
-	    		
 	    	</div>
+
+	    	<!-- TOOLs -->
 	    	<div class="element">
 	    		<h1>Tools</h1>
 	    		<div class="cont" id="tool-1" class="selected"><i class="fa fa-pencil"></i></div>
 	    		<div class="cont" id="tool-2"><i class="fa fa-eraser"></i></div>
 	    		<div class="cont" id="tool-3"><p>Clear</p></div>
 	    	</div>
+
 	    </div>
 	</div>
 

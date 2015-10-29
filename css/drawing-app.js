@@ -2,11 +2,11 @@
 	DRAWING APPLICATION
 	UQDRAW
 	TEAM ONE
+	coded by Rhain Dodd
  ********************************************* */
 
 // VARIABLES
 // *********************************************
-	
 	// Context 
 	var ctx; 
 
@@ -20,7 +20,6 @@
 	var color = "#000";	
 	var white = "#FFFFFF";
 
-	// Colours (split by each component)
 	var red = 'red';
 	var blue = 'blue';
 	var green = 'green';
@@ -41,12 +40,10 @@
 	var medium = 8;
 	var thick = 12;
 
-	// Current color and size that the user has selected
 	var currentColor = blue;
 	var currentSize = medium;
-	var eraserSelected = false;
 
-	// Arrays for storing the drawing
+	// Arrays
 	var clickX = new Array();
 	var clickY = new Array();
 	var clickDrag = new Array();
@@ -59,38 +56,21 @@
 	  	1: 'medium',
 	  	2: 'large'
 	  }
-
+	var eraserSelected = false;
 	var questionClosed = true;
-
 
 
 // ON READY 
 // *********************************************
 $(document).ready(function () {
-
-	var questionID = getParameterByName("questionID");
-	var serverUrl = "http://teamone.uqcloud.net/uqDrawBackend/fetchImageFromQid.php?questionID="+questionID;
-	var imageLink = "";
-	$.get( serverUrl, function( data ) {
-		//imageLink = data;
-		if (imageExists(data)) {
-			console.log("image exists");
-			imageLink = data;
-			console.log(imageLink);
-			document.getElementById("image-question").src = imageLink;
-		}
-
-	});
-
-
 	document.getElementById("questionTitle").innerHTML = getParameterByName("questionTitle");
-	
 	// Prevent the user from dragging the screen
-	$(window).bind (
+	$(window).bind(
 		'touchmove',
    	function(e) {
     	e.preventDefault();
   	}
+
 	);
 
 	// Image loader
@@ -111,6 +91,7 @@ $(document).ready(function () {
 
 	// TOOL BAR (buttons)
 	// *********************************************
+	
 	// Open up the tool bar
 	$( "#menu" ).click(function() {
 	  if ($("#tool-bar").hasClass('closed') || $("#tool-bar").hasClass('closed2')) {
@@ -141,31 +122,37 @@ $(document).ready(function () {
 
 	});
 
+
 	// on insert image into canvas 
 	$("#insert-into-canvas").click(function() {
 		var width = $(document).width();
 		var height = $(document).height();
-		var a, b;
-		
-		// Get url INSERT HERE 
+		var a,b;
+		// Get url
 		var url = $("#image-question").attr('src');
 		var img = document.getElementById("image-question");
-
+		
 		// Check if image exists first
 		if (!imageExists(url))
 			return;
+		
+		console.log(img.naturalWidth + ' a ' + width);
 
 		if (img.naturalWidth >= width) {
+			console.log("too big");
 			a = width;
+			console.log(100*img.naturalHeight / a);
 
-			// Check the height
+			// Check the height 
 			if (img.naturalHeight >= height) {
 				b = height;
 				ctx.drawImage(img, 0, 0, a, a * b / a);
 			} else {
 				ctx.drawImage(img, 0, 0, a, a * img.naturalHeight / a);
 			}
+
 		} else {
+			console.log("good");
 			ctx.drawImage(img, 0, 0);
 		}
 
@@ -173,18 +160,20 @@ $(document).ready(function () {
 		questionClosed = !questionClosed;
 		$("#question-container").addClass('closed');
 		$("#question").removeClass('close');
+
 		$("#question").html('Question');
+		
 	});
 
-	// http://stackoverflow.com/questions/18837735/check-if-image-exists-on-server-using-javascript
-	function imageExists(image_url){
-	    var http = new XMLHttpRequest();
+// http://stackoverflow.com/questions/18837735/check-if-image-exists-on-server-using-javascript
+function imageExists(image_url){
+    var http = new XMLHttpRequest();
 
-	    http.open('HEAD', image_url, false);
-	    http.send();
+    http.open('HEAD', image_url, false);
+    http.send();
 
-	    return http.status != 404;
-	}
+    return http.status != 404;
+}
 
 	// COLOUR SELECTION
 	// *******************************
@@ -227,6 +216,7 @@ $(document).ready(function () {
 
 
 	// BLOCK 2
+
 	$( "#color-pumkin" ).click(function() {
 	  removeColourClasses(this);
 	  ctx.beginPath();
@@ -265,6 +255,7 @@ $(document).ready(function () {
 
 
 	// BLOCK 3 
+
 	$( "#color-silver" ).click(function() {
 	  removeColourClasses(this);
 	  ctx.beginPath();
@@ -409,7 +400,9 @@ $(document).ready(function () {
 	}
 	
 	// *********************************************
+
 	// SUBMIT BUTTON
+
 	// *********************************************
 
 	$("#submit").click(function() {
@@ -441,8 +434,6 @@ $(document).ready(function () {
 		}
 	});
 });
-// END OF on READY 
-// ----------------------------------------------
 
 $( window ).resize(function() {
 	resize(ctx);
@@ -498,7 +489,6 @@ function removeStartingText() {
 	firstTime = false;
 
 }
-
 // adds to the array 
 function addClick(color, thickness, x, y, dragging) {
 	colourA.push(color);
@@ -506,22 +496,7 @@ function addClick(color, thickness, x, y, dragging) {
 	  clickX.push(x);
 	  clickY.push(y);
 	  clickDrag.push(dragging);
-}
-
-function fetchImage(){
-	var questionID = getParameterByName("questionID");
-	var url = "http://teamone.uqcloud.net/uqDrawBackend/fetchImageFromQid.php?questionID="+questionID;
-	//var imageLink = "";
-	$.get( url, function( data ) {
-		//imageLink = data;
-		//console.log(imageLink);
-		imageURL = data;
-	});
-	//return imageLink;
-}
-
-
-;
+};
 
 // prototype to	start drawing on touch using canvas moveTo and lineTo
 $.fn.drawTouch = function() {
@@ -535,7 +510,6 @@ $.fn.drawTouch = function() {
 		addClick(ctx.strokeStyle, ctx.lineWidth, x, y);
 
 	};
-
 	var move = function(e) {
 		e.preventDefault();
         e = e.originalEvent;
@@ -577,7 +551,6 @@ $.fn.drawPointer = function() {
 // prototype to	start drawing on mouse using canvas moveTo and lineTo
 $.fn.drawMouse = function() {
 	var clicked = 0;
-
 	var start = function(e) {
 		removeStartingText();
 		clicked = 1;
@@ -587,7 +560,6 @@ $.fn.drawMouse = function() {
 		ctx.moveTo(x,y);
 		addClick(ctx.strokeStyle, ctx.lineWidth, x, y);
 	};
-
 	var move = function(e) {
 		if(clicked){
 			x = e.pageX;
@@ -597,11 +569,9 @@ $.fn.drawMouse = function() {
 			addClick(ctx.strokeStyle, ctx.lineWidth, x, y, true);
 		}
 	};
-
 	var stop = function(e) {
 		clicked = 0;
 	};
-	
 	$(this).on("mousedown", start);
 	$(this).on("mousemove", move);
 	$(window).on("mouseup", stop);
@@ -636,10 +606,11 @@ function getParameterByName(name) { // get url parameter added by Brian
 	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-
 // Handle Image uploads
 // *********************************************
+
 function handleImage(e) {
+
 	// Grab the width and height of the window
 	var width = $(window).width();
 	var height = $(window).height();
@@ -650,7 +621,6 @@ function handleImage(e) {
 	var exifNode = $('#exif');
 	var target = e.dataTransfer || e.target,
                file = target && target.files && target.files[0];
-  // orientation
   var orie;
   
   var options = {
@@ -664,15 +634,12 @@ function handleImage(e) {
 
 	// Load the image
 	loadImage.parseMetaData(file, function (data) {
-		// Check if the image has exif data, then orientate it
-		// correctly (since iphones flip the image by default)
 	  if (data.exif) {
 	  	options.orientation = data.exif.get('Orientation');	      
 	  } else {
 	  	alert('Failed');
 	  }
-
-	  // Display the image
+	  // DISPLAY IMAGE
 	  loadImage(
     	e.target.files[0],
     	function (img) {
@@ -682,3 +649,5 @@ function handleImage(e) {
     );
 	});
 }
+
+	

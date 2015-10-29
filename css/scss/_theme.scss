@@ -226,3 +226,21 @@ a {
 		margin-top:20px;
 	}
 }
+
+/*add button style in lecture-prepare page*/
+.add-subject-form{
+    max-width: 70%;
+    background: $uq-purple;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    padding-left: 10%;
+    margin: 0 auto;
+	button{
+		margin-top:20px;
+	}
+}
+

@@ -2,6 +2,10 @@
 ** Font Family
 * *****/
 
+$break-small: 960px;
+$break-smaller: 370px;
+
+
 body {
 	font-family: 'open-sans-semibold', sans-serif;
 }
@@ -261,6 +265,13 @@ body {
 	margin-left: 20px;
 	margin-top: 18px;
 	font-family: "open-sans-semibold", Arial;
+
+	@media screen and (max-width: $break-smaller) {
+		margin-left: 2px;
+		font-size: 10px;
+		margin-top: 22px;
+	}
+
 }
 
 .type-body-response {
