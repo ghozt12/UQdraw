@@ -60,9 +60,27 @@
 	var questionClosed = true;
 
 
+
 // ON READY 
 // *********************************************
 $(document).ready(function () {
+	var questionID = getParameterByName("questionID");
+	var serverUrl = "http://teamone.uqcloud.net/uqDrawBackend/fetchImageFromQid.php?questionID="+questionID;
+	var imageLink = "";
+	$.get( serverUrl, function( data ) {
+		//imageLink = data;
+		if (imageExists(data)) {
+			console.log("image exists");
+			imageLink = data;
+			console.log(imageLink);
+			document.getElementById("image-question").src = imageLink;
+		}
+
+	});
+
+
+
+	var imageURL;
 	document.getElementById("questionTitle").innerHTML = getParameterByName("questionTitle");
 	// Prevent the user from dragging the screen
 	$(window).bind(
@@ -131,11 +149,11 @@ $(document).ready(function () {
 		// Get url
 		var url = $("#image-question").attr('src');
 		var img = document.getElementById("image-question");
-		
+
 		// Check if image exists first
 		if (!imageExists(url))
 			return;
-		
+
 		console.log(img.naturalWidth + ' a ' + width);
 
 		if (img.naturalWidth >= width) {
@@ -143,7 +161,7 @@ $(document).ready(function () {
 			a = width;
 			console.log(100*img.naturalHeight / a);
 
-			// Check the height 
+			// Check the height
 			if (img.naturalHeight >= height) {
 				b = height;
 				ctx.drawImage(img, 0, 0, a, a * b / a);
@@ -162,7 +180,6 @@ $(document).ready(function () {
 		$("#question").removeClass('close');
 
 		$("#question").html('Question');
-		
 	});
 
 // http://stackoverflow.com/questions/18837735/check-if-image-exists-on-server-using-javascript
@@ -496,7 +513,22 @@ function addClick(color, thickness, x, y, dragging) {
 	  clickX.push(x);
 	  clickY.push(y);
 	  clickDrag.push(dragging);
-};
+}
+
+function fetchImage(){
+	var questionID = getParameterByName("questionID");
+	var url = "http://teamone.uqcloud.net/uqDrawBackend/fetchImageFromQid.php?questionID="+questionID;
+	//var imageLink = "";
+	$.get( url, function( data ) {
+		//imageLink = data;
+		//console.log(imageLink);
+		imageURL = data;
+	});
+	//return imageLink;
+}
+
+
+;
 
 // prototype to	start drawing on touch using canvas moveTo and lineTo
 $.fn.drawTouch = function() {
@@ -605,6 +637,7 @@ function getParameterByName(name) { // get url parameter added by Brian
 			results = regex.exec(location.search);
 	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
 
 // Handle Image uploads
 // *********************************************
