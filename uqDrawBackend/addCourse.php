@@ -20,16 +20,19 @@ if($lecturerId!=null&&$courseId!=null) {
     $insertQuery = "INSERT INTO `Course`(`lecturerID`, `courseID`, `enteringCode`) VALUES ('$lecturerId','$courseId','$enteringCode')";//insert row
     $insertDataResult = mysqli_query($mysqli, $insertQuery);
 
+
     if ($insertDataResult) {
-        echo "question row inserted";
+       // echo "question row inserted";
+        //echo 1;
     } else {
-        echo "question row can't be insert, procress abandon";
-        echo $mysqli->error;
+        echo "CourseID already in use. ";
+       // echo 0;
+        //echo $mysqli->error;
     }
     $mysqli->close();
 }
 else{
-echo"error null input";
+//echo"error null input";
 }
 function generateRandomString($length) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyz';// randome only lower case and Numbers

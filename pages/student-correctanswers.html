@@ -1,165 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>UQ Draw</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>UQ Draw</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="../css/main.css">
-	<link rel="stylesheet" href="../css/vendor/gridism.css">
-	<!-- Sets it as a mobile viewport if the user is on a mobile device -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/vendor/gridism.css">
+    <!-- Sets it as a mobile viewport if the user is on a mobile device -->
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="../js/lightbox-lecture.js"></script>
-<script src="../js/responses_page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/lightbox-lecture.js"></script>
+    <script src="../js/responses_page.js"></script>
 
-<script type="text/babel">
+    <script type="text/babel" src="../js/pageJS/student-correctanswers.react.js"></script>
 
-	$(document).ready(function() {
-		
-		var ResultBox = React.createClass({ 
-		//props means the parameter pass from parent
-		
-			getInitialState: function() {//default data as empty
-				return {subList: [], title:"",week:"", qID:"",success:"" , listLength:""};
-			},
-			
-			loadCommentsFromServer: function() {//load every 2 sec
-				$.ajax({
-					url: this.props.url+getParameterByName("questionID"),
-					dataType: 'json',
-					cache: false,
-					success: function(data) {
-						this.setState({subList: data.submissionList,title:data.questionTitle,week:data.questionWeek,qID:data.questionID,success:data.success, listLength:data.submissionList.length});
-					}.bind(this),
-					error: function(xhr, status, err) {
-						console.error(this.props.url, status, err.toString());
-					}.bind(this)
-				});
-			}, 
-
-			componentDidMount: function() {//initial run
-				this.loadCommentsFromServer();
-				setInterval(this.loadCommentsFromServer, this.props.pollInterval);
-			},
-			
-			render: function() {//pass data to different Items
-				return (
-						<div>
-							<SubmissionInfo title = {this.state.title} week={this.state.week} qID={this.state.qID} success={this.state.success} listLength={this.state.listLength}/>
-							<SubmissionList subList={this.state.subList}/>
-					</div>
-				);
-			}
-	});
-
-	var SubmissionInfo  = React.createClass({
-	//basically it shows dynamic data of number of responses and titles
-		render: function(){
-			return(
-				<div>
-					<h2 className="type-body-heading">Correct answers for: {this.props.title}</h2>
-				</div>
-			);
-		}
-	});
-
-
-	var SubmissionList = React.createClass({ 
-	//ListView contain mutiple submissions
-		render: function() {
-			var submissionNodes= this.props.subList.map(function (submission) {
-				if(parseInt(submission.result)==1){
-					return (
-						<Submission std_id = {submission.studentID} img_link = {submission.submittedImage}id = {submission.submissionID}>
-						</Submission>
-					);
-				} else {
-					return null;
-				}
-			});
-		
-		return (
-			<div className="grid-container">
-				{submissionNodes}
-			</div>
-
-			);
-		}
-	});
-
-	var Submission = React.createClass({
-	//item of each record
-			render: function() {
-		return (
-				<div className="grid-response">
-				<img className="single-response" src={this.props.img_link} height='110px' width='110px' ></img>
-			<a href={this.props.img_link} data-lightbox='responses' data-title={this.props.std_id} >
-	<button type='button' className='button-hidden'>Expand</button></a>
-	</div>
-	);
-	}
-	});
-	var urlLink = '../uqDrawBackend/getSubmissionsFromQid.php?questionID='+getParameterByName("questionID");
-
-	React.render( 
-		//pass data to SubmissionBox, it relresh every 2sec
-		<ResultBox
-			url = "../uqDrawBackend/getSubmissionsFromQid.php?questionID="
-			pollInterval = {2000} />,
-			document.getElementById('responseBox')
-			);
-	});
-
-	function getParameterByName(name) { // get url parameter
-		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-				results = regex.exec(location.search);
-		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-	}
-
-
-</script>
 </head>
 
 <body>
 <section>
-	<div class="header-l-lecture">
-		<div class="button-back-lecture-response" onclick="btnBack()"> <p> Back </p></div>
-		<div class="headerpos">
-			<img class='images-l-subjects' src="../assets/images/topbar-logo.png" alt="" />
-			<h3 class="typography-l-h3"> Correct Responses </h3>
-		</div>
-	</div>
+    <div class="header-l-lecture">
+        <div class="button-back-lecture-response" onclick="btnBack()"><p> Back </p></div>
+        <script type="text/javascript" src="../js/pageJS/student-correctanswers.js"></script>
+        <div class="headerpos">
+            <img class='images-l-subjects' src="../assets/images/topbar-logo.png" alt=""/>
+
+            <h3 class="typography-l-h3"> Correct Responses </h3>
+        </div>
+    </div>
 </section>
-<script>
-	function btnBack(){
-		window.history.back();
-	}
-</script>
-
 <section>
-
-
-	<!-- Body Heading -->
-	<!--<h2 class="type-body-heading"> Draw a House </h2>
+    <!-- Body Heading -->
+    <!--<h2 class="type-body-heading"> Draw a House </h2>
     Body Subheading - display number of responses-->
-	<!-- <h3 class="type-body-response"> 2 Correct Responses Lecture 1 - Intro</h3>-->
+    <!-- <h3 class="type-body-response"> 2 Correct Responses Lecture 1 - Intro</h3>-->
 
 
-	<span id="responseBox"></span>
+    <span id="responseBox"></span><!-- controlled by react JS-->
 
-	<!--example buttons-->
-	<!--<div class="grid-response" id="response9">
+    <!--example buttons-->
+    <!--<div class="grid-response" id="response9">
             <img class="single-response" src="..\assets\images\response-1.jpg" height="110px" width="110px" >
             <a href="..\assets\images\response-1.jpg" data-lightbox="responses" data-title="First Response" >
                     <button type="button" class="button-hidden">Expand</button>
             </a>
             <div id="mark0">
-
             </div>
     </div>
 
@@ -171,11 +59,7 @@
             <div id="mark1">
             </div>
 
-	</div>-->
-
-
+    </div>-->
 </section>
-
 </body>
-
 </html>

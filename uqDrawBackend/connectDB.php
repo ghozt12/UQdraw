@@ -8,21 +8,21 @@
 
 $mysqli = new mysqli();
 //DB Credentials
-$host ="localhost";
-$user ="root";
+$host = "localhost";
+$user = "root";
 $password = "mYzL@vbOwepH";
 $dbname = "uqdraw";
 //Connect DB
-$mysqli -> connect($host, $user, $password, $dbname);
+$mysqli->connect($host, $user, $password, $dbname);
 
 if (mysqli_connect_errno()) {
     //echo("Failed to connect, the error message is : ".
-        mysqli_connect_error();
+    mysqli_connect_error();
 
     //exit();
 }
 
 //else
- //echo "Connect to mySQL successfully <br/>";
+//echo "Connect to mySQL successfully <br/>";
 
 ?>

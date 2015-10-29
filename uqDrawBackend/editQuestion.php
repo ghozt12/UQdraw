@@ -6,7 +6,7 @@ $questionWeek = $_POST["questionWeek"];
 $title = $_POST["title"];
 
 
-$query = "UPDATE `Question` SET `questionWeek`=".$questionWeek.", `questionTitle`='".$title."' WHERE `questionID` = ".$questionID;
+$query = "UPDATE `Question` SET `questionWeek`=" . $questionWeek . ", `questionTitle`='" . $title . "' WHERE `questionID` = " . $questionID;
 $result = mysqli_query($mysqli, $query);
 
 //if($result){

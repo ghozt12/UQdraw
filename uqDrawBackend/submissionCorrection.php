@@ -9,21 +9,19 @@
 include "connectDB.php";
 $submissionID = $_GET["submissionID"];
 $status = $_GET["status"];
-if($status<3&&$status!=""&&$submissionID!=""){
-    $query= "UPDATE `Submission` SET `result`=$status WHERE `submissionID` = $submissionID ";
+if ($status < 3 && $status != "" && $submissionID != "") {
+    $query = "UPDATE `Submission` SET `result`=$status WHERE `submissionID` = $submissionID ";
     $result = mysqli_query($mysqli, $query);
-    if($result){
+    if ($result) {
         echo "successfully update";
-    }else{
-        echo"update fail";
+    } else {
+        echo "update fail";
     }
 
 
-
-}else{
-    echo"fail wrong input";
+} else {
+    echo "fail wrong input";
 }
-
 
 
 ?>

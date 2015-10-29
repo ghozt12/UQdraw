@@ -7,22 +7,15 @@
  */
 include "connectDB.php";
 $submissionID = $_GET["submissionID"];
-if(isset($submissionID)){
+if (isset($submissionID)) {
     $query = "DELETE FROM `uqdraw`.`Submission` WHERE `Submission`.`submissionID` = $submissionID ";
     $result = mysqli_query($mysqli, $query);
-    if($result){
+    if ($result) {
         echo "successfully deleted";
-    }else{
-        echo"delete fail";
+    } else {
+        echo "delete fail";
     }
-
-
 }
-
-
-
-
-
 
 
 ?>

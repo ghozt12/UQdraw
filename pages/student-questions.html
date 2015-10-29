@@ -15,161 +15,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<script type="text/babel">
-  var courseID ="";
-  var enteringCode="";
-  var Requesturl="";
-  $(document).ready(function() {
-            if(getParameterByName("courseID")!=""){
-              courseID = getParameterByName("courseID");
-              Requesturl = "http://teamone.uqcloud.net/uqDrawBackend/retrieveStudentQuestionsbyCourseId.php?courseID="+courseID;
-              //console.log(Requesturl);
-            }
-            else {
-              if (getParameterByName("enteringCode") != "") {
-                enteringCode = getParameterByName("enteringCode");
-                Requesturl= "http://teamone.uqcloud.net/uqDrawBackend/retrieveQuestionsfromThreeDigitCode.php?enteringCode="+enteringCode;
-              }
-            }
-
-            //-------React JS -------
-            var QuestionBox = React.createClass({ //props means the parameter pass from parent
-                    getInitialState: function() {//default data as empty
-              return {subList: [], enteringCode:"", subject:"",success:"" };
-            },
-            loadCommentsFromServer: function() {//load every 2 sec
-              $.ajax({
-                url: Requesturl,
-                dataType: 'json',
-                cache: false,
-                success: function(data) {
-                  this.setState({subList: data.questionsList, enteringCode: data.enteringCode, subject: data.subject, success : data.success});
-                }.bind(this),
-                error: function(xhr, status, err) {
-                  console.error(this.props.url, status, err.toString());
-                }.bind(this)
-              });
-            }, componentDidMount: function() {//initial run
-              this.loadCommentsFromServer();
-              setInterval(this.loadCommentsFromServer, this.props.pollInterval);
-            },
-            render: function() {//pass data to different Items
-              console.log(this.state.subList);
-                var subject = this.state.subject.substring(0,7);
-              return (
-                      <div>
-                      <section className="student-question">
-                      <CourseInfo enteringCode = {this.state.enteringCode} subject={subject}/>
-          <QuestionsList subList={this.state.subList}/>
-  </section>
-  </div>
-
-  );
-  }
-  });
-
-  var CourseInfo  = React.createClass({//print out course code and id
-            render: function(){
-
-              return(
-                      <div>
-                      <h2 className="type-body-heading"> {this.props.subject}  CODE: {this.props.enteringCode}</h2>
-          </div>
-  );
-  }
-  });
-
-
-  var QuestionsList = React.createClass({// sort and show every subjects
-    render: function() {
-      var counter=-1;
-      var openQuestions = this.props.subList.map(function (question) {
-                if (question.status == 1 &&question.attempted ==0 ){//the question is open and std havn't answered yet
-                  return(<OpenQuestion  questionID={question.questionID} title={question.title}>
-              </OpenQuestion>);
-    }
-    return null;
-  });
-  var notOpenQuestions=this.props.subList.map(function (question) {//the question is closed and std havn't answered yet
-            if (question.status == 0 && question.attempted ==0 ){
-              return(<NotOpenQuestion  questionID={question.questionID} title={question.title}>
-          </NotOpenQuestion>);
-  }
-  return null;
-  });
-  var prevQuestions=this.props.subList.map(function (question) {//answered question
-            if (question.attempted ==1 ){
-              return(<PrevQuestion  questionID={question.questionID} title={question.title}>
-          </PrevQuestion>);
-  }
-  return null;
-  });
-  return (
-          <section className="student-responses">
-          <h2 className="type-body-heading"> <span> Open Questions </span> </h2>
-  <ul className="student-list" >  {openQuestions}</ul>
-          <h2 className="type-body-heading"> <span> Closed Questions</span> </h2>
-  <ul className="closed-questions" >  {notOpenQuestions}</ul>
-          <h2 className="type-body-heading"> <span> Correct Answers </span> </h2>
-  <ul className="student-list" > {prevQuestions}</ul>
-          </section>
-
-  );
-  }
-  });
-
-  var OpenQuestion = React.createClass({//item of each record
-            render: function() {
-              var drawingLink = "drawing-app.html?questionID="+this.props.questionID+"&questionTitle="+this.props.title;
-              return (
-                      <div>
-                      <a href={drawingLink}><li>
-                      <span> {this.props.title} </span></li></a>
-          </div>
-  );
-  }
-  });
-  var NotOpenQuestion = React.createClass({//item of each record
-            render: function() {
-              return (
-                      <div>
-                      <li >
-                      <span> {this.props.title} </span></li>
-          </div>
-  );
-  }
-  });
-  var PrevQuestion = React.createClass({//item of each record
-            render: function() {
-              var resultLink = "student-correctanswers.html?questionID="+this.props.questionID;//tobe confirm
-              return (
-                      <div>
-                      <a href={resultLink}><li>
-                      <span> {this.props.title} </span></li></a>
-          </div>
-  );
-  }
-  });
-
-  React.render( //pass data to SubmissionBox, it relresh every 2sec
-  < QuestionBox
-  pollInterval = {2000} / >,
-          document.getElementById('questionController')
-  );
-
-
-  });
-  function getParameterByName(name) { // get url parameter
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-            results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
-</script>
+<script type="text/babel" src="../js/pageJS/student-questions.react.js"></script>
 </head>
-
-
-
 <body>
 <div class="header-l-prepare">
 <a href="../index.html"><div class="button-back-lecture-response"> <p> Back </p></div></a>
@@ -179,26 +26,20 @@
 </div>
 
 <!-- Back button -->
-
+<!--The html under this is done by reactJS-->
 <span id="questionController"></span>
 
 <section class="student-question">
-    <!-- Body Heading -->
-
 <!-- <h2 class="type-body-heading"> <span id="subject">  </span>  CODE: <span id="code">3FC</span> </h2>
  <h2 class="type-body-heading">Feedback Please - <a href="http://goo.gl/forms/CjTHoSM2pu">http://goo.gl/forms/CjTHoSM2pu</a></h2>-->
-<!-- List the Questions -->
 <ul class="student-list" >
-  <!-- Place PHP here, for each question in db, create a <li> element -->
   <span id="openedQuestions"></span>
   <!--<a href="drawing-app.html"><li> <span> Question Available! </span></li></a> -->
 </ul>
 </section>
 <section class="student-responses">
   <!--<h2 class="type-body-heading"> <span> PREVIOUS RESPONSES </span> </h2>-->
-  <!-- Place PHP here, for each question in db, create a <li> element -->
   <ul class="student-list" >
-    <span id="closedQuestions"></span><!-- don't link to drawing app, since it already submitted-->
     <!-- <a ><li> <span> Draw my house </span> </li></a>-->
   </ul>
 </section>

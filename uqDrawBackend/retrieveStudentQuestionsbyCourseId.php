@@ -10,23 +10,30 @@ include "connectDB.php";
 $studentID = $_SERVER['HTTP_X_UQ_USER'];//std ID to check did that user ansewed that questin or not
 
 $courseID = $_GET["courseID"];//the request should be http://<this url>/?code=XXX
-//$code ="4rt";//ID for testing
-if($courseID!=NULL&& strlen($courseID)<20) {//stop running if code is invaild
+
+if ($courseID != NULL && strlen($courseID) < 20) {//stop running if code is invaild
     $IMG_DIR = "Brian/uqDrawBackend/";
     $response = array();//JSON
     $response["questionsList"] = array();//JSON array
-    $response["enteringCode"]=$code;
+    $response["enteringCode"] = "";
+    $enteringQuery = "select `enteringCode` from `Course` WHERE `courseID` = '$courseID'";
+    $enteringResult = mysqli_query($mysqli, $enteringQuery);
+    if ($enteringResult) {
+        $row = $enteringResult->fetch_object();
+        $response["enteringCode"] = $row->enteringCode;
+    }
+
     $query = "SELECT * FROM `Question` WHERE `courseID` = '$courseID'";
     $result = mysqli_query($mysqli, $query);
     $studentAnswerQuery = "SELECT questionID FROM `Submission` WHERE `studentID`='$studentID' AND questionID IN(SELECT questionID from Question WHERE CourseID = '$courseID')";
     $studentAnswerResult = mysqli_query($mysqli, $studentAnswerQuery);// get all question that student answered in that course
     $submittedQuestion = array();
-    if ($studentAnswerResult){
+    if ($studentAnswerResult) {
         //put all questionID in an Array
         for ($x = 0; $row = $studentAnswerResult->fetch_array(MYSQLI_NUM); $x++) {
-            array_push($submittedQuestion,$row[0]);
+            array_push($submittedQuestion, $row[0]);
         }
-    } else{
+    } else {
         echo "Fail to get student data";
     }
 
@@ -39,16 +46,16 @@ if($courseID!=NULL&& strlen($courseID)<20) {//stop running if code is invaild
             $questionData["title"] = $row->questionTitle;
             $questionData["questionWeek"] = $row->questionWeek;
             $questionData["status"] = intval($row->status);
-            $response["subject"]=$row->courseID;
+            $response["subject"] = $row->courseID;
             if ($row->questionImage != NULL) {
                 $questionData["image"] = $domainURL . $IMG_DIR . $row->questionImage;
             } else {
                 $questionData["image"] = NULL;
             }
 
-            if(in_array($row->questionID,$submittedQuestion)){
+            if (in_array($row->questionID, $submittedQuestion)) {
                 $questionData["attempted"] = 1;
-            }else{
+            } else {
                 $questionData["attempted"] = 0;
             }
             array_push($response["questionsList"], $questionData);//push object in array
@@ -59,7 +66,8 @@ if($courseID!=NULL&& strlen($courseID)<20) {//stop running if code is invaild
         echo $mysqli->error;
     }
 
-}else{//echo"Missing/invaild parameter code ";
+} else {
+//echo"Missing/invaild parameter code ";
     $response["success"] = 0;
 }
 echo json_encode($response, JSON_UNESCAPED_SLASHES);// display JSON
