@@ -13,45 +13,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-</head>
-
-
-
-<body>
-<div class="header-l-prepare">
-<a href="../index.html"><div class="button-back-lecture-response"> <p> Back </p></div></a>
-<div class="headerpos">
-  <img class='images-l-subjects'src="../assets/images/topbar-logo.png"/>
-  </div>
-</div>
-
-<!-- Back button -->
-
-<span id="questionController"></span>
-<!--
-<section class="student-question">
-    <!-- Body Heading -->
-
-<!-- <h2 class="type-body-heading"> <span id="subject">  </span>  CODE: <span id="code">3FC</span> </h2>
- <h2 class="type-body-heading">Feedback Please - <a href="http://goo.gl/forms/CjTHoSM2pu">http://goo.gl/forms/CjTHoSM2pu</a></h2>-->
-<!-- List the Questions -->
-<ul class="student-list" >
-  <!-- Place PHP here, for each question in db, create a <li> element -->
-  <span id="openedQuestions"></span>
-  <!--<a href="drawing-app.html"><li> <span> Question Available! </span></li></a> -->
-</ul>
-</section>
-<section class="student-responses">
-  <!--<h2 class="type-body-heading"> <span> PREVIOUS RESPONSES </span> </h2>-->
-  <!-- Place PHP here, for each question in db, create a <li> element -->
-  <ul class="student-list" >
-    <span id="closedQuestions"></span><!-- don't link to drawing app, since it already submitted-->
-    <!-- <a ><li> <span> Draw my house </span> </li></a>-->
-  </ul>
-</section>
-
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <script type="text/babel">
   var courseID ="";
@@ -148,7 +110,7 @@
   <ul className="student-list" >  {openQuestions}</ul>
           <h2 className="type-body-heading"> <span> Closed Questions</span> </h2>
   <ul className="closed-questions" >  {notOpenQuestions}</ul>
-          <h2 className="type-body-heading"> <span> PREVIOUS RESPONSES </span> </h2>
+          <h2 className="type-body-heading"> <span> Correct Answers </span> </h2>
   <ul className="student-list" > {prevQuestions}</ul>
           </section>
 
@@ -203,10 +165,44 @@
             results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
-
-
-
-
 </script>
+</head>
+
+
+
+<body>
+<div class="header-l-prepare">
+<a href="../index.html"><div class="button-back-lecture-response"> <p> Back </p></div></a>
+<div class="headerpos">
+  <img class='images-l-subjects' src="../assets/images/topbar-logo.png" alt=""/>
+  </div>
+</div>
+
+<!-- Back button -->
+
+<span id="questionController"></span>
+
+<section class="student-question">
+    <!-- Body Heading -->
+
+<!-- <h2 class="type-body-heading"> <span id="subject">  </span>  CODE: <span id="code">3FC</span> </h2>
+ <h2 class="type-body-heading">Feedback Please - <a href="http://goo.gl/forms/CjTHoSM2pu">http://goo.gl/forms/CjTHoSM2pu</a></h2>-->
+<!-- List the Questions -->
+<ul class="student-list" >
+  <!-- Place PHP here, for each question in db, create a <li> element -->
+  <span id="openedQuestions"></span>
+  <!--<a href="drawing-app.html"><li> <span> Question Available! </span></li></a> -->
+</ul>
+</section>
+<section class="student-responses">
+  <!--<h2 class="type-body-heading"> <span> PREVIOUS RESPONSES </span> </h2>-->
+  <!-- Place PHP here, for each question in db, create a <li> element -->
+  <ul class="student-list" >
+    <span id="closedQuestions"></span><!-- don't link to drawing app, since it already submitted-->
+    <!-- <a ><li> <span> Draw my house </span> </li></a>-->
+  </ul>
+</section>
+
+</body>
 
 </html>

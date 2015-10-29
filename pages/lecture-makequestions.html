@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<title>UQ Draw</title>
 	 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
   <!-- CSS -->
@@ -7,7 +9,7 @@
   <link rel="stylesheet" href="../css/vendor/gridism.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">	</script>
-</head>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
 <script type='text/javascript'>
@@ -26,8 +28,8 @@
 				var questionsListObject = JSON.parse(data);
 				if(questionsListObject.success==1) {
 					courseID = questionsListObject.subjectFull;
-					document.getElementById("code").textContent = questionsListObject.enteringCode;// 3 digit code
-					document.getElementById("subject").textContent = questionsListObject.subject;// course code
+					//document.getElementById("code").textContent = questionsListObject.enteringCode;// 3 digit code
+					//document.getElementById("subject").textContent = questionsListObject.subject;// course code
 					var questionListHTML = "";
 					//for (var i = 0; i < questionsListObject.questionsList.length; i++) {//generate all question from JSON
 						var question = questionsListObject.questionsList[0];
@@ -163,24 +165,26 @@
 
 
 	function deleteQuestion(questionID){
+		var confirmDelete = confirm("Are you sure you want to delete this question?");
+		if (confirmDelete){
+			$(document).ready(function(){
+				$.ajax({//delete question through ajax so it updates instantly
+					type: "POST",
+					url: '../uqDrawBackend/deleteQuestion.php',
+					data: {
+						questionID: questionID,
+					},
+					success:function(data){
+						//alert(result);
+						location.reload();
 
-		$(document).ready(function(){
-			$.ajax({//delete question through ajax so it updates instantly
-				type: "POST",
-				url: '../uqDrawBackend/deleteQuestion.php',
-				data: {
-					questionID: questionID,
-				},
-				success:function(data){
-					//alert(result);
-					location.reload();
-
-				},
-				error:function(data){
-					alert("Can't Reach server")
-				}
+					},
+					error:function(data){
+						alert("Can't Reach server")
+					}
+				});
 			});
-		});
+		}
 	}
 
     function submitQuestion(){
@@ -214,6 +218,7 @@
     }
 
 </script>
+</head>
 <body class="bg-prepare">
 	<!-- Header -->
 	<section>
@@ -222,9 +227,9 @@
 			<a href='lecture-prepare.html'><div class='button-back-prepare-response'> <p> Back </p></div></a>
 			<!-- Logo (small) -->
 			<div class="headerpos">
-			<a href="#"><img class='images-l-subjects' src='../assets/images/topbar-logo.png' /></a>
+			<a href="#"><img class='images-l-subjects' src='../assets/images/topbar-logo.png' alt=""/></a>
 			<!-- Title of the page -->
-			<h3 class='type-title'> Create Questions </h3>
+			<h3 class='type-title'> Prepare Mode </h3>
 			</div>
 			<!-- Switch button -->
 			<a id="goto-lecture-mode" href='lecture-questions.html'><div class='button-goto-lecture'> <p> goto Lecture Mode </p></div></a>
@@ -236,7 +241,7 @@
 		<!-- List the Questions -->
 	<section class = "list-make-green">
 		<!-- Body Heading -->
-		<h2 class="type-body-heading"> <span id="subject"> MATH 1061 </span> CODE: <span id="code">3FC</span> </h2>
+		<h1 class="type-body-heading"> Create Questions </h1>
 		<!-- Body Subheading -->
 		<h3 class="type-body-subheading"> Click the plus button to create a new question </h3>
 
