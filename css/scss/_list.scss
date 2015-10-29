@@ -488,6 +488,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 /*make question text input*/
+/*	Css based on Ison style in http://tympanus.net/Development/TextInputEffects/index.html
+	owned by Mary Lou*/
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;

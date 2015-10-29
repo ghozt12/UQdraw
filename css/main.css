@@ -232,7 +232,7 @@ input:focus {
 
 /* line 44, scss/_buttons.scss */
 .button-add {
-  width: 100%;
+  width: 80%;
   opacity: .8;
   border: 2px solid #410C54;
   background-color: white;
@@ -240,6 +240,7 @@ input:focus {
   font-weight: 600;
   font-size: 20px;
   height: 40px;
+  margin-left: 10%;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -1563,14 +1564,14 @@ body {
 
 /* line 61, scss/_theme.scss */
 .bg-prepare {
-  //background-image: url(../assets/images/bg-prepare.jpg);
+  background-image: url(../assets/images/bg-prepare.jpg);
   background-repeat: none;
   background-size: cover;
 }
 
 /* line 68, scss/_theme.scss */
 .bg-lecture {
-  //background-image: url(../assets/images/bg-lecture.jpg);
+  background-image: url(../assets/images/bg-lecture.jpg);
   background-repeat: none;
   background-size: cover;
 }
@@ -1598,7 +1599,7 @@ body {
   border: 5px solid #410C54;
   background: #410C54;
   border-radius: 50%;
-  -webkit-animation: size 240s linear;
+  -webkit-animation: size 120s linear;
   animation: size 240s linear;
   position: absolute;
   top: 50%;
@@ -1763,6 +1764,25 @@ body {
 }
 /* line 225, scss/_theme.scss */
 .subject-form button {
+  margin-top: 20px;
+}
+
+/*add button style in lecture-prepare page*/
+/* line 231, scss/_theme.scss */
+.add-subject-form {
+  max-width: 70%;
+  background: #410C54;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: block;
+  padding-left: 10%;
+  margin: 0 auto;
+}
+/* line 242, scss/_theme.scss */
+.add-subject-form button {
   margin-top: 20px;
 }
 
@@ -2268,7 +2288,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /*make question text input*/
-/* line 491, scss/_list.scss */
+/*	Css based on Ison style in http://tympanus.net/Development/TextInputEffects/index.html
+	owned by Mary Lou*/
+/* line 494, scss/_list.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -2277,7 +2299,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* line 499, scss/_list.scss */
+/* line 502, scss/_list.scss */
 .input-m-t {
   position: relative;
   z-index: 1;
@@ -2288,7 +2310,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 509, scss/_list.scss */
+/* line 512, scss/_list.scss */
 .input-m {
   position: relative;
   z-index: 1;
@@ -2299,7 +2321,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 519, scss/_list.scss */
+/* line 522, scss/_list.scss */
 .input__field-m {
   position: relative;
   display: block;
@@ -2316,12 +2338,12 @@ input[type=number]::-webkit-outer-spin-button {
   /* for box shadows to show on iOS */
 }
 
-/* line 534, scss/_list.scss */
+/* line 537, scss/_list.scss */
 .input__field-m:focus {
   outline: none;
 }
 
-/* line 538, scss/_list.scss */
+/* line 541, scss/_list.scss */
 .input__label-m {
   display: inline-block;
   float: right;
@@ -2340,7 +2362,7 @@ input[type=number]::-webkit-outer-spin-button {
   user-select: none;
 }
 
-/* line 556, scss/_list.scss */
+/* line 559, scss/_list.scss */
 .input__label-content-m {
   position: relative;
   display: block;
@@ -2349,7 +2371,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 564, scss/_list.scss */
+/* line 567, scss/_list.scss */
 .graphic-m {
   position: absolute;
   top: 0;
@@ -2357,13 +2379,13 @@ input[type=number]::-webkit-outer-spin-button {
   fill: none;
 }
 
-/* line 571, scss/_list.scss */
+/* line 574, scss/_list.scss */
 .icon-m {
   color: #ddd;
   font-size: 150%;
 }
 
-/* line 576, scss/_list.scss */
+/* line 579, scss/_list.scss */
 .input__field--isao-m {
   z-index: 10;
   padding: 0.75em 0.1em 0.25em;
@@ -2373,7 +2395,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 586, scss/_list.scss */
+/* line 589, scss/_list.scss */
 .input__label--isao-m {
   position: relative;
   overflow: hidden;
@@ -2384,7 +2406,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 
-/* line 596, scss/_list.scss */
+/* line 599, scss/_list.scss */
 .input__label--isao-m::before {
   content: '';
   position: absolute;
@@ -2402,7 +2424,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 613, scss/_list.scss */
+/* line 616, scss/_list.scss */
 .input__label--isao-m::after {
   content: attr(data-content);
   position: absolute;
@@ -2421,26 +2443,26 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 631, scss/_list.scss */
+/* line 634, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m::before {
   background-color: #8ED676;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 
-/* line 637, scss/_list.scss */
+/* line 640, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m {
   pointer-events: none;
 }
 
-/* line 641, scss/_list.scss */
+/* line 644, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 647, scss/_list.scss */
+/* line 650, scss/_list.scss */
 .input__label-content--isao-m {
   color: white;
   padding: 0.75em 0.15em;
@@ -2450,7 +2472,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 656, scss/_list.scss */
+/* line 659, scss/_list.scss */
 .input__field--isao-m:focus + .input__label--isao-m .input__label-content--isao-m {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
@@ -2458,7 +2480,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /*edit question text input*/
-/* line 671, scss/_list.scss */
+/* line 674, scss/_list.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -2467,7 +2489,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* line 679, scss/_list.scss */
+/* line 682, scss/_list.scss */
 .input-e-t {
   position: relative;
   z-index: 1;
@@ -2478,7 +2500,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 689, scss/_list.scss */
+/* line 692, scss/_list.scss */
 .input-e {
   position: relative;
   z-index: 1;
@@ -2489,7 +2511,7 @@ input[type=number]::-webkit-outer-spin-button {
   vertical-align: top;
 }
 
-/* line 699, scss/_list.scss */
+/* line 702, scss/_list.scss */
 .input__field-e {
   position: relative;
   display: block;
@@ -2506,12 +2528,12 @@ input[type=number]::-webkit-outer-spin-button {
   /* for box shadows to show on iOS */
 }
 
-/* line 714, scss/_list.scss */
+/* line 717, scss/_list.scss */
 .input__field-e:focus {
   outline: none;
 }
 
-/* line 718, scss/_list.scss */
+/* line 721, scss/_list.scss */
 .input__label-e {
   display: inline-block;
   float: right;
@@ -2530,7 +2552,7 @@ input[type=number]::-webkit-outer-spin-button {
   user-select: none;
 }
 
-/* line 736, scss/_list.scss */
+/* line 739, scss/_list.scss */
 .input__label-content-e {
   position: relative;
   display: block;
@@ -2539,7 +2561,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 744, scss/_list.scss */
+/* line 747, scss/_list.scss */
 .graphic-e {
   position: absolute;
   top: 0;
@@ -2547,13 +2569,13 @@ input[type=number]::-webkit-outer-spin-button {
   fill: none;
 }
 
-/* line 751, scss/_list.scss */
+/* line 754, scss/_list.scss */
 .icon-e {
   color: #ddd;
   font-size: 150%;
 }
 
-/* line 756, scss/_list.scss */
+/* line 759, scss/_list.scss */
 .input__field--isao-e {
   z-index: 10;
   padding: 0.75em 0.1em 0.25em;
@@ -2563,7 +2585,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 766, scss/_list.scss */
+/* line 769, scss/_list.scss */
 .input__label--isao-e {
   position: relative;
   overflow: hidden;
@@ -2574,7 +2596,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 
-/* line 776, scss/_list.scss */
+/* line 779, scss/_list.scss */
 .input__label--isao-e::before {
   content: '';
   position: absolute;
@@ -2592,7 +2614,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 793, scss/_list.scss */
+/* line 796, scss/_list.scss */
 .input__label--isao-e::after {
   content: attr(data-content);
   position: absolute;
@@ -2611,26 +2633,26 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
-/* line 811, scss/_list.scss */
+/* line 814, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e::before {
   background-color: #410C54;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 
-/* line 817, scss/_list.scss */
+/* line 820, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e {
   pointer-events: none;
 }
 
-/* line 821, scss/_list.scss */
+/* line 824, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 827, scss/_list.scss */
+/* line 830, scss/_list.scss */
 .input__label-content--isao-e {
   color: white;
   padding: 0.75em 0.15em;
@@ -2640,7 +2662,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* line 836, scss/_list.scss */
+/* line 839, scss/_list.scss */
 .input__field--isao-e:focus + .input__label--isao-e .input__label-content--isao-e {
   opacity: 0;
   -webkit-transform: translate3d(0, -50%, 0);
