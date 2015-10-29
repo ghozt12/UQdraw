@@ -1,51 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<title>UQ Draw</title>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/vendor/gridism.css">
   <!-- Sets it as a mobile viewport if the user is on a mobile device -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
-</head>
-
-<body class="bg-prepare">
-	<!-- Header -->
-	<section>
-		<div class='header-l-prepare'>
-		<div class="headerpos">
-			<!-- Logo (small) -->
-			<img class='images-l-subjects' src='../assets/images/topbar-logo.png' />
-			<!-- Title of the page -->
-			<h3 class='type-title'> Prepare Mode </h3>
-			</div>
-			<!-- Switch button -->
-			<a href='lecture-subjects.html'><div class='button-goto-lecture'> <p> goto Lecture Mode </p></div></a>
-			<!-- Switch button -->
-			<a href='lecture-mode.html'><div class='button-back-prepare-response'> <p> Back </p></div></a>
-		</div>
-	</section>
-
-	<!-- Body -->
-	<section class="list-subject">
-		<!-- Body Heading -->
-		<h2 class="type-body-heading"> Subjects </h2>
-		<!-- Body Subheading -->
-		<h3 class="type-body-subheading"> Select subject below or click '+' to create a new one. </h3>
-		<!-- List the subjects -->
-		<ul class="list-subjects-green" id="subjects">
-			<!-- Place PHP here, for each subject in db, create a <li> element -->
-			<li> <span> Subject 1 </span> </li>
-			<li> <span> Subject 2 </span> </li>
-			<li> <span> Subject 3 </span> </li>
-			<!-- Create new Subject button -->
-		</ul>
-		<ul id="addButton"><li onclick="addCourse()"><button class="button-add">+</button></li></ul>
-		<span id="addSubject"></span>
-
-	</section>
-
-</body>
-	<!-- Library -->
+  	<!-- Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!-- JS -->
 		<script>
@@ -100,5 +62,46 @@
 
 		 }
   	</script>
+
+</head>
+
+<body class="bg-prepare">
+	<!-- Header -->
+	<section>
+		<div class='header-l-prepare'>
+		<div class="headerpos">
+			<!-- Logo (small) -->
+			<img class='images-l-subjects' src='../assets/images/topbar-logo.png' alt=""/>
+			<!-- Title of the page -->
+			<h3 class='type-title'> Prepare Mode </h3>
+			</div>
+			<!-- Switch button -->
+			<a href='lecture-subjects.html'><div class='button-goto-lecture'> <p> goto Lecture Mode </p></div></a>
+			<!-- Switch button -->
+			<a href='lecture-mode.html'><div class='button-back-prepare-response'> <p> Back </p></div></a>
+		</div>
+	</section>
+
+	<!-- Body -->
+	<section class="list-subject">
+		<!-- Body Heading -->
+		<h2 class="type-body-heading"> Subjects </h2>
+		<!-- Body Subheading -->
+		<h3 class="type-body-subheading"> Select subject below or click '+' to create a new one. </h3>
+		<!-- List the subjects -->
+		<ul class="list-subjects-green" id="subjects">
+			<!-- Place PHP here, for each subject in db, create a <li> element -->
+			<li> <span> Subject 1 </span> </li>
+			<li> <span> Subject 2 </span> </li>
+			<li> <span> Subject 3 </span> </li>
+			<!-- Create new Subject button -->
+		</ul>
+		<ul id="addButton"><li onclick="addCourse()"><button class="button-add">+</button></li></ul>
+		<span id="addSubject"></span>
+
+	</section>
+
+</body>
+
 </html>
 

@@ -1,10 +1,15 @@
+/* *********************************************
+	Three Input start page
+	UQDRAW
+	TEAM ONE
+ ********************************************* */
 $('#someInput').bind('input', function() { 
     $(this).val(); 
     var value = $("#element").val();
     alert(value);
 });
 
-// Auto Focus
+// Auto Focus on the first input
 document.getElementById("CodeInputOne").focus();
 
 // Auto Move to next input on entry
@@ -19,13 +24,10 @@ $(window).keyup(function(e) {
 		return;
 	}
 
-
-
-	// Find out which element we are focused on
+	// Find out which element we are focused on: 
 	var focused = document.activeElement;
 	var focusedNumber = 0;
 	
-	// 
 	switch (focused.id) {
 		case "CodeInputOne":
 			focusedNumber = 1;
@@ -55,11 +57,10 @@ $(window).keyup(function(e) {
 			$("#CodeInputTwo").val('');
 			$("#CodeInputTwo").focus();
 		}
-
 		return;
 	}
 
-		// Simple move to next input
+	// Simple move to next input
 	if ($("#CodeInputOne").val())
 		document.getElementById("CodeInputTwo").focus();
 	if ($("#CodeInputTwo").val())
@@ -69,29 +70,30 @@ $(window).keyup(function(e) {
 	if ( e.which != 13 && $("#CodeInputOne").val() != '' && $("#CodeInputTwo").val() != '' && $("#CodeInputThree").val() != '') {
 		var code;
 		code = $("#CodeInputOne").val() + $("#CodeInputTwo").val() + $("#CodeInputThree").val();
-		//alert("YOU ENTERED CODE:" + code);
 
-		$.ajax({//check if the course exists
+		$.ajax({ //check if the course exists
 			type: 'GET',
 			url: 'uqDrawBackend/checkEnteringCode.php?enteringCode='+code,//
 			success: function(data){
 				var checkObject = JSON.parse(data);
-				if(checkObject.success==0) {
+
+				if (checkObject.success==0) {
 					alert("Wrong course");//if wrong, clear inputs and reset focus
 					$("#CodeInputOne").val('');
 					$("#CodeInputTwo").val('');
 					$("#CodeInputThree").val('');
 					document.getElementById("CodeInputOne").focus();
 				}
+
 				if(checkObject.success==1) {
 					window.location.href = "http://teamone.uqcloud.net/pages/student-questions.html?enteringCode="+code;
 				}
 			},
+
 			error: function(){
 				alert("can't reach server" );
 			}
 		});
 
 	}
-
 });

@@ -1,23 +1,32 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<title>UQ Draw</title>
+	
+	<!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name="author" contents="TeamOne">
+  <meta name="description" contents="Create a question UQDraw">
+
 	 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/vendor/gridism.css">
 
+	<!-- JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">	</script>
-</head>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
 <script type='text/javascript'>
-	var courseID ="";
-	var haveImage =0;// set to 1 if a image is imported
-	var fileFormat ="";
-	var title ="";
-	var imageBlob ="";
+	var courseID = "";
+	var haveImage = 0; // set to 1 if a image is imported
+	var fileFormat = "";
+	var title = "";
+	var imageBlob = "";
 	$(document).ready(function() {
-		$.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
+		$.ajax({ //retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
 			type: 'GET',
 			url: '../uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID='+getParameterByName("courseID"),
 			success: function(data){
@@ -45,7 +54,7 @@
 					//}
 					document.getElementById("questionsList").innerHTML = questionListHTML;
 					document.getElementById("goto-lecture-mode").href = "lecture-questions.html?courseID="+getParameterByName("courseID");
-				}else{alert("Fail to retrieve data please signon");}
+				}else{alert("Fail to retrieve data please Signon");}
 			},
 			error: function(){
 				alert('There was an error adding your courses');
@@ -216,6 +225,7 @@
     }
 
 </script>
+</head>
 <body class="bg-prepare">
 	<!-- Header -->
 	<section>
@@ -224,7 +234,7 @@
 			<a href='lecture-prepare.html'><div class='button-back-prepare-response'> <p> Back </p></div></a>
 			<!-- Logo (small) -->
 			<div class="headerpos">
-			<a href="#"><img class='images-l-subjects' src='../assets/images/topbar-logo.png' /></a>
+			<a href="#"><img class='images-l-subjects' src='../assets/images/topbar-logo.png' alt=""/></a>
 			<!-- Title of the page -->
 			<h3 class='type-title'> Prepare Mode </h3>
 			</div>
@@ -247,7 +257,7 @@
 				<label> Lecture 1</label>
 				<div class="question-container">
 					<div class="question">
-					Draw my House Draw asaaaa aaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa
+					Draw my House Draw
 					</div>
 					<div class="question-button">
 					<button class="button"> Edit </button>

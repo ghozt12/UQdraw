@@ -1,16 +1,26 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<title>UQ Draw</title>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/vendor/gridism.css">
   <!-- Sets it as a mobile viewport if the user is on a mobile device -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- JS -->
+	<script>
+  		$(document).ready(function() {
+  		$("#start-username").load("/uqDrawBackend/registerLecturer.php");
+  		 });
+  	</script>
 </head>
 <body class="body-l-startpage">
 	
 	<section>
 		<div class="lecturer-startpage-header">
-			<img class='lecturer-startpage-logo' src="../assets/images/qudraw-logo-white.png" />
+			<img class='lecturer-startpage-logo' src="../assets/images/qudraw-logo-white.png" alt=""/>
 			<h3 class="type-welcome"> Welcome <!-- type-welcome span --> <span id="start-username"></span></h3>
 		</div>
 	</section>
@@ -28,10 +38,10 @@
 							<h2> Lecture Mode</h2>
 							<!-- Information -->
 							<div class="info">
-								<img src="../assets/images/bgicon-01.png" /> <p> Ask prepared questions</p>
+								<img src="../assets/images/bgicon-01.png" alt="" /> <p> Ask prepared questions</p>
 							</div>
 							<div class="info">
-								<img src="../assets/images/bgicon-02.png" /> <p> Review student responses</p>
+								<img src="../assets/images/bgicon-02.png" alt="" /> <p> Review student responses</p>
 							</div>
 						</div>
 				</div>
@@ -46,10 +56,10 @@
 						<h2> Prepare Mode</h2>
 						<!-- Information -->
 						<div class="info">
-							<img src="../assets/images/bgicon-03.png" /> <p> Prepare lecture questions</p>
+							<img src="../assets/images/bgicon-03.png" alt="" /> <p> Prepare lecture questions</p>
 						</div>
 						<div class="info">
-							<img src="../assets/images/bgicon-04.png" /> <p> Grade student responses</p>
+							<img src="../assets/images/bgicon-04.png" alt="" /> <p> Grade student responses</p>
 						</div>
 					</div>
 				</div>
@@ -57,12 +67,5 @@
 		</div>	
 	</section>
 </body>
-	<!-- Library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<!-- JS -->
-	<script>
-  		$(document).ready(function() {
-  		$("#start-username").load("/uqDrawBackend/registerLecturer.php");
-  		 });
-  	</script>
+	
 </html>

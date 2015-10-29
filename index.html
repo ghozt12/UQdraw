@@ -1,27 +1,34 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<title>UQDraw</title>
+	
+	<!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name="author" contents="TeamOne">
+  <meta name="description" contents="Home page for UQDraw">
+
   <!-- CSS -->
-  <!-- just trying to commit something -->
   <link rel="stylesheet" href="css/main.css"> 
 
-  <!-- Sets it as a mobile viewport if the user is on a mobile device -->
+  <!-- Mobile viewport-->
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
+  <!-- Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-<!-- Library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
 <body class="bg-prepare">
+	
 	<!-- Header -->
 	<section>
 		<div class="header-startpage">
-			<img class='lecturer-startpage-logo' src="assets/images/uqdraw-logo-transparent.png" />
-			<h3 class="type-welcome"> Welcome <!-- type-welcome span --> <span id="start-username"></span></h3>
+			<img class='lecturer-startpage-logo' src="assets/images/uqdraw-logo-transparent.png" alt="" />
+			<h3 class="type-welcome"> Welcome <!-- type-welcome span (gets user name) --> <span id="start-username"></span></h3>
 		</div>
 	</section>
 
-	<!-- All styles in this section are in scss/partials/_start_three_input.scss -->
+	<!-- Three character input -->
 	<section class="start-section-input">
 		<h3> Enter Subject Code </h3>
 		<form id="start-input">
@@ -31,9 +38,9 @@
 		</form>
 	</section>
 
-
 	<div class="start-or"> <span> or </span> </div>
 
+	<!-- Subjects -->
 	<section class = "list-subjects-green">
 		<h3> Select subject below </h3>
 		<ul><span id="courseList">
@@ -42,19 +49,21 @@
 			<li> <span class="subject"> Subject 3 </span> </lI>
 		</span></ul>
 	</section>
+
 </body>
-<!-- JS -->
+<!-- JS (load page first, then js) -->
 <script src="js/startPage.js"></script>
 
 <script>
-	var studentID ="";
-	var name ="";
-	// DISRESPECT
+	var studentID = "";
+	var name = "";
 	$(document).ready(function() {
+		
 		// disable the line under to test the pagg avoid redirect
 		//$("#start-username").load("pages/signon.php");//redirect to lecturer mode, if staff login
 
-		$.ajax({//get student course list from table Submissons, stdID will get from JSON, no need to POST anything
+		$.ajax({
+		//get student course list from table Submissons, stdID will get from JSON, no need to POST anything
 			type: 'GET',
 			url: 'uqDrawBackend/retrieveStudentCourseList.php',//
 			success: function(data){
