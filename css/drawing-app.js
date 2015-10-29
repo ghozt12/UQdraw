@@ -63,7 +63,6 @@
 // ON READY 
 // *********************************************
 $(document).ready(function () {
-
 	document.getElementById("questionTitle").innerHTML = getParameterByName("questionTitle");
 	// Prevent the user from dragging the screen
 	$(window).bind(
@@ -129,7 +128,7 @@ $(document).ready(function () {
 		var width = $(document).width();
 		var height = $(document).height();
 		var a,b;
-		// Get url INSERT HERE 
+		// Get url
 		var url = $("#image-question").attr('src');
 		var img = document.getElementById("image-question");
 		
@@ -166,15 +165,15 @@ $(document).ready(function () {
 		
 	});
 
-	// http://stackoverflow.com/questions/18837735/check-if-image-exists-on-server-using-javascript
-	function imageExists(image_url){
-	    var http = new XMLHttpRequest();
+// http://stackoverflow.com/questions/18837735/check-if-image-exists-on-server-using-javascript
+function imageExists(image_url){
+    var http = new XMLHttpRequest();
 
-	    http.open('HEAD', image_url, false);
-	    http.send();
+    http.open('HEAD', image_url, false);
+    http.send();
 
-	    return http.status != 404;
-	}
+    return http.status != 404;
+}
 
 	// COLOUR SELECTION
 	// *******************************
