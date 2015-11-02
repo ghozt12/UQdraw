@@ -9,7 +9,7 @@ $(document).ready(function () {
 function addCourse() {
     var year = getCurrentYear();
     var semester = getCurrentSem();
-    document.getElementById("addButton").innerHTML = "<li><span id ='addSubjectForm' class='subject-form'>" +
+    document.getElementById("addButton").innerHTML = "<li><span id ='addSubjectForm' class='add-subject-form'>" +
         "<div class='input input--isao'><input id='courseID' style='width:100%;'type='text' name='courseID' maxlength='8' data-inputmask='AAAA9999' class='input__field input__field--isao' autocomplete='off'>" +
         "<label class='input__label input__label--isao' for='courseID' data-content='Course Code'>" +
         "<span class='input__label-content input__label-content--isao'>Course Code</span></label></div>" +
