@@ -5,6 +5,7 @@ $(document).ready(function () {
     $("#subjects").load("../uqDrawBackend/lecturerSubjects.php");
 });
 
+//Creates a form for lecturers to create a course
 function addCourse() {
     var year = getCurrentYear();
     var semester = getCurrentSem();
@@ -18,6 +19,8 @@ function addCourse() {
         "<label class='input__label input__label--isao' for='semester' data-content='Semester'><span class='input__label-content input__label-content--isao'>Semester</span>" +
         "</label></span><button class='add-button' onclick='submitCourse()'>Add</button></div></span></li>";
 }
+
+//Adds the course from the form and does a post onto the php file.
 function submitCourse() {//get data from the form
     //alert("submit course");
     var courseCode = document.getElementsByName("courseID")[0].value;
@@ -38,11 +41,14 @@ function submitCourse() {//get data from the form
     }
 
 }
+//gets the current year automatically
 function getCurrentYear() {
     var d = new Date();
     var year = d.getFullYear();
     return year.toString().substring(2, 4);
 }
+
+//gets the current semester automatically
 function getCurrentSem() {
     var d = new Date();
     var month = d.getMonth();

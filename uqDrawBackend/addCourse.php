@@ -16,7 +16,7 @@ if($lecturerId!=null&&$courseId!=null) {
         $digitCodeQuery = "SELECT `enteringCode` FROM `Course` WHERE `enteringCode` = '$enteringCode'";
         $enterCodeResult = mysqli_query($mysqli, $digitCodeQuery);
     } while ($enterCodeResult->fetch_object()->enteringCode != NULL);//random 3-digit code until which is unique
-
+    //query to insert a new subject with the 3 character code generator.
     $insertQuery = "INSERT INTO `Course`(`lecturerID`, `courseID`, `enteringCode`) VALUES ('$lecturerId','$courseId','$enteringCode')";//insert row
     $insertDataResult = mysqli_query($mysqli, $insertQuery);
 
@@ -35,7 +35,7 @@ else{
 //echo"error null input";
 }
 function generateRandomString($length) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyz';// randome only lower case and Numbers
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyz';// random only lower case and numbers
     $charactersLength = strlen($characters);
     $randomString = '';
     for ($i = 0; $i < $length; $i++) {

@@ -7,6 +7,7 @@
  */
 include "connectDB.php";
 $submissionID = $_GET["submissionID"];
+//Deletes the student submissions from the DB
 if (isset($submissionID)) {
     $query = "DELETE FROM `uqdraw`.`Submission` WHERE `Submission`.`submissionID` = $submissionID ";
     $result = mysqli_query($mysqli, $query);

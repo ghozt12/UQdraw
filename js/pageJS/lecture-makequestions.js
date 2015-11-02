@@ -7,7 +7,7 @@ var fileFormat = "";
 var title = "";
 var imageBlob = "";
 $(document).ready(function () {
-    $.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, noting shows
+    $.ajax({//retrieve JSON through ajax, if the parameter(courseID) from url is wrong, nothing shows
         type: 'GET',
         url: '../uqDrawBackend/retrieveQuestionsfromCourseId.php?courseID=' + getParameterByName("courseID"),
         success: function (data) {
@@ -63,12 +63,10 @@ function getQuestionItem(questionObjbyWeek, week) { // input the question Object
     }
     return lectureHeader + questionList;
 }
+//Creates a form to add a question
 function addQuestion() {
     document.getElementById("addButton").innerHTML = "";
-    document.getElementById("addButton").innerHTML = /*"<li><form id ='addSubjectForm' class='subject-form'><span>Title:<input style='width:70%;'type='text' name='title' >" +
-     "<button  type='submit' id ='addButton';class= 'q-button' '>Add</button>" +
-     "<button  class= 'q-button' onclick='parseImage()'>Image</button></span></form></li>";*/
-        "<div id ='addSubjectForm' class='subject-form' style='background:#410C54'><li><span class='input-m-t input--isao-m'><input id='title' style='width:100%;'type='text' name='addTitle' maxlength='100' data-inputmask='AAAA9999' class='input__field-m input__field--isao-m' autocomplete='off'><label class='input__label-m input__label--isao-m' for='title' data-content='Question Title'><span class='input__label-content-m input__label-content--isao-m'>Question Title</span></label></span>" +
+    document.getElementById("addButton").innerHTML = "<div id ='addSubjectForm' class='subject-form' style='background:#410C54'><li><span class='input-m-t input--isao-m'><input id='title' style='width:100%;'type='text' name='addTitle' maxlength='100' data-inputmask='AAAA9999' class='input__field-m input__field--isao-m' autocomplete='off'><label class='input__label-m input__label--isao-m' for='title' data-content='Question Title'><span class='input__label-content-m input__label-content--isao-m'>Question Title</span></label></span>" +
         "<span class='input-m input--isao-m'><input id='year' style='width:100%;'type='number' name='lectureWeek' maxlength='2' class='input__field-m input__field--isao-m'><label class='input__label-m input__label--isao-m' for='lectureWeek' data-content='Lecture Week'><span class='input__label-content-m input__label-content--isao-m'>Lecture Week</span></label></span>" +
         "<button  class='add-button-m' onclick='submitQuestion()' >Add</button></li>" +
         "<li><label><input type='file' class='inputfile' onchange='parseImage()''><span class='upload-file'>Upload Image</span></label></span></li>" +
@@ -77,17 +75,19 @@ function addQuestion() {
 
 var questionContent;
 
+//Creates a form that will edit a question
 function editQuestion(questionID, title, lectureWeek) {
 
     window.questionContent = document.getElementById(questionID).innerHTML;
     document.getElementById(questionID).innerHTML = "<div class='question-container'><div class='question' style='width: 37vw;''><span class='input-e-t input--isao-e' style='max-width: 70%;'><input id='title' style='width:100%;'type='text' name='title' maxlength='100' data-inputmask='AAAA9999' class='input__field-e input__field--isao-e' autocomplete='off' value='" + title + "'><label class='input__label-e input__label--isao-e' for='title' data-content='Question Title'><span class='input__label-content-e input__label-content--isao-e'>Question Title</span></label></span><span class='input-e input--isao-e' style='max-width: 20%;''><input id='year' style='width:100%;'type='number' name='lectureWeek' maxlength='2' class='input__field-e input__field--isao-e' value='" + lectureWeek + "'><label class='input__label-e input__label--isao-e' for='lectureWeek' data-content='Lecture Week'><span class='input__label-content-e input__label-content--isao-e'>Lecture Week</span></label></span></div><div class='question-button' style='width:22.5%;'><button class='add-button-e' onclick='cancelEdit(" + questionID + ")'style='margin-right:5px;'>Cancel</button><button class='add-button-e' onclick='submitChanges(" + questionID + ")'>Submit</button></div>";
 }
 
-
+//Cancel button to return the list of the question
 function cancelEdit(questionID) {
     document.getElementById(questionID).innerHTML = window.questionContent;
 }
 
+//Submits the changes from the edit form
 function submitChanges(questionID) {
     var title = document.getElementsByName("title")[0].value;
     var questionWeek = document.getElementsByName("lectureWeek")[0].value;
@@ -144,7 +144,7 @@ function parseImage() {
     console.log(imageBlob);
 }
 
-
+//Deleting question from the DB
 function deleteQuestion(questionID) {
     var confirmDelete = confirm("Are you sure you want to delete this question?");
     if (confirmDelete) {
@@ -168,6 +168,7 @@ function deleteQuestion(questionID) {
     }
 }
 
+//Add question onto the DB 
 function submitQuestion() {
     var title = document.getElementsByName("addTitle")[0].value;
     var questionWeek = document.getElementsByName("lectureWeek")[0].value;

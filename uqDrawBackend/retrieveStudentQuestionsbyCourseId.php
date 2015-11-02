@@ -7,7 +7,7 @@
  */
 
 include "connectDB.php";
-$studentID = $_SERVER['HTTP_X_UQ_USER'];//std ID to check did that user ansewed that questin or not
+$studentID = $_SERVER['HTTP_X_UQ_USER'];//std ID to check did that user answered that question or not
 
 $courseID = $_GET["courseID"];//the request should be http://<this url>/?code=XXX
 

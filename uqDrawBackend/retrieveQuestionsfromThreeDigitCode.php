@@ -6,7 +6,7 @@
  * Time: 2:43 PM
  */
 include "connectDB.php";
-$studentID = $_SERVER['HTTP_X_UQ_USER'];//std ID to check did that user ansewed that questin or not
+$studentID = $_SERVER['HTTP_X_UQ_USER'];//std ID to check did that user answered that question or not
 
 $code = $_GET["enteringCode"];//the request should be http://<this url>/?code=XXX
 //$code ="4rt";//ID for testing
